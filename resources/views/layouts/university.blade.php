@@ -111,8 +111,7 @@
                         <div>
                             <img src="" alt="Geeks logo" />
                         </div>
-                        <p class="mb-0">Fondée sur la solide réputation de BEM Management School, l’Executive Education
-                            de BEM s’affirme comme le pilier de la formation exécutive en Afrique.</p>
+                        <p class="mb-0">Description de lufr</p>
 
                     </div>
                 </div>
@@ -120,9 +119,7 @@
                     <div class="d-flex flex-column gap-4">
                         <span class="text-white-stable">Nos Formations</span>
                         <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                            <li><a href="#" class="nav-link">Formation continue</a></li>
-                            <li><a href="#" class="nav-link">Formation executive</a></li>
-                            <li><a href="#" class="nav-link">Formation pour organisation</a></li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -142,15 +139,7 @@
                         <div class="d-flex flex-column gap-3">
                             <span class="text-white-stable">Contact</span>
                             <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                                <li>Email:<a href="mailto:contact@bemexecutive.education"
-                                        class="fw-semibold">contact@bemexecutive.education</a></li>
-                                <li>Bureau d'Abidjan & de Douala: <a href="tel:+2250769816200"
-                                        class="fw-semibold">(+225) 07 69 81 62 00</a></li>
-                                <li>Bureau de Dakar:<a href="tel:+221786082397" class="fw-semibold">(+221) 78 608 23
-                                        97</a></li>
-                                <li>Bureau de Paris:
-
-                                </li>
+          
                             </ul>
                         </div>
                         <div class="d-flex flex-row gap-2">
@@ -161,7 +150,7 @@
             </div>
             <div class="bg-dark py-4">
                 <div class="container text-center">
-                    <span class="text-white">© 2024 BEM EXECUTIVE EDUCATION. Tous droits réservés.</span>
+                    <span class="text-white">© 2024 UFR. Tous droits réservés.</span>
                 </div>
             </div>
         </div>
