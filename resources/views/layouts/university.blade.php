@@ -31,9 +31,9 @@
         <div class="row" style="height:100px;padding:30px 30px;">
             <div class="col-md-4">
 
-                <div class="row">
+                <div class="row" style="color:#2b6635">
                     <div class="col-md-3">
-                        <a href="#" class="nav-link text-black">À propos</a>
+                        <a href="{{ route('actualité') }}" class="nav-link text-black" ><strong>À propos</strong></a>
                     </div>
                     <div class="col-md-3">
                         <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant</a>

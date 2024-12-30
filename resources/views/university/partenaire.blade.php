@@ -22,8 +22,12 @@
 <section class="bg-light"
     style="    background: linear-gradient(#040B11A3,#0A0B0B9D), url('assets/accueilback.png') no-repeat right; background-size: auto; background-position: right;height:550px">
 
-    <div class="container">
-        <div><BR>
+    <div class="container ">
+        <div>
+            <BR>
+            <BR>
+            <BR>
+            <BR>
             <div class="row py-8s align-items-center gy-8">
                 <div class="col-xl-7 col-lg-7 rounded-4" style="background:#FFFFFFA3;">
                     <div class="container"><br><br>
@@ -163,7 +167,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-12 ">
                 <br><br><br>
-                <font class=" fw-bold " style="color:white;font-size:100px">
+                <font class=" fw-bold " style="color:white;font-size:60px">
                     <center> L’EXCELLENCE DE NOS PARTENARIATS</center>
                 </font>
             </div>
@@ -211,16 +215,16 @@
             <div class="col-md-6">
                 <br>
 
-                <img src="" class="card-img w-100" style="  background-size: cover;background-color:gray"
+                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1" class="card-img w-100" style="  background-size: cover;background-color:gray"
                     alt="Image">
 
             </div>
             <!-- Colonne avec texte -->
             <div class="col-md-6">
-                <div class="card-body">
+                <div class="card-body"><br>
                     <h5 class="card-title"><span class="text-primary">Don</span></h5>
                     <h2 class="card-title display-3">Besion de Financement</h2>
-                    <br><br>
+                    <br>
                     <ul class="list-unstyled " style="font-size:14PX">
 
                     <li class="mb-2">

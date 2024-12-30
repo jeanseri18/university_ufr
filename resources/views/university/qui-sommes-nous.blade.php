@@ -176,9 +176,9 @@
 
 
         <br>
-        <section class="bg-success text-white py-5 rounded">
+        <section class="bg-primary text-white py-5 rounded">
             <div class="container text-left">
-                <h1 class="display-5 fw-bold">Organigramme</h1>
+                <h1 class="display-5 fw-bold text-white">Organigramme</h1>
             </div>
 
             <div class="org-chart">

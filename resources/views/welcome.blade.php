@@ -96,32 +96,32 @@
            height: 600px;">
   <div class="container">
     <div class="row">
-      <div class="col-md-2" style="background-color: #3CA45D; color: white; padding: 10px;">
-        Actualité
+      <div class="col-md-2 " style="background-color: white; color: #3CA45D; padding: 10px;">
+     <strong>   Actualité</strong>
       </div>
       <div class="col-md-10"></div>
    
 
-    <div class="col-md-12 " style="background-color: #FFFFFF74; color: black; padding: 10px;">
+    <div class="col-md-12 " style="background-color: #0B0B0B93; color: white; padding: 10px; height: 350px;">
       <div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <!-- Texte 1 -->
-          <div class="carousel-item active">
+          <div class="carousel-item active" style="padding: 110px;">
             <p style="font-size: 30px;">Bienvenue à l'UFR de l'Université de Cocody, un espace dédié à l'excellence académique et à l'innovation.</p>
             <p style="font-size: 13px;">Administration, Janvier 2024</p>
           </div>
           <!-- Texte 2 -->
-          <div class="carousel-item">
+          <div class="carousel-item"  style="padding: 110px;">
             <p style="font-size: 30px;">Explorez les programmes variés offerts par l'UFR, conçus pour répondre aux besoins académiques et professionnels des étudiants.</p>
             <p style="font-size: 13px;">Direction Pédagogique, Février 2024</p>
           </div>
           <!-- Texte 3 -->
-          <div class="carousel-item">
+          <div class="carousel-item"  style="padding: 110px;">
             <p style="font-size: 30px;">Rejoignez une communauté dynamique et engageante à l'UFR de l'Université de Cocody.</p>
             <p style="font-size: 13px;">Service de Communication, Mars 2024</p>
           </div>
           <!-- Texte 4 -->
-          <div class="carousel-item">
+          <div class="carousel-item"  style="padding: 110px;">
             <p style="font-size: 30px;">The Impact of Technology on the Workplace: How Technology is Changing.</p>
             <p style="font-size: 13px;">Administration, Janvier 2024</p>
           </div>
@@ -331,7 +331,7 @@ padding-bottom: 30px;">
                                 <span>6:00 PM – 8:00 PM GMT</span>
                             </div>
                         </div>
-                        <a href="#!" class="btn btn-light-primary text-primary">Register Now</a>
+                        <a href="#!" class="btn btn-light-primary text-primary">voir</a>
                     </div>
                 </div>
             </div>
