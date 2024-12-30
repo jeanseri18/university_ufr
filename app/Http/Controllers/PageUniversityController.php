@@ -40,4 +40,8 @@ class PageUniversityController extends Controller
     {
         return view('university.partenaire');
     }
+    public function etudiant()
+    {
+        return view('university.etudiant');
+    }
 }

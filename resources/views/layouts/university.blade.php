@@ -36,7 +36,7 @@
                         <a href="#" class="nav-link text-black">À propos</a>
                     </div>
                     <div class="col-md-3">
-                        <a href="#" class="nav-link text-black">Étudiant</a>
+                        <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant</a>
                     </div>
                     <div class="col-md-3">
                         <a href="#" class="nav-link text-black">Enseignant</a>
