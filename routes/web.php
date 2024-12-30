@@ -17,6 +17,7 @@ use App\Http\Controllers\PageUniversityController;
 Route::get('/qui-sommes-nous', [PageUniversityController::class, 'quiSommesNous'])->name('quiSommesNous');
 Route::get('/larecherche', [PageUniversityController::class, 'larecherche'])->name('larecherche');
 Route::get('/filiere-pro', [PageUniversityController::class, 'filierePro'])->name('filierePro');
+Route::get('/filiere-classique', [PageUniversityController::class, 'filiereCla'])->name('filiereCla');
 Route::get('/alumnis', [PageUniversityController::class, 'alumnis'])->name('alumnis');
 Route::get('/actualité', [PageUniversityController::class, 'actualité'])->name('actualité');
 Route::get('/partenaire', [PageUniversityController::class, 'partenaire'])->name('partenaire');

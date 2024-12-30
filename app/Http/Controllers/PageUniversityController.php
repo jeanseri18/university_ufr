@@ -15,12 +15,17 @@ class PageUniversityController extends Controller
 
     public function larecherche()
     {
-        return view('university.larecherche');
+        return  view('university.larecherche');
     }
 
     public function filierePro()
     {
         return view('university.filiere-pro');
+    }
+
+    public function filiereCla()
+    {
+        return view('university.filiere-classique');
     }
 
     public function alumnis()

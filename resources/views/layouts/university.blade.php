@@ -85,6 +85,7 @@
                 <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualité
                 </a></li>
                     <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Qui sommes-nous</a></li>
+                    <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Filieres Classique</a></li>
                     <li><a href="{{ route('filierePro') }}" class="dropdown-item">Filieres professionnelles</a></li>
                     <li><a href="{{ route('alumnis') }}" class="dropdown-item">Alumnis</a></li>
              

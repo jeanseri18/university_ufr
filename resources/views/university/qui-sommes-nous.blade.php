@@ -24,9 +24,9 @@
 </section-->
 
 <br><br>
-<div style="margin:60px;">
+<div style="">
 
-    <div class="">
+    <div class="container">
 
         <div class="card">
             <div class="row no-gutters">
@@ -41,10 +41,35 @@
                             <li class="mb-2">
 
                                 <span class="ms-2">
-                                    <h3>Bienvenue</h3>
+                                    <h3> Chers étudiants, chers collègues, chers partenaires,
+                                    </h3>
 
-                                    <big>"</big>Dès sa création <span class="text-primary"> l'UFR</span>
-
+                                    C’est avec un immense honneur et une profonde fierté que je m’adresse à vous en tant
+                                    que doyen de<span class="text-primary"> l’UFR Sciences Économiques et
+                                        Gestion</span>. Notre unité de formation a pour vocation de former des leaders
+                                    compétents, visionnaires et capables d’apporter des solutions innovantes aux défis
+                                    économiques et managériaux de notre époque.
+                                    Au cœur de notre mission se trouve un engagement constant envers l’excellence
+                                    académique et l’innovation. À travers des programmes diversifiés, adaptés aux
+                                    réalités du monde professionnel, nous nous efforçons de préparer nos étudiants à
+                                    devenir des acteurs majeurs du développement économique, tant à l’échelle locale
+                                    qu’internationale.
+                                    Nos enseignants, chercheurs et collaborateurs travaillent avec passion et rigueur
+                                    pour offrir un environnement d’apprentissage stimulant, où les savoirs théoriques se
+                                    conjuguent aux compétences pratiques. Nous croyons fermement que l’éducation est la
+                                    clé de la transformation sociale et économique, et c’est pourquoi nous mettons tout
+                                    en œuvre pour offrir un cadre d’apprentissage de qualité, soutenu par des
+                                    partenariats stratégiques avec le secteur privé et les institutions publiques.
+                                    Aux étudiants, je vous encourage à faire preuve de détermination, de curiosité et de
+                                    créativité dans votre parcours académique. Sachez que vous êtes au cœur de nos
+                                    préoccupations, et que tout est mis en place pour vous accompagner dans votre
+                                    réussite.
+                                    À mes collègues et partenaires, je tiens à exprimer ma gratitude pour votre
+                                    engagement et votre soutien indéfectibles. Ensemble, nous continuerons à bâtir une
+                                    UFR forte, reconnue pour son excellence et son impact positif sur la société.
+                                    Avançons ensemble, unis par notre ambition commune de bâtir un avenir meilleur.
+                                    Professeur [Nom du Doyen]
+                                    Doyen de l’UFR Sciences Économiques et Gestion
                                 </span>
                             </li>
                             <li class="mb-2">
@@ -69,11 +94,11 @@
 
     </div>
 
-    <div class=" ">
+    <div class=" container">
 
         <br><br>
         <br>
-        <div class="row  justify-content-center">
+        <div class="row  justify-content-center" >
             <div class="col-lg-12 col-md-12">
                 <div class="row align-items-center">
 
@@ -145,37 +170,135 @@
                 </div>
                 <br>
 
-                
+
+            </div>
+        </div>
+
+
+        <br>
+        <section class="bg-success text-white py-5 rounded">
+            <div class="container text-left">
+                <h1 class="display-5 fw-bold">Organigramme</h1>
             </div>
 
+            <div class="org-chart">
+                <!-- Niveau 1 -->
+                <div class="org-level">
+                    <div class="org-box">Doyen</div>
+                </div>
 
-<br>  <center>
-                            <h1 class="display-5 fw-bold Justify-content-center">Organigramme</h1>
-                        </center><br><br>
+                <div class="line"></div>
 
+                <!-- Niveau 2 -->
+                <div class="org-level">
+                    <div class="org-box">Vice-Doyen</div>
+                    <div class="org-box">Responsable Administratif</div>
+                </div>
 
+                <div class="line"></div>
+
+                <!-- Niveau 3 -->
+                <div class="org-level">
+                    <div class="org-box">Chef de Département A</div>
+                    <div class="org-box">Chef de Département B</div>
+                    <div class="org-box">Chef de Département C</div>
+                </div>
+            </div>
+        </section>
         </div>
-    </div>
-    <br>
+        <style>
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
 
-</div>
-<section class="py-8 bg-gray-200" >
-  <div class="container my-lg-8">
-    <!-- row -->
-    <div class="row justify-content-center text-center">
-      <div class="col-md-9 col-12">
-        <!-- heading -->
-        <h2 class="display-4">Consultez vos résultats d'examen</h2>
-        <p class="lead px-lg-8 mb-6">Accédez facilement et rapidement à vos résultats d'examen. Cliquez ci-dessous pour commencer.</p>
-        <!-- button -->
-        <div class="d-grid d-md-block">
-          <a href="../results.html" class="btn btn-primary mb-2 mb-md-0">Voir mes résultats</a>
-          <a href="../support.html" class="btn btn-info">Assistance aux étudiants</a>
+        .org-level {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .org-box {
+            padding: 15px 30px;
+            background-color: #2b6635;
+            border: 1px solid white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s, transform 0.3s;
+            color: white;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .org-box:hover {
+            background-color: #193E1FFF;
+            transform: scale(1.05);
+        }
+
+        .line {
+            width: 3px;
+            height: 30px;
+            background-color: white;
+            margin: 0 auto;
+        }
+        </style>
+        <br><br>
+        <section class=" " style="background-color:#E7EEEA"><br><br>
+        <div class="container">
+            <h3 class="text-left display-5 mb-4" style="color:#2b6635">Recontrez nos enseignants</h3>
+            <div class="row">
+                <!-- Professeur 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="card border" style="background-color:#2b6635 ;color:white">
+                        <a href="#!">
+                            <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1" alt="professeur-1"
+                                class="img-fluid w-100 rounded-top-3">
+                        </a>
+                        <div class="card-body text-center">
+                            <h3 class="mb-2"><a href="#!" class="text-inherit text-white">Prof. Jean Dupont</a></h3>
+                            <p class="text-muted mb-1">Professeur en Économie</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                    <div class="card border" style="background-color:#2b6635 ;color:white">
+                        <a href="#!">
+                            <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1" alt="professeur-1"
+                                class="img-fluid w-100 rounded-top-3">
+                        </a>
+                        <div class="card-body text-center">
+                            <h3 class="mb-2"><a href="#!" class="text-inherit text-white">Prof. Jean Dupont</a></h3>
+                            <p class="text-muted mb-1">Professeur en Économie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+  
+
+    <!--section class="py-8 bg-gray-200">
+        <div class="container my-lg-8">
+           
+            <div class="row justify-content-center text-center">
+                <div class="col-md-9 col-12">
+                  
+                    <h2 class="display-4">Consultez vos résultats d'examen</h2>
+                    <p class="lead px-lg-8 mb-6">Accédez facilement et rapidement à vos résultats d'examen. Cliquez
+                        ci-dessous pour commencer.</p>
+               
+                    <div class="d-grid d-md-block">
+                        <a href="../results.html" class="btn btn-primary mb-2 mb-md-0">Voir mes résultats</a>
+                        <a href="../support.html" class="btn btn-info">Assistance aux étudiants</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section-->
     </div>
-  </div>
-</section>
 
-
-@endsection
+    @endsection

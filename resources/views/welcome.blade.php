@@ -94,23 +94,52 @@
            background-size: cover; 
            background-position: center; 
            height: 600px;">
-    <div class="container ">
-        <div class="col-md-2" style="background-color: #3CA45D; color: white; padding: 10px;">
-            Actualité
-        </div>
-        <div class="col-md-10"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2" style="background-color: #3CA45D; color: white; padding: 10px;">
+        Actualité
+      </div>
+      <div class="col-md-10"></div>
+   
 
-        <div class="col-md-12" style="background-color: #FFFFFF74; color: black; padding: 20px;">
-            <p style="font-size: 30px;">
-                The Impact of Technology on the Workplace: How Technology is Changing
-            </p>
-            <br>
-            <p style="font-size: 13px;">
-                Administration, Janvier 2024
-            </p>
+    <div class="col-md-12 " style="background-color: #FFFFFF74; color: black; padding: 10px;">
+      <div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Texte 1 -->
+          <div class="carousel-item active">
+            <p style="font-size: 30px;">Bienvenue à l'UFR de l'Université de Cocody, un espace dédié à l'excellence académique et à l'innovation.</p>
+            <p style="font-size: 13px;">Administration, Janvier 2024</p>
+          </div>
+          <!-- Texte 2 -->
+          <div class="carousel-item">
+            <p style="font-size: 30px;">Explorez les programmes variés offerts par l'UFR, conçus pour répondre aux besoins académiques et professionnels des étudiants.</p>
+            <p style="font-size: 13px;">Direction Pédagogique, Février 2024</p>
+          </div>
+          <!-- Texte 3 -->
+          <div class="carousel-item">
+            <p style="font-size: 30px;">Rejoignez une communauté dynamique et engageante à l'UFR de l'Université de Cocody.</p>
+            <p style="font-size: 13px;">Service de Communication, Mars 2024</p>
+          </div>
+          <!-- Texte 4 -->
+          <div class="carousel-item">
+            <p style="font-size: 30px;">The Impact of Technology on the Workplace: How Technology is Changing.</p>
+            <p style="font-size: 13px;">Administration, Janvier 2024</p>
+          </div>
         </div>
-    </div>
+        <!-- Contrôles du slider -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#textCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#textCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div> </div>
+  </div>
 </section>
+
 
 <section class="">
     <div class="container my-lg-8">
@@ -144,7 +173,7 @@
             <div class="col-md-3">
                 <div class="card mb-4 mb-xl-0 card-hover border">
                     <a href="#!">
-                        <img src="../../assets/images/education/edu-webinar-1.jpg" alt="webinar-1"
+                        <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
                             class="img-fluid w-100 rounded-top-3">
                     </a>
                     <div class="card-body">
@@ -169,7 +198,7 @@
         <div class="col-md-3">
             <div class="card mb-4 mb-xl-0 card-hover border">
                 <a href="#!">
-                    <img src="../../assets/images/education/edu-webinar-1.jpg" alt="webinar-1"
+                    <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
                         class="img-fluid w-100 rounded-top-3">
                 </a>
                 <div class="card-body">
@@ -194,7 +223,7 @@
     <div class="col-md-3">
         <div class="card mb-4 mb-xl-0 card-hover border">
             <a href="#!">
-                <img src="../../assets/images/education/edu-webinar-1.jpg" alt="webinar-1"
+                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
                     class="img-fluid w-100 rounded-top-3">
             </a>
             <div class="card-body">
@@ -218,7 +247,7 @@
     <div class="col-md-3">
         <div class="card mb-4 mb-xl-0 card-hover border">
             <a href="#!">
-                <img src="../../assets/images/education/edu-webinar-1.jpg" alt="webinar-1"
+                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
                     class="img-fluid w-100 rounded-top-3">
             </a>
             <div class="card-body">
@@ -275,7 +304,7 @@ padding-bottom: 30px;">
             <div class="col">
                 <div class="card mb-4 mb-xl-0 card-hover border">
                     <!--a href="#!">
-                                        <img src="../../assets/images/education/edu-webinar-1.jpg" alt="webinar-1" class="img-fluid w-100 rounded-top-3">
+                                        <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1" class="img-fluid w-100 rounded-top-3">
                                     </a-->
                     <div class="card-body">
                         <h3 class="mb-4 text-truncate">
@@ -326,7 +355,7 @@ padding-bottom: 30px;">
             <div class="col-md-3">
                 <div class="card mb-4 mb-xl-0 card-hover border">
                     <a href="#!">
-                        <img src="../../assets/images/education/edu-webinar-1.jpg" alt="webinar-1"
+                        <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
                             class="img-fluid w-100 rounded-top-3">
                     </a>
                     <div class="card-body">
@@ -340,7 +369,7 @@ padding-bottom: 30px;">
         <div class="col-md-3">
             <div class="card mb-4 mb-xl-0 card-hover border">
                 <a href="#!">
-                    <img src="../../assets/images/education/edu-webinar-1.jpg" alt="webinar-1"
+                    <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
                         class="img-fluid w-100 rounded-top-3">
                 </a>
                 <div class="card-body">
@@ -354,7 +383,7 @@ padding-bottom: 30px;">
     <div class="col-md-3">
         <div class="card mb-4 mb-xl-0 card-hover border">
             <a href="#!">
-                <img src="../../assets/images/education/edu-webinar-1.jpg" alt="webinar-1"
+                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
                     class="img-fluid w-100 rounded-top-3">
             </a>
             <div class="card-body">
@@ -368,7 +397,7 @@ padding-bottom: 30px;">
     <div class="col-md-3">
         <div class="card mb-4 mb-xl-0 card-hover border">
             <a href="#!">
-                <img src="../../assets/images/education/edu-webinar-1.jpg" alt="webinar-1"
+                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
                     class="img-fluid w-100 rounded-top-3">
             </a>
             <div class="card-body">
