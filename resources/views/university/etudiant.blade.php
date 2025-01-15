@@ -35,7 +35,7 @@
                     <div class="col-lg-6 col-md-6 col-12">
                         <a href="#!">
                             <div class="rounded-3 card-lift" style="
-                                background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1);
+                                background-image: url(image/7I8A9583.jpg);
                                 background-repeat: no-repeat;
                                 height: 386px;
                                 background-size: cover;
@@ -45,7 +45,7 @@
                     <div class="col-lg-6 col-md-6 col-12">
                         <a href="#!">
                             <div class="mb-4 rounded-3 card-lift" style="
-                                background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1);
+                                background-image: url(image/7I8A9612.jpg);
                                 background-repeat: no-repeat;
                                 height: 180px;
                                 background-size: cover;
@@ -53,7 +53,7 @@
                         </a>
                         <a href="#!">
                             <div class="mb-2 rounded-3 card-lift" style="
-                                background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1);
+                                background-image: url(image/7I8A9863.jpg);
                                 background-repeat: no-repeat;
                                 height: 180px;
                                 background-size: cover;
@@ -136,27 +136,27 @@
         <div class="row gy-4">
             <!-- Image 1 -->
             <div class="col-lg-4 col-md-4 col-12">
-                <a href="https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1" class="glightbox rounded-3">
+                <a href="image/7I8A9576.jpg" class="glightbox rounded-3">
                     <div class="rounded-3 card-lift"
-                        style="background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1); background-repeat: no-repeat; height: 350px; background-size: cover">
+                        style="background-image: url(image/7I8A9576.jpg); background-repeat: no-repeat; height: 350px; background-size: cover">
                     </div>
                 </a>
             </div>
 
             <!-- Image 2 -->
             <div class="col-lg-4 col-md-4 col-12">
-                <a href="https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1" class="glightbox rounded-3">
+                <a href="image/7I8A9632.jpg" class="glightbox rounded-3">
                     <div class="rounded-3 card-lift"
-                        style="background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1); background-repeat: no-repeat; height: 350px; background-size: cover">
+                        style="background-image: url(image/7I8A9632.jpg); background-repeat: no-repeat; height: 350px; background-size: cover">
                     </div>
                 </a>
             </div>
 
             <!-- Image 3 -->
             <div class="col-lg-4 col-md-4 col-12">
-                <a href="https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1" class="glightbox rounded-3">
+                <a href="image/7I8A9863.jpg" class="glightbox rounded-3">
                     <div class="rounded-3 card-lift"
-                        style="background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1); background-repeat: no-repeat; height: 350px; background-size: cover">
+                        style="background-image: url(image/7I8A9863.jpg); background-repeat: no-repeat; height: 350px; background-size: cover">
                     </div>
                 </a>
             </div>
@@ -174,7 +174,7 @@
         <div class="row g-4">
             <div class="col-md-4 col-12">
                 <div class="card shadow border-0">
-                    <img src="https://fakeimg.pl/400x250/808080/ffffff/?text=M1" class="card-img-top" alt="Accompagnement 1">
+                    <img src="image/7I8A9696.jpg" class="card-img-top" alt="Accompagnement 1">
                     <div class="card-body">
                         <h5 class="card-title">Mentorat académique</h5>
                         <p class="card-text">Bénéficiez de l'accompagnement de mentor(e)s expérimentés pour vous guider dans votre parcours académique et vous aider à atteindre vos objectifs.</p>
@@ -184,7 +184,7 @@
             </div>
             <div class="col-md-4 col-12">
                 <div class="card shadow border-0">
-                    <img src="https://fakeimg.pl/400x250/808080/ffffff/?text=M2" class="card-img-top" alt="Accompagnement 2">
+                    <img src="image/7I8A9894.jpg" class="card-img-top" alt="Accompagnement 2">
                     <div class="card-body">
                         <h5 class="card-title">Ateliers pratiques</h5>
                         <p class="card-text">Participez à nos ateliers pratiques sur la gestion du temps, la prise de notes et la préparation aux examens. Ces sessions sont animées par des expertes.</p>
@@ -194,7 +194,7 @@
             </div>
             <div class="col-md-4 col-12">
                 <div class="card shadow border-0">
-                    <img src="https://fakeimg.pl/400x250/808080/ffffff/?text=M3" class="card-img-top" alt="Accompagnement 3">
+                    <img src="image/7I8A9600.jpg" class="card-img-top" alt="Accompagnement 3">
                     <div class="card-body">
                         <h5 class="card-title">Réseau d'anciennes étudiantes</h5>
                         <p class="card-text">Rejoignez notre réseau d'anciennes étudiantes et bénéficiez de leurs conseils et de leur soutien tout au long de vos études.</p>
@@ -505,10 +505,10 @@
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="card h-100 p-4 border-0 shadow">
                     <div class="d-flex align-items-center mb-4">
-                        <img src="https://fakeimg.pl/80x80/808080/ffffff/?text=E1" alt="Profil Étudiante" class="rounded-circle me-3" width="80" height="80">
+                        <img src="image/7I8A9767.jpg" alt="Profil Étudiante" class="rounded-circle me-3" width="80" height="80">
                         <div>
                             <h5 class="mb-0">Marie L.</h5>
-                            <small class="text-muted">Étudiante en Médecine</small>
+                            <small class="text-muted">Étudiante en ressources humaine</small>
                         </div>
                     </div>
                     <p>
@@ -519,10 +519,10 @@
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="card h-100 p-4 border-0 shadow">
                     <div class="d-flex align-items-center mb-4">
-                        <img src="https://fakeimg.pl/80x80/808080/ffffff/?text=E2" alt="Profil Étudiante" class="rounded-circle me-3" width="80" height="80">
+                        <img src="image/7I8A9884.jpg" alt="Profil Étudiante" class="rounded-circle me-3" width="80" height="80">
                         <div>
                             <h5 class="mb-0">Sophie M.</h5>
-                            <small class="text-muted">Étudiante en Informatique</small>
+                            <small class="text-muted">Étudiante en banque</small>
                         </div>
                     </div>
                     <p>
@@ -533,10 +533,10 @@
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="card h-100 p-4 border-0 shadow">
                     <div class="d-flex align-items-center mb-4">
-                        <img src="https://fakeimg.pl/80x80/808080/ffffff/?text=E3" alt="Profil Étudiante" class="rounded-circle me-3" width="80" height="80">
+                        <img src="image/7I8A9751.jpg" alt="Profil Étudiante" class="rounded-circle me-3" width="80" height="80">
                         <div>
                             <h5 class="mb-0">Fatou D.</h5>
-                            <small class="text-muted">Étudiante en Droit</small>
+                            <small class="text-muted">Étudiante en economie</small>
                         </div>
                     </div>
                     <p>
