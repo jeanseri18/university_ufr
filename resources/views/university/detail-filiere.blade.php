@@ -5,9 +5,28 @@
 @section('content')
 
 <!-- Header with Background Image -->
-<div class="bg-header" style="background-image: url('https://fakeimg.pl/400x250/808080/ffffff/');height: 400px;">
-    <div class="container text-center align-item-center justify-content-center text-white py-5">
-        <h1>{{ $filiere->categorie }}: {{ $filiere->titre }}</h1>
+<div class="bg-header position-relative" style="background-image: url('{{ asset('image/7I8A9914.jpg') }}'); 
+           background-size: cover; 
+           background-position: center; 
+           height: 400px;">
+    <!-- Overlay vert -->
+    <div class="overlay" style="
+           position: absolute; 
+           top: 0; 
+           left: 0; 
+           width: 100%; 
+           height: 100%; 
+           background-color: rgba(0, 0, 0, 0.9)
+           z-index: 1;">
+    </div>
+
+    <!-- Contenu -->
+    <div class="container text-center align-item-center justify-content-center text-white py-5 position-relative" style="z-index: 2;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1 class="text-white display-2">{{ $filiere->categorie }}:<br> {{ $filiere->titre }}</h1>
     </div>
 </div>
 
