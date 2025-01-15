@@ -90,14 +90,14 @@
 @section('title', 'Acceuil | Bem executive school')
 
 @section('content')
-<section class="bg-light d-flex align-items-center justify-content-center" style="background-image: url('assets/accueilback.png'); 
+<section class="bg-light d-flex align-items-center justify-content-center" style="background-image: url('image/7I8A9623.jpg'); 
            background-size: cover; 
            background-position: center; 
-           height: 600px;">
+           height: 650px;">
   <div class="container">
     <div class="row">
       <div class="col-md-2 " style="background-color: white; color: #3CA45D; padding: 10px;">
-     <strong>   Actualité</strong>
+     <strong>   Bienvenue à l'UFR</strong>
       </div>
       <div class="col-md-10"></div>
    

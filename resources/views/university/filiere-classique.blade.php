@@ -25,15 +25,15 @@
                      <div class="row g-4" data-cues="slideInUp" data-delay="1000" data-disabled="true">
                         <div class="col-lg-6 col-md-6 col-12" data-cue="slideInUp" data-delay="1000" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1000ms; animation-direction: normal; animation-fill-mode: both;">
                            <a href="#!">
-                              <div class="rounded-3 card-lift" style="background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Image); background-repeat: no-repeat; height: 386px; background-size: cover"></div>
+                              <div class="rounded-3 card-lift" style="background-image: url(image/7I8A9747.jpg); background-repeat: no-repeat; height: 386px; background-size: cover"></div>
                            </a>
                         </div>
                         <div class="col-lg-6 col-md-6 col-12" data-cue="slideInUp" data-delay="1000" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;">
                            <a href="#!">
-                              <div class="mb-4 rounded-3 card-lift" style="background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Image); background-repeat: no-repeat; height: 180px; background-size: cover"></div>
+                              <div class="mb-4 rounded-3 card-lift" style="background-image: url(image/7I8A9751.jpg); background-repeat: no-repeat; height: 180px; background-size: cover"></div>
                            </a>
                            <a href="#!">
-                              <div class="mb-2 rounded-3 card-lift" style="background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Image); background-repeat: no-repeat; height: 180px; background-size: cover"></div>
+                              <div class="mb-2 rounded-3 card-lift" style="background-image: url(image/7I8A9755.jpg); background-repeat: no-repeat; height: 180px; background-size: cover"></div>
                            </a>
                         </div>
                      </div>
@@ -59,7 +59,7 @@
                             <p>Explorez nos programmes de Licence conçus pour une solide base académique .</p>
                         </div>
                         <div class="mt-auto">
-                            <a href="#" class="d-flex flex-row gap-2">
+                            <a href="{{ route('licence.classique')}}" class="d-flex flex-row gap-2">
                                 <span class="btn btn-icon btn-secondary btn-xs">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
@@ -79,7 +79,7 @@
                             <p>Avancez dans votre parcours académique avec nos formations spécialisées de Master.</p>
                         </div>
                         <div class="mt-auto">
-                            <a href="#" class="d-flex flex-row gap-2">
+                            <a href="{{ route('master.classique')}}" class="d-flex flex-row gap-2">
                                 <span class="btn btn-icon btn-secondary btn-xs">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
@@ -99,7 +99,7 @@
                             <p>Poursuivez votre carrière académique avec nos programmes de Doctorat.</p>
                         </div>
                         <div class="mt-auto">
-                            <a href="#" class="d-flex flex-row gap-2">
+                            <a href="{{ route('doctorat.classique')}}" class="d-flex flex-row gap-2">
                                 <span class="btn btn-icon btn-secondary btn-xs">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>

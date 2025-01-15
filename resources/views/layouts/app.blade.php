@@ -60,11 +60,14 @@
                     <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu"
                         data-accordion="false">
 
-
-
-                        <li class="nav-item"> <a href="#" class="nav-link"> <i
+                        <li class="nav-item"> <a href="{{ route('filieres.index') }}" class="nav-link"> <i
                                     class="nav-icon bi bi-circle text-info"></i>
-                                <p>Informational</p>
+                                <p>Filieres</p>
+                            </a> </li>
+
+                        <li class="nav-item"> <a href="{{ route('users.index')}}" class="nav-link"> <i
+                                    class="nav-icon bi bi-circle text-info"></i>
+                                <p>Utilisateur</p>
                             </a> </li>
                     </ul> <!--end::Sidebar Menu-->
                 </nav>
@@ -74,7 +77,7 @@
         <main class="app-main">
             <div class="app-content-header"> <!--begin::Container-->
                 <div class="container-fluid"> <!--begin::Row-->
-                    <div class="row">
+                    <!--div class="row">
                         <div class="col-sm-6">
                             <h3 class="mb-0">Dashboard</h3>
                         </div>
@@ -86,7 +89,7 @@
                                 </li>
                             </ol>
                         </div>
-                    </div> <!--end::Row-->
+                    </div--> <!--end::Row-->
                 </div> <!--end::Container-->
             </div> <!--end::App Content Header--> <!--begin::App Content-->
             <div class="app-content"> <!--begin::Container-->

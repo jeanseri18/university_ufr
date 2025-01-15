@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\PageUniversityController;
+use App\Http\Controllers\FiliereController;
+
+Route::get('/filieres', [FiliereController::class, 'index'])->name('filieres.index'); // Afficher toutes les filières
+Route::get('/filieres/create', [FiliereController::class, 'create'])->name('filieres.create'); // Afficher le formulaire de création
+Route::post('/filieres', [FiliereController::class, 'store'])->name('filieres.store'); // Enregistrer une nouvelle filière
+Route::get('/filieres/{id}', [FiliereController::class, 'show'])->name('filieres.show'); // Afficher une filière spécifique
+Route::get('/filieres/{id}/edit', [FiliereController::class, 'edit'])->name('filieres.edit'); // Afficher le formulaire d'édition
+Route::put('/filieres/{id}', [FiliereController::class, 'update'])->name('filieres.update'); // Mettre à jour une filière
+Route::delete('/filieres/{id}', [FiliereController::class, 'destroy'])->name('filieres.destroy'); // Supprimer une filière
+
+Route::get('/licence-classique', [FiliereController::class, 'ShowLicenceClassique'])->name('licence.classique');
+Route::get('/master-classique', [FiliereController::class, 'ShowMasterClassique'])->name('master.classique');
+Route::get('/doctorat-classique', [FiliereController::class, 'ShowDoctoratClassique'])->name('doctorat.classique');
+Route::get('/detail/filieres/{id}', [FiliereController::class, 'showpublic'])->name('detail.classique');
 
 Route::get('/qui-sommes-nous', [PageUniversityController::class, 'quiSommesNous'])->name('quiSommesNous');
 Route::get('/larecherche', [PageUniversityController::class, 'larecherche'])->name('larecherche');
@@ -27,3 +43,27 @@ Route::get('/etudiant', [PageUniversityController::class, 'etudiant'])->name('et
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Route pour lister les utilisateurs
+Route::get('users', [UserController::class, 'index'])->name('users.index');
+
+// Route pour afficher le formulaire de création d'un utilisateur
+Route::get('users/create', [UserController::class, 'create'])->name('users.create');
+
+// Route pour enregistrer un utilisateur
+Route::post('users', [UserController::class, 'store'])->name('users.store');
+
+
+Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('login', [AuthController::class, 'login']);
+
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+
+Route::get('change-password', [AuthController::class, 'showChangePasswordForm'])->name('change.password.form');
+Route::post('change-password', [AuthController::class, 'changePassword'])->name('change.password');
+
+// Route protégée (page d'accueil ou autre)
+Route::get('home', function () {
+    return view('dashboard');
+})->name('home')->middleware('auth');

@@ -62,10 +62,10 @@
                 </div>
             </div>
             <div class="col-md-6 col-12 position-md-absolute top-0 end-0 left-0 h-100 mt-6 mt-md-0 px-0"
-                style="background-image: url(https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise); background-size: cover; background-position: center">
+                style="background-image: url(image/7I8A9939.jpg); background-size: cover; background-position: center">
                 <div class="d-block d-md-none">
                     <figure class="figure">
-                        <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="" class="img-fluid">
+                        <img src="image/" alt="" class="img-fluid">
                     </figure>
                 </div>
             </div>

@@ -92,6 +92,9 @@
                     <li><a href="{{ route('larecherche') }}" class="dropdown-item">La recherche à l'UFRSEG</a></li>
 
                 </ul>
+                <div class="mt-3 mt-lg-0 d-flex align-items-center">
+                  <a href="{{ route('login') }}" class="btn btn-primary">Se connecter</a>
+               </div>
             </div>
         </div>
     </nav>

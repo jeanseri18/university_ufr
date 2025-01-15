@@ -20,7 +20,7 @@
 }
 </style>
 <section class="bg-light"
-    style="    background: linear-gradient(#040B11A3,#0A0B0B9D), url('assets/accueilback.png') no-repeat right; background-size: auto; background-position: right;height:550px">
+    style="    background: linear-gradient(#040B11A3,#0A0B0B9D), url('image/7I8A9914.jpg') no-repeat right; background-size: cover; background-position: right;height:550px">
 
     <div class="container ">
         <div>
@@ -215,7 +215,7 @@
             <div class="col-md-6">
                 <br>
 
-                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Prof+1" class="card-img w-100" style="  background-size: cover;background-color:gray"
+                <img src="image/7I8A9884.jpg" class="card-img w-100 rounded-4" style="  background-size: cover;background-color:gray"
                     alt="Image">
 
             </div>
@@ -242,27 +242,7 @@
             </div>
         </div>
 
-<br><div class="bg-primary py-6 px-6 px-xl-0 rounded-4">
-  <div class="row align-items-center">
-    <!-- Texte et bouton -->
-    <div class="offset-xl-1 col-xl-5 col-md-6 col-12">
-      <div>
-        <h2 class="h1 text-white mb-3">Partagez vos opportunités avec nous</h2>
-        <p class="text-white-50 fs-4">
-          Publiez des offres d'emploi, de stage ou toute autre opportunité pour nos étudiants et diplômés.
-          Rejoignez notre réseau de partenaires dès aujourd'hui !
-        </p>
-        <button class="btn btn-secondary">Poster une offre</button>
-      </div>
-    </div>
-    <!-- Image -->
-    <div class="col-xl-6 col-md-6 col-12">
-      <div class="text-center d-none d-md-block">
-        <img src="../../assets/images/partnership/job-posting.png" alt="Poster une offre" class="img-fluid">
-      </div>
-    </div>
-  </div>
-</div>
+<br>
             </div>
 </section>
 <br>
@@ -318,14 +298,41 @@
         </div>
     </div>
 </section>
-<div class=" py-8 container rounded-4">
-    <div class="">
+<br>
+<br>
+<br>
+<div class="bg-white rounded-4 container">
+  <div class="row align-items-center">
+    <!-- Texte et bouton -->
+    <div class="offset-xl-1 col-xl-5 col-md-6 col-12 ">
+      <div class=" py-6 px-6 px-xl-0 ">
+        <h2 class="h1 text-black mb-3">Partagez vos opportunités avec nous</h2>
+        <p class="text-black-50 fs-4">
+          Publiez des offres d'emploi, de stage ou toute autre opportunité pour nos étudiants et diplômés.
+          Rejoignez notre réseau de partenaires dès aujourd'hui !
+        </p>
+        <button class="btn btn-secondary">Poster une offre</button>
+      </div>
+    </div>
+    <!-- Image -->
+    <div class="col-xl-6 col-md-6 col-12">
+      <div class="text-center d-none d-md-block">
+        <img src="image/7I8A9742.jpg" alt="Poster une offre" class="img-fluid rounded-4">
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<div class="bg-light py-8 ">
+    <div class="container">
         <span class="fw-semibold display-2">Contact</span>
-        <h2 class="h1 mt-3 mb-0 text-white"> Visibilité et réseau : </h2>
+        <h2 class="h1 mt-3 mb-0 text-black"> Visibilité et réseau : </h2>
 
     </div>
-    <div class="card">
-        <div class="card-body p-6">
+    <div class="">
+        <div class=" p-6">
             <div>
                 <h3 class="mb-4">En collaborant avec UFR, vous rejoignez un réseau de leaders qui façonnent l'avenir des
                     affaires et du management. Ensemble, nous développons des solutions qui transforment non seulement
@@ -392,7 +399,6 @@
     </div>
 </div>
 
-<br><br><br>
 
 
 
