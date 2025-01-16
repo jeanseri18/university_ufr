@@ -23,7 +23,7 @@ Route::get('/actualites', [ActualiteController::class, 'index'])->name('actualit
 
 // Formulaire pour ajouter une actualité
 Route::get('/actualites/create', [ActualiteController::class, 'create'])->name('actualites.create');
-
+  
 // Enregistrer une nouvelle actualité
 Route::post('/actualites', [ActualiteController::class, 'store'])->name('actualites.store');
 
