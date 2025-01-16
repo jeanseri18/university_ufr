@@ -16,6 +16,25 @@ use App\Http\Controllers\UserController;
 */
 use App\Http\Controllers\PageUniversityController;
 use App\Http\Controllers\FiliereController;
+use App\Http\Controllers\ActualiteController;
+
+// Liste des actualités
+Route::get('/actualites', [ActualiteController::class, 'index'])->name('actualites.index');
+
+// Formulaire pour ajouter une actualité
+Route::get('/actualites/create', [ActualiteController::class, 'create'])->name('actualites.create');
+
+// Enregistrer une nouvelle actualité
+Route::post('/actualites', [ActualiteController::class, 'store'])->name('actualites.store');
+
+// Formulaire pour modifier une actualité
+Route::get('/actualites/{actualite}/edit', [ActualiteController::class, 'edit'])->name('actualites.edit');
+
+// Mettre à jour une actualité
+Route::put('/actualites/{actualite}', [ActualiteController::class, 'update'])->name('actualites.update');
+
+// Supprimer une actualité
+Route::delete('/actualites/{actualite}', [ActualiteController::class, 'destroy'])->name('actualites.destroy');
 
 Route::get('/filieres', [FiliereController::class, 'index'])->name('filieres.index'); // Afficher toutes les filières
 Route::get('/filieres/create', [FiliereController::class, 'create'])->name('filieres.create'); // Afficher le formulaire de création
