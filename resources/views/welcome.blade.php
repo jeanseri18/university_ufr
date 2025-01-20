@@ -121,10 +121,7 @@
             <p style="font-size: 13px;">Service de Communication, Mars 2024</p>
           </div>
           <!-- Texte 4 -->
-          <div class="carousel-item"  style="padding: 110px;">
-            <p style="font-size: 30px;">The Impact of Technology on the Workplace: How Technology is Changing.</p>
-            <p style="font-size: 13px;">Administration, Janvier 2024</p>
-          </div>
+      
         </div>
         <!-- Contrôles du slider -->
         <button class="carousel-control-prev" type="button" data-bs-target="#textCarousel" data-bs-slide="prev">
@@ -170,104 +167,35 @@
             </div>
         </div>
         <div class="table-responsive-xl pb-6 row">
+        @foreach ($actualites as $actualite)
             <div class="col-md-3">
                 <div class="card mb-4 mb-xl-0 card-hover border">
                     <a href="#!">
-                        <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
+                        <img src="{{ asset('storage/' . $actualite->image) }}" alt="webinar-1"
                             class="img-fluid w-100 rounded-top-3">
                     </a>
                     <div class="card-body">
                         <h3 class="mb-4 text-truncate">
-                            <a href="#!" class="text-inherit">Education Edition Deployment And Set Up</a>
+                            <a href="#!" class="text-inherit">{{ $actualite->titre }}</a>
                         </h3>
                         <div class="mb-4">
                             <div class="mb-3 lh-1">
 
-                                <span>Dans le cadre de ses activités de soutien à la recherche et à l’innovation
-                                    en...</span>
+                                <span>{{ $actualite->detail }}</span>
                             </div>
                             <div class="lh-1">
 
-                                <span>poste le 10 janv</span>
+                                <span>{{ $actualite->date_ajoute }}</span>
                             </div>
                         </div>
                         <a href="#!" class="btn btn-light-primary text-primary">Continuer la lecture</a>
                     </div>
                 </div>
             </div>
-        <div class="col-md-3">
-            <div class="card mb-4 mb-xl-0 card-hover border">
-                <a href="#!">
-                    <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
-                        class="img-fluid w-100 rounded-top-3">
-                </a>
-                <div class="card-body">
-                    <h3 class="mb-4 text-truncate">
-                        <a href="#!" class="text-inherit">Education Edition Deployment And Set Up</a>
-                    </h3>
-                    <div class="mb-4">
-                        <div class="mb-3 lh-1">
+            @endforeach
 
-                            <span>Dans le cadre de ses activités de soutien à la recherche et à l’innovation
-                                en...</span>
-                        </div>
-                        <div class="lh-1">
-
-                            <span>poste le 10 janv</span>
-                        </div>
-                    </div>
-                    <a href="#!" class="btn btn-light-primary text-primary">Continuer la lecture</a>
-                </div>
-            </div>
-        </div>
-    <div class="col-md-3">
-        <div class="card mb-4 mb-xl-0 card-hover border">
-            <a href="#!">
-                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
-                    class="img-fluid w-100 rounded-top-3">
-            </a>
-            <div class="card-body">
-                <h3 class="mb-4 text-truncate">
-                    <a href="#!" class="text-inherit">Education Edition Deployment And Set Up</a>
-                </h3>
-                <div class="mb-4">
-                    <div class="mb-3 lh-1">
-
-                        <span>Dans le cadre de ses activités de soutien à la recherche et à l’innovation en...</span>
-                    </div>
-                    <div class="lh-1">
-
-                        <span>poste le 10 janv</span>
-                    </div>
-                </div>
-                <a href="#!" class="btn btn-light-primary text-primary">Continuer la lecture</a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card mb-4 mb-xl-0 card-hover border">
-            <a href="#!">
-                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
-                    class="img-fluid w-100 rounded-top-3">
-            </a>
-            <div class="card-body">
-                <h3 class="mb-4 text-truncate">
-                    <a href="#!" class="text-inherit">Education Edition Deployment And Set Up</a>
-                </h3>
-                <div class="mb-4">
-                    <div class="mb-3 lh-1">
-
-                        <span>Dans le cadre de ses activités de soutien à la recherche et à l’innovation en...</span>
-                    </div>
-                    <div class="lh-1">
-
-                        <span>poste le 10 janv</span>
-                    </div>
-                </div>
-                <a href="#!" class="btn btn-light-primary text-primary">Continuer la lecture</a>
-            </div>
-        </div>
-    </div>
+    
+    
     </div>
 </section>
 
@@ -352,61 +280,24 @@ padding-bottom: 30px;">
             </div>
         </div>
         <div class="table-responsive-xl pb-6 row">
+        @foreach ($mediatheques as $media)
+
             <div class="col-md-3">
                 <div class="card mb-4 mb-xl-0 card-hover border">
                     <a href="#!">
-                        <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
+                        <img src="{{ asset('storage/' . $media->fichier) }}" alt="webinar-1"
                             class="img-fluid w-100 rounded-top-3">
                     </a>
                     <div class="card-body">
                         <h3 class="mb-4 text-truncate">
-                            <a href="#!" class="text-inherit">Education Edition Deployment And Set Up</a>
+                            <a href="#!" class="text-inherit">{{ $media->titre }}</a>
                         </h3>
                         
                     </div>
                 </div>
             </div>
-        <div class="col-md-3">
-            <div class="card mb-4 mb-xl-0 card-hover border">
-                <a href="#!">
-                    <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
-                        class="img-fluid w-100 rounded-top-3">
-                </a>
-                <div class="card-body">
-                    <h3 class="mb-4 text-truncate">
-                        <a href="#!" class="text-inherit">Education Edition Deployment And Set Up</a>
-                    </h3>
-                    
-                </div>
-            </div>
-        </div>
-    <div class="col-md-3">
-        <div class="card mb-4 mb-xl-0 card-hover border">
-            <a href="#!">
-                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
-                    class="img-fluid w-100 rounded-top-3">
-            </a>
-            <div class="card-body">
-                <h3 class="mb-4 text-truncate">
-                    <a href="#!" class="text-inherit">Education Edition Deployment And Set Up</a>
-                </h3>
-                
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card mb-4 mb-xl-0 card-hover border">
-            <a href="#!">
-                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1"
-                    class="img-fluid w-100 rounded-top-3">
-            </a>
-            <div class="card-body">
-                <h3 class="mb-4 text-truncate">
-                    <a href="#!" class="text-inherit">Education Edition Deployment And Set Up</a>
-                </h3>
-                           </div>
-        </div>
-    </div>
+            @endforeach
+        
     </div></section>
 <!-- Hero Section -->
 

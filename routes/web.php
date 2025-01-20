@@ -75,11 +75,9 @@ Route::get('/alumnis', [PageUniversityController::class, 'alumnis'])->name('alum
 Route::get('/actualité', [PageUniversityController::class, 'actualité'])->name('actualité');
 Route::get('/partenaire', [PageUniversityController::class, 'partenaire'])->name('partenaire');
 Route::get('/etudiant', [PageUniversityController::class, 'etudiant'])->name('etudiant');
+Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 // Route pour lister les utilisateurs

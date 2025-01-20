@@ -4,10 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;  // Importer la façade DB
+use App\Models\Mediatheque;
+use App\Models\Actualite;
 
 class PageUniversityController extends Controller
 {
     //
+
+
+    public function welcome()
+    {
+        $actualites = Actualite::all();
+        $mediatheques = Mediatheque::all();
+
+        return view('welcome', compact('actualites','mediatheques'));
+    }
 
     public function quiSommesNous()
     {
@@ -73,7 +84,10 @@ foreach ($filieres as $index => $filiere) {
     }
     public function actualité()
     {
-        return view('welcome');
+        $actualites = Actualite::all();
+        $mediatheques = Mediatheque::all();
+
+        return view('welcome', compact('actualites','mediatheques'));
     }
     public function partenaire()
     {
