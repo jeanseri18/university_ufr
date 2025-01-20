@@ -1,53 +1,60 @@
 @extends('layouts.app')
 
-@section('title', 'Liste des utilisateurs')
-
 @section('content')
 <div class="container">
-    <br>
+
+
+<br>
 <div class="row">
         <div class="col-md-9">
-        <h1 class="my-4">Liste des utilisateurs</h1>
+        <h1>Liste des jobs</h1>
+
 
         </div>
         <div class="col-md-3">
-        <a href="{{ route('users.create') }}" class="btn btn-primary ">Créer un nouvel utilisateur</a>
-
+        <a href="{{ route('jobs.create') }}" class="btn btn-primary mb-3">Ajouter un job</a>
+ 
         </div>
     </div>
 <br>
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+
+    @if (session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-
-    <table class="table table-bordered" id="Table">
+    <table class="table" id="Table">
         <thead>
             <tr>
-                <th>#</th>
-                <th>Nom</th>
-                <th>Email</th>
-                <th>Rôle</th>
-                <th>Classe</th>
-                <th>Filère</th>
+                <th>ID</th>
+                <th>Entreprise</th>
+                <th>Poste</th>
+                <th>Image</th>
+                <th>Détail</th>
+                <th>Date ajoutée</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($users as $user)
+            @foreach ($jobs as $job)
                 <tr>
-                    <td>{{ $user->id }}</td>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->email }}</td>
-                    <td>{{ $user->role }}</td>
-                    <td>{{ $user->classe }}</td>
-                    <td>{{ $user->filiere }}</td>
+                    <td>{{ $job->id }}</td>
+                    <td>{{ $job->entreprise }}</td>
+                    <td>{{ $job->poste }}</td>
                     <td>
-                        <!-- Actions à personnaliser (modifier, supprimer) -->
-                        <a href="#" class="btn btn-warning btn-sm">Modifier</a>
-                        <a href="#" class="btn btn-danger btn-sm">Supprimer</a>
+                        @if ($job->image)
+                            <img src="{{ asset('storage/' . $job->image) }}" alt="Image" style="width: 50px; height: 50px;">
+                        @else
+                            Aucun
+                        @endif
+                    </td>
+                    <td>{{ $job->detail }}</td>
+                    <td>{{ $job->date_ajoute }}</td>
+                    <td>
+                        <form action="{{ route('jobs.destroy', $job->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</button>
+                        </form>
                     </td>
                 </tr>
             @endforeach

@@ -24,7 +24,7 @@ class PageUniversityController extends Controller
            // Récupérer les filières de type Licence et de catégorie classique depuis la base de données
            $filieres = DB::table('filieres')
            ->where('type', 'Licence')
-           ->where('categorie', 'Filière classique')
+           ->where('categorie', 'filiere pro')
            ->get();
 // Définir 20 images en dur
 $images = [

@@ -17,6 +17,24 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PageUniversityController;
 use App\Http\Controllers\FiliereController;
 use App\Http\Controllers\ActualiteController;
+use App\Http\Controllers\MediathequeController;
+use App\Http\Controllers\ProfesseurController;
+use App\Http\Controllers\JobController;
+
+Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
+Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
+Route::post('/jobs', [JobController::class, 'store'])->name('jobs.store');
+Route::delete('/jobs/{id}', [JobController::class, 'destroy'])->name('jobs.destroy');
+
+Route::get('/professeurs', [ProfesseurController::class, 'index'])->name('professeurs.index');
+Route::get('/professeurs/create', [ProfesseurController::class, 'create'])->name('professeurs.create');
+Route::post('/professeurs', [ProfesseurController::class, 'store'])->name('professeurs.store');
+Route::delete('/professeurs/{id}', [ProfesseurController::class, 'destroy'])->name('professeurs.destroy');
+
+Route::get('/mediatheque', [MediathequeController::class, 'index'])->name('mediatheque.index');
+Route::get('/mediatheque/create', [MediathequeController::class, 'create'])->name('mediatheque.create');
+Route::post('/mediatheque', [MediathequeController::class, 'store'])->name('mediatheque.store');
+Route::delete('/mediatheque/{id}', [MediathequeController::class, 'destroy'])->name('mediatheque.destroy');
 
 // Liste des actualités
 Route::get('/actualites', [ActualiteController::class, 'index'])->name('actualites.index');
@@ -77,7 +95,7 @@ Route::post('users', [UserController::class, 'store'])->name('users.store');
 Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
 
-Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('change-password', [AuthController::class, 'showChangePasswordForm'])->name('change.password.form');
 Route::post('change-password', [AuthController::class, 'changePassword'])->name('change.password');

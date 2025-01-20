@@ -34,8 +34,9 @@
         }
 
         .login-image {
-            background-image: url('https://fakeimg.pl/500x800/808080/ffffff/?text=Image+Grise');
-            background-size: cover;
+          /*  background-image: url('https://fakeimg.pl/500x800/808080/ffffff/?text=Image+Grise');
+            background-size: cover;*/
+            background-color:#074310FF;
             background-position: center;
             border-radius: 8px 0 0 8px;
             height: 100vh;

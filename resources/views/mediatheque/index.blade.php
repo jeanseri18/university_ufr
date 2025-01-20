@@ -2,55 +2,62 @@
 
 @section('content')
 <div class="container">
-
 <br>
-    <div class="row">
+
+<div class="row">
         <div class="col-md-9">
-        <h1>Liste des Filières</h1>
+        <h1>Médiathèque</h1>
 
         </div>
         <div class="col-md-3">
-        <a href="{{ route('filieres.create') }}" class="btn btn-primary mb-3">Ajouter une Filière</a>
+        <a href="{{ route('mediatheque.create') }}" class="btn btn-primary mb-3">Ajouter un média</a>
 
         </div>
     </div>
-    <br>
-    @if(session('success'))
+  <br>
+
+    @if (session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    <table class="table table-bordered" id="Table">
+    <table class="table" id="Table">
         <thead>
             <tr>
-                <th>#</th>
+                <th>ID</th>
                 <th>Titre</th>
-                <th>Domaine</th>
+                <th>Type</th>
+                <th>Fichier</th>
+                <th>Date ajoutée</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($filieres as $filiere)
-            <tr>
-                <td>{{ $filiere->id }}</td>
-                <td>{{ $filiere->titre }}</td>
-                <td>{{ $filiere->domaine }}</td>
-                <td>
-                    <a href="{{ route('filieres.show', $filiere->id) }}" class="btn btn-info btn-sm">Voir</a>
-                    <a href="{{ route('filieres.edit', $filiere->id) }}" class="btn btn-warning btn-sm">Modifier</a>
-                    <form action="{{ route('filieres.destroy', $filiere->id) }}" method="POST" style="display:inline;">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
-                    </form>
-                </td>
-            </tr>
+            @foreach ($mediatheques as $media)
+                <tr>
+                    <td>{{ $media->id }}</td>
+                    <td>{{ $media->titre }}</td>
+                    <td>{{ $media->type }}</td>
+                    <td>
+                        @if ($media->fichier)
+                            <a href="{{ asset('storage/' . $media->fichier) }}" target="_blank">Voir fichier</a>
+                        @else
+                            Aucun fichier
+                        @endif
+                    </td>
+                    <td>{{ $media->date_ajoute }}</td>
+                    <td>
+                        <form action="{{ route('mediatheque.destroy', $media->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr ?')">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
             @endforeach
         </tbody>
     </table>
 </div>
 @endsection
-
-
 @push('styles')
 <link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-2.1.8/b-3.2.0/b-colvis-3.2.0/b-html5-3.2.0/b-print-3.2.0/r-3.0.3/datatables.min.css" rel="stylesheet">
 @endpush
@@ -74,5 +81,4 @@
     });
 </script>
 @endpush
-
 

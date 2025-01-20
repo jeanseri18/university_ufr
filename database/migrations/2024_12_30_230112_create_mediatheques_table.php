@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mediatheque', function (Blueprint $table) {
+        Schema::create('mediatheques', function (Blueprint $table) {
             $table->id();
             $table->string('titre');
             $table->enum('type', ['image', 'video', 'audio']);

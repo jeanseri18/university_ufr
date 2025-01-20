@@ -2,45 +2,43 @@
 
 @section('content')
 <div class="container">
+   <br>
 
-<br>
     <div class="row">
         <div class="col-md-9">
-        <h1>Liste des Filières</h1>
+        <h1>Liste des Actualités</h1>
 
         </div>
         <div class="col-md-3">
-        <a href="{{ route('filieres.create') }}" class="btn btn-primary mb-3">Ajouter une Filière</a>
+        <a href="{{ route('actualites.create') }}" class="btn btn-primary">Ajouter une actualité</a>
 
         </div>
     </div>
     <br>
-    @if(session('success'))
-        <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
-
-    <table class="table table-bordered" id="Table">
+    <table class="table mt-4" id="Table">
         <thead>
             <tr>
-                <th>#</th>
+                <th>Image</th>
                 <th>Titre</th>
-                <th>Domaine</th>
+                <th>Détail</th>
+                <th>Date ajoutée</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($filieres as $filiere)
+            @foreach ($actualites as $actualite)
             <tr>
-                <td>{{ $filiere->id }}</td>
-                <td>{{ $filiere->titre }}</td>
-                <td>{{ $filiere->domaine }}</td>
+                <td><img src="{{ asset('storage/' . $actualite->image) }}" alt="Image" width="100"></td>
+                <td>{{ $actualite->titre }}</td>
+                <td>{{ $actualite->detail }}</td>
+                <td>{{ $actualite->date_ajoute }}</td>
                 <td>
-                    <a href="{{ route('filieres.show', $filiere->id) }}" class="btn btn-info btn-sm">Voir</a>
-                    <a href="{{ route('filieres.edit', $filiere->id) }}" class="btn btn-warning btn-sm">Modifier</a>
-                    <form action="{{ route('filieres.destroy', $filiere->id) }}" method="POST" style="display:inline;">
+                    <a href="{{ route('actualites.edit', $actualite) }}" class="btn btn-warning">Modifier</a>
+                    <form action="{{ route('actualites.destroy', $actualite) }}" method="POST" style="display:inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                        <button type="submit" class="btn btn-danger"
+                            onclick="return confirm('Êtes-vous sûr?')">Supprimer</button>
                     </form>
                 </td>
             </tr>
@@ -74,5 +72,4 @@
     });
 </script>
 @endpush
-
 

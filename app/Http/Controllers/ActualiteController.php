@@ -47,7 +47,7 @@ class ActualiteController extends Controller
     public function update(Request $request, Actualite $actualite)
     {
         $request->validate([
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10048',
             'titre' => 'required|string|max:255',
             'detail' => 'required|string',
             'date_ajoute' => 'required|date',
