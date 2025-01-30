@@ -113,11 +113,20 @@
                 <div class="col-xl-3 col-lg-12 col-md-6 col-12">
                     <div class="d-flex flex-column gap-4">
                         <div>
-                            <img src="" alt="Geeks logo" />
+                            <img src="{{ asset('assets/Logo.png') }}" alt="Geeks logo" />
                         </div>
-                        <p class="mb-0">Description de lufr</p>
+                        <p class="mb-0">Description de l'ufr</p>
 
                     </div>
+                </div> <div class="col-xl-2 col-md-3 col-6">
+                    <!--div class="d-flex flex-column gap-3">
+                        <span class="text-white-stable">Suivez nous sur </span>
+                        <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
+                            <li><a href="https://www.facebook.com" class="nav-link" target="_blank">Facebook</a></li>
+                            <li><a href="https://www.linkedin.com" class="nav-link" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com" class="nav-link" target="_blank">Instagram</a></li>
+                        </ul>
+                    </div-->
                 </div>
                 <div class="col-xl-3 col-md-6 col-12">
                     <div class="d-flex flex-column gap-4">
@@ -128,16 +137,7 @@
                     </div>
                 </div>
                 
-                <div class="col-xl-2 col-md-3 col-6">
-                    <div class="d-flex flex-column gap-3">
-                        <span class="text-white-stable">Suivez nous sur </span>
-                        <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                            <li><a href="https://www.facebook.com" class="nav-link" target="_blank">Facebook</a></li>
-                            <li><a href="https://www.linkedin.com" class="nav-link" target="_blank">LinkedIn</a></li>
-                            <li><a href="https://www.instagram.com" class="nav-link" target="_blank">Instagram</a></li>
-                        </ul>
-                    </div>
-                </div>
+               
                 <div class="col-xl-2 col-md-3 col-12">
                     <div class="d-flex flex-column gap-5">
                         <div class="d-flex flex-column gap-3">

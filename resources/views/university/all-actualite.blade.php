@@ -31,9 +31,9 @@
 <div class="text-center mb-5">
   <div class="btn-group" role="group">
     <button class="btn btn-outline-primary filter-btn active" data-filter="all">Tous</button>
-    <button class="btn btn-outline-primary filter-btn" data-filter="actualites">Actualités</button>
-    <button class="btn btn-outline-primary filter-btn" data-filter="jobs">Jobs</button>
-    <button class="btn btn-outline-primary filter-btn" data-filter="mediatheque">Médiathèque</button>
+    <button class="btn btn-outline-primary filter-btn text-white" data-filter="actualites">Actualités</button>
+    <button class="btn btn-outline-primary filter-btn text-white" data-filter="jobs">Jobs</button>
+    <button class="btn btn-outline-primary filter-btn text-white" data-filter="mediatheque">Médiathèque</button>
   </div>
 </div>
 
