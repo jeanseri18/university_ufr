@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;  // Importer la façade DB
 use App\Models\Mediatheque;
+use App\Models\Job;
 use App\Models\Actualite;
 
 class PageUniversityController extends Controller
@@ -96,5 +97,19 @@ foreach ($filieres as $index => $filiere) {
     public function etudiant()
     {
         return view('university.etudiant');
+    }
+
+    public function allactualite()
+    {
+        $actualites = Actualite::all();
+        $jobs = Job::all();
+        $mediatheques = Mediatheque::all();
+    
+        return view('university.all-actualite', compact('actualites', 'jobs', 'mediatheques'));
+    }
+    
+    public function detailactulite(Actualite $actualite)
+    {
+        return view('university.detail-actualite', compact('actualite'));
     }
 }

@@ -75,6 +75,8 @@ Route::get('/alumnis', [PageUniversityController::class, 'alumnis'])->name('alum
 Route::get('/actualité', [PageUniversityController::class, 'actualité'])->name('actualité');
 Route::get('/partenaire', [PageUniversityController::class, 'partenaire'])->name('partenaire');
 Route::get('/etudiant', [PageUniversityController::class, 'etudiant'])->name('etudiant');
+Route::get('/all-actualite', [PageUniversityController::class, 'allactualite'])->name('all.actualite');
+Route::get('/detail-actulite/{actualite}', [PageUniversityController::class, 'detailactulite'])->name('detail.actualite');
 Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
 
 

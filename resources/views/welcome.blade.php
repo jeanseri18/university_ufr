@@ -156,10 +156,10 @@
             </div>
             <div class="col-xl-2 col-md-2 col-2">
                 <div class="mb-lg-2 mb-6">
-                    <h2 class="h3 fw-bold btn-primary btn">
-                        voir plus
+                                     <a href="{{ route('all.actualite') }}" class="text-xhite">   <h2 class="h3 fw-bold btn-primary btn">
+    voir plus
                         <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
-                    </h2>
+                    </h2></a>
 
                     </p>
                 </div>
@@ -188,7 +188,7 @@
                                 <span>{{ $actualite->date_ajoute }}</span>
                             </div>
                         </div>
-                        <a href="#!" class="btn btn-light-primary text-primary">Continuer la lecture</a>
+                        <a href="{{ route('detail.actualite', $actualite) }}" class="btn btn-light-primary text-primary">Continuer la lecture</a>
                     </div>
                 </div>
             </div>
