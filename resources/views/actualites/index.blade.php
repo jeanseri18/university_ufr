@@ -30,7 +30,7 @@
             <tr>
                 <td><img src="{{ asset('storage/' . $actualite->image) }}" alt="Image" width="100"></td>
                 <td>{{ $actualite->titre }}</td>
-                <td>{{ $actualite->detail }}</td>
+                <td>  {{ Str::limit($actualite->detail, 250) }}</td>
                 <td>{{ $actualite->date_ajoute }}</td>
                 <td>
                     <a href="{{ route('actualites.edit', $actualite) }}" class="btn btn-warning">Modifier</a>

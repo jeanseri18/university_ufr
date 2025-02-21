@@ -86,6 +86,24 @@
     padding: 10px;
     cursor: pointer;
 }
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Hauteur uniforme */
+    object-fit: cover; /* Coupe l’image pour qu’elle garde le bon ratio */
+}
+
+.card-body {
+    min-height: 180px; /* Assure une hauteur uniforme des cartes */
+}
+
+.truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre max de lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 </style>
 @section('title', 'Acceuil | Bem executive school')
 
@@ -167,34 +185,37 @@
             </div>
         </div>
         <div class="table-responsive-xl pb-6 row">
-        @foreach ($actualites as $actualite)
-            <div class="col-md-3">
-                <div class="card mb-4 mb-xl-0 card-hover border">
-                    <a href="#!">
-                        <img src="{{ asset('storage/' . $actualite->image) }}" alt="webinar-1"
-                            class="img-fluid w-100 rounded-top-3">
-                    </a>
-                    <div class="card-body">
-                        <h3 class="mb-4 text-truncate">
-                            <a href="#!" class="text-inherit">{{ $actualite->titre }}</a>
-                        </h3>
-                        <div class="mb-4">
-                            <div class="mb-3 lh-1">
+    @foreach ($actualites as $actualite)
+        <div class="col-md-3">
+            <div class="card mb-4 mb-xl-0 card-hover border">
+                <!-- Image avec taille uniforme -->
+                <a href="{{ route('detail.actualite', $actualite) }}">
+                    <img src="{{ asset('storage/' . $actualite->image) }}" class="card-img-top rounded-top-3" alt="{{ $actualite->titre }}">
+                </a>
 
-                                <span>{{ $actualite->detail }}</span>
-                            </div>
-                            <div class="lh-1">
+                <div class="card-body">
+                    <!-- Titre limité en largeur -->
+                    <h3 class="mb-3 ">
+                        <a href="{{ route('detail.actualite', $actualite) }}" class="text-inherit">
+                            {{ Str::limit($actualite->titre, 65) }}
+                        </a>
+                    </h3>
 
-                                <span>{{ $actualite->date_ajoute }}</span>
-                            </div>
-                        </div>
-                        <a href="{{ route('detail.actualite', $actualite) }}" class="btn btn-light-primary text-primary">Continuer la lecture</a>
+                    <div class="mb-4">
+                        <!-- Texte limité à 3 lignes -->
+                        <p class="truncate-text text-muted">{{ $actualite->detail }}</p>
+
+                        <!-- Date en petit -->
+                        <small class="text-muted">{{ \Carbon\Carbon::parse($actualite->date_ajoute)->format('d M Y') }}</small>
                     </div>
+
+                    <a href="{{ route('detail.actualite', $actualite) }}" class="btn btn-light-primary text-primary">Continuer la lecture</a>
                 </div>
             </div>
-            @endforeach
+        </div>
+    @endforeach
+</div>
 
-    
     
     </div>
 </section>
