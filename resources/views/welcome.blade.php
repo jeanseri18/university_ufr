@@ -203,7 +203,7 @@
 
                     <div class="mb-4">
                         <!-- Texte limité à 3 lignes -->
-                        <p class="truncate-text text-muted">{{ $actualite->detail }}</p>
+                        <p class="truncate-text text-muted">{{ Str::limit($actualite->detail, 100) }}</p>
 
                         <!-- Date en petit -->
                         <small class="text-muted">{{ \Carbon\Carbon::parse($actualite->date_ajoute)->format('d M Y') }}</small>
