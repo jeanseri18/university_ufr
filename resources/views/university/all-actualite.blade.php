@@ -51,6 +51,7 @@
     <button class="btn btn-outline-primary filter-btn text-white" data-filter="actualites">Actualités</button>
     <button class="btn btn-outline-primary filter-btn text-white" data-filter="jobs">Jobs</button>
     <button class="btn btn-outline-primary filter-btn text-white" data-filter="mediatheque">Médiathèque</button>
+    <button class="btn btn-outline-primary filter-btn text-white" data-filter="events">Examen et programme</button>
   </div>
 </div>
 
@@ -85,6 +86,19 @@
             <h5 class="card-title fw-bold">{{ $job->poste }}</h5>
             <p class="card-text text-muted">{{ Str::limit($job->detail, 100) }}</p>
             <a href="#" class="btn btn-primary stretched-link">Voir l'offre</a>
+          </div>
+        </div>
+      </div>
+    @endforeach
+
+    @foreach ($events as $event)
+      <div class="col-md-4 content-item events">
+        <div class="card h-100 shadow-sm border-0 card-hover">
+          <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top" alt="{{ $event->poste }}">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">{{ $event->poste }}</h5>
+            <p class="card-text text-muted">{{ Str::limit($event->detail, 100) }}</p>
+            <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-primary stretched-link" target="blank">Voir  les details</a>
           </div>
         </div>
       </div>

@@ -108,59 +108,106 @@
 @section('title', 'Acceuil | Bem executive school')
 
 @section('content')
-<section class="bg-light d-flex align-items-center justify-content-center" style="background-image: url('image/7I8A9623.jpg'); 
-           background-size: cover; 
-           background-position: center; 
-           height: 650px;">
+<!-- VERSION DESKTOP -->
+<section class="bg-light d-none d-md-flex align-items-center justify-content-center" 
+         style="background-image: url('image/7I8A9623.jpg'); 
+                background-size: cover; 
+                background-position: center; 
+                height: 650px;">
   <div class="container">
     <div class="row">
       <div class="col-md-2 " style="background-color: white; color: #3CA45D; padding: 10px;">
-     <strong>   Bienvenue à l'UFR</strong>
+        <strong>Bienvenue à l'UFR</strong>
       </div>
       <div class="col-md-10"></div>
-   
 
-    <div class="col-md-12 " style="background-color: #0B0B0B93; color: white; padding: 10px; height: 350px;">
-      <div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <!-- Texte 1 -->
-          <div class="carousel-item active" style="padding: 110px;">
-            <p style="font-size: 30px;">Bienvenue à l'UFR de l'Université de Cocody, un espace dédié à l'excellence académique et à l'innovation.</p>
-            <p style="font-size: 13px;">Administration, Janvier 2024</p>
+      <div class="col-md-12 " style="background-color: #0B0B0B93; color: white; padding: 10px; height: 350px;">
+        <div id="textCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Texte 1 -->
+            <div class="carousel-item active" style="padding: 110px;">
+              <p style="font-size: 30px;">Bienvenue à l'UFR de l'Université de Cocody, un espace dédié à l'excellence académique et à l'innovation.</p>
+              <p style="font-size: 13px;">Administration, Janvier 2024</p>
+            </div>
+            <!-- Texte 2 -->
+            <div class="carousel-item" style="padding: 110px;">
+              <p style="font-size: 30px;">Explorez les programmes variés offerts par l'UFR, conçus pour répondre aux besoins académiques et professionnels des étudiants.</p>
+              <p style="font-size: 13px;">Direction Pédagogique, Février 2024</p>
+            </div>
+            <!-- Texte 3 -->
+            <div class="carousel-item" style="padding: 110px;">
+              <p style="font-size: 30px;">Rejoignez une communauté dynamique et engageante à l'UFR de l'Université de Cocody.</p>
+              <p style="font-size: 13px;">Service de Communication, Mars 2024</p>
+            </div>
           </div>
-          <!-- Texte 2 -->
-          <div class="carousel-item"  style="padding: 110px;">
-            <p style="font-size: 30px;">Explorez les programmes variés offerts par l'UFR, conçus pour répondre aux besoins académiques et professionnels des étudiants.</p>
-            <p style="font-size: 13px;">Direction Pédagogique, Février 2024</p>
-          </div>
-          <!-- Texte 3 -->
-          <div class="carousel-item"  style="padding: 110px;">
-            <p style="font-size: 30px;">Rejoignez une communauté dynamique et engageante à l'UFR de l'Université de Cocody.</p>
-            <p style="font-size: 13px;">Service de Communication, Mars 2024</p>
-          </div>
-          <!-- Texte 4 -->
-      
+          <!-- Contrôles du slider -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#textCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#textCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <!-- Contrôles du slider -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#textCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#textCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    </div> </div>
+    </div>
+  </div>
+</section>
+
+<!-- VERSION MOBILE -->
+<section class="bg-light d-block d-md-none text-center" 
+         style="background-image: url('image/7I8A9623.jpg'); 
+                background-size: cover; 
+                background-position: center; 
+                height: auto; 
+                padding: 40px 20px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-12" style="background-color: white; color: #3CA45D; padding: 10px; margin-bottom: 10px;">
+        <strong>Bienvenue à l'UFR</strong>
+      </div>
+
+      <div class="col-12" style="background-color: #0B0B0B93; color: white; padding: 20px;">
+        <div id="mobileTextCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Texte 1 -->
+            <div class="carousel-item active">
+              <p style="font-size: 20px;">Bienvenue à l'UFR de l'Université de Cocody, un espace dédié à l'excellence académique et à l'innovation.</p>
+              <p style="font-size: 12px;">Administration, Janvier 2024</p>
+            </div>
+            <!-- Texte 2 -->
+            <div class="carousel-item">
+              <p style="font-size: 20px;">Explorez les programmes variés offerts par l'UFR, conçus pour répondre aux besoins académiques et professionnels des étudiants.</p>
+              <p style="font-size: 12px;">Direction Pédagogique, Février 2024</p>
+            </div>
+            <!-- Texte 3 -->
+            <div class="carousel-item">
+              <p style="font-size: 20px;">Rejoignez une communauté dynamique et engageante à l'UFR de l'Université de Cocody.</p>
+              <p style="font-size: 12px;">Service de Communication, Mars 2024</p>
+            </div>
+          </div>
+          <!-- Contrôles du slider -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#mobileTextCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#mobileTextCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 
-<section class="">
+<section class=""><br>
     <div class="container my-lg-8">
         <div class="row">
-            <div class="col-xl-10 col-md-10 col-10">
-                <div class="mb-lg-10 mb-6">
+            <div class="col-xl-9 col-md-9 col-9">
+                <div class="mb-lg-9 mb-6">
                     <h2 class="h1 fw-bold">
                         Communiqué
                         <u class="text-warning"><span class="text-primary"> et documents officiels
@@ -172,8 +219,8 @@
                     </p>
                 </div>
             </div>
-            <div class="col-xl-2 col-md-2 col-2">
-                <div class="mb-lg-2 mb-6">
+            <div class="col-xl-3 col-md-3 col-3">
+                <div class="mb-lg-3 mb-6">
                                      <a href="{{ route('all.actualite') }}" class="text-xhite">   <h2 class="h3 fw-bold btn-primary btn">
     voir plus
                         <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
@@ -222,12 +269,12 @@
 
 <section class="" style="background-color:#E7EEEA;padding-top: 30px;
 padding-bottom: 30px;">
-    <div class="container my-lg-8">
+    <div class="container my-lg-10">
         <div class="row">
-            <div class="col-xl-10 col-md-10 col-10">
-                <div class="mb-lg-10 mb-6">
+            <div class="col-xl-9 col-md-9 col-9">
+                <div class="mb-lg-9 mb-6">
                     <h2 class="h1 fw-bold">
-                        Agenda
+                        Calendrier des événements
                         <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
                     </h2>
                     <p class="mb-0">Soyez à l’affût des dates clés, conférences, et activités marquantes qui
@@ -237,8 +284,8 @@ padding-bottom: 30px;">
                 </div>
 
             </div>
-            <div class="col-xl-2 col-md-2 col-2">
-                <div class="mb-lg-2 mb-6">
+            <div class="col-xl-3 col-md-3 col-3">
+                <div class="mb-lg-3 mb-6">
                     <h2 class="h3 fw-bold btn-primary btn">
                         voir plus
                         <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
@@ -250,40 +297,38 @@ padding-bottom: 30px;">
             </div>
         </div>
         <div class="table-responsive-xl pb-6">
-            <div class="col">
-                <div class="card mb-4 mb-xl-0 card-hover border">
-                    <!--a href="#!">
-                                        <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="webinar-1" class="img-fluid w-100 rounded-top-3">
-                                    </a-->
-                    <div class="card-body">
-                        <h3 class="mb-4 text-truncate">
-                            <a href="#!" class="text-inherit">Education Edition Deployment And Set Up</a>
-                        </h3>
-                        <div class="mb-4">
-                            <div class="mb-3 lh-1">
-                                <span class="me-1">
-                                    <i class="bi bi-calendar-check"></i>
-                                </span>
-                                <span>Thu, November 10, 2023</span>
-                            </div>
-                            <div class="lh-1">
-                                <span class="align-text-top me-1">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                        class="bi bi-clock" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z">
-                                        </path>
-                                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z">
-                                        </path>
-                                    </svg>
-                                </span>
-                                <span>6:00 PM – 8:00 PM GMT</span>
-                            </div>
-                        </div>
-                        <a href="#!" class="btn btn-light-primary text-primary">voir</a>
+            <div class="row">
+        @foreach ($events as $event)
+
+        <div class="col-md-3">
+            <div class="card mb-4 mb-xl-0 card-hover border">
+                <!-- Image avec taille uniforme -->
+                <a href="{{ route('detail.actualite', $event) }}">
+                    <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}">
+                </a>
+
+                <div class="card-body">
+                    <!-- Titre limité en largeur -->
+                    <h3 class="mb-3 ">
+                        <a href="{{ route('detail.actualite', $event) }}" class="text-inherit">
+                            {{ Str::limit($event->title, 65) }}
+                        </a>
+                    </h3>
+
+                    <div class="mb-4">
+                        <!-- Texte limité à 3 lignes -->
+                        <p class="truncate-text text-muted">{{ Str::limit($event->detail, 100) }}</p>
+
+                        <!-- Date en petit -->
+                        <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
                     </div>
+
+                    <a href="{{ route('detail.actualite', $event) }}" class="btn btn-light-primary text-primary">Continuer la lecture</a>
                 </div>
             </div>
+        </div>
+    @endforeach
+        </div>
         </div>
     </div>
 </section>

@@ -20,6 +20,7 @@ use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\MediathequeController;
 use App\Http\Controllers\ProfesseurController;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\EventController;
 
 Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
 Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
@@ -104,3 +105,13 @@ Route::post('change-password', [AuthController::class, 'changePassword'])->name(
 Route::get('home', function () {
     return view('dashboard');
 })->name('home')->middleware('auth');
+
+
+Route::get('/events', [EventController::class, 'index'])->name('event.index');
+Route::get('/events/create', [EventController::class, 'create']);
+Route::post('/events', [EventController::class, 'store'])->name('event.store');
+Route::get('/events/{event}/edit', [EventController::class, 'edit']);
+Route::post('/events/{event}', [EventController::class, 'update']);
+Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('event.destroy');
+Route::get('/api/events', [EventController::class, 'getEvents']);
+

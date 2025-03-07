@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;  // Importer la façade DB
 use App\Models\Mediatheque;
 use App\Models\Job;
+use App\Models\Event;
 use App\Models\Actualite;
 
 class PageUniversityController extends Controller
@@ -17,8 +18,8 @@ class PageUniversityController extends Controller
     {
         $actualites = Actualite::all();
         $mediatheques = Mediatheque::all();
-
-        return view('welcome', compact('actualites','mediatheques'));
+        $events = Event::all();
+        return view('welcome', compact('actualites','mediatheques','events'));
     }
 
     public function quiSommesNous()
@@ -103,9 +104,11 @@ foreach ($filieres as $index => $filiere) {
     {
         $actualites = Actualite::all();
         $jobs = Job::all();
+        $events = Event::all();
+
         $mediatheques = Mediatheque::all();
     
-        return view('university.all-actualite', compact('actualites', 'jobs', 'mediatheques'));
+        return view('university.all-actualite', compact('actualites', 'jobs', 'mediatheques','events'));
     }
     
     public function detailactulite(Actualite $actualite)

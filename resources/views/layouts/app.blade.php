@@ -79,6 +79,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('event.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-newspaper"></i>
+                                <p>Calendrier</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('jobs.index') }}" class="nav-link" style="color:white">
                                 <i class="nav-icon bi bi-briefcase"></i>
                                 <p>Offre d'emploie</p>
