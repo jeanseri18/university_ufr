@@ -105,60 +105,58 @@
         @yield('content')
         <!-- Trusted -->
     </main>
-    <!-- Footer -->
-    <!-- Footer -->
-    <footer class="footer  py-8" style="background-color:#021105">
-        <div class="container">
-            <div class="row gy-6 gy-xl-0 pb-8">
-                <div class="col-xl-3 col-lg-12 col-md-6 col-12">
-                    <div class="d-flex flex-column gap-4">
-                        <div>
-                            <img src="{{ asset('assets/Logo.png') }}" alt="Geeks logo" />
-                        </div>
-                        <p class="mb-0">Description de l'ufr</p>
-
+    <footer class="footer py-8" style="background-color:#021105">
+    <div class="container">
+        <div class="row gy-6 gy-xl-0 pb-8">
+            <!-- Section Description -->
+            <div class="col-xl-5 col-lg-6 col-md-12 mb-4">
+                <div class="d-flex flex-column gap-4">
+                    <div>
+                        <img src="{{ asset('assets/Logo.png') }}" alt="Logo UFR"  width="250px"/>
                     </div>
-                </div> <div class="col-xl-2 col-md-3 col-6">
-                    <!--div class="d-flex flex-column gap-3">
-                        <span class="text-white-stable">Suivez nous sur </span>
-                        <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                            <li><a href="https://www.facebook.com" class="nav-link" target="_blank">Facebook</a></li>
-                            <li><a href="https://www.linkedin.com" class="nav-link" target="_blank">LinkedIn</a></li>
-                            <li><a href="https://www.instagram.com" class="nav-link" target="_blank">Instagram</a></li>
-                        </ul>
-                    </div-->
-                </div>
-                <div class="col-xl-3 col-md-6 col-12">
-                    <div class="d-flex flex-column gap-4">
-                        <span class="text-white-stable">Nos Formations</span>
-                        <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                           
-                        </ul>
-                    </div>
-                </div>
-                
-               
-                <div class="col-xl-2 col-md-3 col-12">
-                    <div class="d-flex flex-column gap-5">
-                        <div class="d-flex flex-column gap-3">
-                            <span class="text-white-stable">Contact</span>
-                            <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-          
-                            </ul>
-                        </div>
-                        <div class="d-flex flex-row gap-2">
-
-                        </div>
-                    </div>
+                    <p class="mb-0 text-white">
+                        L’UFR des Sciences de Gestion et d'Économie de l’Université Félix Houphouët-Boigny propose un parcours académique complet et diversifié, allant de la Licence au Master, avec des formations adaptées aux exigences du marché du travail et aux besoins de la recherche scientifique.
+                    </p>
                 </div>
             </div>
-            <div class="bg-dark py-4">
-                <div class="container text-center">
-                    <span class="text-white">© 2024 UFR. Tous droits réservés.</span>
+
+            <!-- Section Pages -->
+            <div class="col-xl-3 col-lg-6 col-md-12 mb-4">
+                <div class="d-flex flex-column gap-4">
+                    <span class="text-white fw-bold">Pages</span>
+                    <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
+                        <li><a href="{{ route('actualité') }}" class="nav-link text-white">Actualité</a></li>
+                        <li><a href="{{ route('quiSommesNous') }}" class="nav-link text-white">Qui sommes-nous</a></li>
+                        <li><a href="{{ route('filiereCla') }}" class="nav-link text-white">Filières Classiques</a></li>
+                        <li><a href="{{ route('filierePro') }}" class="nav-link text-white">Filières Professionnelles</a></li>
+                        <li><a href="{{ route('alumnis') }}" class="nav-link text-white">Alumnis</a></li>
+                        <li><a href="{{ route('larecherche') }}" class="nav-link text-white">La recherche à l'UFRSEG</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section Contact -->
+            <div class="col-xl-4 col-lg-6 col-md-12">
+                <div class="d-flex flex-column gap-4">
+                    <span class="text-white fw-bold">Contact</span>
+                    <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
+                        <li class="text-white">📍 Adresse : Abidjan, Université Félix Houphouët-Boigny</li>
+                        <li class="text-white">📧 Email : contact@ufrseg.edu.ci</li>
+                        <li class="text-white">📞 Téléphone : +225 XX XX XX XX</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Section Copyright -->
+        <div class="bg-dark py-4 mt-4">
+            <div class="container text-center">
+                <span class="text-white">© 2024 UFR. Tous droits réservés.</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
 
 

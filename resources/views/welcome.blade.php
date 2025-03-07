@@ -298,6 +298,10 @@ padding-bottom: 30px;">
         </div>
         <div class="table-responsive-xl pb-6">
             <div class="row">
+            @if($events->isNotEmpty())
+   
+
+
         @foreach ($events as $event)
 
         <div class="col-md-3">
@@ -328,6 +332,9 @@ padding-bottom: 30px;">
             </div>
         </div>
     @endforeach
+    @else
+    <p>Aucun événement disponible.</p>
+@endif
         </div>
         </div>
     </div>

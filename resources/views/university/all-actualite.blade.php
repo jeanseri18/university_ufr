@@ -96,7 +96,7 @@
         <div class="card h-100 shadow-sm border-0 card-hover">
           <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top" alt="{{ $event->poste }}">
           <div class="card-body">
-            <h5 class="card-title fw-bold">{{ $event->poste }}</h5>
+            <h5 class="card-title fw-bold">{{ $event->title }}</h5>
             <p class="card-text text-muted">{{ Str::limit($event->detail, 100) }}</p>
             <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-primary stretched-link" target="blank">Voir  les details</a>
           </div>

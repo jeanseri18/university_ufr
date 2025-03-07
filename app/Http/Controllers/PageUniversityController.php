@@ -13,12 +13,12 @@ class PageUniversityController extends Controller
 {
     //
 
-
+   
     public function welcome()
     {
-        $actualites = Actualite::all();
-        $mediatheques = Mediatheque::all();
-        $events = Event::all();
+        $actualites = Actualite::orderBy('created_at', 'desc')->limit(10)->get();
+        $events = Event::orderBy('created_at', 'desc')->limit(10)->get();
+        $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(10)->get();
         return view('welcome', compact('actualites','mediatheques','events'));
     }
 
@@ -86,10 +86,11 @@ foreach ($filieres as $index => $filiere) {
     }
     public function actualité()
     {
-        $actualites = Actualite::all();
-        $mediatheques = Mediatheque::all();
-
-        return view('welcome', compact('actualites','mediatheques'));
+        $actualites = Actualite::orderBy('created_at', 'desc')->limit(10)->get();
+        $events = Event::orderBy('created_at', 'desc')->limit(10)->get();
+        $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(10)->get();
+   
+        return view('welcome', compact('actualites','mediatheques','events',));
     }
     public function partenaire()
     {
@@ -102,14 +103,14 @@ foreach ($filieres as $index => $filiere) {
 
     public function allactualite()
     {
-        $actualites = Actualite::all();
-        $jobs = Job::all();
-        $events = Event::all();
-
-        $mediatheques = Mediatheque::all();
+        $actualites = Actualite::orderBy('created_at', 'desc')->limit(300)->get();
+        $jobs = Job::orderBy('created_at', 'desc')->limit(300)->get();
+        $events = Event::orderBy('created_at', 'desc')->limit(300)->get();
+        $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(300)->get();
     
-        return view('university.all-actualite', compact('actualites', 'jobs', 'mediatheques','events'));
+        return view('university.all-actualite', compact('actualites', 'jobs', 'mediatheques', 'events'));
     }
+    
     
     public function detailactulite(Actualite $actualite)
     {

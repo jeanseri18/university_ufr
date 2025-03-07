@@ -286,17 +286,17 @@
     <div class="container">
         <div class="text-center mb-5">
             <small class="text-uppercase ls-md fw-semibold text-muted">Ressources en ligne</small>
-            <h2 class="mt-3">Liens utiles</h2>
-            <p class="mb-0">Voici une sélection de liens qui vous aideront dans votre parcours universitaire. Explorez les ressources pour faciliter vos démarches et réussir vos études.</p>
+            <h2 class="mt-3">Liens utiles - Université Félix Houphouët-Boigny</h2>
+            <p class="mb-0">Voici une sélection de liens pour vous accompagner tout au long de votre parcours universitaire à l'Université Félix Houphouët-Boigny d'Abidjan (Cocody). Ces ressources sont conçues pour faciliter vos démarches administratives, vos études et vous aider à réussir.</p>
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-4 mb-4">
-                <a href="https://www.etudiant.gouv.fr/" class="card text-decoration-none text-dark shadow-sm border-0">
+                <a href="http://www.ufhb.edu.ci/" class="card text-decoration-none text-dark shadow-sm border-0">
                     <div class="card-body d-flex align-items-center">
-                        <i class="bi bi-bookmark-check-fill fs-3 text-primary me-3"></i>
+                        <i class="bi bi-house-door-fill fs-3 text-primary me-3"></i>
                         <div>
-                            <h5 class="card-title mb-1">Site officiel des étudiants</h5>
-                            <p class="card-text mb-0">Retrouvez toutes les informations essentielles pour les étudiants, de l'inscription à la bourse, en passant par le logement.</p>
+                            <h5 class="card-title mb-1">Site officiel de l'UFRSEG</h5>
+                            <p class="card-text mb-0">Accédez à toutes les informations concernant les formations, inscriptions, et actualités de l'Université Félix Houphouët-Boigny de Cocody.</p>
                         </div>
                     </div>
                 </a>
@@ -307,29 +307,30 @@
                         <i class="bi bi-globe2 fs-3 text-primary me-3"></i>
                         <div>
                             <h5 class="card-title mb-1">Campus France</h5>
-                            <p class="card-text mb-0">Tout savoir sur les études en France, avec des informations sur les démarches administratives, les visas, et plus encore.</p>
+                            <p class="card-text mb-0">Découvrez les informations relatives aux études en France, y compris les procédures administratives et les démarches pour obtenir un visa étudiant.</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
-                <a href="https://www.legifrance.gouv.fr/" class="card text-decoration-none text-dark shadow-sm border-0">
+                <a href="https://www.etudiant.gouv.fr/" class="card text-decoration-none text-dark shadow-sm border-0">
                     <div class="card-body d-flex align-items-center">
-                        <i class="bi bi-file-earmark-text fs-3 text-primary me-3"></i>
+                        <i class="bi bi-bookmark-check-fill fs-3 text-primary me-3"></i>
                         <div>
-                            <h5 class="card-title mb-1">Légifrance</h5>
-                            <p class="card-text mb-0">Accédez à tous les textes législatifs, décrets et arrêtés officiels en France, une ressource importante pour les étudiantes en droit.</p>
+                            <h5 class="card-title mb-1">Site officiel des étudiants</h5>
+                            <p class="card-text mb-0">Retrouvez toutes les informations essentielles pour les étudiants : inscription, bourse, logement et autres démarches administratives.</p>
                         </div>
                     </div>
                 </a>
             </div>
+       
             <div class="col-md-6 col-lg-4 mb-4">
                 <a href="https://www.orientation.com/" class="card text-decoration-none text-dark shadow-sm border-0">
                     <div class="card-body d-flex align-items-center">
                         <i class="bi bi-person-check-fill fs-3 text-primary me-3"></i>
                         <div>
                             <h5 class="card-title mb-1">Orientation.com</h5>
-                            <p class="card-text mb-0">Une plateforme complète pour vous aider à choisir votre orientation scolaire, avec des outils et des conseils pour réussir.</p>
+                            <p class="card-text mb-0">Une plateforme utile pour vous aider à choisir votre orientation scolaire et universitaire grâce à des outils et conseils pratiques.</p>
                         </div>
                     </div>
                 </a>
@@ -337,6 +338,7 @@
         </div>
     </div>
 </section>
+
 
 <br>
 <!--FAQ pour Nouvelles Bachelières-->
