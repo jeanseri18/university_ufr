@@ -82,15 +82,31 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-default">
                 <ul class="navbar-nav mt-3 mt-lg-0 mx-xxl-auto">
-                <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualité
-                </a></li>
-                    <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Qui sommes-nous</a></li>
-                    <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Filieres Classique</a></li>
-                    <li><a href="{{ route('filierePro') }}" class="dropdown-item">Filieres professionnelles</a></li>
-                    <li><a href="{{ route('alumnis') }}" class="dropdown-item">Alumnis</a></li>
              
-                    <li><a href="{{ route('larecherche') }}" class="dropdown-item">La recherche à l'UFRSEG</a></li>
 
+                @if(Route::currentRouteName() == 'etudiant')
+        <!-- Menu spécifique pour les étudiants -->
+        <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie a l'université</a></li>
+        <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
+
+
+        @elseif(Route::currentRouteName() == 'etudiant.agenda')
+    <!-- Menu spécifique pour l'agenda des étudiants -->
+    <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
+    <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
+
+    @else
+    <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualité
+    </a></li>
+    <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Qui sommes-nous</a></li>
+
+        <!-- Menu standard pour tous les utilisateurs -->
+        <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Filieres Classique</a></li>
+        <li><a href="{{ route('filierePro') }}" class="dropdown-item">Filieres professionnelles</a></li>
+        <li><a href="{{ route('alumnis') }}" class="dropdown-item">Alumnis</a></li>
+        <li><a href="{{ route('larecherche') }}" class="dropdown-item">La recherche à l'UFRSEG</a></li>
+    @endif
+                 
                 </ul>
                 <div class="mt-3 mt-lg-0 d-flex align-items-center">
                   <a href="{{ route('login') }}" class="btn btn-primary">Se connecter</a>

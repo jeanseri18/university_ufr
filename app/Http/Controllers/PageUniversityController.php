@@ -111,6 +111,21 @@ foreach ($filieres as $index => $filiere) {
         return view('university.all-actualite', compact('actualites', 'jobs', 'mediatheques', 'events'));
     }
     
+    public function agenda(Request $request)
+    {
+        // Récupérer le mot-clé de la recherche
+        $search = $request->input('search');
+    
+        // Récupérer les événements, appliquer la recherche si nécessaire et paginer les résultats
+        $events = Event::when($search, function($query, $search) {
+            return $query->where('title', 'like', "%$search%")
+                         ->orWhere('description', 'like', "%$search%");
+        })
+        ->orderBy('created_at', 'desc')
+        ->paginate(10);  // Nombre d'événements par page
+    
+        return view('university.agenda', compact('events'));
+    }
     
     public function detailactulite(Actualite $actualite)
     {
