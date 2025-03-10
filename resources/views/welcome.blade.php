@@ -286,11 +286,11 @@ padding-bottom: 30px;">
             </div>
             <div class="col-xl-3 col-md-3 col-3">
                 <div class="mb-lg-3 mb-6">
-                    <h2 class="h3 fw-bold btn-primary btn">
+                <a href="{{ route('etudiant.agenda') }}" class="text-xhite">    <h2 class="h3 fw-bold btn-primary btn">
                         voir plus
                         <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
                     </h2>
-
+</a>
                     </p>
                 </div>
 
@@ -314,7 +314,7 @@ padding-bottom: 30px;">
                 <div class="card-body">
                     <!-- Titre limité en largeur -->
                     <h3 class="mb-3 ">
-                        <a href="{{ route('detail.actualite', $event) }}" class="text-inherit">
+                        <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
                             {{ Str::limit($event->title, 65) }}
                         </a>
                     </h3>
@@ -327,7 +327,7 @@ padding-bottom: 30px;">
                         <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
                     </div>
 
-                    <a href="{{ route('detail.actualite', $event) }}" class="btn btn-light-primary text-primary">Continuer la lecture</a>
+                    <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
                 </div>
             </div>
         </div>

@@ -28,28 +28,29 @@
 <body class="bg-white">
     <div class="container">
         <!-- Menu à gauche -->
-        <div class="row" style="height:100px;padding:30px 30px;">
-            <div class="col-md-4">
+        <div class="row" style="min-height: 100px; padding: 30px;">
+        <div class="col-md-4">
 
-                <div class="row" style="color:#2b6635">
-                    <div class="col-md-3">
-                        <a href="{{ route('actualité') }}" class="nav-link text-black" ><strong>À propos</strong></a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant</a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="#" class="nav-link text-black">Enseignant</a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="{{ route('partenaire') }}" class="nav-link text-black">Partenaires</a>
-                    </div>
-                </div>
+            <div class="row text-center" style="color:#2b6635">
+    <div class="col-6 col-md-3">
+        <a href="{{ route('actualité') }}" class="nav-link text-black"><strong>À propos</strong></a>
+    </div>
+    <div class="col-6 col-md-3">
+        <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant</a>
+    </div>
+    <div class="col-6 col-md-3">
+        <a href="#" class="nav-link text-black">Enseignant</a>
+    </div>
+    <div class="col-6 col-md-3">
+        <a href="{{ route('partenaire') }}" class="nav-link text-black">Partenaires</a>
+    </div>
+</div>
+
             </div>
             <div class="col-md-1"> </div>
-            <div class="col-md-4">
+            <div class="col-md-4 ">
                 <a class="navbar-brand mx-auto" href="#">
-                    <img src="{{ asset('assets/Logo.png') }}" alt="Logo" style="height: 50px;">
+                <img src="{{ asset('assets/Logo.png') }}" alt="Logo" class="img-fluid navbar-brand">
                 </a>
             </div>
             <div class="col-md-2"> </div>
@@ -88,12 +89,19 @@
         <!-- Menu spécifique pour les étudiants -->
         <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie a l'université</a></li>
         <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
+        <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li>
 
-
+        
         @elseif(Route::currentRouteName() == 'etudiant.agenda')
     <!-- Menu spécifique pour l'agenda des étudiants -->
     <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
     <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
+    <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li>
+    @elseif(Route::currentRouteName() == 'etudiant.listofstudent')
+    <!-- Menu spécifique pour l'agenda des étudiants -->
+    <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
+    <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
+    <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li>
 
     @else
     <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualité

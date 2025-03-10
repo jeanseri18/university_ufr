@@ -45,7 +45,7 @@
                 </ul>
             </div>
         </nav>
-        <aside class="app-sidebar  shadow" data-bs-theme="dark" style="background-color:#3ca45d ; ">
+        <aside class="app-sidebar bg-success shadow" data-bs-theme="dark" style="background-color:#3ca45d ; ">
             <div class="sidebar-brand">
                 <a href="./index.html" class="brand-link">
                     <span class="brand-text fw-light">UFR Admin</span>
@@ -54,10 +54,22 @@
             <div class="sidebar-wrapper">
                 <nav class="mt-2">
                     <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
+                    <li class="nav-item">
+                            <a href="{{ route('home') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-book"></i>
+                                <p>Tableau de board</p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="{{ route('filieres.index') }}" class="nav-link" style="color:white">
                                 <i class="nav-icon bi bi-book"></i>
                                 <p>Filieres</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('documents.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-book"></i>
+                                <p>Documents</p>
                             </a>
                         </li>
                         <li class="nav-item">

@@ -8,6 +8,7 @@ use App\Models\Mediatheque;
 use App\Models\Job;
 use App\Models\Event;
 use App\Models\Actualite;
+use App\Models\Document;
 
 class PageUniversityController extends Controller
 {
@@ -125,6 +126,21 @@ foreach ($filieres as $index => $filiere) {
         ->paginate(10);  // Nombre d'événements par page
     
         return view('university.agenda', compact('events'));
+    }
+    public function listofstudent(Request $request)
+    {
+        // Récupérer le mot-clé de la recherche
+        $search = $request->input('search');
+    
+        // Récupérer les événements, appliquer la recherche si nécessaire et paginer les résultats
+        $docs = Document::when($search, function($query, $search) {
+            return $query->where('titre', 'like', "%$search%")
+                         ->orWhere('details', 'like', "%$search%");
+        })
+        ->orderBy('created_at', 'desc')
+        ->paginate(10);  // Nombre d'événements par page
+    
+        return view('university.listofstudent', compact('docs'));
     }
     
     public function detailactulite(Actualite $actualite)

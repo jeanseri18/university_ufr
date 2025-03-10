@@ -21,6 +21,11 @@ use App\Http\Controllers\MediathequeController;
 use App\Http\Controllers\ProfesseurController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DocumentController;
+
+Route::get('/home', [DashboardController::class, 'index'])->name('home');
+
 
 Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
 Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
@@ -78,6 +83,7 @@ Route::get('/partenaire', [PageUniversityController::class, 'partenaire'])->name
 Route::get('/etudiant', [PageUniversityController::class, 'etudiant'])->name('etudiant');
 Route::get('/all-actualite', [PageUniversityController::class, 'allactualite'])->name('all.actualite');
 Route::get('/etudiant/agenda', [PageUniversityController::class, 'agenda'])->name('etudiant.agenda');
+Route::get('/etudiant/listetresultas', [PageUniversityController::class, 'listofstudent'])->name('etudiant.listofstudent');
 Route::get('/detail-actulite/{actualite}', [PageUniversityController::class, 'detailactulite'])->name('detail.actualite');
 Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
 
@@ -103,9 +109,7 @@ Route::get('change-password', [AuthController::class, 'showChangePasswordForm'])
 Route::post('change-password', [AuthController::class, 'changePassword'])->name('change.password');
 
 // Route protégée (page d'accueil ou autre)
-Route::get('home', function () {
-    return view('dashboard');
-})->name('home')->middleware('auth');
+
 
 
 Route::get('/events', [EventController::class, 'index'])->name('event.index');
@@ -116,3 +120,15 @@ Route::post('/events/{event}', [EventController::class, 'update']);
 Route::delete('/events/{event}', [EventController::class, 'destroy'])->name('event.destroy');
 Route::get('/api/events', [EventController::class, 'getEvents']);
 
+
+// Route pour afficher la liste des documents
+Route::get('documents', [DocumentController::class, 'index'])->name('documents.index');
+
+// Route pour afficher le formulaire de création d'un document
+Route::get('documents/create', [DocumentController::class, 'create'])->name('documents.create');
+
+// Route pour sauvegarder un document
+Route::post('documents', [DocumentController::class, 'store'])->name('documents.store');
+
+// Route pour afficher les détails d'un document spécifique
+Route::get('documents/{id}', [DocumentController::class, 'show'])->name('documents.show');
