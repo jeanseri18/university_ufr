@@ -60,7 +60,7 @@
     <!-- Affichage des événements -->
     <div class="row">
         @foreach ($events as $event)
-            <div class="col-md-4 content-item events">
+            <div class="col-md-4 content-item events  mb-4">
                 <div class="card h-100 shadow-sm border-0 card-hover">
                     <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top" alt="{{ $event->poste }}">
                     <div class="card-body">

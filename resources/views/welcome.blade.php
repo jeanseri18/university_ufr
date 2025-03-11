@@ -7,6 +7,58 @@
     flex-direction: column;
     justify-content: space-between;
 }
+/* Slider container */
+.bg-slide1, .bg-slide2, .bg-slide3 {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Vous pouvez ajuster la hauteur */
+    position: relative;
+    transition: background-position 1s ease, background-size 1s ease; /* Ajoute une animation fluide lors du changement de slide */
+}
+
+/* Amélioration du texte sur chaque slide */
+.bg-slide1 h1, .bg-slide2 h1, .bg-slide3 h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Ajout d'un effet de fondu pour l'image */
+.carousel-inner {
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+/* Effet de bouton hover */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Pour des boutons plus visibles */
+}
+
+/* Card hover effet */
+.card-hover:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Adaptation des images à différentes résolutions */
+.card-img-top {
+    width: 100%;
+    height: 250px; /* Hauteur fixe pour les images */
+    object-fit: cover; /* Assure que l'image couvre toute la surface sans déformation */
+}
 
 .bg-slide1 {
     background: linear-gradient(#0C3396B8, #000000F1), url('../../assets/images/backhome.png') no-repeat right;
@@ -234,13 +286,13 @@
         <div class="table-responsive-xl pb-6 row">
     @foreach ($actualites as $actualite)
         <div class="col-md-3">
-            <div class="card mb-4 mb-xl-0 card-hover border">
+            <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;>
                 <!-- Image avec taille uniforme -->
                 <a href="{{ route('detail.actualite', $actualite) }}">
                     <img src="{{ asset('storage/' . $actualite->image) }}" class="card-img-top rounded-top-3" alt="{{ $actualite->titre }}">
                 </a>
 
-                <div class="card-body">
+                <div class="card-body d-flex flex-column">
                     <!-- Titre limité en largeur -->
                     <h3 class="mb-3 ">
                         <a href="{{ route('detail.actualite', $actualite) }}" class="text-inherit">
@@ -297,46 +349,43 @@ padding-bottom: 30px;">
             </div>
         </div>
         <div class="table-responsive-xl pb-6">
-            <div class="row">
-            @if($events->isNotEmpty())
-   
-
-
-        @foreach ($events as $event)
-
-        <div class="col-md-3">
-            <div class="card mb-4 mb-xl-0 card-hover border">
-                <!-- Image avec taille uniforme -->
-                <a href="{{ route('detail.actualite', $event) }}">
-                    <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}">
-                </a>
-
-                <div class="card-body">
-                    <!-- Titre limité en largeur -->
-                    <h3 class="mb-3 ">
-                        <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
-                            {{ Str::limit($event->title, 65) }}
+    <div class="row">
+        @if($events->isNotEmpty())
+            @foreach ($events as $event)
+                <div class="col-md-3 mb-4">
+                    <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
+                        <!-- Image avec taille uniforme -->
+                        <a href="{{ route('detail.actualite', $event) }}">
+                            <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
                         </a>
-                    </h3>
 
-                    <div class="mb-4">
-                        <!-- Texte limité à 3 lignes -->
-                        <p class="truncate-text text-muted">{{ Str::limit($event->detail, 100) }}</p>
+                        <div class="card-body d-flex flex-column">
+                            <!-- Titre limité en largeur -->
+                            <h3 class="mb-3 ">
+                                <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
+                                    {{ Str::limit($event->title, 65) }}
+                                </a>
+                            </h3>
 
-                        <!-- Date en petit -->
-                        <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
+                            <div class="mb-4 flex-grow-1">
+                                <!-- Texte limité à 3 lignes -->
+                                <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
+
+                                <!-- Date en petit -->
+                                <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
+                            </div>
+
+                            <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
+                        </div>
                     </div>
-
-                    <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
                 </div>
-            </div>
-        </div>
-    @endforeach
-    @else
-    <p>Aucun événement disponible.</p>
-@endif
-        </div>
-        </div>
+            @endforeach
+        @else
+            <p>Aucun événement disponible.</p>
+        @endif
+    </div>
+</div>
+
     </div>
 </section>
 <section class="">
