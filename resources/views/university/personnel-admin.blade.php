@@ -3,7 +3,56 @@
 @section('title', 'Espace Personnel Administratif et Technique | UFR')
 
 @section('content')
+<style>
+    .card-img-top {
+    width: 100%;
+    height: 200px; /* Hauteur uniforme */
+    object-fit: cover; /* Coupe l’image pour qu’elle garde le bon ratio */
+}
 
+.card-body {
+    min-height: 180px; /* Assure une hauteur uniforme des cartes */
+}
+
+.truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre max de lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    .faq-container {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 15px;
+    }
+
+    .faq-item h3 {
+        color: #2B6635;
+        cursor: pointer;
+    }
+
+    .faq-item p {
+        display: none;
+        color: #666;
+        margin-top: 5px;
+    }
+</style>
+
+<script>
+    function toggleAnswer(id) {
+        var answer = document.getElementById(id);
+        answer.style.display = (answer.style.display === "none" || answer.style.display === "") ? "block" : "none";
+    }
+</script>
 <section class="py-lg-8 py-5" style="color:white; background: linear-gradient(to right, #2B6635, #2B6635);">
     <div class="container my-lg-8">
         <div class="row align-items-center">
@@ -119,7 +168,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">MESRS</h5>
                         <p class="card-text">Visitez le site du Ministère de l'Enseignement Supérieur et de la Recherche Scientifique.</p>
-                        <a href="https://www.enseignementsup-recherche.gouv.ci" class="btn btn-primary" target="_blank">
+                        <a href="https://inscription.mesrs-ci.net/" class="btn btn-primary" target="_blank">
                             <i class="bi bi-box-arrow-up-right"></i> Consulter
                         </a>
                     </div>
@@ -130,7 +179,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">UFHB</h5>
                         <p class="card-text">Accédez aux ressources et services administratifs de l'Université Félix Houphouët-Boigny.</p>
-                        <a href="https://www.ufhb.ci" class="btn btn-primary" target="_blank">
+                        <a href="https://w.univ-fhb.edu.ci/" class="btn btn-primary" target="_blank">
                             <i class="bi bi-box-arrow-up-right"></i> Consulter
                         </a>
                     </div>
@@ -201,4 +250,5 @@
         </div>
     </div>
 </section>
+
 @endsection

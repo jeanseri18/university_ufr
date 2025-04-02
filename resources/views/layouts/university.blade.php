@@ -132,7 +132,7 @@
         @yield('content')
         <!-- Trusted -->
     </main>
-    <footer class="footer py-8" style="background-color:#021105">
+    <footer class="footer py-8" style="background-color:#000000FF">
     <div class="container">
         <div class="row gy-6 gy-xl-0 pb-8">
             <!-- Section Description -->
@@ -176,7 +176,7 @@
         </div>
 
         <!-- Section Copyright -->
-        <div class="bg-dark py-4 mt-4">
+        <div class=" py-4 mt-4"  style="background-color:#000000FF">
             <div class="container text-center">
                 <span class="text-white">© 2024 UFR. Tous droits réservés.</span>
             </div>

@@ -3,7 +3,24 @@
 @section('title', 'Ecoles doctorales | UFR')
 
 @section('content')
+<style>
+    .card-img-top {
+    width: 100%;
+    height: 200px; /* Hauteur uniforme */
+    object-fit: cover; /* Coupe l’image pour qu’elle garde le bon ratio */
+}
 
+.card-body {
+    min-height: 180px; /* Assure une hauteur uniforme des cartes */
+}
+
+.truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre max de lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}</style>
 <section class="py-lg-8 py-5" style="color:white; background: linear-gradient(to right, #2B6635, #2B6635);">
     <!-- container -->
     <div class="container my-lg-8">
