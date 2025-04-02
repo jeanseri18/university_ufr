@@ -3,10 +3,10 @@
 @section('title', 'Ecoles doctorales | UFR')
 
 @section('content')
-<section class="py-8">
-  <div class="container">
-    <div class="row">
-      <div class="offset-xl-2 col-xl-8 offset-lg-1 col-lg-10 col-md-12 col-12">
+
+  <div class="col-md-8">
+    <section class="py-8">
+      <div class="container">
         <div class="text-center mb-3">
           <h1 class="display-2 fw-bold">Rechercher un Ancien Étudiant</h1>
           <p class="lead">
@@ -26,8 +26,22 @@
           </div>
         </form>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+    <!-- Section Nous soutenir -->
+    <section class="py-8 bg-light">
+      <div class="container">
+        <div class="text-center mb-3">
+          <h1 class="display-2 fw-bold">Nous soutenir</h1>
+          <p class="lead">
+            Soutenez l'UFR en effectuant un don. Votre contribution nous permettra de renforcer les ressources et d'améliorer l'environnement d'apprentissage pour nos étudiants et enseignants.
+          </p>
+        </div>
+        <div class="text-center mt-4">
+          <p class="text-muted">Vous pouvez aussi faire un don directement via notre plateforme en ligne en cliquant sur le bouton ci-dessous.</p>
+          <a href="https://www.example.com/don" class="btn btn-primary">Faire un Don en Ligne</a>
+        </div>
+      </div>
+    </section>
 
 @endsection
