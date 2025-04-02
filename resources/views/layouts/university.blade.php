@@ -29,34 +29,34 @@
     <div class="container">
         <!-- Menu à gauche -->
         <div class="row" style="min-height: 100px; padding: 30px;">
-        <div class="col-md-4">
+        <div class="col-md-8">
 
             <div class="row text-center" style="color:#2b6635">
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-2">
         <a href="{{ route('actualité') }}" class="nav-link text-black"><strong>À propos</strong></a>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-2">
         <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant</a>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-2">
         <a href="{{ route('enseignant') }}" class="nav-link text-black">Enseignant</a>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-4">
         <a href="{{ route('personnel-admin') }}" class="nav-link text-black">Personnel administratif</a>
     </div>
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-2">
         <a href="{{ route('partenaire') }}" class="nav-link text-black">Partenaires</a>
     </div>
 </div>
 
             </div>
             <div class="col-md-1"> </div>
-            <div class="col-md-4 ">
+            <div class="col-md-3 ">
                 <a class="navbar-brand mx-auto" href="#">
                 <img src="{{ asset('assets/Logo.png') }}" alt="Logo" class="img-fluid navbar-brand">
                 </a>
             </div>
-            <div class="col-md-2"> </div>
+            <div class="col-md-1"> </div>
 
         </div>
 

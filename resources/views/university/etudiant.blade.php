@@ -67,6 +67,7 @@
 </section>
 
 <br>
+
 <section>
     <div class="container">
         <div class="row border-top border-bottom">
@@ -561,6 +562,7 @@
         <div id="map" style="height: 400px;" aria-label="Carte interactive des campus"></div>
     </div>
 </section>
+
 
 <!-- Script pour initialiser la carte -->
 <script>
