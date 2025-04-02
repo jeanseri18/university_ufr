@@ -85,6 +85,8 @@ Route::get('/all-actualite', [PageUniversityController::class, 'allactualite'])-
 Route::get('/etudiant/agenda', [PageUniversityController::class, 'agenda'])->name('etudiant.agenda');
 Route::get('/etudiant/listetresultas', [PageUniversityController::class, 'listofstudent'])->name('etudiant.listofstudent');
 Route::get('/detail-actulite/{actualite}', [PageUniversityController::class, 'detailactulite'])->name('detail.actualite');
+Route::get('/enseignant', [PageUniversityController::class, 'enseignant'])->name('enseignant');
+Route::get('/personnel-admin', [PageUniversityController::class, 'personnel'])->name('personnel-admin');
 Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
 
 

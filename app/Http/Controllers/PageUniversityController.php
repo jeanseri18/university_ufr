@@ -17,9 +17,9 @@ class PageUniversityController extends Controller
    
     public function welcome()
     {
-        $actualites = Actualite::orderBy('created_at', 'desc')->limit(10)->get();
-        $events = Event::orderBy('created_at', 'desc')->limit(10)->get();
-        $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(10)->get();
+        $actualites = Actualite::orderBy('created_at', 'desc')->limit(8)->get();
+        $events = Event::orderBy('created_at', 'desc')->limit(12)->get();
+        $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(8)->get();
         return view('welcome', compact('actualites','mediatheques','events'));
     }
 
@@ -146,5 +146,18 @@ foreach ($filieres as $index => $filiere) {
     public function detailactulite(Actualite $actualite)
     {
         return view('university.detail-actualite', compact('actualite'));
+    }
+
+    public function enseignant( )
+    {
+        $actualites = Actualite::orderBy('created_at', 'desc')->limit(8)->get();
+        $events = Event::orderBy('created_at', 'desc')->limit(12)->get();
+        return view('university.enseignant', compact('actualites','events'));
+    }
+    public function personnel( )
+    {
+        $actualites = Actualite::orderBy('created_at', 'desc')->limit(8)->get();
+        $events = Event::orderBy('created_at', 'desc')->limit(12)->get();
+        return view('university.personnel-admin', compact('actualites','events'));
     }
 }

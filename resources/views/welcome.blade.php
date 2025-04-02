@@ -157,7 +157,7 @@
 }
 
 </style>
-@section('title', 'Acceuil | Bem executive school')
+@section('title', 'Acceuil | Ufr ')
 
 @section('content')
 <!-- VERSION DESKTOP -->

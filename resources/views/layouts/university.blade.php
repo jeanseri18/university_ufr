@@ -39,7 +39,10 @@
         <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant</a>
     </div>
     <div class="col-6 col-md-3">
-        <a href="#" class="nav-link text-black">Enseignant</a>
+        <a href="{{ route('enseignant') }}" class="nav-link text-black">Enseignant</a>
+    </div>
+    <div class="col-6 col-md-3">
+        <a href="{{ route('personnel-admin') }}" class="nav-link text-black">Personnel administratif</a>
     </div>
     <div class="col-6 col-md-3">
         <a href="{{ route('partenaire') }}" class="nav-link text-black">Partenaires</a>
