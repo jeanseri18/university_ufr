@@ -23,11 +23,11 @@
 }</style>
 <section class="py-lg-8 py-5" style="color:white; background: linear-gradient(to right, #2B6635, #2B6635);">
     <!-- container -->
-    <div class="container my-lg-8">
+    <div class="container ">
         <!-- row -->
         <div class="row align-items-center">
             <!-- col -->
-            <div class="col-lg-6 mb-6 mb-lg-0">
+            <div class="col-lg-8 mb-6 mb-lg-0">
                 <div>
                     <!-- heading -->
                     <h5 class="text-white mb-4">
