@@ -21,6 +21,7 @@ public function store(Request $request)
 {
     $validatedData = $request->validate([
         'title' => 'required',
+        'foruser' => 'required|string',
         'description' => 'nullable',
         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         'start_time' => 'required|date',

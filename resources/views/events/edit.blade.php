@@ -35,6 +35,16 @@
             <label for="end_time">Date de fin</label>
             <input type="datetime-local" class="form-control" id="end_time" name="end_time" value="{{ old('end_time', $event->end_time->format('Y-m-d\TH:i')) }}" required>
         </div>
+        <div class="form-group">
+            <label for="foruser">Destiné à</label>
+            <select class="form-control" id="foruser" name="foruser">
+                <option value="">-- Sélectionnez un groupe --</option>
+                <option value="etudiant" {{ old('foruser', $event->foruser) == 'etudiant' ? 'selected' : '' }}>Étudiant</option>
+                <option value="enseignant" {{ old('foruser', $event->foruser) == 'enseignant' ? 'selected' : '' }}>Enseignant</option>
+                <option value="personnel_administratif" {{ old('foruser', $event->foruser) == 'personnel_administratif' ? 'selected' : '' }}>Personnel administratif</option>
+                <option value="tout_le_monde" {{ old('foruser', $event->foruser) == 'tout_le_monde' ? 'selected' : '' }}>Tout le monde</option>
+            </select>
+        </div>
 
         <button type="submit" class="btn btn-primary">Mettre à jour l'événement</button>
     </form>

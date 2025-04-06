@@ -24,6 +24,7 @@ class ActualiteController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'titre' => 'required|string|max:255',
             'detail' => 'required|string',
+            'foruser' => 'required|string',
             'date_ajoute' => 'required|date',
         ]);
 
@@ -34,6 +35,7 @@ class ActualiteController extends Controller
             'titre' => $request->titre,
             'detail' => $request->detail,
             'date_ajoute' => $request->date_ajoute,
+            'foruser' => $request->foruser,
         ]);
 
         return redirect()->route('actualites.index')->with('success', 'Actualité ajoutée avec succès.');

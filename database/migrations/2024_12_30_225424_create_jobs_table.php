@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->text('detail')->nullable();
             $table->timestamp('date_ajoute')->useCurrent();
+            $table->string('foruser')->nullable(); // Utilisateur associé à l'actualité
             $table->timestamps();
         });
     }

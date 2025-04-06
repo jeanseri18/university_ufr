@@ -214,72 +214,21 @@
             <p class="mb-0">Accédez aux documents importants pour votre parcours académique, tels que des guides, des formulaires, et des informations sur nos programmes.</p>
         </div>
         <div class="row">
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Guide de l'étudiante</h5>
-                        <p class="card-text">Téléchargez notre guide complet pour vous accompagner dans vos démarches administratives et académiques.</p>
-                        <a href="assets/guide_etudiante.pdf" class="btn btn-primary" download>
-                            <i class="bi bi-download"></i> Télécharger
-                        </a>
-                    </div>
+        @foreach($docs as $doc)
+        <div class="col-md-4 col-12 mb-4">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ $doc->titre }}</h5>
+                    <p class="card-text">
+                        {{ \Illuminate\Support\Str::limit($doc->details, 100) }}
+                    </p>
+                    <a href="{{ asset('storage/' . $doc->fichier) }}" class="btn btn-primary" target="_blank">
+                        <i class="bi bi-box-arrow-up-right"></i> Consulter
+                    </a>
                 </div>
             </div>
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Fiche d'inscription</h5>
-                        <p class="card-text">Téléchargez et remplissez la fiche d'inscription pour vous inscrire à nos programmes académiques.</p>
-                        <a href="assets/fiche_inscription.pdf" class="btn btn-primary" download>
-                            <i class="bi bi-download"></i> Télécharger
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Calendrier Académique</h5>
-                        <p class="card-text">Consultez notre calendrier académique pour connaître les dates importantes de l'année universitaire.</p>
-                        <a href="assets/calendrier_academique.pdf" class="btn btn-primary" download>
-                            <i class="bi bi-download"></i> Télécharger
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Manuel de l'étudiant(e)</h5>
-                        <p class="card-text">Obtenez un accès direct à notre manuel de l'étudiant(e) pour découvrir les règles et attentes de notre établissement.</p>
-                        <a href="assets/manuel_etudiant.pdf" class="btn btn-primary" download>
-                            <i class="bi bi-download"></i> Télécharger
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Charte de l'étudiant(e)</h5>
-                        <p class="card-text">Téléchargez la charte qui définit les engagements et responsabilités des étudiant(e)s au sein de notre établissement.</p>
-                        <a href="assets/charte_etudiant.pdf" class="btn btn-primary" download>
-                            <i class="bi bi-download"></i> Télécharger
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-12 mb-4">
-                <div class="card shadow border-0">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Brochure des Programmes</h5>
-                        <p class="card-text">Découvrez l'ensemble de nos programmes académiques en téléchargeant notre brochure complète.</p>
-                        <a href="assets/brochure_programmes.pdf" class="btn btn-primary" download>
-                            <i class="bi bi-download"></i> Télécharger
-                        </a>
-                    </div>
-                </div>
-            </div>
+        </div>
+    @endforeach
         </div>
     </div>
 </section>

@@ -99,8 +99,14 @@ foreach ($filieres as $index => $filiere) {
     }
     public function etudiant()
     {
-        return view('university.etudiant');
+        $docs = Document::where('type', 'guideetudiant') // ou 'guide etudiant' selon ce que tu stockes
+            ->whereIn('foruser', ['etudiant', 'tout_le_monde'])
+            ->orderBy('created_at', 'desc')
+            ->get();
+    
+        return view('university.etudiant', compact('docs'));
     }
+    
 
     public function allactualite()
     {
@@ -133,7 +139,8 @@ foreach ($filieres as $index => $filiere) {
         $search = $request->input('search');
     
         // Récupérer les événements, appliquer la recherche si nécessaire et paginer les résultats
-        $docs = Document::when($search, function($query, $search) {
+        $docs = Document::whereIn('foruser', ['etudiant', 'tout_le_monde'])
+        ->when($search, function($query, $search) {
             return $query->where('titre', 'like', "%$search%")
                          ->orWhere('details', 'like', "%$search%");
         })
@@ -150,14 +157,38 @@ foreach ($filieres as $index => $filiere) {
 
     public function enseignant( )
     {
-        $actualites = Actualite::orderBy('created_at', 'desc')->limit(8)->get();
-        $events = Event::orderBy('created_at', 'desc')->limit(12)->get();
-        return view('university.enseignant', compact('actualites','events'));
+        $actualites = Actualite::whereIn('foruser', ['enseignant', 'tout_le_monde'])
+        ->orderBy('created_at', 'desc')
+        ->limit(8)
+        ->get();
+    
+    $events = Event::whereIn('foruser', ['enseignant', 'tout_le_monde'])
+        ->orderBy('created_at', 'desc')
+        ->limit(12)
+        ->get();
+        $docs = Document::where('type', 'guideenseignant') // ou 'guide etudiant' selon ce que tu stockes
+        ->whereIn('foruser', ['enseignant', 'tout_le_monde'])
+        ->orderBy('created_at', 'desc')
+        ->get();
+    
+        return view('university.enseignant', compact('actualites','events','docs'));
     }
     public function personnel( )
     {
-        $actualites = Actualite::orderBy('created_at', 'desc')->limit(8)->get();
-        $events = Event::orderBy('created_at', 'desc')->limit(12)->get();
-        return view('university.personnel-admin', compact('actualites','events'));
+        $actualites = Actualite::whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
+        ->orderBy('created_at', 'desc')
+        ->limit(8)
+        ->get();
+    
+    $events = Event::whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
+        ->orderBy('created_at', 'desc')
+        ->limit(12)
+        ->get();
+        $docs = Document::where('type', 'guideenseignant') // ou 'guide etudiant' selon ce que tu stockes
+        ->whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
+        ->orderBy('created_at', 'desc')
+        ->get();
+    
+        return view('university.personnel-admin', compact('actualites','events','docs'));
     }
 }

@@ -23,6 +23,17 @@
             <label for="date_ajoute" class="form-label">Date ajoutée</label>
             <input type="date" name="date_ajoute" class="form-control" value="{{ $actualite->date_ajoute }}">
         </div>
+        <div class="mb-3">
+            <label for="foruser">Destiné à</label>
+            <select class="form-control" id="foruser" name="foruser">
+                <option value="">-- Sélectionnez un groupe --</option>
+                <option value="etudiant" {{ old('foruser', $event->foruser) == 'etudiant' ? 'selected' : '' }}>Étudiant</option>
+                <option value="enseignant" {{ old('foruser', $event->foruser) == 'enseignant' ? 'selected' : '' }}>Enseignant</option>
+                <option value="personnel_administratif" {{ old('foruser', $event->foruser) == 'personnel_administratif' ? 'selected' : '' }}>Personnel administratif</option>
+                <option value="tout_le_monde" {{ old('foruser', $event->foruser) == 'tout_le_monde' ? 'selected' : '' }}>Tout le monde</option>
+            </select>
+        </div>
+
         <button type="submit" class="btn btn-warning">Modifier</button>
     </form>
 </div>

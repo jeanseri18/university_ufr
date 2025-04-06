@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
             $table->string('type'); // Type du document
+            $table->string('foruser');
             $table->string('titre'); // Titre du document
             $table->string('pdf'); // URL du fichier PDF
             $table->text('details'); // Détails du document

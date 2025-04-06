@@ -30,6 +30,7 @@ class JobController extends Controller
             'poste' => 'required|string|max:255',
             'image' => 'nullable|image|max:10048', // 2MB max
             'detail' => 'nullable|string',
+            'foruser' => 'nullable|string',
         ]);
 
         $imagePath = $request->file('image') ? $request->file('image')->store('jobs', 'public') : null;
@@ -39,6 +40,7 @@ class JobController extends Controller
             'poste' => $request->poste,
             'image' => $imagePath,
             'detail' => $request->detail,
+            'foruser' => $request->foruser,
         ]);
 
         return redirect()->route('jobs.index')->with('success', 'Job ajouté avec succès.');

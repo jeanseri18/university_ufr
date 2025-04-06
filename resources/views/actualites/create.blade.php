@@ -21,6 +21,16 @@
             <label for="date_ajoute" class="form-label">Date ajoutée</label>
             <input type="date" name="date_ajoute" class="form-control">
         </div>
+        <div class="mb-3">
+            <label for="foruser" class="form-label">Destiné à</label>
+            <select class="form-control" id="foruser" name="foruser">
+                <option value="">-- Sélectionnez un groupe --</option>
+                <option value="etudiant">Étudiant</option>
+                <option value="enseignant">Enseignant</option>
+                <option value="personnel_administratif">Personnel administratif</option>
+                <option value="tout_le_monde">Tout le monde</option>
+            </select>
+        </div>
         <button type="submit" class="btn btn-success">Ajouter</button>
     </form>
 </div>
