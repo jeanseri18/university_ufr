@@ -155,24 +155,7 @@ foreach ($filieres as $index => $filiere) {
         return view('university.detail-actualite', compact('actualite'));
     }
 
-    public function enseignant( )
-    {
-        $actualites = Actualite::whereIn('foruser', ['enseignant', 'tout_le_monde'])
-        ->orderBy('created_at', 'desc')
-        ->limit(8)
-        ->get();
-    
-    $events = Event::whereIn('foruser', ['enseignant', 'tout_le_monde'])
-        ->orderBy('created_at', 'desc')
-        ->limit(12)
-        ->get();
-        $docs = Document::where('type', 'guideenseignant') // ou 'guide etudiant' selon ce que tu stockes
-        ->whereIn('foruser', ['enseignant', 'tout_le_monde'])
-        ->orderBy('created_at', 'desc')
-        ->get();
-    
-        return view('university.enseignant', compact('actualites','events','docs'));
-    }
+ 
     public function personnel( )
     {
         $actualites = Actualite::whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])

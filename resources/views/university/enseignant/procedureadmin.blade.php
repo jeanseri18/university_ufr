@@ -46,6 +46,21 @@
                     </div>
                 </div>
             </div>
+            @foreach($docs as $doc)
+        <div class="col-md-4 col-12 mb-4">
+            <div class="card shadow border-0">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ $doc->titre }}</h5>
+                    <p class="card-text">
+                        {{ \Illuminate\Support\Str::limit($doc->details, 100) }}
+                    </p>
+                    <a href="{{ asset('storage/' . $doc->fichier) }}" class="btn btn-primary" target="_blank">
+                        <i class="bi bi-box-arrow-up-right"></i> Consulter
+                    </a>
+                </div>
+            </div>
+        </div>
+    @endforeach
             
         </div>
     </div>
