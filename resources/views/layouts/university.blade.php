@@ -93,7 +93,7 @@
     <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
     <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
     <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li>
-@elseif(in_array(Route::currentRouteName(), ['enseignant','enseignant.join', 'enseignant.agenda', 'enseignant.listofteacher', 'enseignant.doc', 'enseignant.cames']))
+@elseif(in_array(Route::currentRouteName(), ['enseignant','enseignant.rejoindre', 'enseignant.calendrier', 'enseignant.procedure', 'enseignant.liste', 'enseignant.cames']))
 <li>
     <a href="{{ route('enseignant') }}" class="dropdown-item">Vie à l'université</a></li>
     <li><a href="{{ route('enseignant.calendrier') }}" class="dropdown-item">Calendrier</a></li>
