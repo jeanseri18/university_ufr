@@ -85,11 +85,16 @@ Route::get('/all-actualite', [PageUniversityController::class, 'allactualite'])-
 Route::get('/etudiant/agenda', [PageUniversityController::class, 'agenda'])->name('etudiant.agenda');
 Route::get('/etudiant/listetresultas', [PageUniversityController::class, 'listofstudent'])->name('etudiant.listofstudent');
 Route::get('/detail-actulite/{actualite}', [PageUniversityController::class, 'detailactulite'])->name('detail.actualite');
-Route::get('/enseignant', [PageUniversityController::class, 'enseignant'])->name('enseignant');
 Route::get('/personnel-admin', [PageUniversityController::class, 'personnel'])->name('personnel-admin');
 Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
 
 
+Route::get('/enseignant', [ProfesseurController::class, 'enseignant'])->name('enseignant');
+Route::get('/enseignant-event', [ProfesseurController::class, 'calendrier'])->name('enseignant.calendrier');
+Route::get('/enseignant-list', [ProfesseurController::class, 'liste'])->name('enseignant.liste');
+Route::get('/enseignant-procedure', [ProfesseurController::class, 'procedure'])->name('enseignant.procedure');
+Route::get('/enseignant-cames', [ProfesseurController::class, 'cames'])->name('enseignant.cames');
+Route::get('/enseignant-rejoindre', [ProfesseurController::class, 'rejoindre'])->name('enseignant.rejoindre');
 
 
 // Route pour lister les utilisateurs

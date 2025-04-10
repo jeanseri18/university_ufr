@@ -33,7 +33,7 @@
                 <!-- Colonne avec image -->
 
                 <!-- Colonne avec texte -->
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title"><span class="text-primary">Presentation</span></h5>
                         <h2 class="card-title display-3">Mot du doyen</h2>
@@ -41,52 +41,30 @@
                             <li class="mb-2">
 
                                 <span class="ms-2">
-                                    <h3> Chers étudiants, chers collègues, chers partenaires,
-                                    </h3>
+                         
 
-                                    C’est avec un immense honneur et une profonde fierté que je m’adresse à vous en tant
-                                    que doyen de<span class="text-primary"> l’UFR Sciences Économiques et
-                                        Gestion</span>. Notre unité de formation a pour vocation de former des leaders
-                                    compétents, visionnaires et capables d’apporter des solutions innovantes aux défis
-                                    économiques et managériaux de notre époque.
-                                    Au cœur de notre mission se trouve un engagement constant envers l’excellence
-                                    académique et l’innovation. À travers des programmes diversifiés, adaptés aux
-                                    réalités du monde professionnel, nous nous efforçons de préparer nos étudiants à
-                                    devenir des acteurs majeurs du développement économique, tant à l’échelle locale
-                                    qu’internationale.
-                                    Nos enseignants, chercheurs et collaborateurs travaillent avec passion et rigueur
-                                    pour offrir un environnement d’apprentissage stimulant, où les savoirs théoriques se
-                                    conjuguent aux compétences pratiques. Nous croyons fermement que l’éducation est la
-                                    clé de la transformation sociale et économique, et c’est pourquoi nous mettons tout
-                                    en œuvre pour offrir un cadre d’apprentissage de qualité, soutenu par des
-                                    partenariats stratégiques avec le secteur privé et les institutions publiques.
-                                    Aux étudiants, je vous encourage à faire preuve de détermination, de curiosité et de
-                                    créativité dans votre parcours académique. Sachez que vous êtes au cœur de nos
-                                    préoccupations, et que tout est mis en place pour vous accompagner dans votre
-                                    réussite.
-                                    À mes collègues et partenaires, je tiens à exprimer ma gratitude pour votre
-                                    engagement et votre soutien indéfectibles. Ensemble, nous continuerons à bâtir une
-                                    UFR forte, reconnue pour son excellence et son impact positif sur la société.
-                                    Avançons ensemble, unis par notre ambition commune de bâtir un avenir meilleur.
-                                    Professeur [Nom du Doyen]
-                                    Doyen de l’UFR Sciences Économiques et Gestion
+
+Notre UFR a été créée en 19 et est la première UFR de Sciences Économiques et de Gestion de la Côte d'Ivoire. Deux missions nous ont été assignées à savoir celle de l'enseignement et de la recherche. Et en  50 ans, nous avons formé à l'économie et à la gestion des travailleurs qui font la fierté de notre pays: des ministres aux hommes d'affaires en passant par les administrateurs et des travailleurs d'institutions internationales. Nous avons également contribué à la recherche à travers des cellules de recherche telles que le CREMIDE, une revue scientifique qui est la RISEG et bien entendu l'organisation de colloques internationaux. 
+
+Toujours motivé par notre soucis de former les élites de demain dans un monde dynamique, nous avons diversifié nos formations classiques tout en mettant sur pieds des filières professionnelles spécifiques pour être plus proches des besoins des entreprises. Nous avons par ailleurs élargi les champs de recherche dans nos laboratoire afin de renforcer nos productions scientifiques. 
+
+Bien entendu, le travail n'est pas encore terminé et c'est avec vous que nous irons plus loin. Nous espérons que ce site sera l'un des éléments de notre voyage commun et qu'il vous permettra de vivre une expérience spéciale en notre compagnie. 
+<br><br><h5>Koné Salif<br>
+Doyen de l'UFR SEG, <br>Maître de Conférence et Spécialiste des questions de Commerce International</h5>
                                 </span>
                             </li>
-                            <li class="mb-2">
-
-                                <span class="ms-2"></span>
-                            </li>
+                          
 
 
                         </ul>
                     </div>
 
                 </div>
-                <div class="col-md-6" style="  background-color:gray">
+                <div class="col-md-4" style="  background-color:primary">
                     <br>
 
-                    <!--img src="" class="card-img w-100" style="  background-size: cover; background-color:gray"
-                        alt="Image"-->
+                    <img src="assets/doyenbg.jpeg" class="card-img w-100" style="  background-size: cover; background-color:gray;"
+                        alt="Image">
 
                 </div>
             </div>
@@ -119,13 +97,9 @@
                                 <div class="display-4 text-primary mb-3">
                                     <i class="fe fe-award"></i>
                                 </div>
-                                <h3 class="fw-semibold mb-2">Accompagnement sur mesure</h3>
-                                <p class=" mb-0" sstyle="font-size:14px">Nous comprenons que chaque leader est
-                                    unique. Nos programmes sont conçus pour s'adapter à vos objectifs et aux défis
-                                    spécifiques de votre secteur. Bénéficiez d'un accompagnement personnalisé pour
-                                    maximiser
-                                    votre impact dans un environnement en constante évolution.</p>
-                            </div>
+                                <h3 class="fw-semibold mb-2">Formations sur mesure.</h3>
+                                <p class=" mb-0" sstyle="font-size:14px">Conscients des besoins spécifiques des entreprises, nous créons sans cesse des formations innovantes et pointues afin de répondre aux défis actuels.</p>
+                                <br><br><br>   </div>
                         </div>
                     </div>
 

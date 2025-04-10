@@ -88,24 +88,19 @@
                 <ul class="navbar-nav mt-3 mt-lg-0 mx-xxl-auto">
              
 
-                @if(Route::currentRouteName() == 'etudiant')
-        <!-- Menu spécifique pour les étudiants -->
-        <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie a l'université</a></li>
-        <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
-        <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li>
-
-        
-        @elseif(Route::currentRouteName() == 'etudiant.agenda')
-    <!-- Menu spécifique pour l'agenda des étudiants -->
+                @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent']))
+    <!-- Menu spécifique pour les étudiants -->
     <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
     <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
     <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li>
-    @elseif(Route::currentRouteName() == 'etudiant.listofstudent')
-    <!-- Menu spécifique pour l'agenda des étudiants -->
-    <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
-    <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
-    <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li>
-
+@elseif(in_array(Route::currentRouteName(), ['enseignant','enseignant.join', 'enseignant.agenda', 'enseignant.listofteacher', 'enseignant.doc', 'enseignant.cames']))
+<li>
+    <a href="{{ route('enseignant') }}" class="dropdown-item">Vie à l'université</a></li>
+    <li><a href="{{ route('enseignant.calendrier') }}" class="dropdown-item">Calendrier</a></li>
+    <li><a href="{{ route('enseignant.liste') }}" class="dropdown-item">Listes des professeur</a></li>
+    <li><a href="{{ route('enseignant.procedure') }}" class="dropdown-item">Procedure administratives</a></li>
+    <li><a href="{{ route('enseignant.cames') }}" class="dropdown-item">CAMES</a></li>
+    <li><a href="{{ route('enseignant.rejoindre') }}" class="dropdown-item">Nous rejoindre</a></li>
     @else
     <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualité
     </a></li>
