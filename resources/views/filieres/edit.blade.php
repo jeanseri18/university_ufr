@@ -21,9 +21,9 @@
         <div class="mb-3">
             <label for="type" class="form-label">Type</label>
             <select name="type" id="type" class="form-control">
-                <option value="1" {{ $filiere->type == 1 ? 'selected' : '' }}>Licence</option>
-                <option value="2" {{ $filiere->type == 2 ? 'selected' : '' }}>Master</option>
-                <option value="3" {{ $filiere->type == 3 ? 'selected' : '' }}>Doctorat</option>
+                <option value="Licence" {{ $filiere->type == Licence ? 'selected' : '' }}>Licence</option>
+                <option value="Master" {{ $filiere->type == Master ? 'selected' : '' }}>Master</option>
+                <option value="Doctorat" {{ $filiere->type == Doctorat ? 'selected' : '' }}>Doctorat</option>
             </select>
             @error('type')
                 <div class="text-danger">{{ $message }}</div>

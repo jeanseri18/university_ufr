@@ -163,8 +163,11 @@
                     <span class="text-white fw-bold">Contact</span>
                     <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
                         <li class="text-white">📍 Adresse : Abidjan, Université Félix Houphouët-Boigny</li>
-                        <li class="text-white">📧 Email : contact@ufrseg.edu.ci</li>
-                        <li class="text-white">📞 Téléphone : +225 XX XX XX XX</li>
+                        <li class="text-white">📧 Email : Servicecommunication-ufrseg@ufhb.edu.ci</li>
+                        <li class="text-white">
++225 01 03 35 58 03<br>
++225 01 73 77 52 98<br>
++225 07 99 90 43 45</li>
                     </ul>
                 </div>
             </div>

@@ -15,9 +15,9 @@
         <div class="mb-3">
             <label for="type" class="form-label">Type</label>
             <select name="type" id="" class="form-control">
-            <option value=1>Licence</option>
-            <option value=2>Master</option>
-            <option value=3>Doctorat</option>
+            <option value="Licence">Licence</option>
+            <option value="Master">Master</option>
+            <option value="Doctorat">Doctorat</option>
             </select>
         </div>
     

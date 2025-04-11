@@ -128,7 +128,7 @@ Doyen de l'UFR SEG, <br>Maître de Conférence et Spécialiste des questions de 
                                     <i class="fe fe-users"></i>
                                 </div>
                                 <h3 class="fw-semibold mb-2">Expertise Reconnue</h3>
-                                <p class=" mb-0" style="font-size:14px">BEM Executive Education bénéficie d'une solide
+                                <p class=" mb-0" style="font-size:14px">Ufr bénéficie d'une solide
                                     réputation dans le
                                     domaine de la formation des managers, cadres et dirigeants. Nos programmes sont
                                     conçus
@@ -149,81 +149,128 @@ Doyen de l'UFR SEG, <br>Maître de Conférence et Spécialiste des questions de 
         </div>
 
 
-        <br>
-        <section class="bg-primary text-white py-5 rounded">
-            <div class="container text-left">
-                <h1 class="display-5 fw-bold text-white">Organigramme</h1>
-            </div>
+        <br> <style>
+    * {
+      box-sizing: border-box;
+    }
 
-            <div class="org-chart">
-                <!-- Niveau 1 -->
-                <div class="org-level">
-                    <div class="org-box">Doyen</div>
-                </div>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2b6635;
+      color: white;
+  
+    }
 
-                <div class="line"></div>
+    .org-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
 
-                <!-- Niveau 2 -->
-                <div class="org-level">
-                    <div class="org-box">Vice-Doyen</div>
-                    <div class="org-box">Responsable Administratif</div>
-                </div>
+    .level {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      position: relative;
+    }
 
-                <div class="line"></div>
+    .box {
+      background-color: #193E1F;
+      padding: 15px 25px;
+      border-radius: 10px;
+      border: 1px solid white;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+      min-width: 200px;
+    }
 
-                <!-- Niveau 3 -->
-                <div class="org-level">
-                    <div class="org-box">Chef de Département A</div>
-                    <div class="org-box">Chef de Département B</div>
-                    <div class="org-box">Chef de Département C</div>
-                </div>
-            </div>
-        </section>
-        </div>
-        <style>
-        .org-chart {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
+    .arrow-down::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 15px solid white;
+    }
 
-        .org-level {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+    /* Add vertical arrows only to levels that connect downward */
+    .level.arrowed .box::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 15px solid white;
+    }
+  </style>
 
-        .org-box {
-            padding: 15px 30px;
-            background-color: #2b6635;
-            border: 1px solid white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            transition: background-color 0.3s, transform 0.3s;
-            color: white;
-            cursor: pointer;
-            font-weight: 500;
-        }
 
-        .org-box:hover {
-            background-color: #193E1FFF;
-            transform: scale(1.05);
-        }
+  <h1 style="text-align: center;">Organigramme</h1>
 
-        .line {
-            width: 3px;
-            height: 30px;
-            background-color: white;
-            margin: 0 auto;
-        }
-        </style>
+  <div class=" bg-primary" style="padding: 20px; border-radius: 10px;">
+    <p style="text-align: center;">Voici l'organigramme de notre UFR, illustrant les différentes fonctions et
+      responsabilités.</p>
+  <div class="org-container ">
+
+    <!-- Niveau 1 -->
+    <div class="level arrowed">
+      <div class="box">Conseil D’UFR</div>
+    </div>
+
+    <!-- Niveau 2 -->
+    <div class="level arrowed">
+      <div class="box">Vice-Doyen chargé de la pédagogie</div>
+      <div class="box">Doyen d’UFR/SG</div>
+    </div>
+
+    <!-- Niveau 3 -->
+    <div class="level arrowed">
+      <div class="box">Chef de Département</div>
+      <div class="box">Responsable d’Unité</div>
+      <div class="box">Commission pédagogique</div>
+      <div class="box">Service Financier</div>
+    </div>
+
+    <!-- Niveau 4 -->
+    <div class="level arrowed">
+      <div class="box">Responsable des Cellules pédagogiques</div>
+      <div class="box">Commission des Examens</div>
+      <div class="box">Commission Scientifique</div>
+    </div>
+
+    <!-- Niveau 5 -->
+    <div class="level arrowed">
+      <div class="box">Responsable d’unité</div>
+      <div class="box">Responsable des TP</div>
+      <div class="box">Responsable Cellule de Recherche</div>
+    </div>
+
+    <!-- Niveau 6 -->
+    <div class="level">
+      <div class="box">Secrétaire Principal</div>
+      <div class="box">Secrétaire Principal Adjoint</div>
+      <div class="box">Responsable de la Scolarité</div>
+    </div>
+
+  </div>
+  </div>
+
         <br><br>
-        <section class=" " style="background-color:#E7EEEA"><br><br>
+        <!--section class=" " style="background-color:#E7EEEA"><br><br>
         <div class="container">
             <h3 class="text-left display-5 mb-4" style="color:#2b6635">Recontrez nos enseignants</h3>
             <div class="row">
-                <!-- Professeur 1 -->
                 <div class="col-md-3 mb-4">
                     <div class="card border" style="background-color:#2b6635 ;color:white">
                         <a href="#!">
@@ -251,7 +298,7 @@ Doyen de l'UFR SEG, <br>Maître de Conférence et Spécialiste des questions de 
                 </div>
             </div>
             </div>
-        </section>
+        </section-->
 
   
 
