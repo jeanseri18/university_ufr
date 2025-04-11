@@ -29,6 +29,13 @@
     <div class="container">
         <!-- Menu à gauche -->
         <div class="row" style="min-height: 100px; padding: 30px;">
+        <div class="col-md-3 ">
+                <a class="navbar-brand mx-auto" href="#">
+                <img src="{{ asset('assets/Logo.png') }}" alt="Logo" class="img-fluid navbar-brand">
+                </a>
+            </div>
+            <div class="col-md-1"> </div>
+
         <div class="col-md-8">
 
             <div class="row text-center" style="color:#2b6635">
@@ -51,13 +58,7 @@
 
             </div>
             <div class="col-md-1"> </div>
-            <div class="col-md-3 ">
-                <a class="navbar-brand mx-auto" href="#">
-                <img src="{{ asset('assets/Logo.png') }}" alt="Logo" class="img-fluid navbar-brand">
-                </a>
-            </div>
-            <div class="col-md-1"> </div>
-
+           
         </div>
 
         <!-- Logo centré -->
