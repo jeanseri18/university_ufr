@@ -44,13 +44,13 @@
                          
 
 
-Notre UFR a été créée en 19 et est la première UFR de Sciences Économiques et de Gestion de la Côte d'Ivoire. Deux missions nous ont été assignées à savoir celle de l'enseignement et de la recherche. Et en  50 ans, nous avons formé à l'économie et à la gestion des travailleurs qui font la fierté de notre pays: des ministres aux hommes d'affaires en passant par les administrateurs et des travailleurs d'institutions internationales. Nous avons également contribué à la recherche à travers des cellules de recherche telles que le CREMIDE, une revue scientifique qui est la RISEG et bien entendu l'organisation de colloques internationaux. 
+Notre UFR a été créée en 1966 et est la première UFR de Sciences Économiques et de Gestion de la Côte d'Ivoire. Deux missions nous ont été assignées à savoir celle de l'enseignement et de la recherche. Et en près de 60 ans d'existence, nous avons formé à l'économie et à la gestion des travailleurs qui font la fierté de notre pays: des ministres aux hommes d'affaires en passant par les administrateurs et des travailleurs d'institutions internationales. Nous avons également contribué à la recherche à travers des cellules de recherche telles que le CREMIDE, une revue scientifique qui est la RISEG et bien entendu l'organisation de colloques internationaux. 
 
 Toujours motivé par notre soucis de former les élites de demain dans un monde dynamique, nous avons diversifié nos formations classiques tout en mettant sur pieds des filières professionnelles spécifiques pour être plus proches des besoins des entreprises. Nous avons par ailleurs élargi les champs de recherche dans nos laboratoire afin de renforcer nos productions scientifiques. 
 
 Bien entendu, le travail n'est pas encore terminé et c'est avec vous que nous irons plus loin. Nous espérons que ce site sera l'un des éléments de notre voyage commun et qu'il vous permettra de vivre une expérience spéciale en notre compagnie. 
 <br><br><h5>Koné Salif<br>
-Doyen de l'UFR SEG, <br>Maître de Conférence et Spécialiste des questions de Commerce International</h5>
+Doyen de l'UFR de Sciences Économiques et de Gestion, <br>Maître de Conférences</h5>
                                 </span>
                             </li>
                           
