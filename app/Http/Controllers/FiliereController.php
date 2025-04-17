@@ -60,6 +60,15 @@ class FiliereController extends Controller
                       ->where('type', 'Master')
                       ->where('categorie', 'Filière classique')
                       ->get();
+
+        // Assigner les images aux filières en fonction de l'index
+        foreach ($filieres as $index => $filiere) {
+            if (isset($images[$index])) {
+                $filiere->image = $images[$index];
+            } else {
+                $filiere->image = 'images/default-image.jpg'; // Image par défaut
+            }
+        }
     
         // Passer les données à la vue
         return view('university.master-classique', compact('filieres'));
