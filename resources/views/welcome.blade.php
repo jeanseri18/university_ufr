@@ -407,10 +407,14 @@ padding-bottom: 30px;">
             <div class="col-md-3">
                 <div class="card mb-4 mb-xl-0 card-hover border">
                     <a href="#!">
-                        @if (in_array($media, ['jpg', 'jpeg', 'png']))
+                        @php
+                            $extension = pathinfo(Storage::url($media->fichier), PATHINFO_EXTENSION);
+                        @endphp
+
+                        @if (in_array($extension, ['jpg', 'jpeg', 'png']))
                             <img src="{{ asset('storage/' . $media->fichier) }}" alt="webinar-1"
                                 class="img-fluid w-100 rounded-top-3">
-                        @elseif (in_array($media, ['mp4']))
+                        @elseif (in_array($extension, ['mp4']))
                             <video src="{{ asset('storage/' . $media->fichier) }}"></video>
                         @else
                             
