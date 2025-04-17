@@ -415,7 +415,9 @@ padding-bottom: 30px;">
                             <img src="{{ asset('storage/' . $media->fichier) }}" alt="webinar-1"
                                 class="img-fluid w-100 rounded-top-3">
                         @elseif (in_array($extension, ['mp4']))
-                            <video src="{{ asset('storage/' . $media->fichier) }}"></video>
+                            <a href="{{ asset('storage/' . $media->fichier) }}" target="_blank">
+                                <video src="{{ asset('storage/' . $media->fichier) }}" style="width: 100%; height: auto;"></video>
+                            </a>
                         @else
                             
                         @endif
