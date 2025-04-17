@@ -149,7 +149,8 @@ Doyen de l'UFR de Sciences Économiques et de Gestion, <br>Maître de Conférenc
         </div>
 
 
-        <br> <style>
+        <br> 
+    <style>
     * {
       box-sizing: border-box;
     }
@@ -181,6 +182,17 @@ Doyen de l'UFR de Sciences Économiques et de Gestion, <br>Maître de Conférenc
       padding: 15px 25px;
       border-radius: 10px;
       border: 1px solid white;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+      min-width: 200px;
+    }
+
+    .box-transparent {
+      background-color: transparent;
+      padding: 15px 25px;
+      border-radius: 10px;
+      border: 0px solid white;
       font-weight: bold;
       text-align: center;
       position: relative;
@@ -232,36 +244,38 @@ Doyen de l'UFR de Sciences Économiques et de Gestion, <br>Maître de Conférenc
     <div class="level arrowed">
       <div class="box">Vice-Doyen chargé de la pédagogie</div>
       <div class="box">Doyen d’UFR/SG</div>
+      <div class="box">Vice-Doyen chargé de la récherche</div>
     </div>
 
     <!-- Niveau 3 -->
-    <div class="level arrowed">
+    <div class="level">
       <div class="box">Chef de Département</div>
-      <div class="box">Responsable d’Unité</div>
-      <div class="box">Commission pédagogique</div>
-      <div class="box">Service Financier</div>
+      <div class="level arrowed">
+        <div class="box ">Sécretaire principal</div>
+      </div>
+      <div class="box">Responsable de laboratoire</div>
     </div>
 
     <!-- Niveau 4 -->
-    <div class="level arrowed">
-      <div class="box">Responsable des Cellules pédagogiques</div>
-      <div class="box">Commission des Examens</div>
-      <div class="box">Commission Scientifique</div>
+    <div class="level ">
+      <div class="box-transparent"></div>
+      <div class="box">Sécretaire principal adjoint</div>
+      <div class="box-transparent"></div>
     </div>
 
     <!-- Niveau 5 -->
-    <div class="level arrowed">
+    <!-- <div class="level arrowed">
       <div class="box">Responsable d’unité</div>
       <div class="box">Responsable des TP</div>
       <div class="box">Responsable Cellule de Recherche</div>
-    </div>
+    </div> -->
 
     <!-- Niveau 6 -->
-    <div class="level">
+    <!-- <div class="level">
       <div class="box">Secrétaire Principal</div>
       <div class="box">Secrétaire Principal Adjoint</div>
       <div class="box">Responsable de la Scolarité</div>
-    </div>
+    </div> -->
 
   </div>
   </div>
