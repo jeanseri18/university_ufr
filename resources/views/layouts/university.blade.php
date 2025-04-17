@@ -103,12 +103,12 @@
     <li><a href="{{ route('enseignant.cames') }}" class="dropdown-item">CAMES</a></li>
     <li><a href="{{ route('enseignant.rejoindre') }}" class="dropdown-item">Nous rejoindre</a></li>
     @else
-    <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualité
+    <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualités
     </a></li>
     <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Qui sommes-nous</a></li>
 
         <!-- Menu standard pour tous les utilisateurs -->
-        <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Filieres Classique</a></li>
+        <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Filieres Classiques</a></li>
         <li><a href="{{ route('filierePro') }}" class="dropdown-item">Filieres professionnelles</a></li>
         <li><a href="{{ route('alumnis') }}" class="dropdown-item">Alumnis</a></li>
         <li><a href="{{ route('larecherche') }}" class="dropdown-item">La recherche à l'UFRSEG</a></li>
@@ -138,7 +138,7 @@
                         <img src="{{ asset('assets/Logo.png') }}" alt="Logo UFR"  width="250px"/>
                     </div>
                     <p class="mb-0 text-white">
-                        L’UFR des Sciences de Gestion et d'Économie de l’Université Félix Houphouët-Boigny propose un parcours académique complet et diversifié, allant de la Licence au Master, avec des formations adaptées aux exigences du marché du travail et aux besoins de la recherche scientifique.
+                        L’UFR des Sciences Économiques et de Gestion de l’Université Félix Houphouët-Boigny propose un parcours académique complet et diversifié, allant de la Licence au Doctorat, avec des formations adaptées aux exigences du marché du travail et aux besoins de la recherche scientifique.
                     </p>
                 </div>
             </div>
@@ -148,7 +148,7 @@
                 <div class="d-flex flex-column gap-4">
                     <span class="text-white fw-bold">Pages</span>
                     <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                        <li><a href="{{ route('actualité') }}" class="nav-link text-white">Actualité</a></li>
+                        <li><a href="{{ route('actualité') }}" class="nav-link text-white">Actualités</a></li>
                         <li><a href="{{ route('quiSommesNous') }}" class="nav-link text-white">Qui sommes-nous</a></li>
                         <li><a href="{{ route('filiereCla') }}" class="nav-link text-white">Filières Classiques</a></li>
                         <li><a href="{{ route('filierePro') }}" class="nav-link text-white">Filières Professionnelles</a></li>

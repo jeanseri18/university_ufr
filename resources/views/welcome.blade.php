@@ -261,11 +261,11 @@
             <div class="col-xl-9 col-md-9 col-9">
                 <div class="mb-lg-9 mb-6">
                     <h2 class="h1 fw-bold">
-                        Communiqué
+                        Communiqués
                         <u class="text-warning"><span class="text-primary"> et documents officiels
                             </span></u>
                     </h2>
-                    <p class="mb-0">Restez informé des annonces officielles et des informations essentielles émanant de
+                    <p class="mb-0">Restez informés des annonces officielles et des informations essentielles émanant de
                         l’université.
 
                     </p>

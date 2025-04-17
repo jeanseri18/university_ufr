@@ -8,7 +8,7 @@ use App\Models\Visiteur;
 
 class TrackVisitor {
     public function handle(Request $request, Closure $next) {
-        // Vérifie si l'utilisateur est nouveau en utilisant l'IP
+        //Vérifie si l'utilisateur est nouveau en utilisant l'IP
         if (!$request->session()->has('visited')) {
             Visiteur::create([
                 'ip' => $request->ip(),

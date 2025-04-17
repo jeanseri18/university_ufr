@@ -14,7 +14,7 @@
                     <p class="mb-0">Nos programmes sont conçus pour vous fournir les compétences nécessaires à une carrière réussie dans les secteurs économiques, financiers, et managériaux. Rejoignez une institution de renom qui vous ouvre de nombreuses opportunités professionnelles.</p>
                 </div>
 
-                <a href="about.html" class="icon-link icon-link-hover">
+                <a href="/qui-sommes-nous" class="icon-link icon-link-hover">
                     En savoir plus sur l'UFR
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
@@ -191,7 +191,7 @@
                                         <div class="ms-3">
                                             <h5 class="mb-0">Jean Dupont</h5>
                                             <small class="me-4">Responsable des admissions</small>
-                                            <small>admissions@university.com</small>
+                                            <small>Servicecommunication-ufrseg@ufhb.edu.ci</small>
                                         </div>
                                     </div>
                                 </div>
