@@ -28,7 +28,7 @@
             </div>
             @endforeach
             <!-- Filière Marketing Digital -->
-            
+
         </div>
     </div>
 </section>
