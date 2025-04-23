@@ -161,10 +161,10 @@
 
 @section('content')
 <!-- VERSION DESKTOP -->
-<section class="bg-light d-none d-md-flex align-items-center justify-content-center" 
-         style="background-image: url('image/7I8A9623.jpg'); 
-                background-size: cover; 
-                background-position: center; 
+<section class="bg-light d-none d-md-flex align-items-center justify-content-center"
+         style="background-image: url('image/7I8A9623.jpg');
+                background-size: cover;
+                background-position: center;
                 height: 650px;">
   <div class="container">
     <div class="row">
@@ -208,11 +208,11 @@
 </section>
 
 <!-- VERSION MOBILE -->
-<section class="bg-light d-block d-md-none text-center" 
-         style="background-image: url('image/7I8A9623.jpg'); 
-                background-size: cover; 
-                background-position: center; 
-                height: auto; 
+<section class="bg-light d-block d-md-none text-center"
+         style="background-image: url('image/7I8A9623.jpg');
+                background-size: cover;
+                background-position: center;
+                height: auto;
                 padding: 40px 20px;">
   <div class="container">
     <div class="row">
@@ -285,7 +285,7 @@
         </div>
         <div class="table-responsive-xl pb-6 row">
     @foreach ($actualites as $actualite)
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;>
                 <!-- Image avec taille uniforme -->
                 <a href="{{ route('detail.actualite', $actualite) }}">
@@ -315,7 +315,7 @@
     @endforeach
 </div>
 
-    
+
     </div>
 </section>
 
@@ -326,7 +326,7 @@ padding-bottom: 30px;">
             <div class="col-xl-9 col-md-9 col-9">
                 <div class="mb-lg-9 mb-6">
                     <h2 class="h1 fw-bold">
-                        Calendrier des événements
+                        Agenda
                         <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
                     </h2>
                     <p class="mb-0">Soyez à l’affût des dates clés, conférences, et activités marquantes qui
@@ -341,8 +341,7 @@ padding-bottom: 30px;">
                 <a href="{{ route('etudiant.agenda') }}" class="text-xhite">    <h2 class="h3 fw-bold btn-primary btn">
                         voir plus
                         <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
-                    </h2>
-</a>
+                    </h2></a>
                     </p>
                 </div>
 
@@ -388,6 +387,78 @@ padding-bottom: 30px;">
 
     </div>
 </section>
+{{-- ajout de la section des évenements --}}
+</section>
+
+<section class="" style="background-color:#E7EEEA;padding-top: 30px;
+padding-bottom: 30px;">
+    <div class="container my-lg-10">
+        <div class="row">
+            <div class="col-xl-9 col-md-9 col-9">
+                <div class="mb-lg-9 mb-6">
+                    <h2 class="h1 fw-bold">
+                        Événements
+                        <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
+                    </h2>
+                    {{-- <p class="mb-0">Soyez à l’affût des dates clés, conférences, et activités marquantes qui
+                        enrichissent notre communauté universitaire.
+
+                    </p> --}}
+                </div>
+
+            </div>
+            <div class="col-xl-3 col-md-3 col-3">
+                <div class="mb-lg-3 mb-6">
+                <a href="{{ route('etudiant.agenda') }}" class="text-xhite">    <h2 class="h3 fw-bold btn-primary btn">
+                        voir plus
+                        <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
+                    </h2></a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="table-responsive-xl pb-6">
+    <div class="row">
+        @if($new_events->isNotEmpty())
+            @foreach ($new_events as $event)
+                <div class="col-md-3 mb-4">
+                    <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
+                        <!-- Image avec taille uniforme -->
+                        <a href="{{ route('detail.actualite', $event) }}">
+                            <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
+                        </a>
+
+                        <div class="card-body d-flex flex-column">
+                            <!-- Titre limité en largeur -->
+                            <h3 class="mb-3 ">
+                                <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
+                                    {{ Str::limit($event->title, 65) }}
+                                </a>
+                            </h3>
+
+                            <div class="mb-4 flex-grow-1">
+                                <!-- Texte limité à 3 lignes -->
+                                <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
+
+                                <!-- Date en petit -->
+                                <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
+                            </div>
+
+                            <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        @else
+            <p>Aucun événement disponible.</p>
+        @endif
+    </div>
+</div>
+
+    </div>
+</section>
+
 <section class="">
     <div class="container my-lg-8">
         <div class="row">
@@ -419,19 +490,19 @@ padding-bottom: 30px;">
                                 <video src="{{ asset('storage/' . $media->fichier) }}" style="width: 100%; height: auto;"></video>
                             </a>
                         @else
-                            
+
                         @endif
                     </a>
                     <div class="card-body">
                         <h3 class="mb-4 text-truncate">
                             <a href="#!" class="text-inherit">{{ $media->titre }}</a>
                         </h3>
-                        
+
                     </div>
                 </div>
             </div>
             @endforeach
-        
+
     </div></section>
 <!-- Hero Section -->
 

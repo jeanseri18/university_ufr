@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container">
-    <h2>Calendrier des Agendas</h2>
+    <h2>Calendrier des évenements</h2>
 
-    <a href="{{ url('/events/create') }}" class="btn btn-primary mb-3">Ajouter un agenda</a>
+    <a href="{{ url('events/new_create') }}" class="btn btn-primary mb-3">Ajouter un événement</a>
     @if(session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}

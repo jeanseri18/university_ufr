@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h2>Ajouter un Agenda</h2>
+    <h2>Ajouter un événement</h2>
     @if(session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
@@ -12,7 +12,7 @@
                 {{ session('error') }}
             </div>
         @endif
-    <form action="{{ route('event.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('new.event.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="title">Titre</label>

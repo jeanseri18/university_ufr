@@ -25,15 +25,15 @@
                      <div class="row g-4" data-cues="slideInUp" data-delay="1000" data-disabled="true">
                         <div class="col-lg-6 col-md-6 col-12" data-cue="slideInUp" data-delay="1000" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1000ms; animation-direction: normal; animation-fill-mode: both;">
                            <a href="#!">
-                              <div class="rounded-3 card-lift" style="background-image: url(image/7I8A9747.jpg) background-repeat: no-repeat;; height: 386px; background-size: cover"></div>
+                              <div class="rounded-3 card-lift" style="background-image: url('{{asset('assets/images/image1.jpg')}}') background-repeat: no-repeat; height: 386px; background-size: cover"></div>
                            </a>
                         </div>
                         <div class="col-lg-6 col-md-6 col-12" data-cue="slideInUp" data-delay="1000" data-show="true" style="animation-name: slideInUp; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 1200ms; animation-direction: normal; animation-fill-mode: both;">
                            <a href="#!">
-                              <div class="mb-4 rounded-3 card-lift" style="background-image: url(image/7I8A9751.jpg); background-repeat: no-repeat; height: 180px; background-size: cover"></div>
+                              <div class="mb-4 rounded-3 card-lift" style="background-image: url('{{asset('assets/images/image2.jpg')}}'); background-repeat: no-repeat; height: 180px; background-size: cover"></div>
                            </a>
                            <a href="#!">
-                              <div class="mb-2 rounded-3 card-lift" style="background-image: url(image/7I8A9755.jpg); background-repeat: no-repeat; height: 180px; background-size: cover"></div>
+                              <div class="mb-2 rounded-3 card-lift" style="background-image: url('{{asset('assets/images/image3.jpg')}}'); background-repeat: no-repeat; height: 180px; background-size: cover"></div>
                            </a>
                         </div>
                      </div>

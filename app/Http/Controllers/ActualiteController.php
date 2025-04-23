@@ -74,4 +74,4 @@ class ActualiteController extends Controller
         $actualite->delete();
         return redirect()->route('actualites.index')->with('success', 'Actualité supprimée avec succès.');
     }
-} 
+}

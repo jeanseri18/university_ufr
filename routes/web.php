@@ -26,6 +26,10 @@ use App\Http\Controllers\DocumentController;
 
 Route::get('/home', [DashboardController::class, 'index'])->name('home');
 
+//route pour creer un evenement
+Route::get('/events/new_create', [EventController::class, 'new_event_create']);
+Route::post('/events/add', [EventController::class, 'new_event_store'])->name('new.event.store');
+Route::get('/new_events', [EventController::class, 'new_index'])->name('new_event.index');
 
 Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
 Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
@@ -47,7 +51,7 @@ Route::get('/actualites', [ActualiteController::class, 'index'])->name('actualit
 
 // Formulaire pour ajouter une actualité
 Route::get('/actualites/create', [ActualiteController::class, 'create'])->name('actualites.create');
-  
+
 // Enregistrer une nouvelle actualité
 Route::post('/actualites', [ActualiteController::class, 'store'])->name('actualites.store');
 
@@ -87,6 +91,9 @@ Route::get('/etudiant/listetresultas', [PageUniversityController::class, 'listof
 Route::get('/detail-actulite/{actualite}', [PageUniversityController::class, 'detailactulite'])->name('detail.actualite');
 Route::get('/personnel-admin', [PageUniversityController::class, 'personnel'])->name('personnel-admin');
 Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
+
+Route::get('/etudiant/evenement', [PageUniversityController::class, 'evenement'])->name('etudiant.evenement');
+
 
 
 Route::get('/enseignant', [ProfesseurController::class, 'enseignant'])->name('enseignant');
