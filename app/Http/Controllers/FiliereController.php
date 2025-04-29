@@ -56,7 +56,7 @@ class FiliereController extends Controller
             }
         }
 
-        dd($images);
+        // dd($images);
 
         // Passer les données à la vue
         return view('university.licence-classique', compact('filieres'));
