@@ -12,7 +12,7 @@
           <p class="lead">
             Retrouvez facilement un ancien étudiant grâce à notre base de données. 
             Entrez son nom ou d'autres informations pour le localiser.
-          </p>
+          </p> 
         </div>
         <!-- Form -->
         <form class="row px-md-8 mx-md-8 needs-validation" novalidate="">

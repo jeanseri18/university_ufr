@@ -472,7 +472,7 @@ padding-bottom: 30px;">
                 </div>
             </div>
         </div>
-        <div class="table-responsive-xl pb-6 row">
+        <div class="table-responsive-xl pb-6 row"> 
         @foreach ($mediatheques as $media)
 
             <div class="col-md-3">
