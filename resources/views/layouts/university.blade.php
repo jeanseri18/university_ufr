@@ -30,7 +30,7 @@
         <!-- Menu à gauche -->
         <div class="row" style="min-height: 100px; padding: 30px;">
         <div class="col-md-3 ">
-                <a class="navbar-brand mx-auto" href="#">
+                <a class="navbar-brand mx-auto" href="/">
                 <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo" class="img-fluid navbar-brand" style="height: 40px">
                 </a>
             </div>
