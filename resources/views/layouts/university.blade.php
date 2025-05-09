@@ -31,7 +31,7 @@
         <div class="row" style="min-height: 100px; padding: 30px;">
         <div class="col-md-3 ">
                 <a class="navbar-brand mx-auto" href="#">
-                <img src="{{ asset('assets/Logo.png') }}" alt="Logo" class="img-fluid navbar-brand">
+                <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo" class="img-fluid navbar-brand" style="height: 40px">
                 </a>
             </div>
             <div class="col-md-1"> </div>
@@ -43,10 +43,10 @@
         <a href="{{ route('actualité') }}" class="nav-link text-black"><strong>À propos</strong></a>
     </div>
     <div class="col-6 col-md-2">
-        <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant</a>
+        <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant(e)</a>
     </div>
     <div class="col-6 col-md-2">
-        <a href="{{ route('enseignant') }}" class="nav-link text-black">Enseignant</a>
+        <a href="{{ route('enseignant') }}" class="nav-link text-black">Enseignant(e)</a>
     </div>
     <div class="col-6 col-md-4">
         <a href="{{ route('personnel-admin') }}" class="nav-link text-black">Personnel administratif</a>
@@ -58,7 +58,7 @@
 
             </div>
             <div class="col-md-1"> </div>
-           
+
         </div>
 
         <!-- Logo centré -->
@@ -87,7 +87,7 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-default">
                 <ul class="navbar-nav mt-3 mt-lg-0 mx-xxl-auto">
-             
+
 
                 @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent']))
     <!-- Menu spécifique pour les étudiants -->
@@ -113,7 +113,7 @@
         <li><a href="{{ route('alumnis') }}" class="dropdown-item">Alumnis</a></li>
         <li><a href="{{ route('larecherche') }}" class="dropdown-item">La recherche à l'UFRSEG</a></li>
     @endif
-                 
+
                 </ul>
                 <div class="mt-3 mt-lg-0 d-flex align-items-center">
                   <a href="{{ route('login') }}" class="btn btn-primary">Se connecter</a>
@@ -135,7 +135,7 @@
             <div class="col-xl-5 col-lg-6 col-md-12 mb-4">
                 <div class="d-flex flex-column gap-4">
                     <div>
-                        <img src="{{ asset('assets/Logo.png') }}" alt="Logo UFR"  width="250px"/>
+                        <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo UFR" style="height: 40px"/>
                     </div>
                     <p class="mb-0 text-white">
                         L’UFR des Sciences Économiques et de Gestion de l’Université Félix Houphouët-Boigny propose un parcours académique complet et diversifié, allant de la Licence au Doctorat, avec des formations adaptées aux exigences du marché du travail et aux besoins de la recherche scientifique.
