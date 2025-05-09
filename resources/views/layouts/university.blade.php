@@ -8,7 +8,7 @@
     <meta name="author" content="Codescandy" />
 
     <!-- Favicon icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon/favicon.ico') }}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.jpeg') }}" />
 
     <!-- Darkmode JS -->
     <script src="{{ asset('assets/js/vendors/darkMode.js') }}"></script>
