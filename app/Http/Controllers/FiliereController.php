@@ -56,8 +56,6 @@ class FiliereController extends Controller
             }
         }
 
-        // dd($images);
-
         // Passer les données à la vue
         return view('university.licence-classique', compact('filieres'));
     }
@@ -73,14 +71,14 @@ class FiliereController extends Controller
 
         // Définir 20 images en dur
         $images = [
-            'image/7I8A9751.jpg',
-            'image/7I8A9878.jpg',
-            'image/7I8A9914.jpg',
-            'image/7I8A9894.jpg',
-            'image/7I8A9623.jpg',
-            'image/7I8A9928.jpg',
-            'image/licence7.jpg',
-            'image/licence8.jpg',
+            'assets/master/agricole.jpg',
+            'assets/master/eco_dev.jpg',
+            'assets/master/eco_inter.jpg',
+            'assets/master/tra_res_hum.jpg',
+            'assets/master/finance.jpg',
+            'assets/master/comp_gest.jpg',
+            'assets/master/gest_res_hum.jpg',
+            'assets/master/management.jpg',
             'image/licence9.jpg',
             'image/licence10.jpg',
             'image/licence11.jpg',

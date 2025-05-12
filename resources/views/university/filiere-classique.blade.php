@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="text-center mb-6" data-cue="fadeIn" data-show="true" style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                    <h2 class="mb-0">Filières classique</h2>
+                    <h2 class="mb-0">Filières classiques</h2>
                 </div>
             </div>
         </div>
@@ -202,7 +202,7 @@
                                     <div class="d-flex align-items-center">
                                         <img src="assets/images/avatar/avatar-7.jpg" alt="Avatar" class="avatar avatar-lg rounded-circle">
                                         <div class="ms-3">
-                                            <h5 class="mb-0">Jean Dupont</h5>
+                                            <h5 class="mb-0">Dr. Abiba TOURÉ </h5>
                                             <small class="me-4">Responsable des admissions</small>
                                             <small>Servicecommunication-ufrseg@ufhb.edu.ci</small>
                                         </div>
