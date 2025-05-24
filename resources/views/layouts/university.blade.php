@@ -23,6 +23,8 @@
 
     <link rel="stylesheet" href="{{ asset('assets/libs/tiny-slider/dist/tiny-slider.css') }}" />
     <title>@yield('title', 'Homepage | Geeks - Bootstrap 5 Template')</title>
+
+    @stack('styles') {{-- Inclure les styles spécifiques à une page --}}
 </head>
 
 <body class="bg-white">
@@ -204,6 +206,8 @@
     <script src="{{ asset('assets/js/theme.min.js') }}"></script>
     <script src="{{ asset('assets/libs/tiny-slider/dist/min/tiny-slider.js') }}"></script>
     <script src="{{ asset('assets/js/vendors/tnsSlider.js') }}"></script>
+
+    @stack('scripts')
 </body>
 
 </html>
