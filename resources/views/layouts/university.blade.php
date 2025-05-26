@@ -112,7 +112,7 @@
                 <li><a href="javascript:void(0)" class="dropdown-item">Résultats des Examens </a></li>
                 <li><a href="javascript:void(0)" class="dropdown-item">Liste des étudiants</a></li>
 
-                @elseif(in_array(Route::currentRouteName(), ['actualité','enseignant.rejoindre', 'enseignant.calendrier', 'enseignant.procedure', 'enseignant.liste', 'enseignant.cames']))
+                @elseif(in_array(Route::currentRouteName(), ['actualité','quiSommesNous', 'filiereCla', 'filierePro', 'alumnis', 'larecherche']))
                 <!-- Menu spécifique pour les étudiants -->
                 <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualités</a></li>
                 <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Qui sommes-nous</a></li>
@@ -135,13 +135,20 @@
     <li><a href="javascript:void(0)" class="dropdown-item">Opportunités et Mobilité </a></li>
     
     @else
-        <li><a href="{{ route('actualité') }}" class="dropdown-item">Agenda</a></li>
+        {{-- <li><a href="{{ route('actualité') }}" class="dropdown-item">Agenda</a></li>
         <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Nous rejoindre</a></li>
         <!-- Menu standard pour tous les utilisateurs -->
         <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Procédures Administratives</a></li>
         <li><a href="{{ route('filierePro') }}" class="dropdown-item">Promotions</a></li>
         <li><a href="{{ route('alumnis') }}" class="dropdown-item">Opportunités et Mobilité</a></li>
-        <li><a href="{{ route('larecherche') }}" class="dropdown-item">Vie sociale</a></li>
+        <li><a href="{{ route('larecherche') }}" class="dropdown-item">Vie sociale</a></li> --}}
+        <li><a href="javascript:void(0)" class="dropdown-item">Agenda</a></li>
+        <li><a href="javascript:void(0)" class="dropdown-item">Nous rejoindre</a></li>
+        <!-- Menu standard pour tous les utilisateurs -->
+        <li><a href="javascript:void(0)" class="dropdown-item">Procédures Administratives</a></li>
+        <li><a href="javascript:void(0)" class="dropdown-item">Promotions</a></li>
+        <li><a href="javascript:void(0)" class="dropdown-item">Opportunités et Mobilité</a></li>
+        <li><a href="javascript:void(0)" class="dropdown-item">Vie sociale</a></li>
     @endif
 
                 </ul>
