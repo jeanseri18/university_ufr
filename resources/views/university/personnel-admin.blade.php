@@ -68,7 +68,7 @@
                         •⁠  ⁠Fonctionnaires <br>
                         •⁠  ⁠Contractuels
                     </p>
-                    <a href="#" class="btn bg-black text-white" style="background:black">Postuler Maintenant</a>
+                    <a href="https://www.enseignement.gouv.ci/index.php/accueil" target="_blank" class="btn bg-black text-white" style="background:black">Postuler Maintenant</a>
                 </div>
             </div>
             <div class="col-lg-6 d-flex">
@@ -84,11 +84,12 @@
         <div class="row">
             <div class="col-xl-9 col-md-9 col-9">
                 <div class="mb-lg-9 mb-6">
-                    <h2 class="h1 fw-bold">
+                    <h2 class="h1 fw-bold">Agenda</h2>
+                    {{-- <h2 class="h1 fw-bold">
                         Communiqué
                         <u class="text-warning"><span class="text-primary"> et documents officiels
                             </span></u>
-                    </h2>
+                    </h2> --}}
                     <p class="mb-0">Restez informé des annonces officielles et des informations essentielles émanant de
                         l’université.
 
@@ -157,7 +158,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Fonction Publique</h5>
                         <p class="card-text">Accédez au site officiel de la Fonction Publique pour toutes vos démarches.</p>
-                        <a href="https://www.fonctionpublique.ci" class="btn btn-primary" target="_blank">
+                        <a href="https://www.fonctionpublique.gouv.ci/index.php/front-page/navigator/accueil" class="btn btn-primary" target="_blank">
                             <i class="bi bi-box-arrow-up-right"></i> Consulter
                         </a>
                     </div>
@@ -168,7 +169,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">MESRS</h5>
                         <p class="card-text">Visitez le site du Ministère de l'Enseignement Supérieur et de la Recherche Scientifique.</p>
-                        <a href="https://inscription.mesrs-ci.net/" class="btn btn-primary" target="_blank">
+                        <a href="https://www.enseignement.gouv.ci/index.php/accueil" class="btn btn-primary" target="_blank">
                             <i class="bi bi-box-arrow-up-right"></i> Consulter
                         </a>
                     </div>

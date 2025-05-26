@@ -25,38 +25,47 @@
     <title>@yield('title', 'Homepage | Geeks - Bootstrap 5 Template')</title>
 
     @stack('styles') {{-- Inclure les styles spécifiques à une page --}}
+    <style>
+        .active {
+            font-weight: 800;
+        }
+
+        .nav-link:hover{
+            font-weight: 800;
+        }
+    </style>
 </head>
 
 <body class="bg-white">
     <div class="container">
         <!-- Menu à gauche -->
         <div class="row" style="min-height: 100px; padding: 30px;">
-        <div class="col-md-3 ">
+            <div class="col-md-3 ">
                 <a class="navbar-brand mx-auto" href="/">
                 <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo" class="img-fluid navbar-brand" style="height: 40px">
                 </a>
             </div>
             <div class="col-md-1"> </div>
 
-        <div class="col-md-8">
+            <div class="col-md-8">
 
-            <div class="row text-center" style="color:#2b6635">
-    <div class="col-6 col-md-2">
-        <a href="{{ route('actualité') }}" class="nav-link text-black"><strong>À propos</strong></a>
-    </div>
-    <div class="col-6 col-md-2">
-        <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant(e)</a>
-    </div>
-    <div class="col-6 col-md-2">
-        <a href="{{ route('enseignant') }}" class="nav-link text-black">Enseignant(e)</a>
-    </div>
-    <div class="col-6 col-md-4">
-        <a href="{{ route('personnel-admin') }}" class="nav-link text-black">Personnel administratif</a>
-    </div>
-    <div class="col-6 col-md-2">
-        <a href="{{ route('partenaire') }}" class="nav-link text-black">Partenaires</a>
-    </div>
-</div>
+                <div class="row text-center" style="color:#2b6635">
+                    <div class="col-6 col-md-2">
+                        <a href="{{ route('actualité') }}" class="nav-link text-black active">À propos</a>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <a href="{{ route('etudiant') }}" class="nav-link text-black">Étudiant(e)</a>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <a href="{{ route('enseignant') }}" class="nav-link text-black">Enseignant(e)</a>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <a href="{{ route('personnel-admin') }}" class="nav-link text-black">Personnel administratif</a>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <a href="{{ route('partenaire') }}" class="nav-link text-black">Partenaires</a>
+                    </div>
+                </div>
 
             </div>
             <div class="col-md-1"> </div>
@@ -66,7 +75,7 @@
         <!-- Logo centré -->
 
     </div>
-    </nav>
+    <nav>
 
     <!-- Page Content -->
     <!-- Navbar -->
@@ -92,28 +101,47 @@
 
 
                 @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent']))
-    <!-- Menu spécifique pour les étudiants -->
-    <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
-    <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
-    <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li>
+                <!-- Menu spécifique pour les étudiants -->
+                <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
+                <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
+                <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-item">Agenda</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-item">Parlons Eco</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-item">Opportunités et Mobilité</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-item">Emplois et Conseils RH</a></li>
+                <li><a href="javascript:void(0)" class="dropdown-item">Résultats des Examens </a></li>
+                <li><a href="javascript:void(0)" class="dropdown-item">Liste des étudiants</a></li>
+
+                @elseif(in_array(Route::currentRouteName(), ['actualité','enseignant.rejoindre', 'enseignant.calendrier', 'enseignant.procedure', 'enseignant.liste', 'enseignant.cames']))
+                <!-- Menu spécifique pour les étudiants -->
+                <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualités</a></li>
+                <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Qui sommes-nous</a></li>
+                <!-- Menu standard pour tous les utilisateurs -->
+                <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Filieres Classiques</a></li>
+                <li><a href="{{ route('filierePro') }}" class="dropdown-item">Filieres professionnelles</a></li>
+                <li><a href="{{ route('alumnis') }}" class="dropdown-item">Alumnis</a></li>
+                <li><a href="{{ route('larecherche') }}" class="dropdown-item">La recherche à l'UFRSEG</a></li>
+
+
 @elseif(in_array(Route::currentRouteName(), ['enseignant','enseignant.rejoindre', 'enseignant.calendrier', 'enseignant.procedure', 'enseignant.liste', 'enseignant.cames']))
 <li>
-    <a href="{{ route('enseignant') }}" class="dropdown-item">Vie à l'université</a></li>
-    <li><a href="{{ route('enseignant.calendrier') }}" class="dropdown-item">Calendrier</a></li>
-    <li><a href="{{ route('enseignant.liste') }}" class="dropdown-item">Listes des professeur</a></li>
+    <a href="{{ route('enseignant') }}" class="dropdown-item">Vie sociale</a></li>
+    <li><a href="{{ route('enseignant.calendrier') }}" class="dropdown-item">Agenda</a></li>
+    <li><a href="{{ route('enseignant.liste') }}" class="dropdown-item">Listes des professeurs</a></li>
     <li><a href="{{ route('enseignant.procedure') }}" class="dropdown-item">Procedure administratives</a></li>
     <li><a href="{{ route('enseignant.cames') }}" class="dropdown-item">CAMES</a></li>
     <li><a href="{{ route('enseignant.rejoindre') }}" class="dropdown-item">Nous rejoindre</a></li>
+    <li><a href="javascript:void(0)" class="dropdown-item">Cours/ TD </a></li>
+    <li><a href="javascript:void(0)" class="dropdown-item">Opportunités et Mobilité </a></li>
+    
     @else
-    <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualités
-    </a></li>
-    <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Qui sommes-nous</a></li>
-
+        <li><a href="{{ route('actualité') }}" class="dropdown-item">Agenda</a></li>
+        <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Nous rejoindre</a></li>
         <!-- Menu standard pour tous les utilisateurs -->
-        <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Filieres Classiques</a></li>
-        <li><a href="{{ route('filierePro') }}" class="dropdown-item">Filieres professionnelles</a></li>
-        <li><a href="{{ route('alumnis') }}" class="dropdown-item">Alumnis</a></li>
-        <li><a href="{{ route('larecherche') }}" class="dropdown-item">La recherche à l'UFRSEG</a></li>
+        <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Procédures Administratives</a></li>
+        <li><a href="{{ route('filierePro') }}" class="dropdown-item">Promotions</a></li>
+        <li><a href="{{ route('alumnis') }}" class="dropdown-item">Opportunités et Mobilité</a></li>
+        <li><a href="{{ route('larecherche') }}" class="dropdown-item">Vie sociale</a></li>
     @endif
 
                 </ul>
