@@ -77,6 +77,12 @@ Route::get('/master-classique', [FiliereController::class, 'ShowMasterClassique'
 Route::get('/doctorat-classique', [FiliereController::class, 'ShowDoctoratClassique'])->name('doctorat.classique');
 Route::get('/detail/filieres/{id}', [FiliereController::class, 'showpublic'])->name('detail.classique');
 
+Route::get('/detail/filieres-pro/{id}', [FiliereController::class, 'showDetailFilierPro'])->name('detail-filiere.pro');
+
+Route::get('/licence-pro', [FiliereController::class, 'showLicencePro'])->name('licence.pro');
+Route::get('/master-pro', [FiliereController::class, 'showMasterPro'])->name('master.pro');
+Route::get('/doctorat-pro', [FiliereController::class, 'showDoctoratPro'])->name('doctorat.pro');
+
 Route::get('/qui-sommes-nous', [PageUniversityController::class, 'quiSommesNous'])->name('quiSommesNous');
 Route::get('/larecherche', [PageUniversityController::class, 'larecherche'])->name('larecherche');
 Route::get('/filiere-pro', [PageUniversityController::class, 'filierePro'])->name('filierePro');
@@ -146,3 +152,27 @@ Route::post('documents', [DocumentController::class, 'store'])->name('documents.
 
 // Route pour afficher les détails d'un document spécifique
 Route::get('documents/{id}', [DocumentController::class, 'show'])->name('documents.show');
+
+
+
+
+// Route pour le menu apropos
+// Route::prefix('apropos/')->group(function () {
+//     Route::get('/qui-sommes-nous', [PageUniversityController::class, 'quiSommesNous'])->name('quiSommesNous');
+//     Route::get('/larecherche', [PageUniversityController::class, 'larecherche'])->name('larecherche');
+//     Route::get('/filiere-pro', [PageUniversityController::class, 'filierePro'])->name('filierePro');
+//     Route::get('/filiere-classique', [PageUniversityController::class, 'filiereCla'])->name('filiereCla');
+//     Route::get('/alumnis', [PageUniversityController::class, 'alumnis'])->name('alumnis');
+//     Route::get('/actualité', [PageUniversityController::class, 'actualité'])->name('actualité');
+//     Route::get('/partenaire', [PageUniversityController::class, 'partenaire'])->name('partenaire');
+//     Route::get('/etudiant', [PageUniversityController::class, 'etudiant'])->name('etudiant');
+//     Route::get('/all-actualite', [PageUniversityController::class, 'allactualite'])->name('all.actualite');
+//     Route::get('/etudiant/agenda', [PageUniversityController::class, 'agenda'])->name('etudiant.agenda');
+//     Route::get('/etudiant/listetresultas', [PageUniversityController::class, 'listofstudent'])->name('etudiant.listofstudent');
+//     Route::get('/detail-actulite/{actualite}', [PageUniversityController::class, 'detailactulite'])->name('detail.actualite');
+//     Route::get('/personnel-admin', [PageUniversityController::class, 'personnel'])->name('personnel-admin');
+//     Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
+
+//     Route::get('/etudiant/evenement', [PageUniversityController::class, 'evenement'])->name('etudiant.evenement');
+
+// });

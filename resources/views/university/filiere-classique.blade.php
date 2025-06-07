@@ -2,6 +2,44 @@
 
 @section('title', 'Filiere classique | UFR')
 
+@push('styles')
+    <style>
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .faq-question::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        .faq-question.active::after {
+            content: "-";
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px 0;
+            color: #555;
+        }
+    </style>
+@endpush
+
 @section('content')
 <section class="my-xl-9 my-5">
             <div class="container">
@@ -164,6 +202,117 @@
  <center>   <a href="#" class="btn btn-primary mt-3 align-items-center justify-content-center">Découvrir la vie à UFR</a></center>
  <br></div>
 </div>
+
+
+<div style="background-color:#ffffff; padding: 20px; margin: 20px;">
+    <div class="container">
+    <h1 style="color:#2B6635"><center>Foire Aux Qestions</center></h1>
+   
+    <div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question">1. Je souhaite connaître les orientations possibles en Sciences Économiques</div>
+        <div class="faq-answer">Notre site recense la liste de toutes nos formations, dans les filières classiques tout comme dans les filières professionnelles. Vous pouvez cliquer sur la rubrique « Filières Classiques » pour avoir toutes les informations sur nos filières classiques ou sur la rubrique « Filières professionnelles » pour avoir toutes les informations sur nos filières professionnelles.</div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">2. Je suis au Lycée et je souhaite suivre une formation en Sciences Économiques, quelle est la procédure à suivre ?</div>
+        <div class="faq-answer">
+            Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br><br>
+            Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre sur le site du ministère de l’Enseignement Supérieur pour connaître les critères et les procédures d’orientation <br><br>
+            Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com <br><br>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">3. Je suis diplômé d’une autre UFR de l’université et je souhaite faire des études en Sciences Économiques, quelle est la procédure à suivre ?</div>
+        <div class="faq-answer">
+            Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br><br>
+            Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre à la Scolarité Centrale, c’est ce service qui se charge de toutes les questions relatives aux inscriptions.<br><br>
+            Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com <br><br>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">4. Je suis un(e) travailleur(se) et je souhaite faire des études en Sciences Économiques, quelle est la procédure à suivre ?</div>
+        <div class="faq-answer">
+            Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br><br>
+            Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre à la Scolarité Centrale, c’est ce service qui se charge de toutes les questions relatives aux inscriptions.<br><br>
+            Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com<br><br>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">5. Je ne vois pas nom sur les listes de présence / les listes de répartition des examens</div>
+        <div class="faq-answer">
+            Bien vérifier la liste et d’autres liste si possible <br><br>
+            Si le nom ne figure toujours pas, vérifiez le statut de votre inscription et portez une réclamation au niveau de la scolarité Centrale de l’Université Félix Houphouët Boigny
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">6. Je n’arrive pas à payer les frais d’inscription sur la plateforme Trésor Pay</div>
+        <div class="faq-answer">
+            Vous devez faire une réclamation au niveau de la Scolarité Centrale de l’Université Félix Houphouët Boigny
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">7. Je n’arrive pas à payer les frais d’inscription sur la plateforme Trésor Pay</div>
+        <div class="faq-answer">
+            Vous devez faire une réclamation au niveau de la Scolarité Centrale de l’Université Félix Houphouët Boigny
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">8. Je n’arrive pas à obtenir mes identifiants Team pour suivre les cours en ligne</div>
+        <div class="faq-answer">
+            Vous devez vous rendre à l’UFR, plus précisément au bureau 8 pour déposer une réclamation.
+            NB : L’UFR ne propose par de formation entièrement en ligne. Les cours en ligne concernent uniquement certaines Unités d’Enseignement (UE) pour les niveaux Licence 3 et Master (I et II)
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">9. La présence aux Travaux Dirigés (TD) est-elle obligatoire ?</div>
+        <div class="faq-answer">
+            La présence au TD est obligatoire et est contrôlée grâce à une liste de présence. Par ailleurs, à la fin de chaque session de Travaux Dirigés ; 
+            une note de contrôle continu est délivrée et elle compte pour 40% de la moyenne
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">10. Je ne vois pas mon nom sur les listes de répartition d’étudiant(e)s pour les examens</div>
+        <div class="faq-answer">
+            Étape 1 : vérifier toutes les listes <br><br>
+            Étape 2 : vérifier le statut de l’inscription <br><br>
+            Étape 3 : Faire une réclamation à la Scolarité Centrale <br><br>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">11. Pour une UE de 2 ECUE, j’ai eu 10 dans une ECUE et 5 dans l’autre, que faire ?</div>
+        <div class="faq-answer">
+            Étape 1 : vous devez uniquement reprendre l’ECUE dans laquelle vous n’avez pas eu la moyenne à la deuxième session <br><br>
+            Étape 2 : si vous validez cette ECUE, l’UE est considérée comme validée <br><br>
+            Étape 3 : si vous ne validez pas cette ECUE, l’UE est considérée comme non validée et vous devez la reprendre l’année prochaine<br><br>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">12. Les résultats des examens sont sortis mais mon nom ne figure pas et/ou je n’ai pas de note</div>
+        <div class="faq-answer">
+            Si vous êtes dans cette situation, vous devez déposer une réclamation à la commission des examens. Les calendriers et les procédures des réclamations sont publiés à chaque session d’examens.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question">13. Les résultats des examens sont sortis mais il y a une erreur sur mon nom, mon genre</div>
+        <div class="faq-answer">
+            Si vous êtes dans cette situation, vous devez déposer une réclamation à la commission des examens. Les calendriers et les procédures des réclamations sont publiés à chaque session d'examen.
+        </div>
+    </div>
+
+</div>
+{{-- 
 <section class="pattern-square bg-opacity-10">
     <div class="container position-relative z-1 py-xl-9 py-6">
         <div class="row">
@@ -263,5 +412,33 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 @endsection
+
+
+@push('scripts') 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const questions = document.querySelectorAll('.faq-question');
+
+            questions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const isActive = question.classList.contains('active');
+
+                    // Fermer tous les autres
+                    questions.forEach(q => {
+                        q.classList.remove('active');
+                        q.nextElementSibling.style.display = 'none';
+                    });
+
+                    // Ouvrir si ce n'était pas déjà ouvert
+                    if (!isActive) {
+                        question.classList.add('active');
+                        question.nextElementSibling.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+
+@endpush 

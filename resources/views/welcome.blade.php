@@ -331,7 +331,6 @@ padding-bottom: 30px;">
                     </h2>
                     <p class="mb-0">Soyez à l’affût des dates clés, conférences, et activités marquantes qui
                         enrichissent notre communauté universitaire.
-
                     </p>
                 </div>
 
@@ -346,9 +345,248 @@ padding-bottom: 30px;">
                 </div>
 
             </div>
+            
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="licence1-tab" data-toggle="tab" data-target="#licence1" type="button" role="tab" aria-controls="licence1" aria-selected="true">Licence 1 - Fip 1</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="licence2-tab" data-toggle="tab" data-target="#licence2" type="button" role="tab" aria-controls="licence2" aria-selected="false">Licence 2 - Fip 2</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="licence3-tab" data-toggle="tab" data-target="#licence3" type="button" role="tab" aria-controls="licence3" aria-selected="false">Licence 3 Économie - Licence 3 Gestion</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="master1-tab" data-toggle="tab" data-target="#master1" type="button" role="tab" aria-controls="master1" aria-selected="false">Master 1 Économie - Master 1 Gestion</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="master2-tab" data-toggle="tab" data-target="#master2" type="button" role="tab" aria-controls="master2" aria-selected="false">Master 2 Économie - Master 2 Gestion</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="licence1" role="tabpanel" aria-labelledby="licence1-tab">
+
+                    <div class="row">
+                        @if($events->isNotEmpty())
+                            @foreach ($events as $event)
+                                @if ($event->type == 'licence 1')
+                                <div class="col-md-3 mb-4">
+                                    <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
+                                        <!-- Image avec taille uniforme -->
+                                        <a href="{{ route('detail.actualite', $event) }}">
+                                            <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
+                                        </a>
+
+                                        <div class="card-body d-flex flex-column">
+                                            <!-- Titre limité en largeur -->
+                                            <h3 class="mb-3 ">
+                                                <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
+                                                    {{ Str::limit($event->title, 65) }}
+                                                </a>
+                                            </h3>
+
+                                            <div class="mb-4 flex-grow-1">
+                                                <!-- Texte limité à 3 lignes -->
+                                                <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
+
+                                                <!-- Date en petit -->
+                                                <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
+                                            </div>
+
+                                            <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                @endif
+                                
+                            @endforeach
+                        @else
+                            <p>Aucun événement disponible.</p>
+                        @endif
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="licence2" role="tabpanel" aria-labelledby="licence2-tab">
+
+                    <div class="row">
+                        @if($events->isNotEmpty())
+                            @foreach ($events as $event)
+                                @if ($event->type == 'licence 2')
+                                <div class="col-md-3 mb-4">
+                                    <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
+                                        <!-- Image avec taille uniforme -->
+                                        <a href="{{ route('detail.actualite', $event) }}">
+                                            <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
+                                        </a>
+
+                                        <div class="card-body d-flex flex-column">
+                                            <!-- Titre limité en largeur -->
+                                            <h3 class="mb-3 ">
+                                                <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
+                                                    {{ Str::limit($event->title, 65) }}
+                                                </a>
+                                            </h3>
+
+                                            <div class="mb-4 flex-grow-1">
+                                                <!-- Texte limité à 3 lignes -->
+                                                <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
+
+                                                <!-- Date en petit -->
+                                                <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
+                                            </div>
+
+                                            <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                @endif
+                                
+                            @endforeach
+                        @else
+                            <p>Aucun événement disponible.</p>
+                        @endif
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="licence3" role="tabpanel" aria-labelledby="licence3-tab">
+
+                    <div class="row">
+                        @if($events->isNotEmpty())
+                            @foreach ($events as $event)
+                                @if ($event->type == 'licence 3')
+                                <div class="col-md-3 mb-4">
+                                    <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
+                                        <!-- Image avec taille uniforme -->
+                                        <a href="{{ route('detail.actualite', $event) }}">
+                                            <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
+                                        </a>
+
+                                        <div class="card-body d-flex flex-column">
+                                            <!-- Titre limité en largeur -->
+                                            <h3 class="mb-3 ">
+                                                <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
+                                                    {{ Str::limit($event->title, 65) }}
+                                                </a>
+                                            </h3>
+
+                                            <div class="mb-4 flex-grow-1">
+                                                <!-- Texte limité à 3 lignes -->
+                                                <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
+
+                                                <!-- Date en petit -->
+                                                <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
+                                            </div>
+
+                                            <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                @endif
+                                
+                            @endforeach
+                        @else
+                            <p>Aucun événement disponible.</p>
+                        @endif
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="master1" role="tabpanel" aria-labelledby="master1-tab">
+
+                    <div class="row">
+                        @if($events->isNotEmpty())
+                            @foreach ($events as $event)
+                                @if ($event->type == 'master 1')
+                                <div class="col-md-3 mb-4">
+                                    <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
+                                        <!-- Image avec taille uniforme -->
+                                        <a href="{{ route('detail.actualite', $event) }}">
+                                            <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
+                                        </a>
+
+                                        <div class="card-body d-flex flex-column">
+                                            <!-- Titre limité en largeur -->
+                                            <h3 class="mb-3 ">
+                                                <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
+                                                    {{ Str::limit($event->title, 65) }}
+                                                </a>
+                                            </h3>
+
+                                            <div class="mb-4 flex-grow-1">
+                                                <!-- Texte limité à 3 lignes -->
+                                                <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
+
+                                                <!-- Date en petit -->
+                                                <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
+                                            </div>
+
+                                            <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                @endif
+                                
+                            @endforeach
+                        @else
+                            <p>Aucun événement disponible.</p>
+                        @endif
+                    </div>
+
+                </div>
+                <div class="tab-pane fade" id="master2" role="tabpanel" aria-labelledby="master2-tab">
+
+                    <div class="row">
+                        @if($events->isNotEmpty())
+                            @foreach ($events as $event)
+                                @if ($event->type == 'master 2')
+                                <div class="col-md-3 mb-4">
+                                    <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
+                                        <!-- Image avec taille uniforme -->
+                                        <a href="{{ route('detail.actualite', $event) }}">
+                                            <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
+                                        </a>
+
+                                        <div class="card-body d-flex flex-column">
+                                            <!-- Titre limité en largeur -->
+                                            <h3 class="mb-3 ">
+                                                <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
+                                                    {{ Str::limit($event->title, 65) }}
+                                                </a>
+                                            </h3>
+
+                                            <div class="mb-4 flex-grow-1">
+                                                <!-- Texte limité à 3 lignes -->
+                                                <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
+
+                                                <!-- Date en petit -->
+                                                <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
+                                            </div>
+
+                                            <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                    
+                                @endif
+                                
+                            @endforeach
+                        @else
+                            <p>Aucun événement disponible.</p>
+                        @endif
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+
         </div>
         <div class="table-responsive-xl pb-6">
-    <div class="row">
+    {{-- <div class="row">
         @if($events->isNotEmpty())
             @foreach ($events as $event)
                 <div class="col-md-3 mb-4">
@@ -382,7 +620,7 @@ padding-bottom: 30px;">
         @else
             <p>Aucun événement disponible.</p>
         @endif
-    </div>
+    </div> --}}
 </div>
 
     </div>
@@ -557,6 +795,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+<script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const tabButtons = document.querySelectorAll('#myTab .nav-link');
+                    const tabPanes = document.querySelectorAll('#myTabContent .tab-pane');
+
+                    tabButtons.forEach(function (btn) {
+                        btn.addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            // Remove active classes
+                            tabButtons.forEach(b => b.classList.remove('active'));
+                            tabPanes.forEach(pane => {
+                                pane.classList.remove('show', 'active');
+                            });
+
+                            // Add active to clicked tab
+                            this.classList.add('active');
+                            const target = this.getAttribute('data-target');
+                            const pane = document.querySelector(target);
+                            if (pane) {
+                                pane.classList.add('show', 'active');
+                            }
+                        });
+                    });
+                });
+            </script>
 
 
 @endsection

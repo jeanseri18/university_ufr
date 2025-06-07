@@ -127,6 +127,142 @@ class FiliereController extends Controller
         return view('university.doctorat-classique', compact('filieres'));
     }
 
+    function showLicencePro() {
+        // Récupérer les filières de type Licence Pro depuis la base de données
+        $filieres = DB::table('filieres')
+            ->where('type', 'Licence')
+            ->where('categorie', 'Filiere pro')
+            ->get();
+        // Définir 20 images en dur
+        $images = [
+            'assets/licence-pro/gestion.jpg',
+            'assets/licence-pro/informatique.jpg',
+            'assets/licence-pro/marketing.jpg',
+            'assets/licence-pro/finance.jpg',
+            'assets/licence-pro/ressources-humaines.jpg',
+            'assets/licence-pro/comptabilite.jpg',
+            'assets/licence-pro/commerce.jpg',
+            'assets/licence-pro/logistique.jpg',
+            'image/licence9.jpg',
+            'image/licence10.jpg',
+            'image/licence11.jpg',
+            'image/licence12.jpg',
+            'image/licence13.jpg',
+            'image/licence14.jpg',
+            'image/licence15.jpg',
+            'image/licence16.jpg',
+            'image/licence17.jpg',
+            'image/licence18.jpg',
+            'image/licence19.jpg',
+            'image/licence20.jpg'
+        ];
+        // Assigner les images aux filières en fonction de l'index
+        foreach ($filieres as $index => $filiere) {
+            if (isset($images[$index])) {
+                $filiere->image = $images[$index];
+            } else {
+                $filiere->image = 'images/default-image.jpg'; // Image par défaut
+            }
+        }
+        // Passer les données à la vue
+        // return view('university.licence-pro', compact('filieres'));
+        // Pour le moment, on retourne juste une réponse de débogage
+        // Vous pouvez remplacer cette ligne par la vue appropriée
+        //
+        return view('university.licence-pro', compact('filieres'));
+        // return dd($filieres);
+    }
+
+    function showMasterPro() {
+        // Récupérer les filières de type Master Pro depuis la base de données
+        $filieres = DB::table('filieres')
+            ->where('type', 'Master')
+            ->where('categorie', 'Filiere pro')
+            ->get();
+        // Définir 20 images en dur
+        $images = [
+            'assets/master-pro/gestion.jpg',
+            'assets/master-pro/informatique.jpg',
+            'assets/master-pro/marketing.jpg',
+            'assets/master-pro/finance.jpg',
+            'assets/master-pro/ressources-humaines.jpg',
+            'assets/master-pro/comptabilite.jpg',
+            'assets/master-pro/commerce.jpg',
+            'assets/master-pro/logistique.jpg',
+            'image/licence9.jpg',
+            'image/licence10.jpg',
+            'image/licence11.jpg',
+            'image/licence12.jpg',
+            'image/licence13.jpg',
+            'image/licence14.jpg',
+            'image/licence15.jpg',
+            'image/licence16.jpg',
+            'image/licence17.jpg',
+            'image/licence18.jpg',
+            'image/licence19.jpg',
+            'image/licence20.jpg'
+        ];
+        // Assigner les images aux filières en fonction de l'index
+        foreach ($filieres as $index => $filiere) {
+            if (isset($images[$index])) {
+                $filiere->image = $images[$index];
+            } else {
+                $filiere->image = 'images/default-image.jpg'; // Image par défaut
+            }
+        }
+        // Passer les données à la vue
+        return view('university.master-pro', compact('filieres'));
+        
+    }
+
+    function showDoctoratPro() {
+        // Récupérer les filières de type Doctorat Pro depuis la base de données
+        $filieres = DB::table('filieres')
+            ->where('type', 'Doctorat')
+            ->where('categorie', 'Filiere pro')
+            ->get();
+        // Définir 20 images en dur
+        $images = [
+            'assets/doctorat-pro/gestion.jpg',
+            'assets/doctorat-pro/informatique.jpg',
+            'assets/doctorat-pro/marketing.jpg',
+            'assets/doctorat-pro/finance.jpg',
+            'assets/doctorat-pro/ressources-humaines.jpg',
+            'assets/doctorat-pro/comptabilite.jpg',
+            'assets/doctorat-pro/commerce.jpg',
+            'assets/doctorat-pro/logistique.jpg',
+            'image/licence9.jpg',
+            'image/licence10.jpg',
+            'image/licence11.jpg',
+            'image/licence12.jpg',
+            'image/licence13.jpg',
+            'image/licence14.jpg',
+            'image/licence15.jpg',
+            'image/licence16.jpg',
+            'image/licence17.jpg',
+            'image/licence18.jpg',
+            'image/licence19.jpg',
+            'image/licence20.jpg'
+        ];
+        // Assigner les images aux filières en fonction de l'index
+        foreach ($filieres as $index => $filiere) {
+            if (isset($images[$index])) {
+                $filiere->image = $images[$index];
+            } else {
+                $filiere->image = 'images/default-image.jpg'; // Image par défaut
+            }
+        }
+        // Passer les données à la vue
+        return view('university.doctorat-pro', compact('filieres'));
+    }
+
+    function showDetailFilierPro($id)
+    {
+        $filiere = Filiere::findOrFail($id);
+        return view('university.detail-filiere-pro', compact('filiere'));
+        
+    }
+
     public function showpublic($id)
     {
         $filiere = Filiere::findOrFail($id);
