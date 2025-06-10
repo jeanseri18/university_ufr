@@ -51,19 +51,19 @@
 
                 <div class="row text-center" style="color:#2b6635">
                     <div class="col-6 col-md-2">
-                        <a href="{{ route('actualité') }}" class="nav-link text-black {{ activRoute('actualité') }}">À propos</a>
+                        <a href="{{ route('actualité') }}" class="nav-link text-black {{ activeRoute('actualité') }}">À propos</a>
                     </div>
                     <div class="col-6 col-md-2">
-                        <a href="{{ route('etudiant') }}" class="nav-link text-black {{ activRoute('etudiant') }}">Étudiant(e)</a>
+                        <a href="{{ route('etudiant') }}" class="nav-link text-black {{ activeRoute('etudiant') }}">Étudiant(e)</a>
                     </div>
                     <div class="col-6 col-md-2">
-                        <a href="{{ route('enseignant') }}" class="nav-link text-black {{ activRoute('enseignant') }}">Enseignant(e)</a>
+                        <a href="{{ route('enseignant') }}" class="nav-link text-black {{ activeRoute('enseignant') }}">Enseignant(e)</a>
                     </div>
                     <div class="col-6 col-md-4">
-                        <a href="{{ route('personnel-admin') }}" class="nav-link text-black {{ activRoute('personnel-admin') }}">Personnel administratif</a>
+                        <a href="{{ route('personnel-admin') }}" class="nav-link text-black {{ activeRoute('personnel-admin') }}">Personnel administratif</a>
                     </div>
                     <div class="col-6 col-md-2">
-                        <a href="{{ route('partenaire') }}" class="nav-link text-black {{ activRoute('partenaire') }}">Partenaires</a>
+                        <a href="{{ route('partenaire') }}" class="nav-link text-black {{ activeRoute('partenaire') }}">Partenaires</a>
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@
             <div class="collapse navbar-collapse" id="navbar-default">
                 <ul class="navbar-nav mt-3 mt-lg-0 mx-xxl-auto">
 
-                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent']))
+                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen']))
                         <!-- Menu spécifique pour les étudiants -->
                         <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
                         <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
@@ -105,7 +105,7 @@
                         <li><a href="javascript:void(0)" class="dropdown-item">Parlons Eco</a></li>
                         <li><a href="javascript:void(0)" class="dropdown-item">Opportunités et Mobilité</a></li>
                         {{-- <li><a href="javascript:void(0)" class="dropdown-item">Emplois et Conseils RH</a></li> --}}
-                        <li><a href="javascript:void(0)" class="dropdown-item">Résultats des Examens </a></li>
+                        <li><a href="{{ route('etudiant.resultat-examen') }}" class="dropdown-item">Résultats des Examens </a></li>
                         {{-- <li><a href="javascript:void(0)" class="dropdown-item">Liste des étudiants</a></li> --}}
 
                     @elseif(in_array(Route::currentRouteName(), ['welcome','actualité','quiSommesNous', 'filiereCla', 'filierePro', 'alumnis', 'larecherche']))

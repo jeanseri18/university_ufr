@@ -10,6 +10,7 @@ use App\Models\Event;
 use App\Models\Actualite;
 use App\Models\Document;
 use App\Models\New_event;
+use App\Models\ResultatExamens;
 
 class PageUniversityController extends Controller
 {
@@ -108,6 +109,21 @@ class PageUniversityController extends Controller
             ->get();
 
         return view('university.etudiant', compact('docs'));
+    }
+
+
+    public function resultatExamen()
+    {
+        // dd('resulta examen');
+        $resultats = ResultatExamens::where('type', 'resultat-examen')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        $procesVerbaux = ResultatExamens::where('type', 'proces-verbal')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('university.resultat-examen', compact('resultats', 'procesVerbaux'));
     }
 
 

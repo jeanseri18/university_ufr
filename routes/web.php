@@ -23,6 +23,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\ResultatExamenControler;
 
 Route::get('/home', [DashboardController::class, 'index'])->name('home');
 
@@ -100,7 +101,16 @@ Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
 
 Route::get('/etudiant/evenement', [PageUniversityController::class, 'evenement'])->name('etudiant.evenement');
 
-
+// Route pour afficher les résultats d'examen
+Route::get('/resultat-examen/liste', [PageUniversityController::class, 'resultatExamen'])->name('etudiant.resultat-examen');
+// Route pour afficher les résultats d'examen dans le dashboard
+Route::get('/resultat-examen', [ResultatExamenControler::class, 'resultatExamenIndex'])->name('resultat-examen.index');
+Route::get('/resultat-examen/create', [ResultatExamenControler::class, 'resultatExamenCreate'])->name('resultat-examen.create');
+Route::post('/resultat-examen', [ResultatExamenControler::class, 'resultatExamenStore'])->name('resultat-examen.store');
+Route::get('/resultat-examen/{id}/edit', [ResultatExamenControler::class, 'resultatExamenEdit'])->name('resultat-examen.edit');
+Route::post('/resultat-examen/{id}', [ResultatExamenControler::class, 'resultatExamenUpdate'])->name('resultat-examen.update');
+Route::delete('/resultat-examen/{id}', [ResultatExamenControler::class, 'resultatExamenDestroy'])->name('resultat-examen.destroy');
+Route::get('/resultat-examen/{id}/download/', [ResultatExamenControler::class, 'resultatExamenDownloadPdf'])->name('resultat-examen.download');
 
 Route::get('/enseignant', [ProfesseurController::class, 'enseignant'])->name('enseignant');
 Route::get('/enseignant-event', [ProfesseurController::class, 'calendrier'])->name('enseignant.calendrier');

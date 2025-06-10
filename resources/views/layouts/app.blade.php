@@ -46,17 +46,22 @@
             </div>
         </nav>
         <aside class="app-sidebar bg-success shadow" data-bs-theme="dark" style="background-color:#3ca45d ; ">
-            <div class="sidebar-brand">
+            {{-- <div class="sidebar-brand">
                 <a href="./index.html" class="brand-link">
                     <span class="brand-text fw-light">UFR Admin</span>
                 </a>
-            </div>
+            </div> --}}
             <div class="sidebar-wrapper">
                 <nav class="mt-2">
                     <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
-                    <li class="nav-item">
+                        <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+                            <a href="{{ route('home') }}" class="navbar-brand">
+                                <img src="{{ asset('/assets/ufr.jpeg') }}" alt="" srcset="" style="width: 100px; height: 100px; border-radius: 10%; margin-left: 10px; justify-content: center; display: flex; margin-bottom: 10px;">
+                            </a>
+                        </div>
+                        <li class="nav-item">
                             <a href="{{ route('home') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-book"></i>
+                                <i class="nav-icon bi bi-speedometer2"></i>
                                 <p>Tableau de board</p>
                             </a>
                         </li>
@@ -68,7 +73,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('documents.index') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-book"></i>
+                                <i class="nav-icon bi bi-file-earmark-text"></i>
                                 <p>Documents</p>
                             </a>
                         </li>
@@ -92,7 +97,7 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('event.index') }}" class="nav-link" style="color:white">
-                                <i class="nav-icon bi bi-newspaper"></i>
+                                <i class="nav-icon bi bi-calendar-date"></i>
                                 <p>Calendrier</p>
                             </a>
                         </li>
@@ -100,6 +105,12 @@
                             <a href="{{ route('jobs.index') }}" class="nav-link" style="color:white">
                                 <i class="nav-icon bi bi-briefcase"></i>
                                 <p>Offre d'emploie</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('resultat-examen.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-mortarboard"></i>
+                                <p>Resultat examens</p>
                             </a>
                         </li>
                         <li class="nav-item">

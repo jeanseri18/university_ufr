@@ -1,7 +1,7 @@
 <?php
 
-if (!function_exists('activRoute')) {
-    function activRoute($routeName = '')
+if (!function_exists('activeRoute')) {
+    function activeRoute($routeName = '')
     {
         return request()->routeIs($routeName) ? 'active' : '';
     }
