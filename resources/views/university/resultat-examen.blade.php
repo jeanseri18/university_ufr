@@ -9,7 +9,7 @@
         <div class="text-center mb-5">
             <small class="text-uppercase ls-md fw-semibold">Liste des resultats</small>
             <h2 class="mt-3">Resultats des examens</h2>
-            <p class="mb-0">Accédez, ci-dessous, aux à vos resultats d'examens de fin d'années.</p>
+            <p class="mb-0">Accédez ci-dessous aux resultats d'examens de fin d'année.</p>
         </div>
         <div class="row">
         @foreach($resultats as $doc)
@@ -45,7 +45,7 @@
         <div class="text-center mb-5">
             <small class="text-uppercase ls-md fw-semibold text-muted">Procès-verbaux</small>
             <h2 class="mt-3">Liste des procès-verbaux</h2>
-            <p class="mb-0">Accédez à la liste complète et definitives des différents procèsses verbaux de vos examens de fin de cycle.</p>
+            <p class="mb-0">Accédez à la liste complète et definitive des différents procès-verbaux de vos examens de fin de cycle.</p>
         </div>
         <div class="row">
             @foreach($procesVerbaux as $doc)
