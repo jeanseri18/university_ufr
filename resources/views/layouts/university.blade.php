@@ -96,14 +96,14 @@
             <div class="collapse navbar-collapse" id="navbar-default">
                 <ul class="navbar-nav mt-3 mt-lg-0 mx-xxl-auto">
 
-                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen']))
+                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen', 'etudiant.parlons-eco', 'etudiant.opportunites.mobilite']))
                         <!-- Menu spécifique pour les étudiants -->
                         <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
                         <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
                         {{-- <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li> --}}
                         <li><a href="javascript:void(0)" class="dropdown-item">Agenda</a></li>
-                        <li><a href="javascript:void(0)" class="dropdown-item">Parlons Eco</a></li>
-                        <li><a href="javascript:void(0)" class="dropdown-item">Opportunités et Mobilité</a></li>
+                        <li><a href="{{ route('etudiant.parlons-eco') }}" class="dropdown-item">Parlons Eco</a></li>
+                        <li><a href="{{ route('etudiant.opportunites.mobilite') }}" class="dropdown-item">Opportunités et Mobilité</a></li>
                         {{-- <li><a href="javascript:void(0)" class="dropdown-item">Emplois et Conseils RH</a></li> --}}
                         <li><a href="{{ route('etudiant.resultat-examen') }}" class="dropdown-item">Résultats des Examens </a></li>
                         {{-- <li><a href="javascript:void(0)" class="dropdown-item">Liste des étudiants</a></li> --}}

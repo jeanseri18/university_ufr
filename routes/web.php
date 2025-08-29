@@ -23,6 +23,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\ParlonsEcoController;
 use App\Http\Controllers\ResultatExamenControler;
 
 Route::get('/home', [DashboardController::class, 'index'])->name('home');
@@ -98,6 +99,14 @@ Route::get('/etudiant/listetresultas', [PageUniversityController::class, 'listof
 Route::get('/detail-actulite/{actualite}', [PageUniversityController::class, 'detailactulite'])->name('detail.actualite');
 Route::get('/personnel-admin', [PageUniversityController::class, 'personnel'])->name('personnel-admin');
 Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
+// Route::get('/detail-parlons-eco/{parlonsEco}', [PageUniversityController::class, 'detailParlonsEco'])->name('detail.parlons-eco');
+Route::group(['prefix' => 'etudiant'], function () {
+    Route::get('/parlons-eco', [PageUniversityController::class, 'parlonsEco'])->name('etudiant.parlons-eco');
+    Route::get('/opportunites-mobilite', [PageUniversityController::class, 'opportunitesMobilite'])->name('etudiant.opportunites.mobilite');
+
+    // Route::get('/resultat-examen/liste', [PageUniversityController::class, 'resultatExamen'])->name('etudiant.resultat-examen');
+    // Route::get('/opportunites-mobilite', [PageUniversityController::class, 'opportunitesMobilite'])->name('etudiant.opportunites.mobilite');
+});
 
 Route::get('/etudiant/evenement', [PageUniversityController::class, 'evenement'])->name('etudiant.evenement');
 
@@ -163,6 +172,24 @@ Route::post('documents', [DocumentController::class, 'store'])->name('documents.
 // Route pour afficher les détails d'un document spécifique
 Route::get('documents/{id}', [DocumentController::class, 'show'])->name('documents.show');
 
+
+// Route::group(['prefix' => 'etudiant'], function () {
+//     Route::get('/resultat-examen/liste', [PageUniversityController::class, 'resultatExamen'])->name('etudiant.resultat-examen');
+// });
+
+// Route pour admin
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/parlons-eco', [ParlonsEcoController::class, 'index'])->name('parlons-eco.index');
+    Route::get('/parlons-eco/create', [ParlonsEcoController::class, 'create'])->name('parlons-eco.create');
+    Route::post('/parlons-eco', [ParlonsEcoController::class, 'store'])->name('parlons-eco.store');
+    // Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
+    // Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
+    // Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
+    // Route::post('/users', [UserController::class, 'store'])->name('admin.users.store');
+    // Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('admin.users.edit');
+    // Route::put('/users/{id}', [UserController::class, 'update'])->name('admin.users.update');
+    // Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('admin.users.destroy');
+})->name('admin.');
 
 
 

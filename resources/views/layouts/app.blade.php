@@ -119,6 +119,12 @@
                                 <p>Utilisateur</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('parlons-eco.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-mortarboard"></i>
+                                <p>Parlons Eco</p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>

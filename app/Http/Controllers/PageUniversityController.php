@@ -210,4 +210,14 @@ class PageUniversityController extends Controller
 
         return view('university.personnel-admin', compact('actualites', 'events', 'docs'));
     }
+
+    public function parlonsEco()
+    {
+        return view('university.parlons-eco');
+    }
+
+    public function opportunitesMobilite()
+    {
+        return view('university.opportunites-mobilite');
+    }
 }
