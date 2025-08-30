@@ -99,7 +99,7 @@
                             <p class="mb-4">Découvrez les opportunités professionnelles dont vous pouvez bénéficier en étudiant dans notre université.</p>
                         </div>
                         <div class="button-wrapper mt-auto center">
-                            <a href="#" class="btn btn-primary btn-custom-green">Voir plus...</a>
+                            <a href="{{ route('etudiant.opportunites.liste') }}" class="btn btn-primary btn-custom-green">Voir plus...</a>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                             <p class="mb-4">Découvrez les opportunités de mobilité dont vous pouvez bénéficier en étudiant dans notre université.</p>
                         </div>
                         <div class="button-wrapper mt-auto center">
-                            <a href="#" class="btn btn-primary btn-custom-green">Voir plus...</a>
+                            <a href="{{ route('etudiant.mobilite.liste') }}" class="btn btn-primary btn-custom-green">Voir plus...</a>
                         </div>
                     </div>
                 </div>

@@ -96,7 +96,7 @@
             <div class="collapse navbar-collapse" id="navbar-default">
                 <ul class="navbar-nav mt-3 mt-lg-0 mx-xxl-auto">
 
-                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen', 'etudiant.parlons-eco', 'etudiant.opportunites.mobilite']))
+                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen', 'etudiant.parlons-eco', 'etudiant.opportunites.mobilite', 'etudiant.opportunites.liste', 'etudiant.mobilite.liste']))
                         <!-- Menu spécifique pour les étudiants -->
                         <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
                         <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>

@@ -103,9 +103,10 @@ Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
 Route::group(['prefix' => 'etudiant'], function () {
     Route::get('/parlons-eco', [PageUniversityController::class, 'parlonsEco'])->name('etudiant.parlons-eco');
     Route::get('/opportunites-mobilite', [PageUniversityController::class, 'opportunitesMobilite'])->name('etudiant.opportunites.mobilite');
+    Route::get('opportunites/liste', [PageUniversityController::class, 'opportunitesListe'])->name('etudiant.opportunites.liste');
+    Route::get('/mobilite/liste', [PageUniversityController::class, 'mobiliteListe'])->name('etudiant.mobilite.liste');
 
     // Route::get('/resultat-examen/liste', [PageUniversityController::class, 'resultatExamen'])->name('etudiant.resultat-examen');
-    // Route::get('/opportunites-mobilite', [PageUniversityController::class, 'opportunitesMobilite'])->name('etudiant.opportunites.mobilite');
 });
 
 Route::get('/etudiant/evenement', [PageUniversityController::class, 'evenement'])->name('etudiant.evenement');

@@ -220,4 +220,26 @@ class PageUniversityController extends Controller
     {
         return view('university.opportunites-mobilite');
     }
+
+    public function opportunitesListe(Request $request)
+    {
+        // Récupérer le mot-clé de la recherche
+        // $search = $request->input('search');
+
+        // // Récupérer les jobs, appliquer la recherche si nécessaire et paginer les résultats
+        // $jobs = Job::when($search, function ($query, $search) {
+        //     return $query->where('title', 'like', "%$search%")
+        //         ->orWhere('description', 'like', "%$search%");
+        // })
+        //     ->orderBy('created_at', 'desc')
+        //     ->paginate(10);  // Nombre de jobs par page
+
+        // return view('university.opportunites-liste', compact('jobs'));
+        return view('university.opportunites-liste');
+    }
+
+    public function mobiliteListe(Request $request)
+    {
+        return view('university.mobilite-liste');
+    }
 }
