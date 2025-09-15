@@ -242,4 +242,31 @@ class PageUniversityController extends Controller
     {
         return view('university.mobilite-liste');
     }
+
+    public function agendaEtudiant()
+    {
+        $events = Event::orderBy('created_at', 'desc')->get();
+
+        return view('university.agenda-etudiant', compact('events'));
+    }
+
+    public function opportunitesMobiliteEnseignant()
+    {
+        return view('university.enseignant-opportunites-mobilite');
+    }
+
+    public function opportunitesListeEnseignant(Request $request)
+    {
+        return view('university.enseignant-opportunites-liste');
+    }
+
+    public function mobiliteListeEnseignant(Request $request)
+    {
+        return view('university.enseignant-mobilite-liste');
+    }
+
+    public function coursTd()
+    {
+        return view('university.enseignant-cours-td');
+    }
 }

@@ -68,7 +68,7 @@ class ProfesseurController extends Controller
 
         return redirect()->route('professeurs.index')->with('success', 'Professeur supprimé avec succès.');
     }
-    public function enseignant( )
+    public function enseignant()
     {
         $actualites = Actualite::whereIn('foruser', ['enseignant', 'tout_le_monde'])
         ->orderBy('created_at', 'desc')
@@ -104,9 +104,8 @@ class ProfesseurController extends Controller
         return view('university.enseignant.calendrier', compact('actualites','events','docs'));
     }
 
-    public function liste( ){
-    
-    
+    public function liste() 
+    {
         return view('university.enseignant.liste');
     }
 

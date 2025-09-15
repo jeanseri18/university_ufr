@@ -101,12 +101,32 @@ Route::get('/personnel-admin', [PageUniversityController::class, 'personnel'])->
 Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
 // Route::get('/detail-parlons-eco/{parlonsEco}', [PageUniversityController::class, 'detailParlonsEco'])->name('detail.parlons-eco');
 Route::group(['prefix' => 'etudiant'], function () {
+    Route::get('/agenda', [PageUniversityController::class, 'agendaEtudiant'])->name('etudiant.agenda');
     Route::get('/parlons-eco', [PageUniversityController::class, 'parlonsEco'])->name('etudiant.parlons-eco');
     Route::get('/opportunites-mobilite', [PageUniversityController::class, 'opportunitesMobilite'])->name('etudiant.opportunites.mobilite');
     Route::get('opportunites/liste', [PageUniversityController::class, 'opportunitesListe'])->name('etudiant.opportunites.liste');
     Route::get('/mobilite/liste', [PageUniversityController::class, 'mobiliteListe'])->name('etudiant.mobilite.liste');
 
     // Route::get('/resultat-examen/liste', [PageUniversityController::class, 'resultatExamen'])->name('etudiant.resultat-examen');
+});
+
+// Enseignant routes
+Route::group(['prefix' => 'enseignant'], function () {
+    Route::get('/', [ProfesseurController::class, 'enseignant'])->name('enseignant');
+    Route::get('/enseignant-event', [ProfesseurController::class, 'calendrier'])->name('enseignant.calendrier');
+    Route::get('/enseignant-list', [ProfesseurController::class, 'liste'])->name('enseignant.liste');
+    Route::get('/enseignant-procedure', [ProfesseurController::class, 'procedure'])->name('enseignant.procedure');
+    Route::get('/enseignant-cames', [ProfesseurController::class, 'cames'])->name('enseignant.cames');
+    Route::get('/enseignant-rejoindre', [ProfesseurController::class, 'rejoindre'])->name('enseignant.rejoindre');
+
+    // Route::get('/agenda', [PageUniversityController::class, 'agendaEnseignant'])->name('enseignant.agenda');
+    // Route::get('/parlons-eco', [PageUniversityController::class, 'parlonsEcoEnseignant'])->name('enseignant.parlons-eco');
+    Route::get('/opportunites-mobilite', [PageUniversityController::class, 'opportunitesMobiliteEnseignant'])->name('enseignant.opportunites.mobilite');
+    Route::get('opportunites/liste', [PageUniversityController::class, 'opportunitesListeEnseignant'])->name('enseignant.opportunites.liste');
+    Route::get('/mobilite/liste', [PageUniversityController::class, 'mobiliteListeEnseignant'])->name('enseignant.mobilite.liste');
+    Route::get('/cours-td', [PageUniversityController::class, 'coursTd'])->name('enseignant.cours.td');
+
+    
 });
 
 Route::get('/etudiant/evenement', [PageUniversityController::class, 'evenement'])->name('etudiant.evenement');
@@ -122,12 +142,12 @@ Route::post('/resultat-examen/{id}', [ResultatExamenControler::class, 'resultatE
 Route::delete('/resultat-examen/{id}', [ResultatExamenControler::class, 'resultatExamenDestroy'])->name('resultat-examen.destroy');
 Route::get('/resultat-examen/{id}/download/', [ResultatExamenControler::class, 'resultatExamenDownloadPdf'])->name('resultat-examen.download');
 
-Route::get('/enseignant', [ProfesseurController::class, 'enseignant'])->name('enseignant');
-Route::get('/enseignant-event', [ProfesseurController::class, 'calendrier'])->name('enseignant.calendrier');
-Route::get('/enseignant-list', [ProfesseurController::class, 'liste'])->name('enseignant.liste');
-Route::get('/enseignant-procedure', [ProfesseurController::class, 'procedure'])->name('enseignant.procedure');
-Route::get('/enseignant-cames', [ProfesseurController::class, 'cames'])->name('enseignant.cames');
-Route::get('/enseignant-rejoindre', [ProfesseurController::class, 'rejoindre'])->name('enseignant.rejoindre');
+// Route::get('/enseignant', [ProfesseurController::class, 'enseignant'])->name('enseignant');
+// Route::get('/enseignant-event', [ProfesseurController::class, 'calendrier'])->name('enseignant.calendrier');
+// Route::get('/enseignant-list', [ProfesseurController::class, 'liste'])->name('enseignant.liste');
+// Route::get('/enseignant-procedure', [ProfesseurController::class, 'procedure'])->name('enseignant.procedure');
+// Route::get('/enseignant-cames', [ProfesseurController::class, 'cames'])->name('enseignant.cames');
+// Route::get('/enseignant-rejoindre', [ProfesseurController::class, 'rejoindre'])->name('enseignant.rejoindre');
 
 
 // Route pour lister les utilisateurs

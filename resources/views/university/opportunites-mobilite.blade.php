@@ -1,6 +1,6 @@
 @extends('layouts.university')
 
-@section('title', 'Parlons éco | UFR')
+@section('title', 'Opportunité & Mobilités | UFR')
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/university/parlons-eco.css') }}">

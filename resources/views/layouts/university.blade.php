@@ -96,17 +96,15 @@
             <div class="collapse navbar-collapse" id="navbar-default">
                 <ul class="navbar-nav mt-3 mt-lg-0 mx-xxl-auto">
 
-                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen', 'etudiant.parlons-eco', 'etudiant.opportunites.mobilite', 'etudiant.opportunites.liste', 'etudiant.mobilite.liste']))
+                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen', 'etudiant.parlons-eco', 'etudiant.opportunites.mobilite', 'etudiant.opportunites.liste', 'etudiant.mobilite.liste', 'etudiant.agenda']))
                         <!-- Menu spécifique pour les étudiants -->
                         <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
                         <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
                         {{-- <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li> --}}
-                        <li><a href="javascript:void(0)" class="dropdown-item">Agenda</a></li>
+                        <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Agenda</a></li>
                         <li><a href="{{ route('etudiant.parlons-eco') }}" class="dropdown-item">Parlons Eco</a></li>
                         <li><a href="{{ route('etudiant.opportunites.mobilite') }}" class="dropdown-item">Opportunités et Mobilité</a></li>
-                        {{-- <li><a href="javascript:void(0)" class="dropdown-item">Emplois et Conseils RH</a></li> --}}
                         <li><a href="{{ route('etudiant.resultat-examen') }}" class="dropdown-item">Résultats des Examens </a></li>
-                        {{-- <li><a href="javascript:void(0)" class="dropdown-item">Liste des étudiants</a></li> --}}
 
                     @elseif(in_array(Route::currentRouteName(), ['welcome','actualité','quiSommesNous', 'filiereCla', 'filierePro', 'alumnis', 'larecherche']))
                         <!-- Menu spécifique pour les étudiants -->
@@ -117,15 +115,15 @@
                         <li><a href="{{ route('filierePro') }}" class="dropdown-item">Filieres professionnelles</a></li>
                         <li><a href="{{ route('alumnis') }}" class="dropdown-item">Alumnis</a></li>
                         <li><a href="{{ route('larecherche') }}" class="dropdown-item">La recherche à l'UFRSEG</a></li>
-                    @elseif(in_array(Route::currentRouteName(), ['enseignant','enseignant.rejoindre', 'enseignant.calendrier', 'enseignant.procedure', 'enseignant.liste', 'enseignant.cames']))
+                    @elseif(in_array(Route::currentRouteName(), ['enseignant','enseignant.rejoindre', 'enseignant.calendrier', 'enseignant.procedure', 'enseignant.liste', 'enseignant.cames', 'enseignant.opportunites.mobilite', 'enseignant.opportunites.liste', 'enseignant.mobilite.liste', 'enseignant.cours.td']))
+                        <!-- Menu spécifique pour les enseignants -->
                         <li><a href="{{ route('enseignant') }}" class="dropdown-item">Vie sociale</a></li>
                         <li><a href="{{ route('enseignant.calendrier') }}" class="dropdown-item">Agenda</a></li>
                         <li><a href="{{ route('enseignant.liste') }}" class="dropdown-item">Listes des professeurs</a></li>
                         <li><a href="{{ route('enseignant.procedure') }}" class="dropdown-item">Procedure administratives</a></li>
                         <li><a href="{{ route('enseignant.cames') }}" class="dropdown-item">CAMES</a></li>
-                        {{-- <li><a href="{{ route('enseignant.rejoindre') }}" class="dropdown-item">Nous rejoindre</a></li> --}}
-                        <li><a href="javascript:void(0)" class="dropdown-item">Cours/ TD </a></li>
-                        <li><a href="javascript:void(0)" class="dropdown-item">Opportunités et Mobilité </a></li>
+                        <li><a href="{{ route('enseignant.cours.td') }}" class="dropdown-item">Cours/ TD </a></li>
+                        <li><a href="{{ route('enseignant.opportunites.mobilite') }}" class="dropdown-item">Opportunités et Mobilité </a></li>
                     @else
                         {{-- <li><a href="{{ route('actualité') }}" class="dropdown-item">Agenda</a></li>
                         <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Nous rejoindre</a></li>
