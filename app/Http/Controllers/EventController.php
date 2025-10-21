@@ -32,6 +32,7 @@ class EventController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $validatedData = $request->validate([
             'title' => 'required',
             'foruser' => 'required|string',
