@@ -39,7 +39,8 @@ class EventController extends Controller
             'description' => 'nullable',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'start_time' => 'required|date',
-            'end_time' => 'required|date|after:start_time'
+            'end_time' => 'required|date|after:start_time',
+            'type' => 'nullable|string',
         ]);
 
         if ($request->hasFile('image')) {

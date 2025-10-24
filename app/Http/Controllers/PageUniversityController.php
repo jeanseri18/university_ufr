@@ -20,8 +20,9 @@ class PageUniversityController extends Controller
     public function welcome()
     {
         $actualites = Actualite::orderBy('created_at', 'desc')->limit(8)->get();
-        $events = Event::orderBy('created_at', 'desc')->limit(12)->get();
-        $new_events = New_event::orderBy('created_at', 'desc')->limit(12)->get();
+        $events = Event::orderBy('created_at', 'desc')->get();
+        // $events = Event::orderBy('created_at', 'desc')->limit(12)->get();
+        $new_events = New_event::orderBy('created_at', 'desc')->get();
         $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(8)->get();
         return view('welcome', compact('actualites', 'mediatheques', 'events', 'new_events'));
     }
