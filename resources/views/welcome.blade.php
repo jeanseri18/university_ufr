@@ -382,7 +382,7 @@ padding-bottom: 30px;">
                                             <h3 class="mb-3 ">
                                                 <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
                                                     {{ Str::limit($event->title, 65) }}
-                                                </a>
+                                                </a> 
                                             </h3>
 
                                             <div class="mb-4 flex-grow-1">
