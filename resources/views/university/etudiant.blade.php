@@ -318,7 +318,7 @@
                                 data-bs-target="#collapseOne"
                                 aria-expanded="false"
                                 aria-controls="collapseOne">
-                                Quels sont les services offerts pour les nouvelles bachelières ?
+                                1/ Je souhaite connaître les orientations possibles en Sciences Économiques 
                                 <span class="chevron-arrow"><i
                                         class="bi bi-chevron-down"></i></span>
                             </a>
@@ -327,7 +327,7 @@
                             class="accordion-collapse collapse"
                             data-bs-parent="#accordionExample">
                             <div class="mt-3">
-                                Nous offrons des conseils d'orientation, des formations, et un accompagnement personnalisé pour aider les nouvelles bachelières à réussir leur transition vers l'université ou le monde professionnel.
+                                Notre site recense la liste de toutes nos formations, dans les filières classiques tout comme dans les filières professionnelles. Vous pouvez cliquer sur la rubrique « Filières Classiques » pour avoir toutes les informations sur nos filières classiques ou sur la rubrique « Filières professionnelles » pour avoir toutes les informations sur nos filières professionnelles.
                             </div>
                         </div>
                     </div>
@@ -340,7 +340,7 @@
                                 data-bs-target="#collapseTwo"
                                 aria-expanded="true"
                                 aria-controls="collapseTwo">
-                                Comment puis-je m'inscrire à vos programmes ?
+                                2/ Je suis au Lycée et je souhaite suivre une formation en Sciences Économiques, quelle est la procédure à suivre ?
                                 <span class="chevron-arrow"><i
                                         class="bi bi-chevron-down"></i></span>
                             </a>
@@ -349,7 +349,10 @@
                             class="accordion-collapse collapse show"
                             data-bs-parent="#accordionExample">
                             <div class="mt-3">
-                                Vous pouvez vous inscrire via notre formulaire en ligne disponible sur notre site. Si vous avez besoin d’aide, notre équipe est là pour vous guider.
+                                Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br> <br>
+                                Étape 2 : si vous êtes intéressé(e) par une filière classique, vous devez vous rendre sur le site du Ministère de l’Enseignement Supérieur pour connaître les critères et les procédures d’orientation <br> <br>
+                                Étape 3 : si vous êtes intéressé(e) par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG.<br> <br>
+                                Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com
                             </div>
                         </div>
                     </div>
@@ -361,7 +364,7 @@
                                 data-bs-target="#collapseThree"
                                 aria-expanded="false"
                                 aria-controls="collapseThree">
-                                Offrez-vous des bourses ou des aides financières ?
+                                3/ Je suis diplômé(e ) d’une autre UFR de l’université et je souhaite faire des études en Sciences Économiques, quelle est la procédure à suivre ?
                                 <span class="chevron-arrow"><i
                                         class="bi bi-chevron-down"></i></span>
                             </a>
@@ -370,7 +373,10 @@
                             class="accordion-collapse collapse"
                             data-bs-parent="#accordionExample">
                             <div class="mt-3">
-                                Oui, nous travaillons avec des partenaires pour offrir des bourses et des aides financières aux étudiantes méritantes et en besoin.
+                                Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br> <br>
+                                Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre à la Scolarité Centrale, c’est ce service qui se charge de toutes les questions relatives aux inscriptions. <br> <br>
+                                Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. <br> <br>
+                                Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com
                             </div>
                         </div>
                     </div>
@@ -382,7 +388,7 @@
                                 data-bs-target="#collapseFour"
                                 aria-expanded="false"
                                 aria-controls="collapseFour">
-                                Proposez-vous un accompagnement personnalisé ?
+                                4/ Je suis un(e) travailleur(se) et je souhaite faire des études en Sciences Économiques, quelle est la procédure à suivre ?
                                 <span class="chevron-arrow"><i
                                         class="bi bi-chevron-down"></i></span>
                             </a>
@@ -391,7 +397,10 @@
                             class="accordion-collapse collapse"
                             data-bs-parent="#accordionExample">
                             <div class="mt-3">
-                                Absolument. Chaque étudiante bénéficie d’un accompagnement adapté à ses objectifs académiques et professionnels.
+                                Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br> <br>
+                                Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre à la Scolarité Centrale, c’est ce service qui se charge de toutes les questions relatives aux inscriptions.<br> <br>
+                                Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. <br> <br>
+                                Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com
                             </div>
                         </div>
                     </div>
@@ -403,7 +412,7 @@
                                 data-bs-target="#collapseFive"
                                 aria-expanded="false"
                                 aria-controls="collapseFive">
-                                Quels sont les critères pour participer ?
+                                5/ Je ne vois pas nom sur les listes de présence / les listes de répartition des examens
                                 <span class="chevron-arrow"><i
                                         class="bi bi-chevron-down"></i></span>
                             </a>
@@ -412,7 +421,8 @@
                             class="accordion-collapse collapse"
                             data-bs-parent="#accordionExample">
                             <div class="mt-3">
-                                Nos programmes sont ouverts à toutes les bachelières, avec une priorité pour celles récemment diplômées ou en transition vers l’enseignement supérieur.
+                                Bien vérifier la liste et d’autres listes, si possible
+                                Si le nom ne figure toujours pas, vérifiez le statut de votre inscription et portez une réclamation au niveau de la scolarité Centrale de l’Université Félix Houphouët Boigny
                             </div>
                         </div>
                     </div>
@@ -424,7 +434,7 @@
                                 data-bs-target="#collapseSix"
                                 aria-expanded="false"
                                 aria-controls="collapseSix">
-                                Offrez-vous des ateliers en ligne ?
+                                6/ Je n’arrive pas à payer les frais d’inscription sur la plateforme Trésor Pay
                                 <span class="chevron-arrow"><i
                                         class="bi bi-chevron-down"></i></span>
                             </a>
@@ -433,10 +443,214 @@
                             class="accordion-collapse collapse"
                             data-bs-parent="#accordionExample">
                             <div class="mt-3">
-                                Oui, nous organisons des ateliers et des sessions de coaching en ligne pour permettre un accès facile à toutes nos participantes, quel que soit leur lieu de résidence.
+                                Vous devez faire une réclamation au niveau de la Scolarité Centrale de l’Université Félix Houphouët Boigny
                             </div>
                         </div>
                     </div>
+
+                    <div class="border mb-2 rounded-3 p-3">
+                        <h2 class="h5 mb-0">
+                            <a href="#"
+                                class="text-reset d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix">
+                                7/ Je n’arrive pas à finaliser mon inscription
+                                <span class="chevron-arrow"><i
+                                        class="bi bi-chevron-down"></i></span>
+                            </a>
+                        </h2>
+                        <div id="collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="mt-3">
+                                Vous devez faire une réclamation au niveau de la Scolarité Centrale de l’Université Félix Houphouët Boigny
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border mb-2 rounded-3 p-3">
+                        <h2 class="h5 mb-0">
+                            <a href="#"
+                                class="text-reset d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix">
+                                8/ Je n’arrive pas à obtenir mes identifiants Team pour suivre les cours en ligne
+                                <span class="chevron-arrow"><i
+                                        class="bi bi-chevron-down"></i></span>
+                            </a>
+                        </h2>
+                        <div id="collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="mt-3">
+                                Vous devez vous rendre à l’UFR, plus précisément au bureau 8 pour déposer une réclamation. 
+                                NB : L’UFR ne propose par de formation entièrement en ligne. Les cours en ligne concernent uniquement certaines Unités d’Enseignement (UE) pour les niveaux Licence 3 et Master (I et II) 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border mb-2 rounded-3 p-3">
+                        <h2 class="h5 mb-0">
+                            <a href="#"
+                                class="text-reset d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix">
+                                9/ La présence aux Travaux Dirigés (TD) est-elle obligatoire ?
+                                <span class="chevron-arrow"><i
+                                        class="bi bi-chevron-down"></i></span>
+                            </a>
+                        </h2>
+                        <div id="collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="mt-3">
+                                La présence au TD est obligatoire et est contrôlée grâce à une liste de présence. Par ailleurs, à la fin de chaque session de Travaux Dirigés ; une note de contrôle continu est délivrée et elle compte pour 40% de la moyenne
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border mb-2 rounded-3 p-3">
+                        <h2 class="h5 mb-0">
+                            <a href="#"
+                                class="text-reset d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix">
+                                10/ Je ne vois pas mon nom sur les listes de répartition d’étudiant(e)s pour les examens
+                                <span class="chevron-arrow"><i
+                                        class="bi bi-chevron-down"></i></span>
+                            </a>
+                        </h2>
+                        <div id="collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="mt-3">
+                                Étape 1 : vérifier toutes les listes <br>
+                                Étape 2 : vérifier le statut de l’inscription <br>
+                                Étape 3 : Faire une réclamation à la Scolarité Centrale
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border mb-2 rounded-3 p-3">
+                        <h2 class="h5 mb-0">
+                            <a href="#"
+                                class="text-reset d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix">
+                                11/ Pour une UE de 2 ECUE, j’ai eu 10 dans une ECUE et 5 dans l’autre, que faire ?
+                                <span class="chevron-arrow"><i
+                                        class="bi bi-chevron-down"></i></span>
+                            </a>
+                        </h2>
+                        <div id="collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="mt-3">
+                                Étape 1 : vous devez uniquement reprendre l’ECUE dans laquelle vous n’avez pas eu la moyenne à la deuxième session <br>
+                                Étape 2 : si vous validez cette ECUE, l’UE est considérée comme validée <br>
+                                Étape 3 : si vous ne validez pas cette ECUE, l’UE est considérée comme non validée et vous devez la reprendre l’année prochaine <br>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border mb-2 rounded-3 p-3">
+                        <h2 class="h5 mb-0">
+                            <a href="#"
+                                class="text-reset d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix">
+                                12/ Les résultats des examens sont sortis mais mon nom ne figure pas et/ou je n’ai pas de note
+                                <span class="chevron-arrow"><i
+                                        class="bi bi-chevron-down"></i></span>
+                            </a>
+                        </h2>
+                        <div id="collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="mt-3">
+                                Si vous êtes dans cette situation, vous devez déposer une réclamation à la commission des examens. Les calendriers et les procédures des réclamations sont publiés à chaque session d’examens.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border mb-2 rounded-3 p-3">
+                        <h2 class="h5 mb-0">
+                            <a href="#"
+                                class="text-reset d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix">
+                                13/ Les résultats des examens sont sortis mais il y a une erreur sur mon nom, mon genre…
+                                <span class="chevron-arrow"><i
+                                        class="bi bi-chevron-down"></i></span>
+                            </a>
+                        </h2>
+                        <div id="collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="mt-3">
+                                Si vous êtes dans cette situation, vous devez déposer une réclamation à la commission des examens. Les calendriers et les procédures des réclamations sont publiés à chaque session d’examens.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border mb-2 rounded-3 p-3">
+                        <h2 class="h5 mb-0">
+                            <a href="#"
+                                class="text-reset d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix">
+                                14/ Comment s’habiller pour venir à l’université ?
+                                <span class="chevron-arrow"><i
+                                        class="bi bi-chevron-down"></i></span>
+                            </a>
+                        </h2>
+                        <div id="collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="mt-3">
+                                A l’université, il n’y a pas d’uniforme mais cela ne veut pas dire que vous devez venir habillé n’importe comment. Veuillez privilégier les tenues correctes et les chaussures fermées.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border mb-2 rounded-3 p-3">
+                        <h2 class="h5 mb-0">
+                            <a href="#"
+                                class="text-reset d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix"
+                                aria-expanded="false"
+                                aria-controls="collapseSix">
+                                15/ Y a-t-il des listes de fournitures ?
+                                <span class="chevron-arrow"><i
+                                        class="bi bi-chevron-down"></i></span>
+                            </a>
+                        </h2>
+                        <div id="collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionExample">
+                            <div class="mt-3">
+                                Il n’y a pas de liste de fournitures en début d’année mais il est essentiel d’avoir de quoi prendre ses cours et faire ses travaux dirigés correctement. Vous devez donc avoir des stylos, des cahiers, une calculatrice, des crayons….
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
