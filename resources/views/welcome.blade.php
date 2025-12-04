@@ -373,7 +373,7 @@ padding-bottom: 30px;">
                                 <div class="col-md-3 mb-4">
                                     <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
                                         <!-- Image avec taille uniforme -->
-                                        <a href="{{ route('detail.actualite', $event) }}">
+                                        <a href="{{ asset('storage/' . $event->image) }}" target="_blank" {{-- route('detail.actualite', $event) --}}>
                                             <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
                                         </a>
 
