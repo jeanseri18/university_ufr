@@ -136,7 +136,7 @@
 @section('content')
 
 
-<section class="my-5 py-5 ">
+<section class="my-5 py-0 ">
     <div class="container">
         <div class="banner mb-4">
             <h1 class="display-4 banner-title">Liste des enseignants <br></h1>
@@ -144,10 +144,62 @@
         </div>
 
 
+        <div class="row mt-6 mb-5 justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 700px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ asset('/assets/profile-prof.jpeg') }}" height="236px" width="auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="" style="padding-left: 40px">
+                                    <h3 class="card-title">Nom & Prénom</h3>
+                                    <h5 class="card-title">Professeur titulaire</h5>
+                                    <hr class="">
+                                    <p class="card-text"> 
+                                        <i class="bi bi-phone"></i> (+225) 01 0101 0101 <br>
+                                        <i class="bi bi-envelope"></i> prenom.nom@domaine.tld <br>
+                                        <i class="bi bi-geo-alt"></i> Université de cocody <br>
+                                        <i class="bi bi-briefcase"></i> Economie, Gestion, Finance
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 700px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ asset('/assets/profile-prof.jpeg') }}" height="236px" width="auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="card-content" style="padding-left: 40px">
+                                    <h3 class="card-title">Nom & Prénom</h3>
+                                    <h5 class="card-title">Professeur titulaire</h5>
+                                    <hr class="">
+                                    <p class="card-text"> 
+                                        <i class="bi bi-phone"></i> (+225) 01 0101 0101 <br>
+                                        <i class="bi bi-envelope"></i> prenom.nom@domaine.tld <br>
+                                        <i class="bi bi-geo-alt"></i> Université de cocody <br>
+                                        <i class="bi bi-briefcase"></i> Economie, Gestion, Finance
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         {{-- <div class="profile-card">
             <div class="left-section">
                 <div class="profile-photo">
-                    <img src="{{ asset('/assets/profil-prof.png bb ') }}" alt="Photo de profil de Sangaré Ousmane">
+                    <img src="{{ asset('/assets/profile-prof.jpeg') }}" alt="Photo de profil de Sangaré Ousmane">
                 </div>
                 <div class="contact-info">
                     <h2 class="name">Sangaré Ousmane</h2>
@@ -178,9 +230,9 @@
             <div class="row">
                 <div class="col-md-2"></div>
             </div>
-        </div>
+        </div> --}}
 
-        <hr class="divider"> --}}
+        {{-- <hr class="divider"> --}}
 
     </div>
 </section>

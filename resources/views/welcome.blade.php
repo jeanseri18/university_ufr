@@ -255,6 +255,58 @@
 </section>
 
 
+<!-- ADVERTISING BANNER SECTION -->
+{{-- <section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h3 class="fw-bold mb-2 text-warning" style="animation: fadeInOut 3s infinite;">Nouvelle rentrée accademique 2026-2027</h3>
+                <style>
+                    @keyframes fadeInOut {
+                        0%, 100% { opacity: 0; }
+                        50% { opacity: 1; }
+                    }
+                </style>
+                <p class="mb-0">
+                    <marquee behavior="" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                    </marquee>
+                </p>
+            </div>
+            <div class="col-md-4 text-md-end text-center mt-3 mt-md-0">
+                <a href="#" class="btn btn-light btn-sm fw-bold">En savoir plus</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br><br> --}}
+
+<!-- ADVERTISING BANNER SECTION -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-4" style="border-right: 1px solid #f2f2f25e">
+                <h4 class="fw-bold mb-2 text-warning" style="animation: fadeInOut 3s infinite;"><i class="bi bi-info-circle"></i> Spéciale rentrée accademique 2026-2027</h4>
+            </div>
+            <div class="col-md-8 text-md-end text-center mt-3 mt-md-0">
+                <style>
+                    @keyframes fadeInOut {
+                        0%, 100% { opacity: 0; }
+                        50% { opacity: 1; }
+                    }
+                </style>
+                <p class="mb-0">
+                    <marquee behavior="" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                    </marquee>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <section class=""><br>
     <div class="container my-lg-8">
         <div class="row">

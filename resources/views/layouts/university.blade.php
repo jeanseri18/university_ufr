@@ -161,7 +161,8 @@
                 <div class="col-xl-5 col-lg-6 col-md-12 mb-4">
                     <div class="d-flex flex-column gap-4">
                         <div>
-                            <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo UFR" style="height: 40px"/>
+                            {{-- <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo UFR" style="height: 40px"/> --}}
+                            <img src="{{ asset('assets/logo-ufr-no-bg.png') }}" alt="Logo UFR" style="height: 70px"/>
                         </div>
                         <p class="mb-0 text-white">
                             L’UFR des Sciences Économiques et de Gestion de l’Université Félix Houphouët-Boigny propose un parcours académique complet et diversifié, allant de la Licence au Doctorat, avec des formations adaptées aux exigences du marché du travail et aux besoins de la recherche scientifique.
@@ -200,6 +201,18 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-center gap-3 pt-4">
+                        <a href="https://www.facebook.com/share/1834vSsYgb/" target="_blank" class="text-success"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank" class="text-success"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://x.com/UfrsegD" target="_blank" class="text-success"><i class="bi bi-twitter-x"></i></a>
+                        {{-- <a href="https://wa.me" target="_blank" class="text-white"><i class="bi bi-whatsapp"></i></a> --}}
+                    </div>
+                </div>
+                {{-- <hr class="border-white"/> --}}
             </div>
 
             <!-- Section Copyright -->
