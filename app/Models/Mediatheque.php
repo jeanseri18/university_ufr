@@ -9,5 +9,5 @@ class Mediatheque extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['titre', 'type', 'fichier', 'date_ajoute'];
+    protected $fillable = ['titre', 'type', 'page_type', 'fichier', 'date_ajoute', 'description',];
 }

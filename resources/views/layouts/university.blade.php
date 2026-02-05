@@ -156,7 +156,7 @@
     
     <footer class="footer py-8" style="background-color:#000000FF">
         <div class="container">
-            <div class="row gy-6 gy-xl-0 pb-8">
+            <div class="row gy-6 gy-xl-0 pb-4">
                 <!-- Section Description -->
                 <div class="col-xl-5 col-lg-6 col-md-12 mb-4">
                     <div class="d-flex flex-column gap-4">
@@ -193,8 +193,6 @@
                             <li class="text-white">📍 Adresse : Abidjan, Université Félix Houphouët-Boigny</li>
                             <li class="text-white">📧 Email : Servicecommunication-ufrseg@ufhb.edu.ci</li>
                             <li class="text-white">
-                                {{-- +225 01 03 35 58 03<br>
-                                +225 01 73 77 52 98<br> --}}
                                 +225 07 99 90 43 45 <br>
                                 +225 07 77 02 66 42 <br>(bureau des fillières professionnelles)
                             </li>
@@ -203,20 +201,21 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-12">
-                    <div class="d-flex justify-content-center gap-3 pt-4">
+                    <div class="d-flex justify-content-center gap-3 pt-4" style="font-size: 20px">
                         <a href="https://www.facebook.com/share/1834vSsYgb/" target="_blank" class="text-success"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav" target="_blank" class="text-success"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/ufrseg-le-d%C3%A9canat-899947281/" target="_blank" class="text-success"><i class="bi bi-linkedin"></i></a>
                         <a href="https://x.com/UfrsegD" target="_blank" class="text-success"><i class="bi bi-twitter-x"></i></a>
-                        {{-- <a href="https://wa.me" target="_blank" class="text-white"><i class="bi bi-whatsapp"></i></a> --}}
+                        <a href="https://www.instagram.com/ufr_seg/" target="_blank" class="text-success"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
-                {{-- <hr class="border-white"/> --}}
             </div>
 
+            {{-- <hr class="border-" style="height: 0.25px; color: #373737"/> --}}
+
             <!-- Section Copyright -->
-            <div class=" py-4 mt-4"  style="background-color:#000000FF">
+            <div class="pt-4"  style="background-color:#000000FF">
                 <div class="container text-center">
                     <span class="text-white">© 2024 UFR. Tous droits réservés.</span>
                 </div>

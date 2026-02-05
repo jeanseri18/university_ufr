@@ -793,7 +793,8 @@ padding-bottom: 30px;">
             </div>
             @endforeach
 
-    </div></section>
+    </div>
+</section>
 <!-- Hero Section -->
 
 <!-- Inclure le CSS de Tiny Slider -->

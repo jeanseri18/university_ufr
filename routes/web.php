@@ -112,7 +112,7 @@ Route::group(['prefix' => 'etudiant'], function () {
 
 // Enseignant routes
 Route::group(['prefix' => 'enseignant'], function () {
-    Route::get('/', [ProfesseurController::class, 'enseignant'])->name('enseignant');
+    Route::get('/vie-sociale', [ProfesseurController::class, 'enseignant'])->name('enseignant');
     Route::get('/enseignant-event', [ProfesseurController::class, 'calendrier'])->name('enseignant.calendrier');
     Route::get('/enseignant-list', [ProfesseurController::class, 'liste'])->name('enseignant.liste');
     Route::get('/enseignant-procedure', [ProfesseurController::class, 'procedure'])->name('enseignant.procedure');

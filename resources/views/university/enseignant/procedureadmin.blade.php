@@ -17,7 +17,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Fonction Publique</h5>
                         <p class="card-text">Accédez au site officiel de la Fonction Publique pour toutes vos démarches.</p>
-                        <a href="https://www.fonctionpublique.ci" class="btn btn-primary" target="_blank">
+                        <a href="https://www.fonctionpublique.gouv.ci/index.php/front-page/navigator/accueil#" class="btn btn-primary" target="_blank">
                             <i class="bi bi-box-arrow-up-right"></i> Consulter
                         </a>
                     </div>
@@ -28,7 +28,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">MESRS</h5>
                         <p class="card-text">Visitez le site du Ministère de l'Enseignement Supérieur et de la Recherche Scientifique.</p>
-                        <a href="https://www.enseignementsup-recherche.gouv.ci" class="btn btn-primary" target="_blank">
+                        <a href="https://www.enseignement.gouv.ci/accueil" class="btn btn-primary" target="_blank">
                             <i class="bi bi-box-arrow-up-right"></i> Consulter
                         </a>
                     </div>
@@ -40,7 +40,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">UFHB</h5>
                         <p class="card-text">Accédez aux ressources et services administratifs de l'Université Félix Houphouët-Boigny.</p>
-                        <a href="https://www.ufhb.ci" class="btn btn-primary" target="_blank">
+                        <a href="https://w.univ-fhb.edu.ci/" class="btn btn-primary" target="_blank">
                             <i class="bi bi-box-arrow-up-right"></i> Consulter
                         </a>
                     </div>

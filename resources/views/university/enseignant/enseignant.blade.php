@@ -20,9 +20,58 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-}</style>
+}
+</style>
 
-<section class="my-5 py-5">
+<section class="">
+    <div class="container my-lg-8">
+        {{-- <div class="row">
+            <div class="col-xl-6 col-md-12 col-12">
+                <div class="mb-lg-8 mb-6">
+                    <h2 class="h1 fw-bold">
+                        Mediatheque
+                        <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
+                    </h2>
+                    <!--p class="lead mb-0">Online webinars are amazing opportunities to have fun and learn.</p-->
+                </div>
+            </div>
+        </div> --}}
+        <div class="table-responsive-xl pb-6 row"> 
+            @foreach ($mediatheques as $media)
+
+                <div class="col-md-3">
+                    <div class="card mb-4 mb-xl-0 card-hover border">
+                        <a href="#!">
+                            @php
+                                $extension = pathinfo(Storage::url($media->fichier), PATHINFO_EXTENSION);
+                            @endphp
+
+                            @if (in_array($extension, ['jpg', 'jpeg', 'png']))
+                                <img src="{{ asset('storage/' . $media->fichier) }}" alt="webinar-1"
+                                    class="img-fluid w-100 rounded-top-3">
+                            @elseif (in_array($extension, ['mp4']))
+                                <a href="{{ asset('storage/' . $media->fichier) }}" target="_blank">
+                                    <video src="{{ asset('storage/' . $media->fichier) }}" style="width: 100%; height: auto;"></video>
+                                </a>
+                            @else
+
+                            @endif
+                        </a>
+                        <div class="card-body">
+                            <h3 class="mb-4 text-truncate">
+                                <a href="#!" class="text-inherit">{{ $media->titre }}</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
+
+{{-- <section class="my-5 py-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
@@ -66,7 +115,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 
 
 @endsection
