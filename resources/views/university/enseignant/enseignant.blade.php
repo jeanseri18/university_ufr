@@ -37,6 +37,13 @@
             </div>
         </div> --}}
         <div class="table-responsive-xl pb-6 row"> 
+            @if ($mediatheques->isEmpty())
+                <div class="col-12">
+                    <div class="alert alert-info text-center" role="alert">
+                        Aucune ressource disponible pour le moment. Revenez bientôt !
+                    </div>
+                </div>
+            @endif
             @foreach ($mediatheques as $media)
 
                 <div class="col-md-3">
