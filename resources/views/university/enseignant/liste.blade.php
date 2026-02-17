@@ -184,7 +184,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <div class="card-content" style="padding-left: 40px">
-                                    <h3 class="card-title">KOMENAN A. KOMENAN</h3>
+                                    <h3 class="card-title">Dr. KOBENAN A. Narcisse (Maître Assistant)</h3>
                                     <h5 class="card-title">Directeur Adjoint en charge de la Pédagogie</h5>
                                     <hr class="">
                                     <p class="card-text"> 
@@ -207,12 +207,12 @@
                 <div class="card mb-3" style="max-width: 700px;">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="{{ asset('/assets/profile-prof.jpeg') }}" height="236px" width="auto" alt="...">
+                            <img src="{{ asset('/assets/fofana-cesar.png') }}" height="236px" width="auto" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
                                 <div class="" style="padding-left: 40px">
-                                    <h3 class="card-title">FOFANA Andon Cesar</h3>
+                                    <h3 class="card-title">Dr. FOFANA Andon Cesar (Maître Assistant)</h3>
                                     <h5 class="card-title">Directeur Adjoint en charge de la Recherche</h5>
                                     <hr class="">
                                     <p class="card-text"> 
@@ -287,7 +287,7 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <div class="card-content" style="padding-left: 40px">
-                                    <h3 class="card-title">Dr. TOURÉ Kany Abiba Nelly Carla</h3>
+                                    <h3 class="card-title">Dr. TOURÉ Kany Abiba Nelly Carla (Maître Assistante)</h3>
                                     <h5 class="card-title">Responsable Service Communication UFRSEG</h5>
                                     <hr class="">
                                     <p class="card-text"> 
