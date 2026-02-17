@@ -213,7 +213,7 @@
                                     <h5 class="card-title">Directeur Adjoint en charge de la Pédagogie</h5>
                                     <hr class="">
                                     <p class="card-text"> 
-                                        <i class="bi bi-phone"></i> (+225) 07 0000 0000 <br>
+                                        <i class="bi bi-phone"></i> (+225) (+225) 01 0335 5803 <br>
                                         <i class="bi bi-envelope"></i> komenan.narcisse@ufhb.edu.ci <br>
                                         <i class="bi bi-geo-alt"></i> Université de cocody <br>
                                         <i class="bi bi-briefcase"></i> Economie de l'environnement et des ressources Naturelles
@@ -241,7 +241,7 @@
                                     <h5 class="card-title">Directeur Adjoint en charge de la Recherche</h5>
                                     <hr class="">
                                     <p class="card-text"> 
-                                        <i class="bi bi-phone"></i> (+225) 01 0270 9189 <br>
+                                        <i class="bi bi-phone"></i> (+225) 01 0335 5803 <br>
                                         <i class="bi bi-envelope"></i> andon.fofana16@ufhb.edu.ci <br>
                                         <i class="bi bi-geo-alt"></i> Université de cocody <br>
                                         <i class="bi bi-briefcase"></i> GESTION/ COMPTABILITE
