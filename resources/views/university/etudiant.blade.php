@@ -2,7 +2,42 @@
 
 @section('title', 'Ecoles doctorales | UFR')
 
+@push('styles')
+<style>
+    .header-bg {
+        color:white; 
+        background: linear-gradient(to right, #2B6635, #2B6635);
+        height: 26em;
+    }
+</style>
+@endpush
+
 @section('content')
+
+<section class="py-lg-8 py-5 header-bg" style="">
+    <div class="container ">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-6 mb-lg-0">
+                <div>
+                    <h4 class="text-white mb-4">
+                        <i class="bi bi-chevron-compact-right text-white rounded-circle "></i>
+                        Etudiant
+                    </h4>
+                    <h1 class="display-3 fw-bold mb-3 text-white">VIE À L'UNIVERSITÉ</h1>
+                    <p class="pe-lg-10 mb-5">
+                        Vous venez d’être recruté ou vous avez été promu ? Vous avez certaines démarches administratives à faire au niveau de l’Université Félix Houphouët Boigny, du Ministère de l’Enseignement Supérieur et de la Recherche Scientifique (MESRS) et du Ministère de la Fonction Publique (MFP)
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex">
+                <!-- Image ou autre contenu -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 <br>
 <section class="my-xl-9 my-5">
     <div class="container">
@@ -656,10 +691,9 @@
         </div>
     </div>
 </section>
-
-<section class=" bg-light">
 <br>
 <br>
+<section class="bg-light">
 
     <div class="container">
         <div class="text-center mb-5">
@@ -713,21 +747,72 @@
         </div>
         <br>
         <br>
-        </div>
-</section><section class="bg-dark text-white py-5">
-    <div class="container">
-        <div class="text-center mb-5">
-            <small class="text-uppercase ls-md fw-semibold">Nos Campus</small>
-            <h2 class="mt-3">Trouvez nos campus</h2>
-            <p class="mb-0">Nos établissements sont répartis dans plusieurs villes. Utilisez la carte interactive ci-dessous pour en savoir plus.</p>
-        </div>
-        <!-- Ajout de l'attribut aria-label pour l'accessibilité -->
-        <div id="map" style="height: 400px;" aria-label="Carte interactive des campus"></div>
     </div>
 </section>
 
 
-<!-- Script pour initialiser la carte -->
+
+
+<section class="">
+    <div class="container my-lg-8">
+        <div class="row">
+            <div class="col-xl-6 col-md-12 col-12">
+                <div class="mb-lg-8 mb-6">
+                    <h2 class="h1 fw-bold">
+                        Mediatheque
+                        <!--u class="text-warning"><span class="text-primary">education webinars</span></u-->
+                    </h2>
+                    <!--p class="lead mb-0">Online webinars are amazing opportunities to have fun and learn.</p-->
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive-xl pb-6 row"> 
+            @if ($mediatheques->isEmpty())
+                <div class="col-12">
+                    <div class="alert alert-info text-center" role="alert">
+                        Aucune ressource disponible pour le moment. Revenez bientôt !
+                    </div>
+                </div>
+            @endif
+            @foreach ($mediatheques as $media)
+
+                <div class="col-md-3">
+                    <div class="card mb-4 mb-xl-0 card-hover border">
+                        <a href="#!">
+                            @php
+                                $extension = pathinfo(Storage::url($media->fichier), PATHINFO_EXTENSION);
+                            @endphp
+
+                            @if (in_array($extension, ['jpg', 'jpeg', 'png']))
+                                <img src="{{ asset('storage/' . $media->fichier) }}" alt="webinar-1"
+                                    class="img-fluid w-100 rounded-top-3">
+                            @elseif (in_array($extension, ['mp4']))
+                                <a href="{{ asset('storage/' . $media->fichier) }}" target="_blank">
+                                    <video src="{{ asset('storage/' . $media->fichier) }}" style="width: 100%; height: auto;"></video>
+                                </a>
+                            @else
+
+                            @endif
+                        </a>
+                        <div class="card-body">
+                            <h3 class="mb-4 text-truncate">
+                                <a href="#!" class="text-inherit">{{ $media->titre }}</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
+
+@endsection
+
+
+@push('script')
+    <!-- Script pour initialiser la carte -->
 <script>
     // Initialisation de la carte avec une vue sur Paris
     var map = L.map('map').setView([48.8566, 2.3522], 13); // Remplacez les coordonnées par celles de votre campus principal
@@ -743,6 +828,4 @@
     L.marker([45.7640, 4.8357]).addTo(map) // Exemple pour Lyon, ajustez les coordonnées
         .bindPopup("<b>Campus Lyon</b><br>Lyon, France");
 </script>
-
-
-@endsection
+@endpush

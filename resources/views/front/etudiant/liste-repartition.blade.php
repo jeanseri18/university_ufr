@@ -111,7 +111,7 @@
                         <i class="bi bi-chevron-compact-right text-white rounded-circle "></i>
                         Etudiant
                     </h4>
-                    <h1 class="display-3 fw-bold mb-3 text-white">CALENDRIER & AGENDA</h1>
+                    <h1 class="display-3 fw-bold mb-3 text-white">LISTE DE REPARTITION</h1>
                     <p class="pe-lg-10 mb-5">
                         Soyez à l’affût des dates clés, conférences, et activités marquantes qui enrichissent notre communauté universitaire.
                     </p>
@@ -126,7 +126,7 @@
 
 
 
-<section class="" style="background-color:#E7EEEA; padding-top: 30px; padding-bottom: 30px; margin-bottom: 0px; margin-top: 0px; border-radius: 0px;">
+{{-- <section class="" style="background-color:#E7EEEA; padding-top: 30px; padding-bottom: 30px; margin-bottom: 0px; margin-top: 0px; border-radius: 0px;">
     <section class="" style="background-color:#E7EEEA; padding-top: 30px; padding-bottom: 30px; margin-bottom: 0px; margin-top: 60px; border-radius: 10px;">
             <div class="container my-lg-10">
                 <div class="row">
@@ -143,11 +143,11 @@
                     </div>
                     <div class="col-xl-3 col-md-3 col-3">
                         <div class="mb-lg-3 mb-6">
-                            {{-- <a href="{{ route('etudiant.agenda') }}" class="text-xhite">
+                            <a href="{{ route('etudiant.agenda') }}" class="text-xhite">
                                 <h2 class="h3 fw-bold btn-primary btn">
                                     Voir plus
                                 </h2>
-                            </a> --}}
+                            </a>
                         </div>
                     </div>
                     
@@ -384,274 +384,8 @@
                 </div>
             </div>
         </section>
-</section>
+</section> --}}
 
-<section class="my-5 py-5 ">
-    <div class="container">
-        {{-- <div class="banner mb-4">
-            <h1 class="display-4 banner-title">Agenda <br></h1>
-            <p class="lead">Soyez à l’affût des dates clés, conférences, et activités marquantes qui enrichissent notre communauté universitaire.</p>
-        </div> --}}
-
-        <section class="" style="background-color:#ffffff; padding-top: 30px; padding-bottom: 30px; margin-bottom: 0px; margin-top: 60px; border-radius: 10px;">
-            <div class="container my-lg-10">
-                <div class="row">
-                    <div class="col-xl-9 col-md-9 col-9">
-                        <div class="mb-lg-9 mb-6">
-                            <h2 class="h1 fw-bold">
-                                Agenda
-                            </h2>
-                            <p class="mb-0">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, eaque perferendis provident sit est ducimus mollitia accusantium 
-                                dolorum. Eius reiciendis, deleniti eum sequi officia ut consequuntur perferendis quidem maiores animi?
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-md-3 col-3">
-                        <div class="mb-lg-3 mb-6">
-                            {{-- <a href="{{ route('etudiant.agenda') }}" class="text-xhite">
-                                <h2 class="h3 fw-bold btn-primary btn">
-                                    Voir plus
-                                </h2>
-                            </a> --}}
-                        </div>
-                    </div>
-                    
-                    {{-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="licence1-tab" data-toggle="tab" data-target="#licence1" type="button" role="tab" aria-controls="licence1" aria-selected="true">Licence 1 - Fip 1</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="licence2-tab" data-toggle="tab" data-target="#licence2" type="button" role="tab" aria-controls="licence2" aria-selected="false">Licence 2 - Fip 2</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="licence3-tab" data-toggle="tab" data-target="#licence3" type="button" role="tab" aria-controls="licence3" aria-selected="false">Licence 3 Économie - Licence 3 Gestion</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="master1-tab" data-toggle="tab" data-target="#master1" type="button" role="tab" aria-controls="master1" aria-selected="false">Master 1 Économie - Master 1 Gestion</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="master2-tab" data-toggle="tab" data-target="#master2" type="button" role="tab" aria-controls="master2" aria-selected="false">Master 2 Économie - Master 2 Gestion</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="licence1" role="tabpanel" aria-labelledby="licence1-tab">
-                            <div class="row">
-                                @if($events->isNotEmpty())
-                                    @foreach ($events as $event)
-                                        @if ($event->type == 'licence 1')
-                                        <div class="col-md-3 mb-4">
-                                            <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
-                                                <!-- Image avec taille uniforme -->
-                                                <a href="{{ route('detail.actualite', $event) }}">
-                                                    <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
-                                                </a>
-
-                                                <div class="card-body d-flex flex-column">
-                                                    <!-- Titre limité en largeur -->
-                                                    <h3 class="mb-3 ">
-                                                        <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
-                                                            {{ Str::limit($event->title, 65) }}
-                                                        </a>
-                                                    </h3>
-
-                                                    <div class="mb-4 flex-grow-1">
-                                                        <!-- Texte limité à 3 lignes -->
-                                                        <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
-
-                                                        <!-- Date en petit -->
-                                                        <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
-                                                    </div>
-
-                                                    <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                            
-                                        @endif
-                                        
-                                    @endforeach
-                                @else
-                                    <p>Aucun événement disponible.</p>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="licence2" role="tabpanel" aria-labelledby="licence2-tab">
-                            <div class="row">
-                                @if($events->isNotEmpty())
-                                    @foreach ($events as $event)
-                                        @if ($event->type == 'licence 2')
-                                        <div class="col-md-3 mb-4">
-                                            <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
-                                                <!-- Image avec taille uniforme -->
-                                                <a href="{{ route('detail.actualite', $event) }}">
-                                                    <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
-                                                </a>
-
-                                                <div class="card-body d-flex flex-column">
-                                                    <!-- Titre limité en largeur -->
-                                                    <h3 class="mb-3 ">
-                                                        <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
-                                                            {{ Str::limit($event->title, 65) }}
-                                                        </a>
-                                                    </h3>
-
-                                                    <div class="mb-4 flex-grow-1">
-                                                        <!-- Texte limité à 3 lignes -->
-                                                        <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
-
-                                                        <!-- Date en petit -->
-                                                        <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
-                                                    </div>
-
-                                                    <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                            
-                                        @endif
-                                        
-                                    @endforeach
-                                @else
-                                    <p>Aucun événement disponible.</p>
-                                @endif
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="licence3" role="tabpanel" aria-labelledby="licence3-tab">
-
-                            <div class="row">
-                                @if($events->isNotEmpty())
-                                    @foreach ($events as $event)
-                                        @if ($event->type == 'licence 3')
-                                        <div class="col-md-3 mb-4">
-                                            <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
-                                                <!-- Image avec taille uniforme -->
-                                                <a href="{{ route('detail.actualite', $event) }}">
-                                                    <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
-                                                </a>
-
-                                                <div class="card-body d-flex flex-column">
-                                                    <!-- Titre limité en largeur -->
-                                                    <h3 class="mb-3 ">
-                                                        <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
-                                                            {{ Str::limit($event->title, 65) }}
-                                                        </a>
-                                                    </h3>
-
-                                                    <div class="mb-4 flex-grow-1">
-                                                        <!-- Texte limité à 3 lignes -->
-                                                        <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
-
-                                                        <!-- Date en petit -->
-                                                        <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
-                                                    </div>
-
-                                                    <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                            
-                                        @endif
-                                        
-                                    @endforeach
-                                @else
-                                    <p>Aucun événement disponible.</p>
-                                @endif
-                            </div>
-
-                        </div>
-                        <div class="tab-pane fade" id="master1" role="tabpanel" aria-labelledby="master1-tab">
-
-                            <div class="row">
-                                @if($events->isNotEmpty())
-                                    @foreach ($events as $event)
-                                        @if ($event->type == 'master 1')
-                                        <div class="col-md-3 mb-4">
-                                            <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
-                                                <!-- Image avec taille uniforme -->
-                                                <a href="{{ route('detail.actualite', $event) }}">
-                                                    <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
-                                                </a>
-
-                                                <div class="card-body d-flex flex-column">
-                                                    <!-- Titre limité en largeur -->
-                                                    <h3 class="mb-3 ">
-                                                        <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
-                                                            {{ Str::limit($event->title, 65) }}
-                                                        </a>
-                                                    </h3>
-
-                                                    <div class="mb-4 flex-grow-1">
-                                                        <!-- Texte limité à 3 lignes -->
-                                                        <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
-
-                                                        <!-- Date en petit -->
-                                                        <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
-                                                    </div>
-
-                                                    <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                            
-                                        @endif
-                                        
-                                    @endforeach
-                                @else
-                                    <p>Aucun événement disponible.</p>
-                                @endif
-                            </div>
-
-                        </div>
-                        <div class="tab-pane fade" id="master2" role="tabpanel" aria-labelledby="master2-tab">
-
-                            <div class="row">
-                                @if($events->isNotEmpty())
-                                    @foreach ($events as $event)
-                                        @if ($event->type == 'master 2')
-                                        <div class="col-md-3 mb-4">
-                                            <div class="card mb-4 mb-xl-0 card-hover border d-flex flex-column" style="height: 100%;">
-                                                <!-- Image avec taille uniforme -->
-                                                <a href="{{ route('detail.actualite', $event) }}">
-                                                    <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top rounded-top-3" alt="{{ $event->title }}" style="height: 200px; object-fit: cover;">
-                                                </a>
-
-                                                <div class="card-body d-flex flex-column">
-                                                    <!-- Titre limité en largeur -->
-                                                    <h3 class="mb-3 ">
-                                                        <a href="{{ asset('storage/' . $event->image) }}" class="text-inherit" target="blank">
-                                                            {{ Str::limit($event->title, 65) }}
-                                                        </a>
-                                                    </h3>
-
-                                                    <div class="mb-4 flex-grow-1">
-                                                        <!-- Texte limité à 3 lignes -->
-                                                        <p class="truncate-text text-muted">{{ Str::limit($event->description, 100) }}</p>
-
-                                                        <!-- Date en petit -->
-                                                        <small class="text-muted">{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
-                                                    </div>
-
-                                                    <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-light-primary text-primary" target="blank">Continuer la lecture</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                            
-                                        @endif
-                                        
-                                    @endforeach
-                                @else
-                                    <p>Aucun événement disponible.</p>
-                                @endif
-                            </div>
-
-                        </div>
-                    </div> --}}
-                </div>
-            </div>
-        </section>
-    </div>
-</section>
 
 
 @endsection

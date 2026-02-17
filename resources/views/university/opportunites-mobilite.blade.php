@@ -74,12 +74,42 @@
 
 @section('content')
 
+<section class="py-lg-8 py-5 header-bg" style="">
+    <div class="container ">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-6 mb-lg-0">
+                <div>
+                    <h4 class="text-white mb-4">
+                        <i class="bi bi-chevron-compact-right text-white rounded-circle "></i>
+                        Etudiant
+                    </h4>
+                    <h1 class="display-3 fw-bold mb-3 text-white">OPPORTUNITÉS & MOBILITÉS</h1>
+                    <p class="pe-lg-10 mb-5">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus 
+                        culpa a explicabo ea repellat aspernatur atque porro alias odit ex 
+                        recusandae ut commodi sapiente repudiandae corporis aliquid doloribus, 
+                        quasi deserunt?
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex">
+                <!-- Image ou autre contenu -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 
 <section class="my-5 py-5 ">
     <div class="container">
         <div class="banner mb-4">
             <h1 class="display-4 banner-title">Opportunité <br> & Mobilité</h1>
-            {{-- <p class="lead">Bienvenue dans notre rubrique "Parlons Eco", où nous abordons des thématiques liées à l'Économie.</p> --}}
+            {{-- <p class="lead">
+                Cette rubrique relaie les offres de consultance, les offres de formation ou encore les offres de renforcement des capacités qui sont disponibles. Elle relaie également 
+            </p> --}}
         </div>
 
         {{-- <div class="mt-5">

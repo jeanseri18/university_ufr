@@ -22,14 +22,24 @@
     text-overflow: ellipsis;
 }</style>
 
-<section class="my-5
-bg-light
-py-5">
+<section class="my-5 bg-light py-5">
     <div class="container">
         <div class="text-center mb-5">
             <small class="text-uppercase ls-md fw-semibold">CAMES</small>
             <h2 class="mt-3">Accédez aux informations du CAMES</h2>
-            <p class="mb-0">Retrouvez les procédures et réglementations du CAMES concernant les CTS, l'agrégation et les démarches administratives.</p>
+            <p class="mb-0">
+                Le Conseil Africain et Malgache pour l’Enseignement Supérieur (CAMES) est l’institution qui gère l’avancement des enseignant(e)s et leurs inscriptions sur les différentes listes d’aptitude.
+                <br>
+                L’enseignant démarre sa carrière universitaire en tant qu’Assistant des Universités et appartient à la catégorie des rangs B. Le pallier suivant est celui de Maître-Assistant des Universités 
+                (Rang B) qu’il doit franchir en soumettant son dossier au programme des Comités Consultatifs Interafricains (CCI) organisé par le CAMES.
+                <br>
+                Une fois Maître-Assistant, l’enseignant doit atteindre le pallier suivant qui est celui de Maître-Assistant (Rang A). Pour ce faire, deux voies d’offrent à lui : la voie courte qui est celle 
+                du concours d’Agrégation et la voie longue qui est celle du programme CCI. Une fois Maître de Conférence, l’enseignant se prépare pour le dernier pallier qui est celui de Professeur Titulaire 
+                (Rang A) en soumettant son dossier aux CCI.
+                <br>
+                L’accès à chaque pallier s’accompagne de procédures administratives à remplir.
+            </p>
+            {{-- <p class="mb-0">Retrouvez les procédures et réglementations du CAMES concernant les CTS, l'agrégation et les démarches administratives.</p> --}}
         </div>
         <div class="row">
             <div class="col-md-4 col-12 mb-4">

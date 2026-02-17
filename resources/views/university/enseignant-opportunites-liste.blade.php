@@ -69,7 +69,7 @@
     <div class="container">
         <div class="banner mb-4">
             <h1 class="display-4 banner-title">Opportunités <br></h1>
-            {{-- <p class="lead">Bienvenue dans notre rubrique "Parlons Eco", où nous abordons des thématiques liées à l'Économie.</p> --}}
+            <p class="lead">Cette rubrique relaie les offres de consultance, les offres de formation ou encore les offres de renforcement des capacités qui sont disponibles. Elle relaie également.</p>
         </div>
 
         <div class="my-5 mt-8">

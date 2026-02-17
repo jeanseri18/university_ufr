@@ -1,163 +1,168 @@
 @extends('layouts.university')
-<style>
-.card-custom {
-    min-height: 300px;
-    /* Ajustez cette valeur selon vos besoins */
 
-    flex-direction: column;
-    justify-content: space-between;
-}
-/* Slider container */
-.bg-slide1, .bg-slide2, .bg-slide3 {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh; /* Vous pouvez ajuster la hauteur */
-    position: relative;
-    transition: background-position 1s ease, background-size 1s ease; /* Ajoute une animation fluide lors du changement de slide */
-}
-
-/* Amélioration du texte sur chaque slide */
-.bg-slide1 h1, .bg-slide2 h1, .bg-slide3 h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3rem;
-    text-align: center;
-}
-
-/* Ajout d'un effet de fondu pour l'image */
-.carousel-inner {
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel-item {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel-item.active {
-    opacity: 1;
-}
-
-/* Effet de bouton hover */
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Pour des boutons plus visibles */
-}
-
-/* Card hover effet */
-.card-hover:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease;
-}
-
-/* Adaptation des images à différentes résolutions */
-.card-img-top {
-    width: 100%;
-    height: 250px; /* Hauteur fixe pour les images */
-    object-fit: cover; /* Assure que l'image couvre toute la surface sans déformation */
-}
-
-.bg-slide1 {
-    background: linear-gradient(#0C3396B8, #000000F1), url('../../assets/images/backhome.png') no-repeat right;
-    background-size: auto;
-    background-position: right;
-    height: 610px;
-    background-size: cover;
-
-}
-
-.bg-slide2 {
-    background: linear-gradient(#0C3396B8, #000000F1), url('../../assets/images/formationorg/handsome-young-businessman.jpg') no-repeat right;
-    background-size: auto;
-    background-position: right;
-    height: 610px;
-
-    background-size: cover;
-}
-
-.bg-slide3 {
-    background: linear-gradient(#0C3396B8, #000000F1), url('../../assets/images/about/geeksui-img-3.jpg') no-repeat right;
-    background-size: auto;
-    background-position: right;
-    height: 610px;
-    background-size: cover;
-}
-
-.bg-spacing {
-    margin-left: 15%;
-    margin-top: 5%;
-    margin-right: 15%;
-}
-
-.my-slider .card-img-top {
-    width: 100%;
-    height: 200px;
-    /* Hauteur fixe pour toutes les images */
-    object-fit: cover;
-    /* Couvrir le conteneur sans déformation */
-}
-
-.card {
-    overflow: hidden;
-    /* Éviter que les images débordent du conteneur */
-}
-
-.item {
-    display: flex;
-    justify-content: center;
-    /* Centrer les éléments horizontalement */
-    align-items: center;
-    /* Centrer les éléments verticalement */
-}
-
-.card-img-top {
-    width: 100%;
-    height: 200px;
-    /* Hauteur fixe pour toutes les images */
-    object-fit: cover;
-    /* Couvrir le conteneur sans déformation */
-}
-
-#certifCarouselControls {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-}
-
-#certifCarouselControls .prev,
-#certifCarouselControls .next {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-}
-.card-img-top {
-    width: 100%;
-    height: 200px; /* Hauteur uniforme */
-    object-fit: cover; /* Coupe l’image pour qu’elle garde le bon ratio */
-}
-
-.card-body {
-    min-height: 180px; /* Assure une hauteur uniforme des cartes */
-}
-
-.truncate-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 3; /* Nombre max de lignes */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-</style>
 @section('title', 'Acceuil | Ufr ')
+
+@push('style')
+<style>
+    .card-custom {
+        min-height: 300px;
+        /* Ajustez cette valeur selon vos besoins */
+
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    /* Slider container */
+    .bg-slide1, .bg-slide2, .bg-slide3 {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Vous pouvez ajuster la hauteur */
+        position: relative;
+        transition: background-position 1s ease, background-size 1s ease; /* Ajoute une animation fluide lors du changement de slide */
+    }
+
+    /* Amélioration du texte sur chaque slide */
+    .bg-slide1 h1, .bg-slide2 h1, .bg-slide3 h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    /* Ajout d'un effet de fondu pour l'image */
+    .carousel-inner {
+        transition: opacity 1s ease-in-out;
+    }
+
+    .carousel-item {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .carousel-item.active {
+        opacity: 1;
+    }
+
+    /* Effet de bouton hover */
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5); /* Pour des boutons plus visibles */
+    }
+
+    /* Card hover effet */
+    .card-hover:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+    }
+
+    /* Adaptation des images à différentes résolutions */
+    .card-img-top {
+        width: 100%;
+        height: 250px; /* Hauteur fixe pour les images */
+        object-fit: cover; /* Assure que l'image couvre toute la surface sans déformation */
+    }
+
+    .bg-slide1 {
+        background: linear-gradient(#0C3396B8, #000000F1), url('../../assets/images/backhome.png') no-repeat right;
+        background-size: auto;
+        background-position: right;
+        height: 610px;
+        background-size: cover;
+
+    }
+
+    .bg-slide2 {
+        background: linear-gradient(#0C3396B8, #000000F1), url('../../assets/images/formationorg/handsome-young-businessman.jpg') no-repeat right;
+        background-size: auto;
+        background-position: right;
+        height: 610px;
+
+        background-size: cover;
+    }
+
+    .bg-slide3 {
+        background: linear-gradient(#0C3396B8, #000000F1), url('../../assets/images/about/geeksui-img-3.jpg') no-repeat right;
+        background-size: auto;
+        background-position: right;
+        height: 610px;
+        background-size: cover;
+    }
+
+    .bg-spacing {
+        margin-left: 15%;
+        margin-top: 5%;
+        margin-right: 15%;
+    }
+
+    .my-slider .card-img-top {
+        width: 100%;
+        height: 200px;
+        /* Hauteur fixe pour toutes les images */
+        object-fit: cover;
+        /* Couvrir le conteneur sans déformation */
+    }
+
+    .card {
+        overflow: hidden;
+        /* Éviter que les images débordent du conteneur */
+    }
+
+    .item {
+        display: flex;
+        justify-content: center;
+        /* Centrer les éléments horizontalement */
+        align-items: center;
+        /* Centrer les éléments verticalement */
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 200px;
+        /* Hauteur fixe pour toutes les images */
+        object-fit: cover;
+        /* Couvrir le conteneur sans déformation */
+    }
+
+    #certifCarouselControls {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    #certifCarouselControls .prev,
+    #certifCarouselControls .next {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 200px; /* Hauteur uniforme */
+        object-fit: cover; /* Coupe l’image pour qu’elle garde le bon ratio */
+    }
+
+    .card-body {
+        min-height: 180px; /* Assure une hauteur uniforme des cartes */
+    }
+
+    .truncate-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Nombre max de lignes */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+</style>    
+@endpush
+
 
 @section('content')
 <!-- VERSION DESKTOP -->
@@ -214,53 +219,57 @@
                 background-position: center;
                 height: auto;
                 padding: 40px 20px;">
-  <div class="container">
-    <div class="row">
-      <div class="col-12" style="background-color: white; color: #3CA45D; padding: 10px; margin-bottom: 10px;">
-        <strong>Bienvenue à l'UFR</strong>
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12" style="background-color: white; color: #3CA45D; padding: 10px; margin-bottom: 10px;">
+                <strong>Bienvenue à l'UFR</strong>
+            </div>
 
-      <div class="col-12" style="background-color: #0B0B0B93; color: white; padding: 20px;">
-        <div id="mobileTextCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- Texte 1 -->
-            <div class="carousel-item active">
-              <p style="font-size: 20px;">Bienvenue à l'UFR de l'Université de Cocody, un espace dédié à l'excellence académique et à l'innovation.</p>
-              <p style="font-size: 12px;">Administration, Janvier 2024</p>
+            <div class="col-12" style="background-color: #0B0B0B93; color: white; padding: 20px;">
+                <div id="mobileTextCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Texte 1 -->
+                    <div class="carousel-item active">
+                    <p style="font-size: 20px;">Bienvenue à l'UFR de l'Université de Cocody, un espace dédié à l'excellence académique et à l'innovation.</p>
+                    <p style="font-size: 12px;">Administration, Janvier 2024</p>
+                    </div>
+                    <!-- Texte 2 -->
+                    <div class="carousel-item">
+                    <p style="font-size: 20px;">Explorez les programmes variés offerts par l'UFR, conçus pour répondre aux besoins académiques et professionnels des étudiants.</p>
+                    <p style="font-size: 12px;">Direction Pédagogique, Février 2024</p>
+                    </div>
+                    <!-- Texte 3 -->
+                    <div class="carousel-item">
+                    <p style="font-size: 20px;">Rejoignez une communauté dynamique et engageante à l'UFR de l'Université de Cocody.</p>
+                    <p style="font-size: 12px;">Service de Communication, Mars 2024</p>
+                    </div>
+                </div>
+                <!-- Contrôles du slider -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#mobileTextCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mobileTextCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
             </div>
-            <!-- Texte 2 -->
-            <div class="carousel-item">
-              <p style="font-size: 20px;">Explorez les programmes variés offerts par l'UFR, conçus pour répondre aux besoins académiques et professionnels des étudiants.</p>
-              <p style="font-size: 12px;">Direction Pédagogique, Février 2024</p>
-            </div>
-            <!-- Texte 3 -->
-            <div class="carousel-item">
-              <p style="font-size: 20px;">Rejoignez une communauté dynamique et engageante à l'UFR de l'Université de Cocody.</p>
-              <p style="font-size: 12px;">Service de Communication, Mars 2024</p>
-            </div>
-          </div>
-          <!-- Contrôles du slider -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#mobileTextCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#mobileTextCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
 
 <!-- ADVERTISING BANNER SECTION -->
-{{-- <section class="bg-primary text-white py-5">
+<section class="bg-primary text-white py-2">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-md-8">
-                <h3 class="fw-bold mb-2 text-warning" style="animation: fadeInOut 3s infinite;">Nouvelle rentrée accademique 2026-2027</h3>
+            <div class="col-md-2" style="border-right: 1px solid #f2f2f25e">
+                <h4 class="fw-bold mb-2 text-warning" style="animation: fadeInOut 3s infinite;">
+                    Flash Info <i class="bi bi-exclamation-triangle-fill" style="animation: fadeInOut 3s infinite; color: orange; margin-right: 10px;"></i>
+                </h4>
+            </div>
+            <div class="col-md-10 text-md-end text-center mb-0 mt-0 mt-md-0">
                 <style>
                     @keyframes fadeInOut {
                         0%, 100% { opacity: 0; }
@@ -269,36 +278,11 @@
                 </style>
                 <p class="mb-0">
                     <marquee behavior="" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                    </marquee>
-                </p>
-            </div>
-            <div class="col-md-4 text-md-end text-center mt-3 mt-md-0">
-                <a href="#" class="btn btn-light btn-sm fw-bold">En savoir plus</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<br><br> --}}
-
-<!-- ADVERTISING BANNER SECTION -->
-<section class="bg-primary text-white py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-4" style="border-right: 1px solid #f2f2f25e">
-                <h4 class="fw-bold mb-2 text-warning" style="animation: fadeInOut 3s infinite;"><i class="bi bi-info-circle"></i> Spéciale rentrée accademique 2026-2027</h4>
-            </div>
-            <div class="col-md-8 text-md-end text-center mt-3 mt-md-0">
-                <style>
-                    @keyframes fadeInOut {
-                        0%, 100% { opacity: 0; }
-                        50% { opacity: 1; }
-                    }
-                </style>
-                <p class="mb-0">
-                    <marquee behavior="" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        @foreach ($annonces as $item)
+                            <span style="display: inline-flex; align-items: center; margin-right: 10px;">
+                                <span><a class="text-white" href="{{ $item->fichier_path }}" target="_blank">{{ $item->description }}</a></span> <span style="margin-right: 10px; margin-left: 10px;"><i class="bi bi-dot"></i></span> 
+                            </span>
+                        @endforeach
                     </marquee>
                 </p>
             </div>
@@ -307,7 +291,7 @@
 </section>
 
 
-<section class=""><br>
+<section class="">
     <div class="container my-lg-8">
         <div class="row">
             <div class="col-xl-9 col-md-9 col-9">

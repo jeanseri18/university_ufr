@@ -33,6 +33,12 @@
         .nav-link:hover{
             font-weight: 800;
         }
+
+        .header-bg {
+            color:white; 
+            background: linear-gradient(to right, #2B6635, #2B6635);
+            height: 26em;
+        }
     </style>
 </head>
 
@@ -42,7 +48,7 @@
         <div class="row" style="min-height: 100px; padding: 30px;">
             <div class="col-md-3 ">
                 <a class="navbar-brand mx-auto" href="/">
-                <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo" class="img-fluid navbar-brand" style="height: 40px">
+                    <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo" class="img-fluid navbar-brand" style="height: 40px">
                 </a>
             </div>
             <div class="col-md-1"> </div>
@@ -96,13 +102,12 @@
             <div class="collapse navbar-collapse" id="navbar-default">
                 <ul class="navbar-nav mt-3 mt-lg-0 mx-xxl-auto">
 
-                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen', 'etudiant.parlons-eco', 'etudiant.opportunites.mobilite', 'etudiant.opportunites.liste', 'etudiant.mobilite.liste', 'etudiant.agenda']))
+                    @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen', 'etudiant.parlons-eco', 'etudiant.opportunites.mobilite', 'etudiant.opportunites.liste', 'etudiant.mobilite.liste', 'etudiant.agenda', 'etudiant.liste-repartition']))
                         <!-- Menu spécifique pour les étudiants -->
                         <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
                         <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
-                        {{-- <li><a href="{{ route('etudiant.listofstudent') }}" class="dropdown-item">Resultat et liste des etudiants</a></li> --}}
-                        <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Agenda</a></li>
-                        <li><a href="{{ route('etudiant.parlons-eco') }}" class="dropdown-item">Parlons Eco</a></li>
+                        <li><a href="{{ route('etudiant.liste-repartition') }}" class="dropdown-item">Liste de répartition</a></li>
+                        <li><a href="{{ route('etudiant.parlons-eco') }}" class="dropdown-item">Parlons Economie</a></li>
                         <li><a href="{{ route('etudiant.opportunites.mobilite') }}" class="dropdown-item">Opportunités et Mobilité</a></li>
                         <li><a href="{{ route('etudiant.resultat-examen') }}" class="dropdown-item">Résultats des Examens </a></li>
 
@@ -125,20 +130,12 @@
                         <li><a href="{{ route('enseignant.cours.td') }}" class="dropdown-item">Cours/ TD </a></li>
                         <li><a href="{{ route('enseignant.opportunites.mobilite') }}" class="dropdown-item">Opportunités et Mobilité </a></li>
                     @else
-                        {{-- <li><a href="{{ route('actualité') }}" class="dropdown-item">Agenda</a></li>
-                        <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Nous rejoindre</a></li>
-                        <!-- Menu standard pour tous les utilisateurs -->
-                        <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Procédures Administratives</a></li>
-                        <li><a href="{{ route('filierePro') }}" class="dropdown-item">Promotions</a></li>
-                        <li><a href="{{ route('alumnis') }}" class="dropdown-item">Opportunités et Mobilité</a></li>
-                        <li><a href="{{ route('larecherche') }}" class="dropdown-item">Vie sociale</a></li> --}}
                         <li><a href="javascript:void(0)" class="dropdown-item">Agenda</a></li>
-                        {{-- <li><a href="javascript:void(0)" class="dropdown-item">Nous rejoindre</a></li> --}}
                         <!-- Menu standard pour tous les utilisateurs -->
                         <li><a href="javascript:void(0)" class="dropdown-item">Procédures Administratives</a></li>
                         <li><a href="javascript:void(0)" class="dropdown-item">Promotions</a></li>
                         <li><a href="javascript:void(0)" class="dropdown-item">Opportunités et Mobilité</a></li>
-                        <li><a href="javascript:void(0)" class="dropdown-item">Vie sociale</a></li>
+                        <li><a href="{{ route('partenaire.vie-sociale') }}" class="dropdown-item">Vie sociale</a></li>
                     @endif
                 </ul>
                     <div class="mt-3 mt-lg-0 d-flex align-items-center ms-auto">
@@ -161,7 +158,6 @@
                 <div class="col-xl-5 col-lg-6 col-md-12 mb-4">
                     <div class="d-flex flex-column gap-4">
                         <div>
-                            {{-- <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo UFR" style="height: 40px"/> --}}
                             <img src="{{ asset('assets/logo-ufr-no-bg.png') }}" alt="Logo UFR" style="height: 70px"/>
                         </div>
                         <p class="mb-0 text-white">

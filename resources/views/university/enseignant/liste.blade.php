@@ -140,9 +140,67 @@
     <div class="container">
         <div class="banner mb-4">
             <h1 class="display-4 banner-title">Liste des enseignants <br></h1>
-            {{-- <p class="lead">Bienvenue dans notre rubrique "Parlons Eco", où nous abordons des thématiques liées à l'Économie.</p> --}}
+            <p class="lead">
+                L’enseignant-chercheur est un érudit spécialisé dans une discipline qui constitue le lien 
+                entre la recherche scientifique, le monde industriel et la société. En Côte d’ivoire, 
+                l’enseignant-chercheur est un universitaire de haut niveau (titulaire d’un doctorat) qui 
+                assure la formation et la recherche au sein des institutions d’enseignement supérieur. Il est 
+                fonctionnaire et est recruté par le Ministère de l’Enseignement Supérieur et de la Recherche Scientifique (MESRS).
+            </p>
         </div>
 
+
+        <div class="row mt-6 mb-5 justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 700px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ asset('/assets/test-ufr.png') }}" height="236px" width="auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="" style="padding-left: 40px">
+                                    <h3 class="card-title">Dr. KONÉ Salif (Maître de Conférences)</h3>
+                                    <h5 class="card-title">Directeur de l'UFR SEG</h5>
+                                    <hr class="">
+                                    <p class="card-text"> 
+                                        <i class="bi bi-phone"></i> (+225) 01 0335 5803 <br>
+                                        <i class="bi bi-envelope"></i> salifkon@yahoo.fr <br>
+                                        {{-- <i class="bi bi-geo-alt"></i> Université de cocody <br> --}}
+                                        <i class="bi bi-briefcase"></i> Commerce international, integration regionale
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 700px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ asset('/assets/komenan.png') }}" height="236px" width="auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="card-content" style="padding-left: 40px">
+                                    <h3 class="card-title">KOMENAN A. KOMENAN</h3>
+                                    <h5 class="card-title">Directeur Adjoint en charge de la Pédagogie</h5>
+                                    <hr class="">
+                                    <p class="card-text"> 
+                                        <i class="bi bi-phone"></i> (+225) 07 0000 0000 <br>
+                                        <i class="bi bi-envelope"></i> komenan.narcisse@ufhb.edu.ci <br>
+                                        <i class="bi bi-geo-alt"></i> Université de cocody <br>
+                                        <i class="bi bi-briefcase"></i> Economie de l'environnement et des ressources Naturelles
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
 
         <div class="row mt-6 mb-5 justify-content-center">
             <div class="col-md-6">
@@ -154,14 +212,14 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <div class="" style="padding-left: 40px">
-                                    <h3 class="card-title">Nom & Prénom</h3>
-                                    <h5 class="card-title">Professeur titulaire</h5>
+                                    <h3 class="card-title">FOFANA Andon Cesar</h3>
+                                    <h5 class="card-title">Directeur Adjoint en charge de la Recherche</h5>
                                     <hr class="">
                                     <p class="card-text"> 
-                                        <i class="bi bi-phone"></i> (+225) 01 0101 0101 <br>
-                                        <i class="bi bi-envelope"></i> prenom.nom@domaine.tld <br>
+                                        <i class="bi bi-phone"></i> (+225) 01 0270 9189 <br>
+                                        <i class="bi bi-envelope"></i> andon.fofana16@ufhb.edu.ci <br>
                                         <i class="bi bi-geo-alt"></i> Université de cocody <br>
-                                        <i class="bi bi-briefcase"></i> Economie, Gestion, Finance
+                                        <i class="bi bi-briefcase"></i> GESTION/ COMPTABILITE
                                     </p>
                                 </div>
                             </div>
@@ -178,14 +236,14 @@
                         <div class="col-md-8">
                             <div class="card-body">
                                 <div class="card-content" style="padding-left: 40px">
-                                    <h3 class="card-title">Nom & Prénom</h3>
-                                    <h5 class="card-title">Professeur titulaire</h5>
+                                    <h3 class="card-title">Dr. BROU BOSSON Marcellin (Maître de Conférences Agrégé)</h3>
+                                    <h5 class="card-title">Chef du Département des Sciences Économiques</h5>
                                     <hr class="">
                                     <p class="card-text"> 
-                                        <i class="bi bi-phone"></i> (+225) 01 0101 0101 <br>
-                                        <i class="bi bi-envelope"></i> prenom.nom@domaine.tld <br>
+                                        <i class="bi bi-phone"></i> (+225) 07 0000 0000 <br>
+                                        <i class="bi bi-envelope"></i> exemple@domaine.tdl <br>
                                         <i class="bi bi-geo-alt"></i> Université de cocody <br>
-                                        <i class="bi bi-briefcase"></i> Economie, Gestion, Finance
+                                        <i class="bi bi-briefcase"></i> Spécialité enseignée
                                     </p>
                                 </div>
                             </div>
@@ -195,42 +253,56 @@
             </div>
         </div>
 
-
-        {{-- <div class="profile-card">
-            <div class="left-section">
-                <div class="profile-photo">
-                    <img src="{{ asset('/assets/profile-prof.jpeg') }}" alt="Photo de profil de Sangaré Ousmane">
-                </div>
-                <div class="contact-info">
-                    <h2 class="name">Sangaré Ousmane</h2>
-                    <p class="title">Professeur</p>
-                    <div class="contact-item">
-                        <span class="icon"><i class=""></i></span>
-                        <span class="info">sangareousmane@ufr.ci</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="icon">📞</span>
-                        <span class="info">0101010101</span>
-                    </div>
-                    <div class="contact-item">
-                        <span class="icon">📍</span>
-                        <span class="info">Université de cocody</span>
+        <div class="row mt-6 mb-5 justify-content-center">
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 700px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ asset('/assets/profile-prof.jpeg') }}" height="236px" width="auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="" style="padding-left: 40px">
+                                    <h3 class="card-title">Dr. KONATE Fati( Maître de Conférences Agrégée)</h3>
+                                    <h5 class="card-title">Cheffe du Département des Sciences de Gestion </h5>
+                                    <hr class="">
+                                    <p class="card-text"> 
+                                        <i class="bi bi-phone"></i> (+225) 00 0000 0000 <br>
+                                        <i class="bi bi-envelope"></i> nom.prénom@example.tld <br>
+                                        <i class="bi bi-geo-alt"></i> Université de cocody <br>
+                                        <i class="bi bi-briefcase"></i> Spécialité enseignée
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="right-section">
-                <p class="bio-text">
-                    Je suis professeur à l'UFR des Sciences Économiques et de Gestion. J'enseigne et mène des recherches dans les domaines de l'économie de l'environnement et du commerce international. La majeure partie de mes travaux porte sur l’interaction entre la mondialisation, l’environnement et la durabilité.
-                </p>
+            <div class="col-md-6">
+                <div class="card mb-3" style="max-width: 700px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="{{ asset('/assets/mtoure.png') }}" height="236px" width="auto" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="card-content" style="padding-left: 40px">
+                                    <h3 class="card-title">Dr. TOURÉ Kany Abiba Nelly Carla</h3>
+                                    <h5 class="card-title">Responsable Service Communication UFRSEG</h5>
+                                    <hr class="">
+                                    <p class="card-text"> 
+                                        <i class="bi bi-phone"></i> (+225) 07 9990 4345 <br>
+                                        <i class="bi bi-envelope"></i> servicecommunication-ufrseg@ufhb.edu.ci <br>
+                                        <i class="bi bi-geo-alt"></i> Université de cocody <br>
+                                        <i class="bi bi-briefcase"></i> Economie de l'environnement
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2"></div>
-            </div>
-        </div> --}}
 
         {{-- <hr class="divider"> --}}
 

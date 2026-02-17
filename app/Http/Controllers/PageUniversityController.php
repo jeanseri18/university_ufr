@@ -8,6 +8,7 @@ use App\Models\Mediatheque;
 use App\Models\Job;
 use App\Models\Event;
 use App\Models\Actualite;
+use App\Models\Annonce;
 use App\Models\Document;
 use App\Models\New_event;
 use App\Models\ResultatExamens;
@@ -24,7 +25,8 @@ class PageUniversityController extends Controller
         // $events = Event::orderBy('created_at', 'desc')->limit(12)->get();
         $new_events = New_event::orderBy('created_at', 'desc')->get();
         $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(8)->get();
-        return view('welcome', compact('actualites', 'mediatheques', 'events', 'new_events'));
+        $annonces = Annonce::orderBy('created_at', 'desc')->limit(8)->get();
+        return view('welcome', compact('actualites', 'mediatheques', 'events', 'new_events', 'annonces'));
     }
 
     public function quiSommesNous()
@@ -109,7 +111,9 @@ class PageUniversityController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        return view('university.etudiant', compact('docs'));
+        $mediatheques = Mediatheque::orderBy('created_at', 'desc')->where('page_type', 'etudiant')->limit(8)->get();
+
+        return view('university.etudiant', compact('docs', 'mediatheques'));
     }
 
 
@@ -269,5 +273,15 @@ class PageUniversityController extends Controller
     public function coursTd()
     {
         return view('university.enseignant-cours-td');
+    }
+
+    function listeRepartition() {
+        return view('front.etudiant.liste-repartition');
+    }
+
+    function partenaireVieSociale() {
+        $medias = Mediatheque::orderBy('created_at', 'desc')->where('page_type', 'partenaire')->limit(8)->get();
+
+        return view('front.partenaire.vie-sociale', compact('medias'));
     }
 }

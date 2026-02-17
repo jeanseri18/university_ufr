@@ -114,6 +114,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('annonce.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-megaphone"></i>
+                                <p>Annonces</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('users.index')}}" class="nav-link" style="color:white" >
                                 <i class="nav-icon bi bi-people"></i>
                                 <p>Utilisateur</p>
@@ -125,6 +131,7 @@
                                 <p>Parlons Eco</p>
                             </a>
                         </li>
+                        
                     </ul>
                 </nav>
             </div>

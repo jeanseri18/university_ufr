@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,57 +12,11 @@ use App\Http\Controllers\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-use App\Http\Controllers\PageUniversityController;
 use App\Http\Controllers\FiliereController;
-use App\Http\Controllers\ActualiteController;
-use App\Http\Controllers\MediathequeController;
-use App\Http\Controllers\ProfesseurController;
-use App\Http\Controllers\JobController;
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DocumentController;
-use App\Http\Controllers\ParlonsEcoController;
-use App\Http\Controllers\ResultatExamenControler;
 
-Route::get('/home', [DashboardController::class, 'index'])->name('home');
 
-//route pour creer un evenement
-Route::get('/events/new_create', [EventController::class, 'new_event_create']);
-Route::post('/events/add', [EventController::class, 'new_event_store'])->name('new.event.store');
-Route::get('/new_events', [EventController::class, 'new_index'])->name('new_event.index');
-
-Route::get('/jobs', [JobController::class, 'index'])->name('jobs.index');
-Route::get('/jobs/create', [JobController::class, 'create'])->name('jobs.create');
-Route::post('/jobs', [JobController::class, 'store'])->name('jobs.store');
-Route::delete('/jobs/{id}', [JobController::class, 'destroy'])->name('jobs.destroy');
-
-Route::get('/professeurs', [ProfesseurController::class, 'index'])->name('professeurs.index');
-Route::get('/professeurs/create', [ProfesseurController::class, 'create'])->name('professeurs.create');
-Route::post('/professeurs', [ProfesseurController::class, 'store'])->name('professeurs.store');
-Route::delete('/professeurs/{id}', [ProfesseurController::class, 'destroy'])->name('professeurs.destroy');
-
-Route::get('/mediatheque', [MediathequeController::class, 'index'])->name('mediatheque.index');
-Route::get('/mediatheque/create', [MediathequeController::class, 'create'])->name('mediatheque.create');
-Route::post('/mediatheque', [MediathequeController::class, 'store'])->name('mediatheque.store');
-Route::delete('/mediatheque/{id}', [MediathequeController::class, 'destroy'])->name('mediatheque.destroy');
-
-// Liste des actualités
-Route::get('/actualites', [ActualiteController::class, 'index'])->name('actualites.index');
-
-// Formulaire pour ajouter une actualité
-Route::get('/actualites/create', [ActualiteController::class, 'create'])->name('actualites.create');
-
-// Enregistrer une nouvelle actualité
-Route::post('/actualites', [ActualiteController::class, 'store'])->name('actualites.store');
-
-// Formulaire pour modifier une actualité
-Route::get('/actualites/{actualite}/edit', [ActualiteController::class, 'edit'])->name('actualites.edit');
-
-// Mettre à jour une actualité
-Route::put('/actualites/{actualite}', [ActualiteController::class, 'update'])->name('actualites.update');
-
-// Supprimer une actualité
-Route::delete('/actualites/{actualite}', [ActualiteController::class, 'destroy'])->name('actualites.destroy');
 
 Route::get('/filieres', [FiliereController::class, 'index'])->name('filieres.index'); // Afficher toutes les filières
 Route::get('/filieres/create', [FiliereController::class, 'create'])->name('filieres.create'); // Afficher le formulaire de création
@@ -84,91 +36,6 @@ Route::get('/detail/filieres-pro/{id}', [FiliereController::class, 'showDetailFi
 Route::get('/licence-pro', [FiliereController::class, 'showLicencePro'])->name('licence.pro');
 Route::get('/master-pro', [FiliereController::class, 'showMasterPro'])->name('master.pro');
 Route::get('/doctorat-pro', [FiliereController::class, 'showDoctoratPro'])->name('doctorat.pro');
-
-Route::get('/qui-sommes-nous', [PageUniversityController::class, 'quiSommesNous'])->name('quiSommesNous');
-Route::get('/larecherche', [PageUniversityController::class, 'larecherche'])->name('larecherche');
-Route::get('/filiere-pro', [PageUniversityController::class, 'filierePro'])->name('filierePro');
-Route::get('/filiere-classique', [PageUniversityController::class, 'filiereCla'])->name('filiereCla');
-Route::get('/alumnis', [PageUniversityController::class, 'alumnis'])->name('alumnis');
-Route::get('/actualité', [PageUniversityController::class, 'actualité'])->name('actualité');
-Route::get('/partenaire', [PageUniversityController::class, 'partenaire'])->name('partenaire');
-Route::get('/etudiant', [PageUniversityController::class, 'etudiant'])->name('etudiant');
-Route::get('/all-actualite', [PageUniversityController::class, 'allactualite'])->name('all.actualite');
-Route::get('/etudiant/agenda', [PageUniversityController::class, 'agenda'])->name('etudiant.agenda');
-Route::get('/etudiant/listetresultas', [PageUniversityController::class, 'listofstudent'])->name('etudiant.listofstudent');
-Route::get('/detail-actulite/{actualite}', [PageUniversityController::class, 'detailactulite'])->name('detail.actualite');
-Route::get('/personnel-admin', [PageUniversityController::class, 'personnel'])->name('personnel-admin');
-Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
-// Route::get('/detail-parlons-eco/{parlonsEco}', [PageUniversityController::class, 'detailParlonsEco'])->name('detail.parlons-eco');
-Route::group(['prefix' => 'etudiant'], function () {
-    Route::get('/agenda', [PageUniversityController::class, 'agendaEtudiant'])->name('etudiant.agenda');
-    Route::get('/parlons-eco', [PageUniversityController::class, 'parlonsEco'])->name('etudiant.parlons-eco');
-    Route::get('/opportunites-mobilite', [PageUniversityController::class, 'opportunitesMobilite'])->name('etudiant.opportunites.mobilite');
-    Route::get('opportunites/liste', [PageUniversityController::class, 'opportunitesListe'])->name('etudiant.opportunites.liste');
-    Route::get('/mobilite/liste', [PageUniversityController::class, 'mobiliteListe'])->name('etudiant.mobilite.liste');
-
-    // Route::get('/resultat-examen/liste', [PageUniversityController::class, 'resultatExamen'])->name('etudiant.resultat-examen');
-});
-
-// Enseignant routes
-Route::group(['prefix' => 'enseignant'], function () {
-    Route::get('/vie-sociale', [ProfesseurController::class, 'enseignant'])->name('enseignant');
-    Route::get('/enseignant-event', [ProfesseurController::class, 'calendrier'])->name('enseignant.calendrier');
-    Route::get('/enseignant-list', [ProfesseurController::class, 'liste'])->name('enseignant.liste');
-    Route::get('/enseignant-procedure', [ProfesseurController::class, 'procedure'])->name('enseignant.procedure');
-    Route::get('/enseignant-cames', [ProfesseurController::class, 'cames'])->name('enseignant.cames');
-    Route::get('/enseignant-rejoindre', [ProfesseurController::class, 'rejoindre'])->name('enseignant.rejoindre');
-
-    // Route::get('/agenda', [PageUniversityController::class, 'agendaEnseignant'])->name('enseignant.agenda');
-    // Route::get('/parlons-eco', [PageUniversityController::class, 'parlonsEcoEnseignant'])->name('enseignant.parlons-eco');
-    Route::get('/opportunites-mobilite', [PageUniversityController::class, 'opportunitesMobiliteEnseignant'])->name('enseignant.opportunites.mobilite');
-    Route::get('opportunites/liste', [PageUniversityController::class, 'opportunitesListeEnseignant'])->name('enseignant.opportunites.liste');
-    Route::get('/mobilite/liste', [PageUniversityController::class, 'mobiliteListeEnseignant'])->name('enseignant.mobilite.liste');
-    Route::get('/cours-td', [PageUniversityController::class, 'coursTd'])->name('enseignant.cours.td');
-
-    
-});
-
-Route::get('/etudiant/evenement', [PageUniversityController::class, 'evenement'])->name('etudiant.evenement');
-
-// Route pour afficher les résultats d'examen
-Route::get('/resultat-examen/liste', [PageUniversityController::class, 'resultatExamen'])->name('etudiant.resultat-examen');
-// Route pour afficher les résultats d'examen dans le dashboard
-Route::get('/resultat-examen', [ResultatExamenControler::class, 'resultatExamenIndex'])->name('resultat-examen.index');
-Route::get('/resultat-examen/create', [ResultatExamenControler::class, 'resultatExamenCreate'])->name('resultat-examen.create');
-Route::post('/resultat-examen', [ResultatExamenControler::class, 'resultatExamenStore'])->name('resultat-examen.store');
-Route::get('/resultat-examen/{id}/edit', [ResultatExamenControler::class, 'resultatExamenEdit'])->name('resultat-examen.edit');
-Route::post('/resultat-examen/{id}', [ResultatExamenControler::class, 'resultatExamenUpdate'])->name('resultat-examen.update');
-Route::delete('/resultat-examen/{id}', [ResultatExamenControler::class, 'resultatExamenDestroy'])->name('resultat-examen.destroy');
-Route::get('/resultat-examen/{id}/download/', [ResultatExamenControler::class, 'resultatExamenDownloadPdf'])->name('resultat-examen.download');
-
-// Route::get('/enseignant', [ProfesseurController::class, 'enseignant'])->name('enseignant');
-// Route::get('/enseignant-event', [ProfesseurController::class, 'calendrier'])->name('enseignant.calendrier');
-// Route::get('/enseignant-list', [ProfesseurController::class, 'liste'])->name('enseignant.liste');
-// Route::get('/enseignant-procedure', [ProfesseurController::class, 'procedure'])->name('enseignant.procedure');
-// Route::get('/enseignant-cames', [ProfesseurController::class, 'cames'])->name('enseignant.cames');
-// Route::get('/enseignant-rejoindre', [ProfesseurController::class, 'rejoindre'])->name('enseignant.rejoindre');
-
-
-// Route pour lister les utilisateurs
-Route::get('users', [UserController::class, 'index'])->name('users.index');
-
-// Route pour afficher le formulaire de création d'un utilisateur
-Route::get('users/create', [UserController::class, 'create'])->name('users.create');
-
-// Route pour enregistrer un utilisateur
-Route::post('users', [UserController::class, 'store'])->name('users.store');
-
-
-Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
-Route::post('login', [AuthController::class, 'login']);
-
-Route::get('logout', [AuthController::class, 'logout'])->name('logout');
-
-Route::get('change-password', [AuthController::class, 'showChangePasswordForm'])->name('change.password.form');
-Route::post('change-password', [AuthController::class, 'changePassword'])->name('change.password');
-
-// Route protégée (page d'accueil ou autre)
 
 
 
@@ -194,43 +61,10 @@ Route::post('documents', [DocumentController::class, 'store'])->name('documents.
 Route::get('documents/{id}', [DocumentController::class, 'show'])->name('documents.show');
 
 
-// Route::group(['prefix' => 'etudiant'], function () {
-//     Route::get('/resultat-examen/liste', [PageUniversityController::class, 'resultatExamen'])->name('etudiant.resultat-examen');
-// });
 
-// Route pour admin
+
+require __DIR__.'/web/front.php';
+
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/parlons-eco', [ParlonsEcoController::class, 'index'])->name('parlons-eco.index');
-    Route::get('/parlons-eco/create', [ParlonsEcoController::class, 'create'])->name('parlons-eco.create');
-    Route::post('/parlons-eco', [ParlonsEcoController::class, 'store'])->name('parlons-eco.store');
-    // Route::get('/', [DashboardController::class, 'index'])->name('admin.dashboard');
-    // Route::get('/users', [UserController::class, 'index'])->name('admin.users.index');
-    // Route::get('/users/create', [UserController::class, 'create'])->name('admin.users.create');
-    // Route::post('/users', [UserController::class, 'store'])->name('admin.users.store');
-    // Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('admin.users.edit');
-    // Route::put('/users/{id}', [UserController::class, 'update'])->name('admin.users.update');
-    // Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('admin.users.destroy');
-})->name('admin.');
-
-
-
-// Route pour le menu apropos
-// Route::prefix('apropos/')->group(function () {
-//     Route::get('/qui-sommes-nous', [PageUniversityController::class, 'quiSommesNous'])->name('quiSommesNous');
-//     Route::get('/larecherche', [PageUniversityController::class, 'larecherche'])->name('larecherche');
-//     Route::get('/filiere-pro', [PageUniversityController::class, 'filierePro'])->name('filierePro');
-//     Route::get('/filiere-classique', [PageUniversityController::class, 'filiereCla'])->name('filiereCla');
-//     Route::get('/alumnis', [PageUniversityController::class, 'alumnis'])->name('alumnis');
-//     Route::get('/actualité', [PageUniversityController::class, 'actualité'])->name('actualité');
-//     Route::get('/partenaire', [PageUniversityController::class, 'partenaire'])->name('partenaire');
-//     Route::get('/etudiant', [PageUniversityController::class, 'etudiant'])->name('etudiant');
-//     Route::get('/all-actualite', [PageUniversityController::class, 'allactualite'])->name('all.actualite');
-//     Route::get('/etudiant/agenda', [PageUniversityController::class, 'agenda'])->name('etudiant.agenda');
-//     Route::get('/etudiant/listetresultas', [PageUniversityController::class, 'listofstudent'])->name('etudiant.listofstudent');
-//     Route::get('/detail-actulite/{actualite}', [PageUniversityController::class, 'detailactulite'])->name('detail.actualite');
-//     Route::get('/personnel-admin', [PageUniversityController::class, 'personnel'])->name('personnel-admin');
-//     Route::get('/', [PageUniversityController::class, 'welcome'])->name('welcome');
-
-//     Route::get('/etudiant/evenement', [PageUniversityController::class, 'evenement'])->name('etudiant.evenement');
-
-// });
+    require __DIR__.'/web/dashboard.php';
+});
