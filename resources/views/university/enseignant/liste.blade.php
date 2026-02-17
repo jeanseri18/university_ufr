@@ -135,10 +135,35 @@
 
 @section('content')
 
+<section class="py-lg-8 py-5 header-bg" style="">
+    <div class="container ">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-6 mb-lg-0">
+                <div>
+                    <h4 class="text-white mb-4">
+                        <i class="bi bi-chevron-compact-right text-white rounded-circle "></i>
+                        Enseignant
+                    </h4>
+                    <h1 class="display-3 fw-bold mb-3 text-white">LISTE DES ENSEIGNANTS</h1>
+                    <p class="pe-lg-10 mb-5">
+                        L’enseignant-chercheur est un érudit spécialisé dans une discipline qui constitue le lien 
+                        entre la recherche scientifique, le monde industriel et la société. En Côte d’ivoire, 
+                        l’enseignant-chercheur est un universitaire de haut niveau (titulaire d’un doctorat) qui 
+                        assure la formation et la recherche au sein des institutions d’enseignement supérieur. Il est 
+                        fonctionnaire et est recruté par le Ministère de l’Enseignement Supérieur et de la Recherche Scientifique (MESRS).
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex">
+                <!-- Image ou autre contenu -->
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="my-5 py-0 ">
     <div class="container">
-        <div class="banner mb-4">
+        {{-- <div class="banner mb-4">
             <h1 class="display-4 banner-title">Liste des enseignants <br></h1>
             <p class="lead">
                 L’enseignant-chercheur est un érudit spécialisé dans une discipline qui constitue le lien 
@@ -147,7 +172,7 @@
                 assure la formation et la recherche au sein des institutions d’enseignement supérieur. Il est 
                 fonctionnaire et est recruté par le Ministère de l’Enseignement Supérieur et de la Recherche Scientifique (MESRS).
             </p>
-        </div>
+        </div> --}}
 
 
         <div class="row mt-6 mb-5 justify-content-center">
@@ -240,7 +265,7 @@
                                     <h5 class="card-title">Chef du Département des Sciences Économiques</h5>
                                     <hr class="">
                                     <p class="card-text"> 
-                                        <i class="bi bi-phone"></i> (+225) 07 0000 0000 <br>
+                                        <i class="bi bi-phone"></i> (+225) 01 0335 5803 <br>
                                         <i class="bi bi-envelope"></i> exemple@domaine.tdl <br>
                                         <i class="bi bi-geo-alt"></i> Université de cocody <br>
                                         <i class="bi bi-briefcase"></i> Spécialité enseignée
@@ -267,7 +292,7 @@
                                     <h5 class="card-title">Cheffe du Département des Sciences de Gestion </h5>
                                     <hr class="">
                                     <p class="card-text"> 
-                                        <i class="bi bi-phone"></i> (+225) 00 0000 0000 <br>
+                                        <i class="bi bi-phone"></i> (+225) 01 0335 5803 <br>
                                         <i class="bi bi-envelope"></i> nom.prénom@example.tld <br>
                                         <i class="bi bi-geo-alt"></i> Université de cocody <br>
                                         <i class="bi bi-briefcase"></i> Spécialité enseignée
