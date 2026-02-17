@@ -33,7 +33,7 @@
                 L’enseignant démarre sa carrière universitaire en tant qu’Assistant des Universités et appartient à la catégorie des rangs B. Le pallier suivant est celui de Maître-Assistant des Universités 
                 (Rang B) qu’il doit franchir en soumettant son dossier au programme des Comités Consultatifs Interafricains (CCI) organisé par le CAMES.
                 <br>
-                Une fois Maître-Assistant, l’enseignant doit atteindre le pallier suivant qui est celui de Maître-Assistant (Rang A). Pour ce faire, deux voies d’offrent à lui : la voie courte qui est celle 
+                Une fois Maître-Assistant, l’enseignant doit atteindre le pallier suivant qui est celui de Maître de Conférences (Rang A). Pour ce faire, deux voies d’offrent à lui : la voie courte qui est celle 
                 du concours d’Agrégation et la voie longue qui est celle du programme CCI. Une fois Maître de Conférence, l’enseignant se prépare pour le dernier pallier qui est celui de Professeur Titulaire 
                 (Rang A) en soumettant son dossier aux CCI.
                 <br>
