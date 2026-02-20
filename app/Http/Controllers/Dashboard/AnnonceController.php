@@ -28,18 +28,19 @@ class AnnonceController extends Controller
         ]);
 
         // Traitement du fichier PDF
-        $path = $request->file('fichier_pdf') ? $request->file('fichier_pdf')->store('uploads', 'public') : null;
-        // if ($request->hasFile('fichier_pdf')) {
-        //     $file = $request->file('fichier_pdf');
-        //     $filename = time() . '_' . $file->getClientOriginalName();
-        //     $filePath = $file->storeAs('public/annonces', $filename);
-        // }
+        // $path = $request->file('fichier_pdf') ? $request->file('fichier_pdf')->store('/storage', 'public') : null;
+        // $path = $request->file('fichier_pdf') ? $request->file('fichier_pdf')->store('uploads', 'public') : null;
+        if ($request->hasFile('fichier_pdf')) {
+            $file = $request->file('fichier_pdf');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $filePath = $file->storeAs('/storage', $filename);
+        }
 
         // Enregistrement de l'annonce dans la base de données
         Annonce::create([
             'titre' => $request->input('titre'),
             'page_cible' => $request->input('page_cible'),
-            'fichier_path' => $path,
+            'fichier_path' => $filePath ?? null,
             'description' => $request->input('description'),
         ]);
 
@@ -62,6 +63,7 @@ class AnnonceController extends Controller
         ]);
 
         $annonce = Annonce::findOrFail($request->annonce_id);
+        dd($annonce);
 
         // Traitement du fichier PDF si un nouveau fichier est téléchargé
         if ($request->hasFile('fichier_pdf')) {

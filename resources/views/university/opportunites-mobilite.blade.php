@@ -103,14 +103,14 @@
 
 
 
-<section class="my-5 py-5 ">
+<section class="my-5 py-0 ">
     <div class="container">
-        <div class="banner mb-4">
+        {{-- <div class="banner mb-4">
             <h1 class="display-4 banner-title">Opportunité <br> & Mobilité</h1>
-            {{-- <p class="lead">
+            <p class="lead">
                 Cette rubrique relaie les offres de consultance, les offres de formation ou encore les offres de renforcement des capacités qui sont disponibles. Elle relaie également 
-            </p> --}}
-        </div>
+            </p>
+        </div> --}}
 
         {{-- <div class="mt-5">
             <h2>Découvrez les thèmes abordés</h2>

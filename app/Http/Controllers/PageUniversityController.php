@@ -97,8 +97,9 @@ class PageUniversityController extends Controller
         $events = Event::orderBy('created_at', 'desc')->limit(10)->get();
         $new_events = New_event::orderBy('created_at', 'desc')->limit(10)->get();
         $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(10)->get();
+        $annonces = Annonce::orderBy('created_at', 'desc')->limit(8)->get();
 
-        return view('welcome', compact('actualites', 'mediatheques', 'events', 'new_events'));
+        return view('welcome', compact('actualites', 'mediatheques', 'events', 'new_events', 'annonces'));
     }
     public function partenaire()
     {
