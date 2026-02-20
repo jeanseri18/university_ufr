@@ -33,7 +33,7 @@ class AnnonceController extends Controller
         if ($request->hasFile('fichier_pdf')) {
             $file = $request->file('fichier_pdf');
             $filename = time() . '_' . $file->getClientOriginalName();
-            $filePath = $file->storeAs('public/storage', $filename);
+            $filePath = $file->storeAs('/storage/pdfs', $filename);
         }
 
         // Enregistrement de l'annonce dans la base de données
