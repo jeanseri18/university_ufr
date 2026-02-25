@@ -11,6 +11,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Dashboard\AnnonceController;
+use App\Http\Controllers\Dashboard\ListeRepartitionController;
 use App\Http\Controllers\UserController;
 
 
@@ -65,6 +66,21 @@ Route::get('/annonce/{id}/edit', [AnnonceController::class, 'edit'])->name('anno
 Route::post('/annonce/update', [AnnonceController::class, 'update'])->name('annonce.update');
 Route::delete('/annonce/{id}', [AnnonceController::class, 'destroy'])->name('annonce.destroy');
 Route::get('/annonce/{id}/download', [AnnonceController::class, 'download'])->name('annonce.download');
+
+
+/*****************************************************************************************************************************************
+**                                                                                                                                      **
+**                               LISTE DE REPARTITION ROUTE                                                                             ** 
+**                                                                                                                                      **
+*****************************************************************************************************************************************/  
+Route::get('/liste-repartition', [ListeRepartitionController::class, 'index'])->name('liste-repartition.index');
+Route::get('/liste-repartition/create', [ListeRepartitionController::class, 'create'])->name('liste-repartition.create');
+Route::post('/liste-repartition/store', [ListeRepartitionController::class, 'store'])->name('liste-repartition.store');
+Route::get('/liste-repartition/{id}/edit', [ListeRepartitionController::class, 'edit'])->name('liste-repartition.edit');
+Route::post('/liste-repartition/{id}/update', [ListeRepartitionController::class, 'update'])->name('liste-repartition.update');
+Route::delete('/liste-repartition/{id}', [ListeRepartitionController::class, 'destroy'])->name('liste-repartition.destroy');   
+Route::get('/liste-repartition/{id}/download', [ListeRepartitionController::class, 'download'])->name('liste-repartition.download');
+
 
 
 

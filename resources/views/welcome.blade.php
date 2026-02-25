@@ -280,7 +280,7 @@
                     <marquee behavior="" direction="left" scrollamount="5" onmouseover="this.stop();" onmouseout="this.start();">
                         @foreach ($annonces as $item)
                             <span style="display: inline-flex; align-items: center; margin-right: 10px;">
-                                <span><a class="text-white" href="{{ $item->fichier_path }}" target="_blank">{{ $item->description }}</a></span> <span style="margin-right: 10px; margin-left: 10px;"><i class="bi bi-dot"></i></span> 
+                                <span><a class="text-white" href="{{ asset('storage/' . $item->fichier_path) }}" target="_blank">{{ $item->description }}</a></span> <span style="margin-right: 10px; margin-left: 10px;"><i class="bi bi-dot"></i></span> 
                             </span>
                         @endforeach
                     </marquee>

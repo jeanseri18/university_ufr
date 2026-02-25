@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Ajouter un nouveau fichier</h1>
+    <h1>Ajouter un resultat / PV</h1>
     <br> 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -24,8 +24,11 @@
             <select class="form-control" id="niveau_etude" name="niveau_etude">
                 <option value="">-- Sélectionnez le niveau d'étude --</option>
                 <option value="licence 1">Licence 1</option>
+                <option value="licence 1">Licence FIP 1</option>
                 <option value="licence 2">Licence 2</option>
+                <option value="licence 2">Licence FIP 2</option>
                 <option value="licence 3">Licence 3</option>
+                <option value="licence 3">Licence FIP 3</option>
                 <option value="master 1">Master 1</option>
                 <option value="master 2">Master 2</option>
             </select>

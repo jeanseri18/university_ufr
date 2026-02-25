@@ -81,14 +81,14 @@
                 <div>
                     <h4 class="text-white mb-4">
                         <i class="bi bi-chevron-compact-right text-white rounded-circle "></i>
-                        Etudiant
+                        Enseignant
                     </h4>
                     <h1 class="display-3 fw-bold mb-3 text-white">OPPORTUNITÉ & MOBILITÉ</h1>
                     <p class="pe-lg-10 mb-5">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus 
                         culpa a explicabo ea repellat aspernatur atque porro alias odit ex 
                         recusandae ut commodi sapiente repudiandae corporis aliquid doloribus, 
-                        quasi deserunt?
+                        quasi deserunt ?
                     </p>
                 </div>
             </div>
@@ -101,18 +101,15 @@
 
 
 
-
-
-
 <section class="my-5 py-5 ">
     <div class="container">
         {{-- <div class="banner mb-4">
             <h1 class="display-4 banner-title">Opportunité & Mobilité</h1>
             <p class="lead">Cette rubrique relaie les offres de consultance, les offres de formation ou encore les offres de renforcement des capacités qui sont disponibles. Elle relaie également
                  égalément des offres de mobilité disponibles.</p>
-        </div> --}}
+        </div>
 
-        {{-- <div class="mt-5">
+        <div class="mt-5">
             <h2>Découvrez les thèmes abordés</h2>
         </div> --}}
 

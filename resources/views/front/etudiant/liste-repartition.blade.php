@@ -125,6 +125,42 @@
 </section>
 
 
+<section class="my-5 py-5 ">
+    <div class="container">
+        {{-- <div class="text-center mb-5">
+            <small class="text-uppercase ls-md fw-semibold">Liste des resultats</small>
+            <h2 class="mt-3">Resultats des examens</h2>
+            <p class="mb-0">Accédez ci-dessous aux resultats d'examens de fin d'année.</p>
+        </div> --}}
+        <div class="row">
+        @foreach($listes as $doc)
+            <div class="col-md-4 col-12 mb-4">
+                <div class="card shadow border-0">
+                    <img src="{{ asset('/assets/images/cover-resultat-exam.png') }}" alt="Image du résultat" class="card-img-top" style="max-height: 180px; object-fit: cover;">
+                    <div class="card-body text-">
+                        <h5 class="card-title">{{ $doc->titre }}</h5>
+                        <p class="card-text">
+                            {{ \Illuminate\Support\Str::limit($doc->description, 100) }}
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-secondary">{{ ucfirst($doc->niveau_etude) }}</span>
+                            <span class="badge bg-info">{{ $doc->sessions }}</span>
+                            <span class="badge bg-success">{{ ucfirst($doc->type) }}</span>
+                        </div>
+                        <div class="mt-3 d-flex justify-content-between align-items-center">
+                            <a href="{{ asset('storage/' . $doc->file_path) }}" class="btn btn-primary btn-sm" target="_blank">
+                                <i class="bi bi-box-arrow-up-right"></i> Consulter
+                            </a>
+                            <a href="{{ route('liste-repartition.download', $doc) }}" class="btn btn-outline-secondary btn-sm"><i class="bi bi-download"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+        </div>
+    </div>
+</section>
+
 
 {{-- <section class="" style="background-color:#E7EEEA; padding-top: 30px; padding-bottom: 30px; margin-bottom: 0px; margin-top: 0px; border-radius: 0px;">
     <section class="" style="background-color:#E7EEEA; padding-top: 30px; padding-bottom: 30px; margin-bottom: 0px; margin-top: 60px; border-radius: 10px;">

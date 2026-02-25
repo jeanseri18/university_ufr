@@ -10,6 +10,7 @@ use App\Models\Event;
 use App\Models\Actualite;
 use App\Models\Annonce;
 use App\Models\Document;
+use App\Models\ListeRepartition;
 use App\Models\New_event;
 use App\Models\ResultatExamens;
 
@@ -277,7 +278,8 @@ class PageUniversityController extends Controller
     }
 
     function listeRepartition() {
-        return view('front.etudiant.liste-repartition');
+        $listes = ListeRepartition::orderBy('created_at', 'desc')->where('type_page', 'etudiant')->get();
+        return view('front.etudiant.liste-repartition', compact('listes'));
     }
 
     function partenaireVieSociale() {

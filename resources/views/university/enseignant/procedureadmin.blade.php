@@ -4,7 +4,33 @@
 
 @section('content')
 
-<section class="my-5 bg-light py-5">
+<section class="py-lg-8 py-5 header-bg" style="">
+    <div class="container ">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-6 mb-lg-0">
+                <div>
+                    <h4 class="text-white mb-4">
+                        <i class="bi bi-chevron-compact-right text-white rounded-circle "></i>
+                        Enseignant
+                    </h4>
+                    <h1 class="display-3 fw-bold mb-3 text-white">PROCEDURE ADMINISTRATIVE</h1>
+                    <p class="pe-lg-10 mb-5">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos 
+                        doloremque nisi ad dolores illum eum voluptas unde quia ea placeat mollitia 
+                        voluptate veniam accusantium, provident dolor! A earum asperiores consequuntur!
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex">
+                <!-- Image ou autre contenu -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="bg-light py-5">
     <div class="container">
         <div class="text-center mb-5">
             <small class="text-uppercase ls-md fw-semibold">Procédures Administratives</small>

@@ -29,7 +29,7 @@
                     </li>
                     <li class="nav-item dropdown user-menu">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img src="../../dist/assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow" alt="User Image">
+                            <img src="{{ asset('/dist/assets/img/user2-160x160.jpg') }}" class="user-image rounded-circle shadow" alt="User Image">
                             <span class="d-none d-md-inline">Admin</span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
@@ -37,7 +37,6 @@
                                 <p>Admin</p>
                             </li>
                             <li class="user-footer">
-                                <!--a href="#" class="btn btn-default btn-flat">Profile</a-->
                                 <a href="{{ route('logout') }}" class="btn btn-default btn-flat float-end">Deconnexion</a>
                             </li>
                         </ul>
@@ -120,6 +119,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="{{ route('liste-repartition.index') }}" class="nav-link" style="color:white">
+                                <i class="nav-icon bi bi-list-task"></i>
+                                <p>Liste de repartition</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ route('users.index')}}" class="nav-link" style="color:white" >
                                 <i class="nav-icon bi bi-people"></i>
                                 <p>Utilisateur</p>
@@ -137,7 +142,6 @@
             </div>
         </aside>
         <main class="app-main">
-          
             <div class="app-content">
                 <div class="container-fluid">
                     @yield('content')
