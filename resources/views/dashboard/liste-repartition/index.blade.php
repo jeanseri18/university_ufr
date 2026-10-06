@@ -20,8 +20,8 @@
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    <section class="py-4">
-        <div class="container">
+    {{-- <section class="py-4"> --}}
+        {{-- <div class="container"> --}}
             <table class="table mt-4" id="Table">
                 <thead>
                     <tr>
@@ -53,8 +53,8 @@
                     @endforeach
                 </tbody>
             </table>
-        </div>
-    </section>
+        {{-- </div> --}}
+    {{-- </section> --}}
 
 </div>
 @endsection
@@ -78,3 +78,37 @@
     });
 </script>
 @endpush
+
+
+    .mega-menu {
+        position: absolute;
+        min-width: 900px;
+        /*min-width: auto;*/
+        /*top: 65px;*/
+        /*margin-top: 15px;*/
+        left: -45%;
+        right: 5%;
+        background-color: var(--bg-mega-menu); /* #F6F5F2 */
+        padding: 40px;
+        border-radius: var(--border-radius);
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(15px);
+        transition: all 0.35s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* Animation au survol du parent */
+    .has-mega-menu:hover .mega-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .mega-menu-container {
+        display: flex;
+        justify-content: space-around;
+        max-width: 2000px;
+        margin: 0 auto;
+        gap: 20px;
+    }

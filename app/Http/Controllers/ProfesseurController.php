@@ -39,7 +39,7 @@ class ProfesseurController extends Controller
         $request->validate([
             'nom' => 'required|string|max:255',
             'prenom' => 'nullable|string|max:255',
-            'image' => 'nullable|file|image|max:7048', // Limitation à 2 MB
+            'image' => 'nullable|file|image|max:104857600', // Limitation à 100 MB
             'detail' => 'nullable|string',
         ]);
     

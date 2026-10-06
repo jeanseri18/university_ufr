@@ -23,7 +23,7 @@ class AnnonceController extends Controller
         $request->validate([
             'titre' => 'required|string|max:255',
             'page_cible' => 'required|string|max:255',
-            'fichier_pdf' => 'required|file|mimes:pdf|max:4096', // Limite de 4MB pour le fichier PDF
+            'fichier_pdf' => 'required|file|mimes:pdf|max:104857600', // Limite de 100MB pour le fichier PDF
             'description' => 'nullable|string',
         ]);
 
@@ -58,7 +58,7 @@ class AnnonceController extends Controller
         $request->validate([
             'titre' => 'required|string|max:255',
             'page_cible' => 'string|max:255',
-            'fichier_pdf' => 'nullable|file|mimes:pdf|max:4096', // Limite de 4MB pour le fichier PDF
+            'fichier_pdf' => 'nullable|file|mimes:pdf|max:104857600', // Limite de 100MB pour le fichier PDF
             'description' => 'nullable|string',
         ]);
 

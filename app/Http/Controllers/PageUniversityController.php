@@ -23,7 +23,6 @@ class PageUniversityController extends Controller
     {
         $actualites = Actualite::orderBy('created_at', 'desc')->limit(8)->get();
         $events = Event::orderBy('created_at', 'desc')->get();
-        // $events = Event::orderBy('created_at', 'desc')->limit(12)->get();
         $new_events = New_event::orderBy('created_at', 'desc')->get();
         $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(8)->get();
         $annonces = Annonce::orderBy('created_at', 'desc')->limit(8)->get();
@@ -210,6 +209,7 @@ class PageUniversityController extends Controller
             ->orderBy('created_at', 'desc')
             ->limit(12)
             ->get();
+            
         $docs = Document::where('type', 'guideenseignant') // ou 'guide etudiant' selon ce que tu stockes
             ->whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
             ->orderBy('created_at', 'desc')

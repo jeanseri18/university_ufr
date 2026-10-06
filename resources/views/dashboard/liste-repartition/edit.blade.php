@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-<section class="py-4">
+{{-- <section class="py-4"> --}}
     <div class="container">
         <h1>Modifier la liste de repartition</h1>
         <form action="{{ route('liste-repartition.update', $liste->id) }}" method="POST" enctype="multipart/form-data">
@@ -49,5 +49,5 @@
             <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
         </form>
     </div>
-</section>
+{{-- </section> --}}
 @endsection

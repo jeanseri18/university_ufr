@@ -25,7 +25,7 @@ class DocumentController extends Controller
         $request->validate([
             'type' => 'required',
             'titre' => 'required',
-            'pdf' => 'required|file|mimes:pdf|max:2048', // Validation pour le fichier PDF
+            'pdf' => 'required|file|mimes:pdf|max:104857600', // Validation pour le fichier PDF 100Mo
             'details' => 'required',
         ]);
 

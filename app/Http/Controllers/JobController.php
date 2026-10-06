@@ -28,7 +28,7 @@ class JobController extends Controller
         $request->validate([
             'entreprise' => 'required|string|max:255',
             'poste' => 'required|string|max:255',
-            'image' => 'nullable|image|max:10048', // 2MB max
+            'image' => 'nullable|image|max:104857600', // 100MB max
             'detail' => 'nullable|string',
             'foruser' => 'nullable|string',
         ]);

@@ -30,7 +30,7 @@ class ParlonsEcoController extends Controller
         $validation = Validator::make($request->all(), [
             'titre' => 'required|string|max:255',
             'status' => 'required|in:draft,published,archived',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:104857600',
             'description' => 'nullable|string',
         ]);
 

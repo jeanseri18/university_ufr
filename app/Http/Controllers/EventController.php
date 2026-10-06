@@ -37,7 +37,7 @@ class EventController extends Controller
             'title' => 'required',
             'foruser' => 'required|string',
             'description' => 'nullable',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:104857600',
             'start_time' => 'required|date',
             'end_time' => 'required|date|after:start_time',
             'type' => 'nullable|string',
@@ -58,7 +58,7 @@ class EventController extends Controller
             'title' => 'required',
             'foruser' => 'required|string',
             'description' => 'nullable',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:104857600',
             'start_time' => 'required|date',
             'end_time' => 'required|date|after:start_time'
         ]);
@@ -82,7 +82,7 @@ class EventController extends Controller
         $validatedData = $request->validate([
             'title' => 'required',
             'description' => 'nullable',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:104857600',
             'start_time' => 'required|date',
             'end_time' => 'required|date|after:start_time'
         ]);
