@@ -168,7 +168,7 @@
             <div class="col-md-6 col-lg-4">
                 <article class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4">
-                        <span class="badge bg-warning text-dark mb-3">Mobilité</span>
+                        <span class="badge bg-warning text-white mb-3">Mobilité</span>
                         <h3 class="h5">Programme d'échange universitaire</h3>
                         <p class="small text-muted mb-3"><i class="bi bi-mortarboard me-2"></i>Université partenaire</p>
                         <p class="text-muted">Suivre une période académique à l'étranger et bénéficier d'un accompagnement pour la mobilité.</p>
@@ -184,7 +184,7 @@
             <div class="col-md-6 col-lg-4">
                 <article class="card h-100 border-0 shadow-sm">
                     <div class="card-body p-4">
-                        <span class="badge bg-info text-dark mb-3">Alternance</span>
+                        <span class="badge bg-info text-white mb-3">Alternance</span>
                         <h3 class="h5">Développeur(euse) web junior</h3>
                         <p class="small text-muted mb-3"><i class="bi bi-building me-2"></i>Entreprise partenaire</p>
                         <p class="text-muted">Contribuer au développement d'applications web au sein d'une équipe technique expérimentée.</p>
