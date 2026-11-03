@@ -418,13 +418,13 @@
         </div>
         <div class="row actualites-grid pb-6">
         @foreach ($actualites as $actualite)
-            <div class="col-lg-4 col-md-6">
-                <article class="card actualite-card card-hover d-flex flex-column" style="--reveal-delay: {{ $loop->index * 120 }}ms">
-                    <a href="{{ route('detail.actualite', $actualite) }}" class="actualite-image rounded-top-3" aria-label="Lire {{ $actualite->titre }}">
-                        <img src="{{ asset('storage/' . $actualite->image) }}" class="card-img-top" alt="{{ $actualite->titre }}">
+            <div class="col-lg-4 col-md-6 d-flex g-4" style="margin-bottom: 10px;">
+                <article class="card actualite-card card-hover d-flex flex-column w-100" style="--reveal-delay: {{ $loop->index * 120 }}ms">
+                    <a href="{{ route('detail.actualite', $actualite) }}" class="actualite-image rounded-top-3 overflow-hidden" style="height: 220px; flex: 0 0 220px;" aria-label="Lire {{ $actualite->titre }}">
+                        <img src="{{ asset('storage/' . $actualite->image) }}" class="card-img-top w-100 h-100" style="object-fit: cover;" alt="{{ $actualite->titre }}">
                     </a>
 
-                    <div class="card-body d-flex flex-column">
+                    <div class="card-body d-flex flex-column flex-grow-1">
                         <div class="actualite-card__meta">
                             <time datetime="{{ \Carbon\Carbon::parse($actualite->date_ajoute)->toDateString() }}">
                                 {{ \Carbon\Carbon::parse($actualite->date_ajoute)->translatedFormat('d M Y') }}
