@@ -30,7 +30,7 @@
             font-weight: 800;
         }
 
-        .nav-link:hover{
+        .nav-link:hover {
             font-weight: 800;
         }
 
@@ -38,6 +38,12 @@
             color:white; 
             background: linear-gradient(to right, #2B6635, #2B6635);
             height: 26em;
+        }
+
+        .active-submenu {
+            font-weight: 600;
+            color: #2B6635 !important;
+            background-color: #E6F0E9 !important;
         }
     </style>
 </head>
@@ -48,7 +54,7 @@
         <div class="row" style="min-height: 100px; padding: 30px;">
             <div class="col-md-3 ">
                 <a class="navbar-brand mx-auto" href="/">
-                    <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo" class="img-fluid navbar-brand" style="height: 40px">
+                    <img src="{{ asset('assets/ufr.jpeg') }}" alt="Logo" class="img-fluid navbar-brand" style="height: 50px !important;">
                 </a>
             </div>
             <div class="col-md-1"> </div>
@@ -57,41 +63,39 @@
 
                 <div class="row text-center" style="color:#2b6635">
                     <div class="col-6 col-md-2">
-                        <a href="{{ route('actualité') }}" class="nav-link text-black {{ activeRoute('actualité') }}">À propos</a>
+                        <a href="{{ route('welcome') }}#a-propos{{-- route('actualité') --}}" class="nav-link text-black {{-- activeRoute('actualité') --}}">À propos</a>
                     </div>
                     <div class="col-6 col-md-2">
                         <a href="{{ route('etudiant') }}" class="nav-link text-black {{ activeRoute('etudiant') }}">Étudiant(e)</a>
                     </div>
                     <div class="col-6 col-md-2">
-                        <a href="{{ route('enseignant') }}" class="nav-link text-black {{ activeRoute('enseignant') }}">Enseignant(e)</a>
+                        <a href="{{ route('enseignant.vie-sociale') }}" class="nav-link text-black {{ activeRoute('enseignant.vie-sociale', 'enseignant.calendrier', 'enseignant.procedure', 'enseignant.cames', 'enseignant.cours.td', 'enseignant.liste', 'enseignant.opportunites.mobilite', 'enseignant.opportunites.liste', 'enseignant.mobilite.liste') }}">Enseignant(e)</a>
                     </div>
                     <div class="col-6 col-md-4">
-                        <a href="{{ route('personnel-admin') }}" class="nav-link text-black {{ activeRoute('personnel-admin') }}">Personnel administratif</a>
+                        {{-- <a href="{{ route('personnel-admin') }}" class="nav-link text-black {{ activeRoute('personnel-admin') }}">Personnel administratif</a> --}}
+                        <a href="{{ route('personnel-administratif.vie-sociale') }}" class="nav-link text-black {{ activeRoute('personnel-administratif.vie-sociale') }}">Personnel administratif</a>
                     </div>
                     <div class="col-6 col-md-2">
-                        <a href="{{ route('partenaire') }}" class="nav-link text-black {{ activeRoute('partenaire') }}">Partenaires</a>
+                        <a href="{{ route('partenaire.vie-sociale') }}" class="nav-link text-black {{ activeRoute('partenaire.vie-sociale') }}">Partenaires</a>
                     </div>
                 </div>
 
             </div>
             <div class="col-md-1"> </div>
-
         </div>
-
         <!-- Logo centré -->
-
     </div>
     
     <!-- Page Content -->
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg" style="background-color:#3CA45D;">
         <div class="container px-0">
-            <!--  <a class="navbar-brand" href=""><img src="{{ asset('assets/Logo-BEM-Executive 1.png') }}" alt="Geeks" /></a>
+            {{-- <!--  <a class="navbar-brand" href=""><img src="{{ asset('assets/Logo-BEM-Executive 1.png') }}" alt="Geeks" /></a>
             <div class="ms-auto d-flex align-items-center order-lg-3">
                 <div class="d-flex gap-2 align-items-center">
                     <a href="" class="btn btn-dark d-none d-md-block">Contactez nous</a>
                 </div>
-            </div>-->
+            </div>--> --}}
             <div>
                 <button class="navbar-toggler collapsed ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar top-bar mt-0"></span>
@@ -101,46 +105,49 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-default">
                 <ul class="navbar-nav mt-3 mt-lg-0 mx-xxl-auto">
-
                     @if(in_array(Route::currentRouteName(), ['etudiant', 'etudiant.agenda', 'etudiant.listofstudent', 'etudiant.resultat-examen', 'etudiant.parlons-eco', 'etudiant.opportunites.mobilite', 'etudiant.opportunites.liste', 'etudiant.mobilite.liste', 'etudiant.agenda', 'etudiant.liste-repartition']))
                         <!-- Menu spécifique pour les étudiants -->
-                        <li><a href="{{ route('etudiant') }}" class="dropdown-item">Vie à l'université</a></li>
-                        <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item">Calendrier</a></li>
-                        <li><a href="{{ route('etudiant.liste-repartition') }}" class="dropdown-item">Liste de répartition</a></li>
-                        <li><a href="{{ route('etudiant.parlons-eco') }}" class="dropdown-item">Parlons Economie</a></li>
-                        <li><a href="{{ route('etudiant.opportunites.mobilite') }}" class="dropdown-item">Opportunités et Mobilité</a></li>
-                        <li><a href="{{ route('etudiant.resultat-examen') }}" class="dropdown-item">Résultats des Examens </a></li>
-
-                    @elseif(in_array(Route::currentRouteName(), ['welcome','actualité','quiSommesNous', 'filiereCla', 'filierePro', 'alumnis', 'larecherche']))
+                        <li><a href="{{ route('etudiant') }}" class="dropdown-item {{ activeRouteSubMenu('etudiant') }}">Vie à l'université</a></li>
+                        <li><a href="{{ route('etudiant.agenda') }}" class="dropdown-item {{ activeRouteSubMenu('etudiant.agenda') }}">Calendrier</a></li>
+                        <li><a href="{{ route('etudiant.liste-repartition') }}" class="dropdown-item {{ activeRouteSubMenu('etudiant.liste-repartition') }}">Liste de répartition</a></li>
+                        <li><a href="{{ route('etudiant.parlons-eco') }}" class="dropdown-item {{ activeRouteSubMenu('etudiant.parlons-eco') }}">Parlons Economie</a></li>
+                        <li><a href="{{ route('etudiant.opportunites.mobilite') }}" class="dropdown-item {{ activeRouteSubMenu('etudiant.opportunites.mobilite') }}">Opportunités et Mobilité</a></li>
+                        <li><a href="{{ route('etudiant.resultat-examen') }}" class="dropdown-item {{ activeRouteSubMenu('etudiant.resultat-examen') }}">Résultats des Examens </a></li>
+                    @elseif(in_array(Route::currentRouteName(), ['welcome','welcome.qui-sommes-nous', 'filiereCla', 'filierePro', 'alumnis', 'larecherche']))
                         <!-- Menu spécifique pour les étudiants -->
-                        <li><a href="{{ route('actualité') }}" class="dropdown-item">Actualités</a></li>
-                        <li><a href="{{ route('quiSommesNous') }}" class="dropdown-item">Qui sommes-nous</a></li>
-                        <!-- Menu standard pour tous les utilisateurs -->
-                        <li><a href="{{ route('filiereCla') }}" class="dropdown-item">Filieres Classiques</a></li>
-                        <li><a href="{{ route('filierePro') }}" class="dropdown-item">Filieres professionnelles</a></li>
-                        <li><a href="{{ route('alumnis') }}" class="dropdown-item">Alumnis</a></li>
-                        <li><a href="{{ route('larecherche') }}" class="dropdown-item">La recherche à l'UFRSEG</a></li>
-                    @elseif(in_array(Route::currentRouteName(), ['enseignant','enseignant.rejoindre', 'enseignant.calendrier', 'enseignant.procedure', 'enseignant.liste', 'enseignant.cames', 'enseignant.opportunites.mobilite', 'enseignant.opportunites.liste', 'enseignant.mobilite.liste', 'enseignant.cours.td']))
+                        <li><a href="{{ route('welcome') }}#a-propos" class="dropdown-item {{ activeRouteSubMenu('welcome') }}">Actualités</a></li>
+                        <li><a href="{{ route('welcome.qui-sommes-nous') }}" class="dropdown-item {{ activeRouteSubMenu('welcome.qui-sommes-nous') }}">Qui sommes-nous</a></li>
+                        <li><a href="{{ route('filiereCla') }}" class="dropdown-item {{ activeRouteSubMenu('filiereCla') }}">Filieres Classiques</a></li>
+                        <li><a href="{{ route('filierePro') }}" class="dropdown-item {{ activeRouteSubMenu('filierePro') }}">Filieres professionnelles</a></li>
+                        <li><a href="{{ route('alumnis') }}" class="dropdown-item {{ activeRouteSubMenu('alumnis') }}">Alumnis</a></li>
+                        <li><a href="{{ route('larecherche') }}" class="dropdown-item {{ activeRouteSubMenu('larecherche') }}">La recherche à l'UFRSEG</a></li>
+                    @elseif(in_array(Route::currentRouteName(), ['enseignant','enseignant.rejoindre', 'enseignant.calendrier', 'enseignant.procedure', 'enseignant.liste', 'enseignant.cames', 'enseignant.opportunites.mobilite', 'enseignant.opportunites.liste', 'enseignant.mobilite.liste', 'enseignant.cours.td', 'enseignant.vie-sociale']))
                         <!-- Menu spécifique pour les enseignants -->
-                        <li><a href="{{ route('enseignant') }}" class="dropdown-item">Vie sociale</a></li>
-                        <li><a href="{{ route('enseignant.calendrier') }}" class="dropdown-item">Agenda</a></li>
-                        <li><a href="{{ route('enseignant.liste') }}" class="dropdown-item">Listes des professeurs</a></li>
-                        <li><a href="{{ route('enseignant.procedure') }}" class="dropdown-item">Procedure administratives</a></li>
-                        <li><a href="{{ route('enseignant.cames') }}" class="dropdown-item">CAMES</a></li>
-                        <li><a href="{{ route('enseignant.cours.td') }}" class="dropdown-item">Cours/ TD </a></li>
-                        <li><a href="{{ route('enseignant.opportunites.mobilite') }}" class="dropdown-item">Opportunités et Mobilité </a></li>
+                        <li><a href="{{ route('enseignant.vie-sociale') }}" class="dropdown-item {{ activeRouteSubMenu('enseignant.vie-sociale') }}">Vie sociale</a></li>
+                        <li><a href="{{ route('enseignant.calendrier') }}" class="dropdown-item {{ activeRouteSubMenu('enseignant.calendrier') }}">Agenda</a></li>
+                        <li><a href="{{ route('enseignant.liste') }}" class="dropdown-item {{ activeRouteSubMenu('enseignant.liste') }}">Listes des professeurs</a></li>
+                        <li><a href="{{ route('enseignant.procedure') }}" class="dropdown-item {{ activeRouteSubMenu('enseignant.procedure') }}">Procedure administratives</a></li>
+                        <li><a href="{{ route('enseignant.cames') }}" class="dropdown-item {{ activeRouteSubMenu('enseignant.cames') }}">CAMES</a></li>
+                        <li><a href="{{ route('enseignant.cours.td') }}" class="dropdown-item {{ activeRouteSubMenu('enseignant.cours.td') }}">Cours/ TD </a></li>
+                        <li><a href="{{ route('enseignant.opportunites.mobilite') }}" class="dropdown-item {{ activeRouteSubMenu('enseignant.opportunites.mobilite') }}">Opportunités et Mobilité </a></li>
+                    @elseif(in_array(Route::currentRouteName(), ['personnel-administratif', 'personnel-administratif.vie-sociale','personnel-administratif.agenda', 'personnel-administratif.procedure', 'personnel-administratif.promotions', 'personnel-administratif.cames', 'personnel-administratif.opportunites.mobilite', 'personnel-administratif.opportunites.liste', 'personnel-administratif.mobilite.liste']))
+                        <!-- Menu spécifique pour les Personnel administratif -->
+                        <li><a href="{{ route('personnel-administratif.vie-sociale') }}" class="dropdown-item {{ activeRouteSubMenu('personnel-administratif.vie-sociale') }}">Vie sociale</a></li>
+                        <li><a href="{{ route('personnel-administratif.agenda') }}" class="dropdown-item {{ activeRouteSubMenu('personnel-administratif.agenda') }}">Agenda</a></li>
+                        <li><a href="{{ route('personnel-administratif.procedure') }}" class="dropdown-item {{ activeRouteSubMenu('personnel-administratif.procedure') }}">Procedure administratives</a></li>
+                        <li><a href="{{ route('personnel-administratif.promotions') }}" class="dropdown-item {{ activeRouteSubMenu('personnel-administratif.promotions') }}">Promotions</a></li>
+                        <li><a href="{{ route('personnel-administratif.opportunites.mobilite') }}" class="dropdown-item {{ activeRouteSubMenu('personnel-administratif.opportunites.mobilite') }}">Opportunités et Mobilité </a></li>
                     @else
-                        <li><a href="javascript:void(0)" class="dropdown-item">Agenda</a></li>
-                        <!-- Menu standard pour tous les utilisateurs -->
-                        <li><a href="javascript:void(0)" class="dropdown-item">Procédures Administratives</a></li>
-                        <li><a href="javascript:void(0)" class="dropdown-item">Promotions</a></li>
-                        <li><a href="javascript:void(0)" class="dropdown-item">Opportunités et Mobilité</a></li>
-                        <li><a href="{{ route('partenaire.vie-sociale') }}" class="dropdown-item">Vie sociale</a></li>
+                        <!-- Menu spécifique pour le personnel administratif -->
+                        <li><a href="{{ route('partenaire.vie-sociale') }}" class="dropdown-item {{ activeRouteSubMenu('partenaire.vie-sociale') }}">Vie sociale</a></li>
+                        <li><a href="{{ route('partenaire.liste') }}" class="dropdown-item {{ activeRouteSubMenu('partenaire.liste') }}">Liste des partenaires</a></li>
+                        <li><a href="{{ route('partenaire.procedure-administrative') }}" class="dropdown-item {{ activeRouteSubMenu('partenaire.procedure-administrative') }}">Procédures Administratives</a></li>
+                        <li><a href="{{ route('partenaire.opportunites.mobilite') }}" class="dropdown-item {{ activeRouteSubMenu('partenaire.opportunites.mobilite') }}">Opportunités et Mobilité</a></li>
                     @endif
                 </ul>
-                    <div class="mt-3 mt-lg-0 d-flex align-items-center ms-auto">
-                        <a href="{{ route('login') }}" class="btn btn-primary">Se connecter</a>
-                    </div>
+                <div class="mt-3 mt-lg-0 d-flex align-items-center ms-auto">
+                    <a href="{{ route('login') }}" class="btn btn-primary">Se connecter</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -160,7 +167,7 @@
                         <div>
                             <img src="{{ asset('assets/logo-ufr-no-bg.png') }}" alt="Logo UFR" style="height: 70px"/>
                         </div>
-                        <p class="mb-0 text-white">
+                        <p class="mb-0 text-white text-justify">
                             L’UFR des Sciences Économiques et de Gestion de l’Université Félix Houphouët-Boigny propose un parcours académique complet et diversifié, allant de la Licence au Doctorat, avec des formations adaptées aux exigences du marché du travail et aux besoins de la recherche scientifique.
                         </p>
                     </div>
@@ -169,14 +176,14 @@
                 <!-- Section Pages -->
                 <div class="col-xl-3 col-lg-6 col-md-12 mb-4">
                     <div class="d-flex flex-column gap-4">
-                        <span class="text-white fw-bold">Pages</span>
+                        <h3 class="text-white fw-bold">Pages</h3>
                         <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                            <li><a href="{{ route('actualité') }}" class="nav-link text-white">Actualités</a></li>
-                            <li><a href="{{ route('quiSommesNous') }}" class="nav-link text-white">Qui sommes-nous</a></li>
-                            <li><a href="{{ route('filiereCla') }}" class="nav-link text-white">Filières Classiques</a></li>
-                            <li><a href="{{ route('filierePro') }}" class="nav-link text-white">Filières Professionnelles</a></li>
-                            <li><a href="{{ route('alumnis') }}" class="nav-link text-white">Alumnis</a></li>
-                            <li><a href="{{ route('larecherche') }}" class="nav-link text-white">La recherche à l'UFRSEG</a></li>
+                            <li><a href="{{ route('welcome') }}#a-propos" class="nav-link text-white"><i class="bi bi-chevron-right"></i> Actualités</a></li>
+                            <li><a href="{{ route('welcome.qui-sommes-nous') }}" class="nav-link text-white"><i class="bi bi-chevron-right"></i> Qui sommes-nous</a></li>
+                            <li><a href="{{ route('filiereCla') }}" class="nav-link text-white"><i class="bi bi-chevron-right"></i> Filières Classiques</a></li>
+                            <li><a href="{{ route('filierePro') }}" class="nav-link text-white"><i class="bi bi-chevron-right"></i> Filières Professionnelles</a></li>
+                            <li><a href="{{ route('alumnis') }}" class="nav-link text-white"><i class="bi bi-chevron-right"></i> Alumnis</a></li>
+                            <li><a href="{{ route('larecherche') }}" class="nav-link text-white"><i class="bi bi-chevron-right"></i> La recherche à l'UFRSEG</a></li>
                         </ul>
                     </div>
                 </div>
@@ -184,13 +191,13 @@
                 <!-- Section Contact -->
                 <div class="col-xl-4 col-lg-6 col-md-12">
                     <div class="d-flex flex-column gap-4">
-                        <span class="text-white fw-bold">Contact</span>
+                        <h3 class="text-white fw-bold">Contact</h3>
                         <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
-                            <li class="text-white">📍 Adresse : Abidjan, Université Félix Houphouët-Boigny</li>
-                            <li class="text-white">📧 Email : Servicecommunication-ufrseg@ufhb.edu.ci</li>
+                            <li class="text-white"><span class="text-success"><i class="bi bi-geo-alt"></i></span>  Adresse : Abidjan, Université Félix Houphouët-Boigny</li>
+                            <li class="text-white"><span class="text-success"><i class="bi bi-envelope"></i></span> Email : servicecommunication-ufrseg@ufhb.edu.ci</li>
                             <li class="text-white">
-                                +225 07 99 90 43 45 <br>
-                                +225 07 77 02 66 42 <br>(bureau des fillières professionnelles)
+                                <span class="text-success"><i class="bi bi-telephone"></i></span>(+225) 07 99 90 43 45 <br>
+                                <span class="text-success"><i class="bi bi-telephone"></i></span> (+225) 07 77 02 66 42 <br>(bureau des fillières professionnelles)
                             </li>
                         </ul>
                     </div>
@@ -223,8 +230,7 @@
     <!-- Scroll top -->
     <div class="btn-scroll-top">
         <svg class="progress-square svg-content" width="100%" height="100%" viewBox="0 0 40 40">
-            <path
-                d="M8 1H32C35.866 1 39 4.13401 39 8V32C39 35.866 35.866 39 32 39H8C4.13401 39 1 35.866 1 32V8C1 4.13401 4.13401 1 8 1Z" />
+            <path d="M8 1H32C35.866 1 39 4.13401 39 8V32C39 35.866 35.866 39 32 39H8C4.13401 39 1 35.866 1 32V8C1 4.13401 4.13401 1 8 1Z" />
         </svg>
     </div>
 

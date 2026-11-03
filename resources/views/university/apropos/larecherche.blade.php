@@ -2,77 +2,143 @@
 
 @section('title', 'Nos Formations | UFR')
 
+@push('styles')
+    <style>
+        .banner {
+            /* background-image: url('{{ asset('images/university/banner-parlons-eco.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 50px 0; */
+            background-image: linear-gradient(to right, #4CAF50, #8BC34A);
+            color: white;
+            padding: 50px 20px;
+            /* text-align: center; */
+            border-radius: 10px;
+            height: 300px;
+        }
+
+        .banner-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Styles pour le conteneur principal */
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Styles pour chaque bloc de section */
+        .section-block {
+            display: flex; /* Active Flexbox pour un alignement horizontal */
+            align-items: center; /* Centre les éléments verticalement */
+            gap: 30px; /* Ajoute un espace entre l'image et le texte */
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 30px; /* Espace entre les deux blocs */
+        }
+
+        /* Styles pour l'inversion du layout */
+        .reversed-layout {
+            flex-direction: row-reverse; /* Inverse l'ordre de l'image et du texte */
+            background-color: #f0f3f0; /* Couleur de fond pour le second bloc */
+        }
+
+        /* Styles des conteneurs d'image et de contenu */
+        .image-container, .content-container {
+            flex: 1; /* Permet aux deux conteneurs de prendre une part égale de l'espace */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 1rem;
+        }
+
+        /* Styles du titre */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        /* Style du titre du second bloc */
+        .green-title {
+            color: #386641;
+        }
+
+        /* Styles du texte */
+        .section-text {
+            font-size: 1rem;
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        /* Styles pour les petits écrans (tablettes et mobiles) */
+        @media (max-width: 768px) {
+            .section-block {
+                flex-direction: column; /* Les blocs s'empilent verticalement */
+                text-align: center;
+                padding: 20px;
+            }
+        }
+
+        .header-bg {
+            color: white;
+            background: linear-gradient(135deg, rgba(43, 102, 53, .96), rgba(56, 102, 65, .92)),
+                        linear-gradient(to right, #2B6635, #386641);
+            min-height: 26em;
+            display: flex;
+            align-items: center;
+        }
+
+        @media (max-width: 767.98px) {
+            .header-bg { min-height: 22em; }
+        }
+    </style>
+    <style>
+        .alumni-directory { background: #f8faf8; }
+        .alumni-card { transition: transform .2s ease, box-shadow .2s ease; }
+        .alumni-card:hover { transform: translateY(-4px); box-shadow: 0 1rem 2rem rgba(43,102,53,.12)!important; }
+        .alumni-avatar { width:58px; height:58px; border-radius:50%; display:grid; place-items:center; font-size:1.45rem; font-weight:700; flex-shrink:0; }
+        .alumni-item.is-hidden { display:none; }
+        .text-white-75 { color: rgba(255,255,255,.82); }
+        #alumniNoResults { display:none; }
+    </style>
+@endpush
+
+
 @section('content')
-<section class="py-md-10 pt-5  bg-opacity-10 position-relative" style="background-color:#82C17E">
-    <div class="container">
-        <div class="row align-items-center py-lg-8">
-            <div class="col-md-6 col-12">
-                <div class="text-center text-md-start">
-                    <div class="mb-6 pe-xl-8">
-                        <h1 class="display-5">Recherche Universitaire</h1>
-                        <p class="lead">Notre institution est dédiée à l'excellence dans la recherche académique. Nous
-                            nous efforçons de faire progresser les connaissances dans divers domaines et de contribuer
-                            au développement de la société à travers des études et des innovations continues.</p>
-                    </div>
-                    <div class="mb-7">
-                        <div class="mb-3">
-                            <a href="#!" class="btn btn-primary me-2">Découvrir nos projets</a>
-                            <a href="#!" class="btn btn-white">En savoir plus</a>
-                        </div>
-                        <small>📣 Garantie de publication de résultats de qualité.</small>
-                    </div>
-                    <div class="d-flex flex-column flex-lg-row align-items-center gap-2">
-                        <div class="text-dark mb-0 fs-6 lh-1 d-flex align-items-center">
-                            <span>Excellente recherche</span>
-                            <span class="mx-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                    </path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                    </path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                    </path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                    </path>
-                                </svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
-                                    <path
-                                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                                    </path>
-                                </svg>
-                            </span>
-                        </div>
-                        <div class="mt-2 mt-lg-0"><span>(Basé sur les critiques des chercheurs)</span></div>
-                    </div>
+<section class="py-lg-8 py-5 header-bg" style="">
+    <div class="container ">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-6 mb-lg-0">
+                <div>
+                    <h4 class="text-white mb-4">
+                        <i class="bi bi-chevron-compact-right text-white rounded-circle "></i>
+                        A propos
+                    </h4>
+                    <h1 class="display-3 fw-bold mb-3 text-white">La recherche universitaire</h1>
+                    <p class="fs-5 pe-lg-10 mb-5 text-white-75">
+                        Notre institution est dédiée à l'excellence dans la recherche académique. Nous nous efforçons de faire progresser les connaissances dans divers domaines et de contribuer au développement de la société à travers des études et des innovations continues.
+                    </p>
                 </div>
             </div>
-            <div class="col-md-6 col-12 position-md-absolute top-0 end-0 left-0 h-100 mt-6 mt-md-0 px-0"
-                style="background-image: url(image/7I8A9939.jpg); background-size: cover; background-position: center">
-                <div class="d-block d-md-none">
-                    <figure class="figure">
-                        <img src="image/" alt="" class="img-fluid">
-                    </figure>
-                </div>
+            <div class="col-lg-6 d-flex">
+                <!-- Image ou autre contenu -->
             </div>
         </div>
     </div>
 </section>
-<br>
+
 
 <section class="my-xl-9 my-5">
     <div class="container" data-cue="fadeIn" data-show="true"
@@ -504,6 +570,5 @@
         </div>
     </div>
 </section>
-
 
 @endsection

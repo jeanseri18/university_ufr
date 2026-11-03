@@ -82,14 +82,15 @@
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- Graphique des visiteurs -->
 
     <div class="col-md-4">
-            <div class="card bg-success text-white p-3">
-                <div class="text-start">
-            <h3>Visiteurs Annuels</h3>
-            <p>{{ $visiteursAnnuel }} visiteurs cette année</p>
+        <div class="card bg-success text-white p-3">
+            <div class="text-start">
+                <h3>Visiteurs Annuels</h3>
+                <p>{{ $visiteursAnnuel }} visiteurs cette année</p>
             </div>
         </div>
     </div>

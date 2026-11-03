@@ -44,7 +44,7 @@ class DocumentController extends Controller
     }
 
     // Afficher les détails d'un document
-    public function show($id)
+    public function show(int $id)
     {
         $document = Document::findOrFail($id);
         return view('documents.show', compact('document'));

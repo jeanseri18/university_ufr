@@ -31,7 +31,7 @@
 
         <div class="mb-3">
             <label for="pdf" class="form-label">Fichier PDF</label>
-            <input type="file" class="form-control @error('pdf') is-invalid @enderror" id="pdf" name="pdf" required>
+            <input type="file" class="form-control @error('pdf') is-invalid @enderror" id="pdf" name="pdf" accept=".pdf" required>
             @error('pdf')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror

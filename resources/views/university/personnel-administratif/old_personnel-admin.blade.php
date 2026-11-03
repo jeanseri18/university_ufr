@@ -2,8 +2,14 @@
 
 @section('title', 'Espace Personnel Administratif et Technique | UFR')
 
-@section('content')
-<style>
+@push('styles')
+   <style>
+    .header-bg {
+        color:white; 
+        background: linear-gradient(to right, #2B6635, #2B6635); 
+        height: 26em
+    }
+
     .card-img-top {
         width: 100%;
         height: 200px; /* Hauteur uniforme */
@@ -49,39 +55,31 @@
     
 </style>
 
-@push('styles')
-<style>
-    .header-bg {
-        color:white; 
-        background: linear-gradient(to right, #2B6635, #2B6635); 
-        height: 26em
-    }
-</style>    
 @endpush
-
+@section('content')
 <script>
     function toggleAnswer(id) {
         var answer = document.getElementById(id);
         answer.style.display = (answer.style.display === "none" || answer.style.display === "") ? "block" : "none";
     }
 </script>
+
 <section class="py-lg-8 py-5 header-bg" style="">
     <div class="container ">
         <div class="row align-items-center">
             <div class="col-lg-8 mb-6 mb-lg-0">
                 <div>
-                    <h5 class="text-white mb-4">
-                        <i class="fe fe-check icon-xxs icon-shape bg-light-success text-white rounded-circle me-2"></i>
-                        PERSONNEL ADMINISTRATIF
-                    </h5>
-                    <h1 class="display-3 fw-bold mb-3 text-white">AGENDA</h1>
+                    <h4 class="text-white mb-4">
+                        <i class="bi bi-chevron-compact-right text-white rounded-circle "></i>
+                        Personnel Administratif  
+                    </h4>
+                    <h1 class="display-3 fw-bold mb-3 text-white">VIE SOCIALE</h1>
                     <p class="pe-lg-10 mb-5">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ad cumque tempora at ut, similique amet fugit sequi a adipisci, 
-                        molestiae odit doloribus voluptates magnam deserunt facilis quisquam enim numquam?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ad cumque tempora at ut, similique amet fugit sequi a adipisci, 
-                        molestiae odit doloribus voluptates magnam deserunt facilis quisquam enim numquam?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus 
+                        culpa a explicabo ea repellat aspernatur atque porro alias odit ex 
+                        recusandae ut commodi sapiente repudiandae corporis aliquid doloribus, 
+                        quasi deserunt ?
                     </p>
-                    {{-- <a href="https://www.enseignement.gouv.ci/index.php/accueil" target="_blank" class="btn bg-black text-white" style="background:black">Postuler Maintenant</a> --}}
                 </div>
             </div>
             <div class="col-lg-6 d-flex">

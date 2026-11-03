@@ -2,6 +2,85 @@
 
 @section('title', 'Qui sommes nous | UFR')
 
+@push('styles')
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2b6635;
+            color: white;
+    
+        }
+
+        .org-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .level {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            position: relative;
+        }
+
+        .box {
+            background-color: #193E1F;
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 1px solid white;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            min-width: 200px;
+        }
+
+        .box-transparent {
+            background-color: transparent;
+            padding: 15px 25px;
+            border-radius: 10px;
+            border: 0px solid white;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            min-width: 200px;
+        }
+
+        .arrow-down::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid white;
+        }
+
+        /* Add vertical arrows only to levels that connect downward */
+        .level.arrowed .box::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid white;
+        }
+    </style>
+@endpush
+
 @section('content')
 
 <!--section class="" 
@@ -150,82 +229,6 @@ Doyen de l'UFR de Sciences Économiques et de Gestion, <br>Maître de Conférenc
 
 
         <br> 
-    <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #2b6635;
-      color: white;
-  
-    }
-
-    .org-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .level {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 40px;
-      position: relative;
-    }
-
-    .box {
-      background-color: #193E1F;
-      padding: 15px 25px;
-      border-radius: 10px;
-      border: 1px solid white;
-      font-weight: bold;
-      text-align: center;
-      position: relative;
-      min-width: 200px;
-    }
-
-    .box-transparent {
-      background-color: transparent;
-      padding: 15px 25px;
-      border-radius: 10px;
-      border: 0px solid white;
-      font-weight: bold;
-      text-align: center;
-      position: relative;
-      min-width: 200px;
-    }
-
-    .arrow-down::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 15px solid white;
-    }
-
-    /* Add vertical arrows only to levels that connect downward */
-    .level.arrowed .box::after {
-      content: '';
-      position: absolute;
-      bottom: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 15px solid white;
-    }
-  </style>
 
 
   <h1 style="text-align: center;">Organigramme</h1>

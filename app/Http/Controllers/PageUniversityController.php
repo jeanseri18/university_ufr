@@ -17,8 +17,6 @@ use App\Models\ResultatExamens;
 class PageUniversityController extends Controller
 {
     //
-
-
     public function welcome()
     {
         $actualites = Actualite::orderBy('created_at', 'desc')->limit(8)->get();
@@ -29,14 +27,26 @@ class PageUniversityController extends Controller
         return view('welcome', compact('actualites', 'mediatheques', 'events', 'new_events', 'annonces'));
     }
 
+    // public function actualite()
+    // {
+    //     $actualites = Actualite::orderBy('created_at', 'desc')->limit(10)->get();
+    //     $events = Event::orderBy('created_at', 'desc')->limit(10)->get();
+    //     $new_events = New_event::orderBy('created_at', 'desc')->limit(10)->get();
+    //     $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(10)->get();
+    //     $annonces = Annonce::orderBy('created_at', 'desc')->limit(8)->get();
+
+    //     return view('welcome', compact('actualites', 'mediatheques', 'events', 'new_events', 'annonces'));
+    // }
+
+
     public function quiSommesNous()
     {
-        return view('university.qui-sommes-nous');
+        return view('university.apropos.qui-sommes-nous');
     }
 
     public function larecherche()
     {
-        return  view('university.larecherche');
+        return  view('university.apropos.larecherche');
     }
 
     public function filierePro()
@@ -79,32 +89,25 @@ class PageUniversityController extends Controller
             }
         }
         // Passer les données à la vue
-        return view('university.filiere-pro', compact('filieres'));
+        return view('university.apropos.filiere-pro', compact('filieres'));
     }
 
     public function filiereCla()
     {
-        return view('university.filiere-classique');
+        return view('university.apropos.filiere-classique');
     }
 
     public function alumnis()
     {
-        return view('university.alumnis');
+        return view('university.apropos.alumnis');
     }
-    public function actualité()
-    {
-        $actualites = Actualite::orderBy('created_at', 'desc')->limit(10)->get();
-        $events = Event::orderBy('created_at', 'desc')->limit(10)->get();
-        $new_events = New_event::orderBy('created_at', 'desc')->limit(10)->get();
-        $mediatheques = Mediatheque::orderBy('created_at', 'desc')->limit(10)->get();
-        $annonces = Annonce::orderBy('created_at', 'desc')->limit(8)->get();
 
-        return view('welcome', compact('actualites', 'mediatheques', 'events', 'new_events', 'annonces'));
-    }
     public function partenaire()
     {
+        return view('university.partenaire.vie-sociale');
         return view('university.partenaire');
     }
+
     public function etudiant()
     {
         $docs = Document::where('type', 'guideetudiant') // ou 'guide etudiant' selon ce que tu stockes
@@ -129,12 +132,13 @@ class PageUniversityController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        return view('university.resultat-examen', compact('resultats', 'procesVerbaux'));
+        return view('university.etudiant.resultat-examen', compact('resultats', 'procesVerbaux'));
     }
 
 
     public function allactualite()
     {
+        // dd('PAge actualité');
         $actualites = Actualite::orderBy('created_at', 'desc')->limit(300)->get();
         $jobs = Job::orderBy('created_at', 'desc')->limit(300)->get();
         $events = Event::orderBy('created_at', 'desc')->limit(300)->get();
@@ -198,34 +202,41 @@ class PageUniversityController extends Controller
     }
 
 
-    public function personnel()
-    {
-        $actualites = Actualite::whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
-            ->orderBy('created_at', 'desc')
-            ->limit(8)
-            ->get();
+    // public function personnel()
+    // {
+    //     $actualites = Actualite::whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
+    //         ->orderBy('created_at', 'desc')
+    //         ->limit(8)
+    //         ->get();
 
-        $events = Event::whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
-            ->orderBy('created_at', 'desc')
-            ->limit(12)
-            ->get();
+    //     $events = Event::whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
+    //         ->orderBy('created_at', 'desc')
+    //         ->limit(12)
+    //         ->get();
             
-        $docs = Document::where('type', 'guideenseignant') // ou 'guide etudiant' selon ce que tu stockes
-            ->whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
-            ->orderBy('created_at', 'desc')
-            ->get();
+    //     $docs = Document::where('type', 'guideenseignant') // ou 'guide etudiant' selon ce que tu stockes
+    //         ->whereIn('foruser', ['personnel_administratif', 'tout_le_monde'])
+    //         ->orderBy('created_at', 'desc')
+    //         ->get();
 
-        return view('university.personnel-admin', compact('actualites', 'events', 'docs'));
+    //     return view('university.personnel-administratif.personnel-admin', compact('actualites', 'events', 'docs'));
+    // }
+
+    public function personnelAdministratifVieSociale()
+    {
+        $medias = Mediatheque::orderBy('created_at', 'desc')->where('page_type', 'partenaire')->limit(8)->get();
+
+        return view('university.personnel-administratif.vie-sociale', compact('medias'));
     }
 
     public function parlonsEco()
     {
-        return view('university.parlons-eco');
+        return view('university.etudiant.parlons-eco');
     }
 
     public function opportunitesMobilite()
     {
-        return view('university.opportunites-mobilite');
+        return view('university.etudiant.opportunites-mobilite');
     }
 
     public function opportunitesListe(Request $request)
@@ -242,19 +253,19 @@ class PageUniversityController extends Controller
         //     ->paginate(10);  // Nombre de jobs par page
 
         // return view('university.opportunites-liste', compact('jobs'));
-        return view('university.opportunites-liste');
+        return view('university.etudiant.opportunites-liste');
     }
 
     public function mobiliteListe(Request $request)
     {
-        return view('university.mobilite-liste');
+        return view('university.etudiant.mobilite-liste');
     }
 
     public function agendaEtudiant()
     {
         $events = Event::orderBy('created_at', 'desc')->get();
 
-        return view('university.agenda-etudiant', compact('events'));
+        return view('university.etudiant.agenda-etudiant', compact('events'));
     }
 
     public function opportunitesMobiliteEnseignant()
@@ -272,19 +283,105 @@ class PageUniversityController extends Controller
         return view('university.enseignant-mobilite-liste');
     }
 
-    public function coursTd()
+    public function enseignantCoursTd()
     {
-        return view('university.enseignant-cours-td');
+        return view('university.enseignant.enseignant-cours-td');
     }
 
     function listeRepartition() {
         $listes = ListeRepartition::orderBy('created_at', 'desc')->where('type_page', 'etudiant')->get();
-        return view('front.etudiant.liste-repartition', compact('listes'));
+        return view('university.etudiant.liste-repartition', compact('listes'));
     }
 
-    function partenaireVieSociale() {
-        $medias = Mediatheque::orderBy('created_at', 'desc')->where('page_type', 'partenaire')->limit(8)->get();
+    function partenaireVieSociale() 
+    {
+        // $actualites = Actualite::whereIn('foruser', ['enseignant', 'tout_le_monde'])
+        // ->orderBy('created_at', 'desc')
+        // ->limit(8)
+        // ->get();
 
-        return view('front.partenaire.vie-sociale', compact('medias'));
+        // // dd($actualites);
+    
+        // $events = Event::whereIn('foruser', ['enseignant', 'tout_le_monde'])
+        //     ->orderBy('created_at', 'desc')
+        //     ->limit(12)
+        //     ->get();
+        //     $docs = Document::where('type', 'guideenseignant') // ou 'guide etudiant' selon ce que tu stockes
+        //     ->whereIn('foruser', ['enseignant', 'tout_le_monde'])
+        //     ->orderBy('created_at', 'desc')
+        //     ->get();
+
+        $mediatheques = Mediatheque::whereIn('page_type', ['enseignant'])
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        // $mediatheques = Mediatheque::orderBy('created_at', 'desc')->where('page_type', 'partenaire')->limit(8)->get();
+
+        return view('university.partenaire.vie-sociale', compact('mediatheques'));
     }
+
+    ///////////////////////////
+
+    public function personnelAdministratifAgenda()
+    {
+        $events = Event::orderBy('created_at', 'desc')->get();
+
+        return view('university.personnel-administratif.agenda', compact('events'));
+    }
+
+    public function personnelAdministratifProcedure()
+    {
+        return view('university.personnel-administratif.procedure-administrative');
+    }
+
+    public function personnelAdministratifPromotions()
+    {
+        return view('university.personnel-administratif.promotions');
+    }
+
+    public function personnelAdministratifOpportunitesMobilite()
+    {
+        return view('university.personnel-administratif.opportunites-mobilite');
+    }
+
+    public function enseignantVieSociale()
+    {
+        $actualites = Actualite::whereIn('foruser', ['enseignant', 'tout_le_monde'])
+        ->orderBy('created_at', 'desc')
+        ->limit(8)
+        ->get();
+
+        // dd($actualites);
+    
+        $events = Event::whereIn('foruser', ['enseignant', 'tout_le_monde'])
+            ->orderBy('created_at', 'desc')
+            ->limit(12)
+            ->get();
+            $docs = Document::where('type', 'guideenseignant') // ou 'guide etudiant' selon ce que tu stockes
+            ->whereIn('foruser', ['enseignant', 'tout_le_monde'])
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        $mediatheques = Mediatheque::whereIn('page_type', ['enseignant'])
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('university.enseignant.vie-sociale', compact('actualites', 'events', 'docs', 'mediatheques'));
+    }
+
+    public function partenaireProcedureAdministrative()
+    {
+        return view('university.partenaire.procedure-administrative');
+    }
+
+    public function partenaireListe()
+    {
+        return view('university.partenaire.liste');
+    }
+
+    public function partenaireOpportunitesMobilite()
+    {
+        return view('university.partenaire.opportunites-mobilite');
+    }
+
 }

@@ -150,8 +150,153 @@
                             </a> --}}
                         </div>
                     </div>
+
+
+            <ul class="nav nav-tabs agenda-tabs flex-nowrap overflow-hidden mb-4 justify-content-center" id="eventTypeTabs" role="tablist">
+                <li class="nav-item flex-shrink-0" role="presentation">
+                    <button class="nav-link active px-4" id="licence1-tab" data-toggle="tab" data-target="#licence1" type="button" role="tab" aria-controls="licence1" aria-selected="true">Licence 1 <span class="d-none d-md-inline">- FIP 1</span></button>
+                </li>
+                <li class="nav-item flex-shrink-0" role="presentation">
+                    <button class="nav-link px-4" id="licence2-tab" data-toggle="tab" data-target="#licence2" type="button" role="tab" aria-controls="licence2" aria-selected="false">Licence 2 <span class="d-none d-md-inline">- FIP 2</span></button>
+                </li>
+                <li class="nav-item flex-shrink-0" role="presentation">
+                    <button class="nav-link px-4" id="licence3-tab" data-toggle="tab" data-target="#licence3" type="button" role="tab" aria-controls="licence3" aria-selected="false">Licence 3 <span class="d-none d-md-inline">Économie - Gestion</span></button>
+                </li>
+                <li class="nav-item flex-shrink-0" role="presentation">
+                    <button class="nav-link px-4" id="master1-tab" data-toggle="tab" data-target="#master1" type="button" role="tab" aria-controls="master1" aria-selected="false">Master 1 <span class="d-none d-md-inline">Économie - Gestion</span></button>
+                </li>
+                <li class="nav-item flex-shrink-0" role="presentation">
+                    <button class="nav-link px-4" id="master2-tab" data-toggle="tab" data-target="#master2" type="button" role="tab" aria-controls="master2" aria-selected="false">Master 2 <span class="d-none d-md-inline">Économie - Gestion</span></button>
+                </li>
+            </ul>
+            
+            <div class="tab-content agenda-content" id="eventTypeTabContent">
+                <div class="tab-pane fade show active" id="licence1" role="tabpanel" aria-labelledby="licence1-tab">
+                    <div class="row g-4">
+                        @forelse($events->where('type', 'licence 1') as $event)
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <article class="card agenda-card h-100 border-0 shadow-sm">
+                                    <a href="{{ asset('storage/' . $event->image) }}" class="agenda-card-image">
+                                        <img src="{{ asset('storage/' . $event->image) }}" class="card-img-top" alt="{{ $event->title }}">
+                                    </a>
+                                    <div class="card-body d-flex flex-column p-4">
+                                        <span class="badge bg-primary align-self-start mb-3">Licence 1</span>
+                                        <h3 class="h5 mb-3"><a href="{{ asset('storage/' . $event->image) }}" class="text-dark text-decoration-none">{{ Str::limit($event->title, 65) }}</a></h3>
+                                        <p class="text-muted mb-4 flex-grow-1">{{ Str::limit($event->description, 100) }}</p>
+                                        <div class="d-flex align-items-center justify-content-between mt-auto">
+                                            <small class="text-muted"><i class="fe fe-calendar me-2"></i>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small>
+                                            <a href="{{ asset('storage/' . $event->image) }}" class="btn btn-sm btn-primary" aria-label="Lire {{ $event->title }}">Lire la suite</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        @empty
+                            <div class="col-12"><div class="agenda-empty text-center p-5 rounded border bg-white"><i class="fe fe-calendar fs-2 text-primary d-block mb-3"></i><p class="mb-0 text-muted">Aucun événement disponible pour Licence 1.</p></div></div>
+                        @endforelse
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="licence2" role="tabpanel" aria-labelledby="licence2-tab">
+                    <div class="row g-4">
+                        @forelse($events->where('type', 'licence 2') as $event)
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <article class="card agenda-card h-100 border-0 shadow-sm"><a href="{{ asset('storage/' . $event->image) }}" class="agenda-card-image"><img src="{{ asset('storage/' . $event->image) }}" class="card-img-top" alt="{{ $event->title }}"></a><div class="card-body d-flex flex-column p-4"><span class="badge bg-primary align-self-start mb-3">Licence 2</span><h3 class="h5 mb-3"><a href="{{ asset('storage/' . $event->image) }}" class="text-dark text-decoration-none">{{ Str::limit($event->title, 65) }}</a></h3><p class="text-muted mb-4 flex-grow-1">{{ Str::limit($event->description, 100) }}</p><div class="d-flex align-items-center justify-content-between mt-auto"><small class="text-muted"><i class="fe fe-calendar me-2"></i>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small><a href="{{ asset('storage/' . $event->image) }}" class="btn btn-sm btn-primary">Lire la suite</a></div></div></article>
+                            </div>
+                        @empty
+                            <div class="col-12"><div class="agenda-empty text-center p-5 rounded border bg-white"><i class="fe fe-calendar fs-2 text-primary d-block mb-3"></i><p class="mb-0 text-muted">Aucun événement disponible pour Licence 2.</p></div></div>
+                        @endforelse
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="licence3" role="tabpanel" aria-labelledby="licence3-tab">
+                    <div class="row g-4">
+                        @forelse($events->where('type', 'licence 3') as $event)
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <article class="card agenda-card h-100 border-0 shadow-sm"><a href="{{ asset('storage/' . $event->image) }}" class="agenda-card-image"><img src="{{ asset('storage/' . $event->image) }}" class="card-img-top" alt="{{ $event->title }}"></a><div class="card-body d-flex flex-column p-4"><span class="badge bg-primary align-self-start mb-3">Licence 3</span><h3 class="h5 mb-3"><a href="{{ asset('storage/' . $event->image) }}" class="text-dark text-decoration-none">{{ Str::limit($event->title, 65) }}</a></h3><p class="text-muted mb-4 flex-grow-1">{{ Str::limit($event->description, 100) }}</p><div class="d-flex align-items-center justify-content-between mt-auto"><small class="text-muted"><i class="fe fe-calendar me-2"></i>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small><a href="{{ asset('storage/' . $event->image) }}" class="btn btn-sm btn-primary">Lire la suite</a></div></div></article>
+                            </div>
+                        @empty
+                            <div class="col-12"><div class="agenda-empty text-center p-5 rounded border bg-white"><i class="fe fe-calendar fs-2 text-primary d-block mb-3"></i><p class="mb-0 text-muted">Aucun événement disponible pour Licence 3.</p></div></div>
+                        @endforelse
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="master1" role="tabpanel" aria-labelledby="master1-tab">
+                    <div class="row g-4">
+                        @forelse($events->where('type', 'master 1') as $event)
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <article class="card agenda-card h-100 border-0 shadow-sm"><a href="{{ asset('storage/' . $event->image) }}" class="agenda-card-image"><img src="{{ asset('storage/' . $event->image) }}" class="card-img-top" alt="{{ $event->title }}"></a><div class="card-body d-flex flex-column p-4"><span class="badge bg-primary align-self-start mb-3">Master 1</span><h3 class="h5 mb-3"><a href="{{ asset('storage/' . $event->image) }}" class="text-dark text-decoration-none">{{ Str::limit($event->title, 65) }}</a></h3><p class="text-muted mb-4 flex-grow-1">{{ Str::limit($event->description, 100) }}</p><div class="d-flex align-items-center justify-content-between mt-auto"><small class="text-muted"><i class="fe fe-calendar me-2"></i>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small><a href="{{ asset('storage/' . $event->image) }}" class="btn btn-sm btn-primary">Lire la suite</a></div></div></article>
+                            </div>
+                        @empty
+                            <div class="col-12"><div class="agenda-empty text-center p-5 rounded border bg-white"><i class="fe fe-calendar fs-2 text-primary d-block mb-3"></i><p class="mb-0 text-muted">Aucun événement disponible pour Master 1.</p></div></div>
+                        @endforelse
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="master2" role="tabpanel" aria-labelledby="master2-tab">
+                    <div class="row g-4">
+                        @forelse($events->where('type', 'master 2') as $event)
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <article class="card agenda-card h-100 border-0 shadow-sm"><a href="{{ asset('storage/' . $event->image) }}" class="agenda-card-image"><img src="{{ asset('storage/' . $event->image) }}" class="card-img-top" alt="{{ $event->title }}"></a><div class="card-body d-flex flex-column p-4"><span class="badge bg-primary align-self-start mb-3">Master 2</span><h3 class="h5 mb-3"><a href="{{ asset('storage/' . $event->image) }}" class="text-dark text-decoration-none">{{ Str::limit($event->title, 65) }}</a></h3><p class="text-muted mb-4 flex-grow-1">{{ Str::limit($event->description, 100) }}</p><div class="d-flex align-items-center justify-content-between mt-auto"><small class="text-muted"><i class="fe fe-calendar me-2"></i>{{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}</small><a href="{{ asset('storage/' . $event->image) }}" class="btn btn-sm btn-primary">Lire la suite</a></div></div></article>
+                            </div>
+                        @empty
+                            <div class="col-12"><div class="agenda-empty text-center p-5 rounded border bg-white"><i class="fe fe-calendar fs-2 text-primary d-block mb-3"></i><p class="mb-0 text-muted">Aucun événement disponible pour Master 2.</p></div></div>
+                        @endforelse
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .agenda-tabs { border-bottom: 0; scrollbar-width: thin; }
+                .agenda-tabs .nav-link { color: #344054; font-weight: 600; border: 1px solid transparent; border-radius: 20px 20px 20px 20px; white-space: nowrap; }
+                .agenda-tabs .nav-link.active { color: var(--bs-primary); background: #fff; border-color: #dee2e6 #dee2e6 #fff; }
+                .agenda-card { border-radius: 10px; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+                .agenda-card:hover { transform: translateY(-5px); box-shadow: 0 1rem 2rem rgba(16, 24, 40, .12) !important; }
+                .agenda-card-image { height: 210px; overflow: hidden; background: #f4f6f8; }
+                .agenda-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+                .agenda-card:hover .agenda-card-image img { transform: scale(1.04); }
+                .agenda-card h3 a:hover { color: var(--bs-primary) !important; }
+                .agenda-empty { background-image: linear-gradient(135deg, #fff, #f8faf9); }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const tabButtons = document.querySelectorAll('#eventTypeTabs .nav-link');
+                    const tabPanes = document.querySelectorAll('#eventTypeTabContent .tab-pane');
+
+                    tabButtons.forEach(function (btn) {
+                        btn.addEventListener('click', function (e) {
+                            e.preventDefault();
+
+                            // Supprimer les classes actives des onglets
+                            tabButtons.forEach(function (b) {
+                                b.classList.remove('active');
+                                b.setAttribute('aria-selected', 'false');
+                            });
+
+                            // Masquer tous les contenus
+                            tabPanes.forEach(function (pane) {
+                                pane.classList.remove('show', 'active');
+                            });
+
+                            // Activer l'onglet sélectionné
+                            this.classList.add('active');
+                            this.setAttribute('aria-selected', 'true');
+
+                            // Afficher le contenu correspondant
+                            const target = this.getAttribute('data-target');
+                            const pane = document.querySelector(target);
+
+                            if (pane) {
+                                pane.classList.add('show', 'active');
+                            }
+                        });
+                    });
+                });
+            </script>
+
+
                     
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    {{-- <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="licence1-tab" data-toggle="tab" data-target="#licence1" type="button" role="tab" aria-controls="licence1" aria-selected="true">Licence 1 - Fip 1</button>
                         </li>
@@ -380,7 +525,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </section>

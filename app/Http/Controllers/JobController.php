@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Job;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class JobController extends Controller
 {
@@ -47,13 +48,13 @@ class JobController extends Controller
     }
 
     // Supprimer un job
-    public function destroy($id)
+    public function destroy(int $id)
     {
         $job = Job::findOrFail($id);
 
         // Supprimer les fichiers associés si présents
         if ($job->image) {
-            \Storage::disk('public')->delete($job->image);
+            Storage::disk('public')->delete($job->image);
         }
 
         $job->delete();
