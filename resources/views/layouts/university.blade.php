@@ -146,7 +146,7 @@
                     @endif
                 </ul>
                 <div class="mt-3 mt-lg-0 d-flex align-items-center ms-auto">
-                    <a href="{{ route('login') }}" class="btn btn-primary">Se connecter</a>
+                    <a href="{{ route('login') }}" target="_blank" class="btn btn-primary">Se connecter</a>
                 </div>
             </div>
         </div>

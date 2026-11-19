@@ -159,48 +159,48 @@
 
 <div style="background-color:#E7EEEA; padding: 20px;">
     <div class="container">
-    <h1 style="color:#2B6635">ADMISSION</h1>
-    Toute admission à l’UFHB passe par la Scolarité Centrale. Cette dernière a donc la responsabilité de l’inscription
-    administrative des étudiants, du pilotage opérationnel des scolarités pédagogiques, de la gestion des salles et de
-    l’édition des attestations, des certificats et des diplômes délivrés par l’Université.
-    <br></br>
-    </br>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card d-flex align-items-right justify-content-center text-right p-3"
-                 style="height:250px; background-color:#435053; color: white;">
-                <h3 class="text-right text-white ">La pré-inscription</h3>
-                <p>La pré-inscription à l’UFHB se fait en ligne. Elle concerne les bacheliers. Cette opération est gérée
-                   par le Ministère de l’Enseignement Supérieur et de la Recherche Scientifique (MESRS).</p>
+        <h1 style="color:#2B6635">ADMISSION</h1>
+        Toute admission à l’UFHB passe par la Scolarité Centrale. Cette dernière a donc la responsabilité de l’inscription
+        administrative des étudiants, du pilotage opérationnel des scolarités pédagogiques, de la gestion des salles et de
+        l’édition des attestations, des certificats et des diplômes délivrés par l’Université.
+        <br></br>
+        </br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card d-flex align-items-right justify-content-center text-right p-3"
+                    style="height:250px; background-color:#435053; color: white;">
+                    <h3 class="text-right text-white ">La pré-inscription</h3>
+                    <p>La pré-inscription à l’UFHB se fait en ligne. Elle concerne les bacheliers. Cette opération est gérée
+                    par le Ministère de l’Enseignement Supérieur et de la Recherche Scientifique (MESRS).</p>
 
-                   <a href="#" class="icon-link icon-link-hover" style="color: white;">
-                    En savoir plus
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                    </svg>
-                </a>
+                    <a href="https://inscription.mesrs-ci.net/" target="_blank" class="icon-link icon-link-hover" style="color: white;">
+                        En savoir plus
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card d-flex align-items-right justify-content-center text-right p-3"
+                    style="height:250px; background-color:#435053; color: white;">
+                    <h3 class="text-right text-white">Inscription et réinscription</h3>
+                    <p>L’admission à l’UFHB se fait par voie d’inscription ou réinscription. Elle est ouverte à toute personne
+                    justifiant des titres requis, sans distinction de nationalité, de race, de sexe, de religion, dans la
+                    limite des places disponibles et selon des procédures d’admission spécifiques à chaque
+                    établissement. (Voir plus)</p>
+
+                    <a href="https://inscription.mesrs-ci.net/" target="_blank" class="icon-link icon-link-hover" style="color: white;">
+                        En savoir plus sur l'UFR
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="card d-flex align-items-right justify-content-center text-right p-3"
-                 style="height:250px; background-color:#435053; color: white;">
-                <h3 class="text-right text-white">Inscription et réinscription</h3>
-                <p>L’admission à l’UFHB se fait par voie d’inscription ou réinscription. Elle est ouverte à toute personne
-                   justifiant des titres requis, sans distinction de nationalité, de race, de sexe, de religion, dans la
-                   limite des places disponibles et selon des procédures d’admission spécifiques à chaque
-                   établissement. (Voir plus)</p>
-
-                   <a href="#" class="icon-link icon-link-hover" style="color: white;">
-                    En savoir plus sur l'UFR
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                    </svg>
-                </a>
-            </div>
-        </div>
-    </div><br>
- <center>   <a href="#" class="btn btn-primary mt-3 align-items-center justify-content-center">Découvrir la vie à UFR</a></center>
- <br></div>
+        <center><a href="#" class="btn btn-primary mt-3 align-items-center justify-content-center">Découvrir la vie à UFR</a></center>
+    </div>
 </div>
 
 

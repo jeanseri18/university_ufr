@@ -105,13 +105,31 @@
         }
     </style>
     <style>
-        .alumni-directory { background: #f8faf8; }
-        .alumni-card { transition: transform .2s ease, box-shadow .2s ease; }
-        .alumni-card:hover { transform: translateY(-4px); box-shadow: 0 1rem 2rem rgba(43,102,53,.12)!important; }
-        .alumni-avatar { width:58px; height:58px; border-radius:50%; display:grid; place-items:center; font-size:1.45rem; font-weight:700; flex-shrink:0; }
-        .alumni-item.is-hidden { display:none; }
-        .text-white-75 { color: rgba(255,255,255,.82); }
-        #alumniNoResults { display:none; }
+        .research-section { background: #f6f8f6; }
+        .research-heading { color: #243728; }
+        .research-heading small { color: #5f7c65; letter-spacing: .12em; }
+        .research-card { border: 0; border-radius: 1.25rem; overflow: hidden; background: #fff; box-shadow: 0 12px 35px rgba(36,55,40,.08); transition: transform .25s ease, box-shadow .25s ease; }
+        .research-card:hover { transform: translateY(-6px); box-shadow: 0 20px 45px rgba(36,55,40,.14); }
+        .research-card-cover { height: 175px; display: flex; align-items: flex-end; padding: 1.25rem; position: relative; overflow: hidden; }
+        .research-card-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,45,27,.04), rgba(20,45,27,.72)); }
+        .research-card-cover i { position: absolute; right: 1.25rem; top: 1.25rem; z-index: 1; font-size: 2.25rem; color: rgba(255,255,255,.9); }
+        .research-cover-green { background: linear-gradient(135deg, #84b78a, #2f7040); }
+        .research-cover-blue { background: linear-gradient(135deg, #76aeb1, #2d6570); }
+        .research-cover-gold { background: linear-gradient(135deg, #d9b86c, #9a7434); }
+        .research-cover-red { background: linear-gradient(135deg, #b98a82, #7d4941); }
+        .research-domain { position: relative; z-index: 1; color: #fff; font-size: .75rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; }
+        .research-card .card-body { padding: 1.6rem; }
+        .research-card h3 { color: #243728; font-size: 1.25rem; }
+        .research-card p { color: #6c757d; line-height: 1.65; }
+        .research-meta { display: flex; align-items: center; gap: .5rem; color: #6f8171; font-size: .875rem; }
+        .research-link { color: #386641; font-weight: 700; text-decoration: none; }
+        .research-link:hover { color: #244a2d; }
+        .research-link i { transition: transform .2s ease; }
+        .research-link:hover i { transform: translateX(4px); }
+        .research-stat { border-right: 1px solid #dde4de; }
+        .research-stat:last-child { border-right: 0; }
+        .research-stat strong { display: block; color: #386641; font-size: 2rem; }
+        @media (max-width: 767.98px) { .research-stat { border-right: 0; border-bottom: 1px solid #dde4de; padding: 1rem; } .research-stat:last-child { border-bottom: 0; } }
     </style>
 @endpush
 
@@ -139,434 +157,86 @@
     </div>
 </section>
 
-
-<section class="my-xl-9 my-5">
-    <div class="container" data-cue="fadeIn" data-show="true"
-        style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-        <div class="row">
-            <div class="col-xl-12 ">
-                <div class="text-left mb-xl-7 mb-5">
-                    <h2 class="mb-3">
-                        Découvrez notre <span class="text-primary">Cellule de recherche</span>
-                    </h2>
+<section class="research-section py-lg-8 py-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <div class="research-heading">
+                    <small class="fw-bold d-block mb-2">EXCELLENCE &amp; INNOVATION</small>
+                    <h2 class="display-5 fw-bold mb-3">Nos projets de recherche</h2>
+                    <p class="fs-5 text-secondary mb-0">
+                        Des équipes pluridisciplinaires travaillent sur des enjeux scientifiques majeurs au service du savoir, des territoires et des sociétés.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="table-responsive-lg">
-            <div class="row flex-nowrap pb-4 pb-lg-0 me-5 me-lg-0">
-                <!-- Article 1 -->
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
 
-                    <div class="card border-0 card-primary">
-                        <div style="display: flex; background-color: #82C17E; width: 100%;">
-                            <div style="flex: 1; background-color: #82C17E; text-align: center; padding: 10px;">
-                                <strong>Article 1</strong>
-                            </div>
-                            <div style="flex: 1; background-color:#82C17E; text-align: center; padding: 10px;">
-                                <!-- vide pour l'instant -->
-                            </div>
-                        </div>
-
-                        <div style="display: flex; width: 100%;">
-                            <div style="flex: 1; background-color: white; text-align: center;">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/" alt="Image" style="width: 100%; object-fit: cover;">
-                            </div>
-                            <div style="flex: 1; background-color: white; text-align: center; padding: 10px;">
-                                <strong>Texte sur l'article 1 concernant les cellules de recherche</strong>
-                            </div>
-                        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+                <article class="card research-card h-100">
+                    <div class="research-card-cover research-cover-green">
+                        <i class="bi bi-leaf"></i>
+                        <span class="research-domain">Environnement</span>
                     </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-
-                    <div class="card border-0 card-primary">
-                        <div style="display: flex; background-color: #82C17E; width: 100%;">
-                            <div style="flex: 1; background-color: #82C17E; text-align: center; padding: 10px;">
-                                <strong>Article 2</strong>
-                            </div>
-                            <div style="flex: 1; background-color:#82C17E; text-align: center; padding: 10px;">
-                                <!-- vide pour l'instant -->
-                            </div>
-                        </div>
-
-                        <div style="display: flex; width: 100%;">
-                            <div style="flex: 1; background-color: white; text-align: center;">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/" alt="Image" style="width: 100%; object-fit: cover;">
-                            </div>
-                            <div style="flex: 1; background-color: white; text-align: center; padding: 10px;">
-                                <strong>Texte sur l'article 2 concernant les cellules de recherche</strong>
-                            </div>
-                        </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="fw-bold mb-3">Transition écologique locale</h3>
+                        <p>Étudier les solutions durables adaptées aux défis environnementaux des collectivités et des territoires.</p>
+                        <div class="research-meta mt-auto pt-3 mb-3"><i class="bi bi-people-fill"></i><span>8 chercheurs</span></div>
+                        <a href="#" class="research-link">Découvrir le projet <i class="bi bi-arrow-right ms-1"></i></a>
                     </div>
-                </div>
+                </article>
+            </div>
 
-                <!-- Article 3 -->
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-
-                    <div class="card border-0 card-primary">
-                        <div style="display: flex; background-color: #82C17E; width: 100%;">
-                            <div style="flex: 1; background-color: #82C17E; text-align: center; padding: 10px;">
-                                <strong>Article 3</strong>
-                            </div>
-                            <div style="flex: 1; background-color:#82C17E; text-align: center; padding: 10px;">
-                                <!-- vide pour l'instant -->
-                            </div>
-                        </div>
-
-                        <div style="display: flex; width: 100%;">
-                            <div style="flex: 1; background-color: white; text-align: center;">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/" alt="Image" style="width: 100%; object-fit: cover;">
-                            </div>
-                            <div style="flex: 1; background-color: white; text-align: center; padding: 10px;">
-                                <strong>Texte sur l'article 3 concernant les cellules de recherche</strong>
-                            </div>
-                        </div>
+            <div class="col-md-6 col-xl-3">
+                <article class="card research-card h-100">
+                    <div class="research-card-cover research-cover-blue">
+                        <i class="bi bi-cpu"></i>
+                        <span class="research-domain">Numérique</span>
                     </div>
-                </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="fw-bold mb-3">Intelligence des données</h3>
+                        <p>Concevoir des outils d'analyse responsable pour éclairer la décision publique et les usages numériques.</p>
+                        <div class="research-meta mt-auto pt-3 mb-3"><i class="bi bi-people-fill"></i><span>12 chercheurs</span></div>
+                        <a href="#" class="research-link">Découvrir le projet <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </article>
+            </div>
 
+            <div class="col-md-6 col-xl-3">
+                <article class="card research-card h-100">
+                    <div class="research-card-cover research-cover-gold">
+                        <i class="bi bi-mortarboard"></i>
+                        <span class="research-domain">Éducation</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="fw-bold mb-3">École &amp; transformations</h3>
+                        <p>Analyser les nouveaux parcours d'apprentissage et accompagner l'évolution des pratiques pédagogiques.</p>
+                        <div class="research-meta mt-auto pt-3 mb-3"><i class="bi bi-people-fill"></i><span>6 chercheurs</span></div>
+                        <a href="#" class="research-link">Découvrir le projet <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-xl-3">
+                <article class="card research-card h-100">
+                    <div class="research-card-cover research-cover-red">
+                        <i class="bi bi-heart-pulse"></i>
+                        <span class="research-domain">Santé publique</span>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="fw-bold mb-3">Territoires en santé</h3>
+                        <p>Évaluer les facteurs d'accès aux soins pour renforcer les politiques de santé sur nos territoires.</p>
+                        <div class="research-meta mt-auto pt-3 mb-3"><i class="bi bi-people-fill"></i><span>10 chercheurs</span></div>
+                        <a href="#" class="research-link">Découvrir le projet <i class="bi bi-arrow-right ms-1"></i></a>
+                    </div>
+                </article>
             </div>
         </div>
-    </div>
-</section>
 
-<br>
-<section class="my-xl-9 my-5">
-    <div class="container" data-cue="fadeIn" data-show="true"
-        style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-        <div class="row">
-            <div class="col-xl-12 ">
-                <div class="text-left mb-xl-7 mb-5">
-                    <h2 class="mb-3">
-                        Découvrez notre <span class="text-primary">CVthèque en Sciences Économiques et Gestion</span>
-                    </h2>
-                    <p class="mb-0">Accédez à des profils de professionnels et de diplômés dans les domaines des
-                        sciences économiques et de la gestion. Consultez les parcours académiques et professionnels des
-                        candidats pour trouver le talent qui correspond à vos besoins.</p>
-                </div>
-            </div>
-        </div>
-        <div class="table-responsive-lg">
-            <div class="row flex-nowrap pb-4 pb-lg-0 me-5 me-lg-0">
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                    <div class="card border-0 card-primary">
-                        <div class="card-body p-5">
-                            <div class="position-relative d-inline-block mb-5">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="profile"
-                                    class="avatar avatar-xl rounded-circle border-2 border border-white shadow-sm">
-
-                                <div class="position-absolute bottom-0 end-0">
-                                    <div class="icon-md icon-shape rounded-circle bg-white me-n2 mb-n2 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            fill="currentColor" class="bi bi-person-check text-primary"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M6 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zM8 7a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM1 11s1-1 4-1h6s3 0 4 1v3s-1-1-4-1H5s-3 0-4 1v-3z">
-                                            </path>
-                                            <path
-                                                d="M10.854 3.146a.5.5 0 0 1 .707.707L8.707 6.207l-1.5-1.5 2.646-2.647a.5.5 0 0 1 .707 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-5">
-                                <h4 class="card-title">Marie Dupont</h4>
-                                <p class="mb-0 card-text">Diplômée d'un Master en Sciences Économiques et Gestion, avec
-                                    une expertise en analyse financière et en stratégie d'entreprise. Passionnée par la
-                                    gestion des projets et la planification financière.</p>
-                            </div>
-
-                            <a href="#!" class="icon-link icon-link-hover card-link">
-                                Voir le CV complet
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 200ms; animation-direction: normal; animation-fill-mode: both;">
-                    <div class="card border-0 card-primary">
-                        <div class="card-body p-5">
-                            <div class="position-relative d-inline-block mb-5">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="profile"
-                                    class="avatar avatar-xl rounded-circle border-2 border border-white shadow-sm">
-
-                                <div class="position-absolute bottom-0 end-0">
-                                    <div class="icon-md icon-shape rounded-circle bg-white me-n2 mb-n2 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            fill="currentColor" class="bi bi-person-check text-primary"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M6 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zM8 7a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM1 11s1-1 4-1h6s3 0 4 1v3s-1-1-4-1H5s-3 0-4 1v-3z">
-                                            </path>
-                                            <path
-                                                d="M10.854 3.146a.5.5 0 0 1 .707.707L8.707 6.207l-1.5-1.5 2.646-2.647a.5.5 0 0 1 .707 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-5">
-                                <h4 class="card-title">Jean Martin</h4>
-                                <p class="mb-0 card-text">Expert en gestion des ressources humaines et en optimisation
-                                    des processus dans les entreprises. Titulaire d’un MBA en Management et Leadership,
-                                    avec 5 ans d'expérience dans le secteur public et privé.</p>
-                            </div>
-
-                            <a href="#!" class="icon-link icon-link-hover card-link">
-                                Voir le CV complet
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 400ms; animation-direction: normal; animation-fill-mode: both;">
-                    <div class="card border-0 card-primary">
-                        <div class="card-body p-5">
-                            <div class="position-relative d-inline-block mb-5">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/?text=Image+Grise" alt="profile"
-                                    class="avatar avatar-xl rounded-circle border-2 border border-white shadow-sm">
-
-                                <div class="position-absolute bottom-0 end-0">
-                                    <div class="icon-md icon-shape rounded-circle bg-white me-n2 mb-n2 shadow-sm">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                                            fill="currentColor" class="bi bi-person-check text-primary"
-                                            viewBox="0 0 16 16">
-                                            <path
-                                                d="M6 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zM8 7a2 2 0 1 0-4 0 2 2 0 0 0 4 0zM1 11s1-1 4-1h6s3 0 4 1v3s-1-1-4-1H5s-3 0-4 1v-3z">
-                                            </path>
-                                            <path
-                                                d="M10.854 3.146a.5.5 0 0 1 .707.707L8.707 6.207l-1.5-1.5 2.646-2.647a.5.5 0 0 1 .707 0z">
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mb-5">
-                                <h4 class="card-title">Sophie Lefèvre</h4>
-                                <p class="mb-0 card-text">Consultante en stratégie d'entreprise, avec une expertise
-                                    particulière dans l'analyse des marchés financiers et la gestion des
-                                    investissements. Diplômée d’un MSc en Gestion et Stratégie Internationale.</p>
-                            </div>
-
-                            <a href="#!" class="icon-link icon-link-hover card-link">
-                                Voir le CV complet
-                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                                    class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="my-xl-9 my-5">
-    <div class="container" data-cue="fadeIn" data-show="true"
-        style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-        <div class="row">
-            <div class="col-xl-12 ">
-                <div class="text-left mb-xl-7 mb-5">
-                    <h2 class="mb-3">
-                        Découvrez Nos <span class="text-primary">projets nationaux</span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <div class="table-responsive-lg">
-            <div class="row flex-nowrap pb-4 pb-lg-0 me-5 me-lg-0">
-                <!-- Article 1 -->
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-
-                    <div class="card border-0 card-primary">
-                        <div style="display: flex; background-color: #82C17E; width: 100%;">
-                            <div style="flex: 1; background-color: #82C17E; text-align: center; padding: 10px;">
-                                <strong>Article 1</strong>
-                            </div>
-                            <div style="flex: 1; background-color:#82C17E; text-align: center; padding: 10px;">
-                                <!-- vide pour l'instant -->
-                            </div>
-                        </div>
-
-                        <div style="display: flex; width: 100%; padding: 0px;">
-                            <div style="flex: 1; background-color: white; text-align: center;">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/" alt="Image" style="width: 100%; object-fit: cover;">
-                            </div>
-                            <div style="flex: 1; background-color: white; text-align: center; padding: 10px;">
-                                <strong>Texte sur l'article 1 concernant les cellules de recherche</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-
-                    <div class="card border-0 card-primary">
-                        <div style="display: flex; background-color: #82C17E; width: 100%;">
-                            <div style="flex: 1; background-color: #82C17E; text-align: center; padding: 10px;">
-                                <strong>Article 2</strong>
-                            </div>
-                            <div style="flex: 1; background-color:#82C17E; text-align: center; padding: 10px;">
-                                <!-- vide pour l'instant -->
-                            </div>
-                        </div>
-
-                        <div style="display: flex; width: 100%;">
-                            <div style="flex: 1; background-color: white; text-align: center;">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/" alt="Image" style="width: 100%; object-fit: cover;">
-                            </div>
-                            <div style="flex: 1; background-color: white; text-align: center; padding: 10px;">
-                                <strong>Texte sur l'article 2 concernant les cellules de recherche</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-
-                    <div class="card border-0 card-primary">
-                        <div style="display: flex; background-color: #82C17E; width: 100%;">
-                            <div style="flex: 1; background-color: #82C17E; text-align: center; padding: 10px;">
-                                <strong>Article 3</strong>
-                            </div>
-                            <div style="flex: 1; background-color:#82C17E; text-align: center; padding: 10px;">
-                                <!-- vide pour l'instant -->
-                            </div>
-                        </div>
-
-                        <div style="display: flex; width: 100%;">
-                            <div style="flex: 1; background-color: white; text-align: center;">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/" alt="Image" style="width: 100%; object-fit: cover;">
-                            </div>
-                            <div style="flex: 1; background-color: white; text-align: center; padding: 10px;">
-                                <strong>Texte sur l'article 3 concernant les cellules de recherche</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="my-xl-9 my-5">
-    <div class="container" data-cue="fadeIn" data-show="true"
-        style="animation-name: fadeIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-        <div class="row">
-            <div class="col-xl-12 ">
-                <div class="text-left mb-xl-7 mb-5">
-                    <h2 class="mb-3">
-                        Découvrez Nos <span class="text-primary">Projets internationaux</span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <div class="table-responsive-lg">
-            <div class="row flex-nowrap pb-4 pb-lg-0 me-5 me-lg-0">
-                <!-- Article 1 -->
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-
-                    <div class="card border-0 card-primary">
-                        <div style="display: flex; background-color: #82C17E; width: 100%;">
-                            <div style="flex: 1; background-color: #82C17E; text-align: center; padding: 10px;">
-                                <strong>Article 1</strong>
-                            </div>
-                            <div style="flex: 1; background-color:#82C17E; text-align: center; padding: 10px;">
-                                <!-- vide pour l'instant -->
-                            </div>
-                        </div>
-
-                        <div style="display: flex; width: 100%;">
-                            <div style="flex: 1; background-color: white; text-align: center;">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/" alt="Image" style="width: 100%; object-fit: cover;">
-                            </div>
-                            <div style="flex: 1; background-color: white; text-align: center; padding: 10px;">
-                                <strong>Texte sur l'article 1 concernant les cellules de recherche</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 2 -->
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-
-                    <div class="card border-0 card-primary">
-                        <div style="display: flex; background-color: #82C17E; width: 100%;">
-                            <div style="flex: 1; background-color: #82C17E; text-align: center; padding: 10px;">
-                                <strong>Article 2</strong>
-                            </div>
-                            <div style="flex: 1; background-color:#82C17E; text-align: center; padding: 10px;">
-                                <!-- vide pour l'instant -->
-                            </div>
-                        </div>
-
-                        <div style="display: flex; width: 100%;">
-                            <div style="flex: 1; background-color: white; text-align: center;">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/" alt="Image" style="width: 100%; object-fit: cover;">
-                            </div>
-                            <div style="flex: 1; background-color: white; text-align: center; padding: 10px;">
-                                <strong>Texte sur l'article 2 concernant les cellules de recherche</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Article 3 -->
-                <div class="col-lg-4 col-md-6" data-cue="zoomIn" data-show="true"
-                    style="animation-name: zoomIn; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-
-                    <div class="card border-0 card-primary">
-                        <div style="display: flex; background-color: #82C17E; width: 100%;">
-                            <div style="flex: 1; background-color: #82C17E; text-align: center; padding: 10px;">
-                                <strong>Article 3</strong>
-                            </div>
-                            <div style="flex: 1; background-color:#82C17E; text-align: center; padding: 10px;">
-                                <!-- vide pour l'instant -->
-                            </div>
-                        </div>
-
-                        <div style="display: flex; width: 100%;">
-                            <div style="flex: 1; background-color: white; text-align: center;">
-                                <img src="https://fakeimg.pl/300x200/808080/ffffff/" alt="Image" style="width: 100%; object-fit: cover;">
-                            </div>
-                            <div style="flex: 1; background-color: white; text-align: center; padding: 10px;">
-                                <strong>Texte sur l'article 3 concernant les cellules de recherche</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="row bg-white rounded-4 shadow-sm py-4 mt-5 mx-0 text-center">
+            <div class="col-md-4 research-stat"><strong>24</strong><span class="text-secondary">Projets actifs</span></div>
+            <div class="col-md-4 research-stat"><strong>36</strong><span class="text-secondary">Chercheurs impliqués</span></div>
+            <div class="col-md-4 research-stat"><strong>11</strong><span class="text-secondary">Partenaires institutionnels</span></div>
         </div>
     </div>
 </section>

@@ -222,254 +222,118 @@
         </div>
     </div><br>
  <center>   <a href="#" class="btn btn-primary mt-3 align-items-center justify-content-center">Découvrir la vie à UFR</a></center>
- <br></div>
+ <br>
+</div>
 </div>
 
+    <div style="background-color:#FFF; padding: 20px;">
+        <div class="container">
+        <h1 style="color:#2B6635"><center>Foire Aux Qestions</center></h1>
+    
+        <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question">1. Je souhaite connaître les orientations possibles en Sciences Économiques</div>
+            <div class="faq-answer">Notre site recense la liste de toutes nos formations, dans les filières classiques tout comme dans les filières professionnelles. Vous pouvez cliquer sur la rubrique « Filières Classiques » pour avoir toutes les informations sur nos filières classiques ou sur la rubrique « Filières professionnelles » pour avoir toutes les informations sur nos filières professionnelles.</div>
+        </div>
 
-
-<section class="pattern-square bg-opacity-10">
-    <div class="container position-relative z-1 py-xl-9 py-6">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1 col-md-12">
-
-                <h2 class="h1 mb-4">Discutez de votre avenir académique en Sciences Économiques et Gestion</h2>
-
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-6 col-12 order-2" data-cue="slideInLeft" data-show="true" style="animation-name: slideInLeft; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                        <div class="me-xl-7">
-                            <div class="mb-5">
-                                {{-- <h2 class="h1 mb-4">Discutez de votre avenir académique en Sciences Économiques et Gestion</h2> --}}
-                                <p class="mb-0">Prenez rendez-vous pour une consultation gratuite avec nos conseillers spécialisés. Que vous soyez en licence ou en master, nous sommes là pour vous guider dans votre choix de formation et vous aider à planifier vos études avec succès.</p>
-                            </div>
-                            {{-- <div class="mb-5">
-                                <ul class="list-unstyled">
-                                    <li class="mb-2 d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                                        </svg>
-                                        <span class="ms-1">Vous ne savez pas quel programme choisir ?</span>
-                                    </li>
-                                    <li class="mb-2 d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                                        </svg>
-                                        <span class="ms-1">Vous avez besoin de conseils sur vos choix de spécialisation ?</span>
-                                    </li>
-                                    <li class="mb-2 d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                                        </svg>
-                                        <span class="ms-1">Vous avez des questions sur le programme de stage ou l'insertion professionnelle ?</span>
-                                    </li>
-                                </ul>
-                            </div> --}}
-
-                            {{-- <div class="d-md-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center mb-3 mb-md-0 small">
-                                    <div class="d-flex align-items-center">
-                                        <img src="assets/images/avatar/avatar-7.jpg" alt="Avatar" class="avatar avatar-lg rounded-circle">
-                                        <div class="ms-3">
-                                            <h5 class="mb-0">Dr. Abiba TOURÉ </h5>
-                                            <small class="me-4">Responsable des admissions</small>
-                                            <small>Servicecommunication-ufrseg@ufhb.edu.ci</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <a href="mailto:admissions@university.com" class="btn btn-outline-secondary">Contactez-nous par e-mail</a>
-                                </div>
-                            </div> --}}
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12 order-lg-2" data-cue="slideInRight" data-show="true" style="animation-name: slideInRight; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                        
-                        <div class="mb-5">
-                                <ul class="list-unstyled">
-                                    <li class="mb-2 d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                                        </svg>
-                                        <span class="ms-1">Vous ne savez pas quel programme choisir ?</span>
-                                    </li>
-                                    <li class="mb-2 d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                                        </svg>
-                                        <span class="ms-1">Vous avez besoin de conseils sur vos choix de spécialisation ?</span>
-                                    </li>
-                                    <li class="mb-2 d-flex">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                                            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                                        </svg>
-                                        <span class="ms-1">Vous avez des questions sur le programme de stage ou l'insertion professionnelle ?</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        
-                        {{-- <div class="card shadow-sm">
-                            <div class="card-body">
-                                <form class="row needs-validation g-3" novalidate="">
-                                    <div class="col-lg-12">
-                                        <div class="mb-3">
-                                            <h3 class="mb-0">Réservez un appel de consultation gratuit</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <label for="ScheduleFirstnameInput" class="form-label">
-                                            Prénom
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <input type="text" class="form-control" id="ScheduleFirstnameInput" required="">
-                                        <div class="invalid-feedback">Veuillez entrer votre prénom.</div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <label for="scheduleLastnameInput" class="form-label">
-                                            Nom
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <input type="text" class="form-control" id="scheduleLastnameInput" required="">
-                                        <div class="invalid-feedback">Veuillez entrer votre nom.</div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label for="scheduleEmailInput" class="form-label">
-                                            E-mail
-                                            <span class="text-danger">*</span>
-                                        </label>
-                                        <input type="email" class="form-control" id="scheduleEmailInput" required="">
-                                        <div class="invalid-feedback">Veuillez entrer votre adresse e-mail.</div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label for="scheduleTextarea" class="form-label">Message</label>
-                                        <textarea class="form-control" id="scheduleTextarea" placeholder="Écrivez-nous" rows="3" required=""></textarea>
-                                        <div class="invalid-feedback">Veuillez écrire un message.</div>
-                                    </div>
-                                    <div class="d-grid">
-                                        <button class="btn btn-primary" type="submit">Réservez votre consultation</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div> --}}
-                    </div>
-                </div>
+        <div class="faq-item">
+            <div class="faq-question">2. Je suis au Lycée et je souhaite suivre une formation en Sciences Économiques, quelle est la procédure à suivre ?</div>
+            <div class="faq-answer">
+                Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br><br>
+                Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre sur le site du ministère de l’Enseignement Supérieur pour connaître les critères et les procédures d’orientation <br><br>
+                Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com <br><br>
             </div>
         </div>
-    </div>
-</section>
 
-
-<div style="background-color:#E7EEEA; padding: 20px;">
-    <div class="container">
-    <h1 style="color:#2B6635"><center>Foire Aux Qestions</center></h1>
-   
-    <div class="faq-container">
-    <div class="faq-item">
-        <div class="faq-question">1. Je souhaite connaître les orientations possibles en Sciences Économiques</div>
-        <div class="faq-answer">Notre site recense la liste de toutes nos formations, dans les filières classiques tout comme dans les filières professionnelles. Vous pouvez cliquer sur la rubrique « Filières Classiques » pour avoir toutes les informations sur nos filières classiques ou sur la rubrique « Filières professionnelles » pour avoir toutes les informations sur nos filières professionnelles.</div>
-    </div>
-
-    <div class="faq-item">
-        <div class="faq-question">2. Je suis au Lycée et je souhaite suivre une formation en Sciences Économiques, quelle est la procédure à suivre ?</div>
-        <div class="faq-answer">
-            Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br><br>
-            Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre sur le site du ministère de l’Enseignement Supérieur pour connaître les critères et les procédures d’orientation <br><br>
-            Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com <br><br>
+        <div class="faq-item">
+            <div class="faq-question">3. Je suis diplômé d’une autre UFR de l’université et je souhaite faire des études en Sciences Économiques, quelle est la procédure à suivre ?</div>
+            <div class="faq-answer">
+                Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br><br>
+                Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre à la Scolarité Centrale, c’est ce service qui se charge de toutes les questions relatives aux inscriptions.<br><br>
+                Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com <br><br>
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">3. Je suis diplômé d’une autre UFR de l’université et je souhaite faire des études en Sciences Économiques, quelle est la procédure à suivre ?</div>
-        <div class="faq-answer">
-            Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br><br>
-            Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre à la Scolarité Centrale, c’est ce service qui se charge de toutes les questions relatives aux inscriptions.<br><br>
-            Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com <br><br>
+        <div class="faq-item">
+            <div class="faq-question">4. Je suis un(e) travailleur(se) et je souhaite faire des études en Sciences Économiques, quelle est la procédure à suivre ?</div>
+            <div class="faq-answer">
+                Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br><br>
+                Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre à la Scolarité Centrale, c’est ce service qui se charge de toutes les questions relatives aux inscriptions.<br><br>
+                Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com<br><br>
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">4. Je suis un(e) travailleur(se) et je souhaite faire des études en Sciences Économiques, quelle est la procédure à suivre ?</div>
-        <div class="faq-answer">
-            Étape 1 : vous rendre sur notre site internet pour voir l’ensemble des formations disponibles <br><br>
-            Étape 2 : si vous êtes intéressé par une filière classique, vous devez vous rendre à la Scolarité Centrale, c’est ce service qui se charge de toutes les questions relatives aux inscriptions.<br><br>
-            Étape 3 : si vous êtes intéressé par une filière professionnelle, vous devez vous mettre en contact avec le Secrétariat des filières de l’UFRSEG. Tel : 01 01 15 47 47 ; Email : profilseg@gmail.com<br><br>
+        <div class="faq-item">
+            <div class="faq-question">5. Je ne vois pas nom sur les listes de présence / les listes de répartition des examens</div>
+            <div class="faq-answer">
+                Bien vérifier la liste et d’autres liste si possible <br><br>
+                Si le nom ne figure toujours pas, vérifiez le statut de votre inscription et portez une réclamation au niveau de la scolarité Centrale de l’Université Félix Houphouët Boigny
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">5. Je ne vois pas nom sur les listes de présence / les listes de répartition des examens</div>
-        <div class="faq-answer">
-            Bien vérifier la liste et d’autres liste si possible <br><br>
-            Si le nom ne figure toujours pas, vérifiez le statut de votre inscription et portez une réclamation au niveau de la scolarité Centrale de l’Université Félix Houphouët Boigny
+        <div class="faq-item">
+            <div class="faq-question">6. Je n’arrive pas à payer les frais d’inscription sur la plateforme Trésor Pay</div>
+            <div class="faq-answer">
+                Vous devez faire une réclamation au niveau de la Scolarité Centrale de l’Université Félix Houphouët Boigny
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">6. Je n’arrive pas à payer les frais d’inscription sur la plateforme Trésor Pay</div>
-        <div class="faq-answer">
-            Vous devez faire une réclamation au niveau de la Scolarité Centrale de l’Université Félix Houphouët Boigny
+        <div class="faq-item">
+            <div class="faq-question">7. Je n’arrive pas à payer les frais d’inscription sur la plateforme Trésor Pay</div>
+            <div class="faq-answer">
+                Vous devez faire une réclamation au niveau de la Scolarité Centrale de l’Université Félix Houphouët Boigny
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">7. Je n’arrive pas à payer les frais d’inscription sur la plateforme Trésor Pay</div>
-        <div class="faq-answer">
-            Vous devez faire une réclamation au niveau de la Scolarité Centrale de l’Université Félix Houphouët Boigny
+        <div class="faq-item">
+            <div class="faq-question">8. Je n’arrive pas à obtenir mes identifiants Team pour suivre les cours en ligne</div>
+            <div class="faq-answer">
+                Vous devez vous rendre à l’UFR, plus précisément au bureau 8 pour déposer une réclamation.
+                NB : L’UFR ne propose par de formation entièrement en ligne. Les cours en ligne concernent uniquement certaines Unités d’Enseignement (UE) pour les niveaux Licence 3 et Master (I et II)
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">8. Je n’arrive pas à obtenir mes identifiants Team pour suivre les cours en ligne</div>
-        <div class="faq-answer">
-            Vous devez vous rendre à l’UFR, plus précisément au bureau 8 pour déposer une réclamation.
-            NB : L’UFR ne propose par de formation entièrement en ligne. Les cours en ligne concernent uniquement certaines Unités d’Enseignement (UE) pour les niveaux Licence 3 et Master (I et II)
+        <div class="faq-item">
+            <div class="faq-question">9. La présence aux Travaux Dirigés (TD) est-elle obligatoire ?</div>
+            <div class="faq-answer">
+                La présence au TD est obligatoire et est contrôlée grâce à une liste de présence. Par ailleurs, à la fin de chaque session de Travaux Dirigés ; 
+                une note de contrôle continu est délivrée et elle compte pour 40% de la moyenne
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">9. La présence aux Travaux Dirigés (TD) est-elle obligatoire ?</div>
-        <div class="faq-answer">
-            La présence au TD est obligatoire et est contrôlée grâce à une liste de présence. Par ailleurs, à la fin de chaque session de Travaux Dirigés ; 
-            une note de contrôle continu est délivrée et elle compte pour 40% de la moyenne
+        <div class="faq-item">
+            <div class="faq-question">10. Je ne vois pas mon nom sur les listes de répartition d’étudiant(e)s pour les examens</div>
+            <div class="faq-answer">
+                Étape 1 : vérifier toutes les listes <br><br>
+                Étape 2 : vérifier le statut de l’inscription <br><br>
+                Étape 3 : Faire une réclamation à la Scolarité Centrale <br><br>
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">10. Je ne vois pas mon nom sur les listes de répartition d’étudiant(e)s pour les examens</div>
-        <div class="faq-answer">
-            Étape 1 : vérifier toutes les listes <br><br>
-            Étape 2 : vérifier le statut de l’inscription <br><br>
-            Étape 3 : Faire une réclamation à la Scolarité Centrale <br><br>
+        <div class="faq-item">
+            <div class="faq-question">11. Pour une UE de 2 ECUE, j’ai eu 10 dans une ECUE et 5 dans l’autre, que faire ?</div>
+            <div class="faq-answer">
+                Étape 1 : vous devez uniquement reprendre l’ECUE dans laquelle vous n’avez pas eu la moyenne à la deuxième session <br><br>
+                Étape 2 : si vous validez cette ECUE, l’UE est considérée comme validée <br><br>
+                Étape 3 : si vous ne validez pas cette ECUE, l’UE est considérée comme non validée et vous devez la reprendre l’année prochaine<br><br>
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">11. Pour une UE de 2 ECUE, j’ai eu 10 dans une ECUE et 5 dans l’autre, que faire ?</div>
-        <div class="faq-answer">
-            Étape 1 : vous devez uniquement reprendre l’ECUE dans laquelle vous n’avez pas eu la moyenne à la deuxième session <br><br>
-            Étape 2 : si vous validez cette ECUE, l’UE est considérée comme validée <br><br>
-            Étape 3 : si vous ne validez pas cette ECUE, l’UE est considérée comme non validée et vous devez la reprendre l’année prochaine<br><br>
+        <div class="faq-item">
+            <div class="faq-question">12. Les résultats des examens sont sortis mais mon nom ne figure pas et/ou je n’ai pas de note</div>
+            <div class="faq-answer">
+                Si vous êtes dans cette situation, vous devez déposer une réclamation à la commission des examens. Les calendriers et les procédures des réclamations sont publiés à chaque session d’examens.
+            </div>
         </div>
-    </div>
 
-    <div class="faq-item">
-        <div class="faq-question">12. Les résultats des examens sont sortis mais mon nom ne figure pas et/ou je n’ai pas de note</div>
-        <div class="faq-answer">
-            Si vous êtes dans cette situation, vous devez déposer une réclamation à la commission des examens. Les calendriers et les procédures des réclamations sont publiés à chaque session d’examens.
+        <div class="faq-item">
+            <div class="faq-question">13. Les résultats des examens sont sortis mais il y a une erreur sur mon nom, mon genre</div>
+            <div class="faq-answer">
+                Si vous êtes dans cette situation, vous devez déposer une réclamation à la commission des examens. Les calendriers et les procédures des réclamations sont publiés à chaque session d'examen.
+            </div>
         </div>
+
     </div>
-
-    <div class="faq-item">
-        <div class="faq-question">13. Les résultats des examens sont sortis mais il y a une erreur sur mon nom, mon genre</div>
-        <div class="faq-answer">
-            Si vous êtes dans cette situation, vous devez déposer une réclamation à la commission des examens. Les calendriers et les procédures des réclamations sont publiés à chaque session d'examen.
-        </div>
-    </div>
-
-</div>
-
-
-
-
-    <br></br>
 </div>
 
 {{-- <section class="my-5 py-5 ">
