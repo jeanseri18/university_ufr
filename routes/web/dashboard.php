@@ -62,7 +62,7 @@ Route::post('/parlons-eco', [ParlonsEcoController::class, 'store'])->name('parlo
 Route::get('/annonce', [AnnonceController::class, 'index'])->name('annonce.index');
 Route::get('/annonce/create', [AnnonceController::class, 'create'])->name('annonce.create');
 Route::post('/annonce/store', [AnnonceController::class, 'store'])->name('annonce.store');
-Route::get('/annonce/{id}/edit', [AnnonceController::class, 'edit'])->name('annonce.edit');
+Route::get('/annonce/{id}/', [AnnonceController::class, 'edit'])->name('annonce.edit');
 Route::post('/annonce/update', [AnnonceController::class, 'update'])->name('annonce.update');
 Route::delete('/annonce/{id}', [AnnonceController::class, 'destroy'])->name('annonce.destroy');
 Route::get('/annonce/{id}/download', [AnnonceController::class, 'download'])->name('annonce.download');
@@ -112,7 +112,7 @@ Route::get('/actualites/create', [ActualiteController::class, 'create'])->name('
 Route::post('/actualites', [ActualiteController::class, 'store'])->name('actualites.store');
 
 // Formulaire pour modifier une actualité
-Route::get('/actualites/{actualite}/edit', [ActualiteController::class, 'edit'])->name('actualites.edit');
+Route::get('/actualitesedit/{actualite}', [ActualiteController::class, 'edit'])->name('actualites.edit');
 
 // Mettre à jour une actualité
 Route::put('/actualites/{actualite}', [ActualiteController::class, 'update'])->name('actualites.update');

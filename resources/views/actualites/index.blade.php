@@ -2,19 +2,20 @@
 
 @section('content')
 <div class="container">
-   <br>
 
     <div class="row">
         <div class="col-md-9">
-        <h1>Liste des Actualités</h1>
-
+            <h1>Liste des Actualités</h1>
         </div>
         <div class="col-md-3">
-        <a href="{{ route('actualites.create') }}" class="btn btn-primary">Ajouter une actualité</a>
-
+            <a href="{{ route('actualites.create') }}" class="btn btn-primary">Ajouter une actualité</a>
         </div>
     </div>
-    <br>
+
+    @if(session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+    
     <table class="table mt-4" id="Table">
         <thead>
             <tr>

@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
 
-<br>
     <div class="row">
         <div class="col-md-9">
         <h1>Liste des Filières</h1>
